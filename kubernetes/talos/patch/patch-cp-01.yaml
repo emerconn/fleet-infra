@@ -1,0 +1,8 @@
+machine:
+  network:
+    hostname: talos-cp-01
+    interfaces:
+    - deviceSelector:
+        busPath: "0*"
+      addresses:
+      - 172.21.0.30/24

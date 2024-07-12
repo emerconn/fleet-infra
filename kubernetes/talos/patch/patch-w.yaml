@@ -1,0 +1,36 @@
+machine:
+  network:
+    interfaces:
+    - deviceSelector:
+        busPath: "0*"
+      routes:
+      - network: 0.0.0.0/0
+        gateway: 172.21.0.1
+    nameservers:
+    - 172.17.0.1
+
+    extraHostEntries:
+    # talos-cp-01
+    - ip: 172.21.0.30
+      aliases:
+      - talos-cp-01
+    # talos-cp-02
+    - ip: 172.21.0.31
+      aliases:
+      - talos-cp-02
+    # talos-cp-03
+    - ip: 172.21.0.32
+      aliases:
+      - talos-cp-03
+    # talos-w-01
+    - ip: 172.21.0.33
+      aliases:
+      - talos-w-01
+    # talos-w-02
+    - ip: 172.21.0.34
+      aliases:
+      - talos-w-02
+    # talos-w-03
+    - ip: 172.21.0.35
+      aliases:
+      - talos-w-03

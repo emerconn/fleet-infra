@@ -1,0 +1,8 @@
+machine:
+  network:
+    hostname: talos-w-02
+    interfaces:
+    - deviceSelector:
+        busPath: "0*"
+      addresses:
+      - 172.21.0.34/24

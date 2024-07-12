@@ -1,0 +1,19 @@
+cluster:
+  network:
+    cni:
+      name: none
+  proxy:
+    disabled: true
+    image: registry.k8s.io/kube-proxy:v1.28.6
+  apiServer:
+    image: registry.k8s.io/kube-apiserver:v1.28.6
+  controllerManager:
+    image: registry.k8s.io/kube-controller-manager:v1.28.6
+  scheduler:
+    image: registry.k8s.io/kube-scheduler:v1.28.6
+
+machine:
+  install:
+    image: ghcr.io/siderolabs/installer:v1.5.6
+  kubelet:
+    image: ghcr.io/siderolabs/kubelet:v1.28.6
