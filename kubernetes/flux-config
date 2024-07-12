@@ -2,6 +2,7 @@ export GITHUB_TOKEN=github_pat_11ACT552A0xwpNNDE19scL_HzUZBFUNC4eHaT5QRAmw4YPkkw
 export GITHUB_USER=emerconnelly
 
 flux bootstrap github \
+  --token-auth \
   --owner=$GITHUB_USER \
   --repository=fleet-infra \
   --branch=main \
