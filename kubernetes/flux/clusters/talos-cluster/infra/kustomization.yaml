@@ -5,3 +5,4 @@ resources:
 - cilium.yaml
 - ../../../infra/ingress-class/ingress-nginx.yaml
 - ../../../infra/ingress-class/traefik.yaml
+- ../../../infra/storage-class/nfs-subdir-external-provisioner.yaml
