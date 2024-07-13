@@ -19,6 +19,4 @@ helm upgrade \
     --set l2announcements.enabled=true \
     --set l2announcements.leaseDuration="3s" \
     --set l2announcements.leaseRenewDeadline="1s" \
-    --set l2announcements.leaseRetryPeriod="500ms" \
-    --set k8sClientRateLimit.qps={QPS} \
-    --set k8sClientRateLimit.burst={BURST}
+    --set l2announcements.leaseRetryPeriod="500ms"
