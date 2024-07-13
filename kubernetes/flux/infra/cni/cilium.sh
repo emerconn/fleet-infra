@@ -12,12 +12,7 @@ helm install \
     --set cgroup.autoMount.enabled=false \
     --set cgroup.hostRoot=/sys/fs/cgroup \
     --set k8sServiceHost=localhost \
-    --set k8sServicePort=7445
-
-helm upgrade cilium cilium/cilium --version 1.15.7 \
-   --namespace kube-system \
-   --reuse-values \
-   --set l2announcements.enabled=true \
-   --set k8sClientRateLimit.qps={QPS} \
-   --set k8sClientRateLimit.burst={BURST} \
-   --set kubeProxyReplacement=true
+    --set k8sServicePort=7445 \
+    --set l2announcements.enabled=true \
+    --set k8sClientRateLimit.qps={QPS} \
+    --set k8sClientRateLimit.burst={BURST} \
