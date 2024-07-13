@@ -4,6 +4,7 @@ kind: Kustomization
 resources:
 - cilium.yaml
 - cloudflare.yaml
+- external-secrets.yaml
 - ingress-nginx.yaml
 - jetstack.yaml
 - nfs-subdir-external-provisioner.yaml
