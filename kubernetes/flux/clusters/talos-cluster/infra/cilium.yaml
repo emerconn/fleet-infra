@@ -12,6 +12,6 @@ kind: CiliumL2AnnouncementPolicy
 metadata:
   name: policy
 spec:
-  interfaces:
-  - eno0
+  nodeSelector:
+    kubernetes.io/hostname: "talos-cp-01"
   loadBalancerIPs: true
