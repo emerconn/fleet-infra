@@ -5,6 +5,7 @@ resources:
 - cilium.yaml
 - cloudflare.yaml
 - ingress-nginx.yaml
+- jetstack.yaml
 - nfs-subdir-external-provisioner.yaml
 - piraeus.yaml
 - traefik.yaml
