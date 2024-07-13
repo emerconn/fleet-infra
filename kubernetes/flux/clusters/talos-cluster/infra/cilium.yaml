@@ -14,8 +14,6 @@ metadata:
 spec:
   nodeSelector:
     matchExpressions:
-    - key: kubernetes.io/hostname
-      operator: In
-      values:
-      - talos-cp-01
+    - key: node-role.kubernetes.io/control-plane
+      operator: Exists
   loadBalancerIPs: true
