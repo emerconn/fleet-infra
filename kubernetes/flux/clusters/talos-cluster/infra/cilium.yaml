@@ -14,8 +14,4 @@ metadata:
 spec:
   loadBalancerIPs: true
   externalIPs: true
-  nodeSelector:
-    matchExpressions:
-    - key: node-role.kubernetes.io/control-plane
-      operator: Exists
 
