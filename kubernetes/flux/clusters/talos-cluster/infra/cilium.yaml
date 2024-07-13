@@ -13,4 +13,3 @@ metadata:
   name: policy
 spec:
   loadBalancerIPs: true
-
