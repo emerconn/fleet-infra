@@ -56,6 +56,4 @@ helm upgrade cilium cilium/cilium --version 1.15.7 \
    --set l2announcements.enabled=true \
    --set k8sClientRateLimit.qps={QPS} \
    --set k8sClientRateLimit.burst={BURST} \
-   --set kubeProxyReplacement=true \
-   --set k8sServiceHost=${API_SERVER_IP} \
-   --set k8sServicePort=${API_SERVER_PORT}
+   --set kubeProxyReplacement=true
