@@ -33,5 +33,5 @@ spec:
     ingressRoute:
       dashboard:
         enabled: true
-        matchRule: Host(`traefik.rph.int`) && (PathPrefix(`/dashboard`) || PathPrefix(`/api`))
+        matchRule: Host(`traefik.emer.lab`) && (PathPrefix(`/dashboard`) || PathPrefix(`/api`))
         entryPoints: ["websecure", "web", "traefik"]
