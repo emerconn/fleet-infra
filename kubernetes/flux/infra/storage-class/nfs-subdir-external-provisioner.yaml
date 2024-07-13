@@ -26,4 +26,3 @@ spec:
   values: # https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner/blob/master/charts/nfs-subdir-external-provisioner/values.yaml
     nfs:
       server: 172.21.0.20
-      path: /volume1/talos_cluster
