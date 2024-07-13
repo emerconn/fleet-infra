@@ -5,5 +5,5 @@ metadata:
   name: cloudflare
   namespace: flux-system
 spec:
-  interval: 1h
+  interval: 24h
   url: https://cloudflare.github.io/helm-charts
