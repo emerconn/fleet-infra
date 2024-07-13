@@ -23,7 +23,7 @@ spec:
   install:
     remediation:
       retries: -1
-  values:
+  values: # https://github.com/kubernetes/ingress-nginx/blob/main/charts/ingress-nginx/values.yaml
     controller:
       kind: DaemonSet
       ingressClassResource:

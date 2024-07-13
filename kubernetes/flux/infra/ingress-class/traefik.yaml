@@ -23,7 +23,7 @@ spec:
   install:
     remediation:
       retries: -1
-  values:
+  values: # https://github.com/traefik/traefik-helm-chart/blob/master/traefik/values.yaml
     deployment:
       kind: DaemonSet
     ingressClass:
