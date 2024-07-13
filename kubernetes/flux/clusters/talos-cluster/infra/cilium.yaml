@@ -13,5 +13,9 @@ metadata:
   name: policy
 spec:
   nodeSelector:
-    kubernetes.io/hostname: "talos-cp-01"
+    matchExpressions:
+    - key: kubernetes.io/hostname
+      operator: In
+      values:
+      - talos-cp-01
   loadBalancerIPs: true
