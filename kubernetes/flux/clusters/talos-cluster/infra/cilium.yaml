@@ -1,8 +1,15 @@
 apiVersion: "cilium.io/v2alpha1"
 kind: CiliumLoadBalancerIPPool
 metadata:
-  name: "pool"
+  name: pool
 spec:
   blocks:
   - start: "172.21.0.170"
     stop: "172.21.0.199"
+---
+apiVersion: "cilium.io/v2alpha1"
+kind: CiliumL2AnnouncementPolicy
+metadata:
+  name: policy
+spec:
+  loadBalancerIPs: true
