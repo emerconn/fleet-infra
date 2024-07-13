@@ -17,6 +17,7 @@ spec:
   install:
     remediation:
       retries: -1
+  upgrade:
     force: true
   values:
     ipam:
