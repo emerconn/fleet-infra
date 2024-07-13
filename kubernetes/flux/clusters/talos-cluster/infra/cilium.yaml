@@ -13,5 +13,5 @@ metadata:
   name: policy
 spec:
   interfaces:
-  - name: eno1
+  - eno1
   loadBalancerIPs: true
