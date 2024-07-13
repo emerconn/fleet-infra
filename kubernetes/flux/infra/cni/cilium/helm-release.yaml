@@ -17,6 +17,7 @@ spec:
   install:
     remediation:
       retries: -1
+    force: true
   values:
     ipam:
       mode: kubernetes
