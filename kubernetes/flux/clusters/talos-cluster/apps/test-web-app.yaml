@@ -38,4 +38,3 @@ spec:
         env:
         - name: TITLE
           value: "Welcome to Azure Kubernetes Service (AKS)"
----
