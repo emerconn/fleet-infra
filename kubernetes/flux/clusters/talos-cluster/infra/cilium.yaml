@@ -12,8 +12,12 @@ kind: CiliumL2AnnouncementPolicy
 metadata:
   name: policy
 spec:
+  loadBalancerIPs: true
+  externalIPs: true
+  interfaces:
+  - eno1
   nodeSelector:
     matchExpressions:
     - key: node-role.kubernetes.io/control-plane
       operator: Exists
-  loadBalancerIPs: true
+
