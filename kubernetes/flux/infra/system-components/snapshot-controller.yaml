@@ -13,10 +13,9 @@ spec:
         kind: HelmRepository
         name: piraeus
         namespace: flux-system
-      version: "4.0.18"
+      version: "3.0.5"
   interval: 1h
   install:
     remediation:
       retries: -1
   values: # https://github.com/piraeusdatastore/helm-charts/blob/main/charts/snapshot-controller/values.yaml
-
