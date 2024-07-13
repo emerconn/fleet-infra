@@ -12,4 +12,6 @@ kind: CiliumL2AnnouncementPolicy
 metadata:
   name: policy
 spec:
+  interfaces:
+  - name: eno1
   loadBalancerIPs: true
