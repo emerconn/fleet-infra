@@ -1,4 +1,4 @@
-export GITHUB_TOKEN=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
+export GITHUB_TOKEN=<replace_me>
 export GITHUB_USER=emerconnelly
 
 flux bootstrap github \
