@@ -36,4 +36,5 @@ spec:
         matchRule: Host(`traefik.emer.lab`) && (PathPrefix(`/dashboard`) || PathPrefix(`/api`))
         entryPoints: ["websecure", "web", "traefik"]
     service:
-      loadBalancerIP: 172.21.0.170
+      spec:
+        loadBalancerIP: 172.21.0.170
