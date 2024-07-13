@@ -13,5 +13,5 @@ metadata:
   name: policy
 spec:
   interfaces:
-  - asdf
+  - eno0
   loadBalancerIPs: true
