@@ -7,6 +7,7 @@ resources:
 - ../../../infra/classes/ingress/traefik.yaml
 - ../../../infra/classes/storage/nfs-subdir-external-provisioner.yaml
 - ../../../infra/components/system/snapshot-controller.yaml
+- ../../../infra/components/cert-manager.yaml
 patches:
 - patch: |-
     apiVersion: helm.toolkit.fluxcd.io/v2
