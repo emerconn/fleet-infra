@@ -4,6 +4,7 @@ metadata:
   name: cilium
   namespace: flux-system
 spec:
+  releaseName: cilium
   targetNamespace: kube-system
   chart:
     spec:
