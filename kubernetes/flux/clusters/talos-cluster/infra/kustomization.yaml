@@ -12,6 +12,7 @@ patches:
     kind: HelmRelease
     metadata:
       name: nfs-subdir-external-provisioner
+      namespace: flux-system
     spec:
       values:
         nfs:
