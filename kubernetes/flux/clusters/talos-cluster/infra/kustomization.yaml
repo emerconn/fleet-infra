@@ -6,7 +6,7 @@ resources:
 - vault-secrets-operator
 - cilium.yaml
 - ../../../infra/classes/ingress/ingress-nginx.yaml
-- ../../../infra/classes/ingress/traefik.yaml
+
 - ../../../infra/classes/storage/nfs-subdir-external-provisioner.yaml
 - ../../../infra/components/system/snapshot-controller.yaml
 - ../../../infra/components/external-secrets.yaml
