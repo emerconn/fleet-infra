@@ -4,5 +4,4 @@ kind: Kustomization
 resources:
 - gotk-components.yaml
 - gotk-sync.yaml
-- secrets-kustomization.yaml
 - ../../../infra/flux-system/helm
