@@ -67,5 +67,3 @@ spec:
     services:
     - name: clusterip
       port: 80
-  tls:
-    secretName: example-com-tls
