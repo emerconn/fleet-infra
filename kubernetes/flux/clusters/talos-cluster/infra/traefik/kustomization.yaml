@@ -23,7 +23,7 @@ patches:
           dashboard:
             enabled: true
             matchRule: Host(`traefik.homelab.emerconnelly.com`) && (PathPrefix(`/dashboard`) || PathPrefix(`/api`))
-            entryPoints: ["websecure", "web", "traefik"]
+            entryPoints: ["websecure"]
             tls:
               secretName: cert-manager-tls
         service:
