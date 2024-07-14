@@ -1,10 +1,10 @@
 apiVersion: secrets.hashicorp.com/v1beta1
 kind: HCPAuth
 metadata:
-  name: default
+  name: talos-cluster
   namespace: vault-secrets-operator-system
 spec:
-  organizationID: $HCP_ORG_ID
-  projectID: $HCP_PROJECT_ID
+  organizationID: 410917a3-77d5-441b-b030-063cab461377
+  projectID: a9244a11-290a-4c69-b472-807bab7cdeb2
   servicePrincipal:
-    secretRef: vso-demo-sp
+    secretRef: hashicorpcloud-serviceprincipal-taloscluster
