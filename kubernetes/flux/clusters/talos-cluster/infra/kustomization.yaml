@@ -3,6 +3,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - cilium.yaml
+- vault-secrets-operator.yaml
 - ../../../infra/classes/ingress/ingress-nginx.yaml
 - ../../../infra/classes/ingress/traefik.yaml
 - ../../../infra/classes/storage/nfs-subdir-external-provisioner.yaml
@@ -22,3 +23,14 @@ patches:
       values:
         nfs:
           path: /volume1/talos-cluster
+- patch: |- # manually created, auth for project 'talos-cluster' in HCP
+    apiVerson: v1
+    kind: Secret
+    metadata:
+      name: hashicorpcloud-serviceprincipal-taloscluster
+      namespace: vault-secrets-operator-system
+    annotations:
+      reflector.v1.k8s.emberstack.com/reflection-allowed: "true"
+      reflector.v1.k8s.emberstack.com/reflection-allowed-namespaces: ""
+      reflector.v1.k8s.emberstack.com/reflection-auto-enabled: "true"
+      reflector.v1.k8s.emberstack.com/reflection-auto-namespaces: "reflector"
