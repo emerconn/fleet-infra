@@ -23,22 +23,9 @@ patches:
           dashboard:
             enabled: true
             matchRule: Host(`traefik.homelab.emerconnelly.com`)
-            entryPoints: ["web", "websecure"]
-            middlewares:
-            - name: https-redirect
+            entryPoints: ["websecure"]
             tls:
               secretName: cert-manager-tls
         service:
           spec:
             loadBalancerIP: 172.21.0.170
-        extraObjects:
-        - apiVersion: traefik.io/v1alpha1
-          kind: Middleware
-          metadata:
-            name: https-redirect
-          spec:
-            redirectScheme:
-              scheme: https
-              permanent: true
-
-
