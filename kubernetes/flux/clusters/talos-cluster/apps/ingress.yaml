@@ -48,7 +48,7 @@ spec:
           name: traefik-ingress
           secure: true
           httpOnly: true
-          sameSite: strict
+          sameSite: lax
   tls:
     secretName: cert-manager-tls
 ---
