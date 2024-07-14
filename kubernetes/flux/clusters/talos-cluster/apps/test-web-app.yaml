@@ -61,7 +61,7 @@ spec:
   entryPoints:
   - web
   routes:
-  - match: Host(`homelab.emerconnelly.com`)
+  - match: Host(`test-web-app.homelab.emerconnelly.com`)
     kind: Rule
     services:
     - name: clusterip
