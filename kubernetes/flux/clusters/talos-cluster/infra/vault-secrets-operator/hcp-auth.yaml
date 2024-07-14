@@ -8,3 +8,5 @@ spec:
   projectID: a9244a11-290a-4c69-b472-807bab7cdeb2
   servicePrincipal:
     secretRef: hashicorpcloud-serviceprincipal-taloscluster
+  allowedNamespaces:
+  - cert-manager
