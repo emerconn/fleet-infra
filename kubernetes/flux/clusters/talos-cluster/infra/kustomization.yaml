@@ -20,4 +20,4 @@ patches:
     spec:
       values:
         nfs:
-          path: /volume1/talos_cluster
+          path: /volume1/talos-cluster
