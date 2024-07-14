@@ -4,14 +4,16 @@ kind: Kustomization
 resources:
 - secret.yaml
 patches:
-- patch: |- # manually created, auth for project 'talos-cluster' in HCP
-    apiVersion: v1
+- target:
     kind: Secret
-    metadata:
-      name: hashicorpcloud-serviceprincipal-taloscluster
-      namespace: vault-secrets-operator-system
-    annotations:
-      reflector.v1.k8s.emberstack.com/reflection-allowed: "true"
-      reflector.v1.k8s.emberstack.com/reflection-allowed-namespaces: ""
-      reflector.v1.k8s.emberstack.com/reflection-auto-enabled: "true"
-      reflector.v1.k8s.emberstack.com/reflection-auto-namespaces: "reflector"
+    name: hashicorpcloud-serviceprincipal-taloscluster
+    namespace: vault-secrets-operator-system
+  patch: |-
+    - op: add
+      path: /metadata/annotations
+      value:
+        reflector.v1.k8s.emberstack.com/reflection-allowed: "true"
+        reflector.v1.k8s.emberstack.com/reflection-allowed-namespaces: ""
+        reflector.v1.k8s.emberstack.com/reflection-auto-enabled: "true"
+        reflector.v1.k8s.emberstack.com/reflection-auto-namespaces: "reflector"
+# manually created, auth for project 'talos-cluster' in HCP
