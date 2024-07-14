@@ -24,7 +24,7 @@ patches:
         nfs:
           path: /volume1/talos-cluster
 - patch: |- # manually created, auth for project 'talos-cluster' in HCP
-    apiVerson: v1
+    apiVersion: v1
     kind: Secret
     metadata:
       name: hashicorpcloud-serviceprincipal-taloscluster
