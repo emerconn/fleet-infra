@@ -24,6 +24,9 @@ patches:
             enabled: true
             matchRule: Host(`traefik.homelab.emerconnelly.com`) && (PathPrefix(`/dashboard`) || PathPrefix(`/api`))
             entryPoints: ["websecure", "web", "traefik"]
+            tls:
+              secretName: cert-manager-tls
         service:
           spec:
             loadBalancerIP: 172.21.0.170
+
