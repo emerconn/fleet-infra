@@ -55,13 +55,13 @@ spec:
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
-  name: treafik-ingress
+  name: traefik-ingress
   namespace: test-web-app
 spec:
   entryPoints:
   - web
   routes:
-  - match: Host(`test-web-app.workshop.emerconnelly.com`)
+  - match: Host(`homelab.emerconnelly.com`)
     kind: Rule
     services:
     - name: clusterip
