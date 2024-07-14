@@ -29,7 +29,9 @@ patches:
           healthcheck:
             enabled: true
             matchRule: Host(`traefik.homelab.emerconnelly.com`) && Path(`/ping`)
-            entryPoints: ["web"]
+            entryPoints: ["websecure", "web"]
+            tls:
+              secretName: cert-manager-tls
         service:
           spec:
             loadBalancerIP: 172.21.0.170
