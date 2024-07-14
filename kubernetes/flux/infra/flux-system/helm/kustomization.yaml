@@ -4,6 +4,7 @@ kind: Kustomization
 resources:
 - cilium.yaml
 - cloudflare.yaml
+- emberstack.yaml
 - external-secrets.yaml
 - hashicorp.yaml
 - ingress-nginx.yaml
