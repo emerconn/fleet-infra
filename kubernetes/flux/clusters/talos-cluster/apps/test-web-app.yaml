@@ -3,19 +3,6 @@ kind: Namespace
 metadata:
   name: test-web-app
 ---
-apiVersion: v1
-kind: Service
-metadata:
-  name: test-web-app
-  namespace: test-web-app
-spec:
-  type: LoadBalancer
-  loadBalancerIP: 172.21.0.171
-  ports:
-  - port: 80
-  selector:
-    app: test-web-app
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -39,3 +26,46 @@ spec:
         env:
         - name: TITLE
           value: "Welcome to Azure Kubernetes Service (AKS)"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: loadbalancer
+  namespace: test-web-app
+spec:
+  type: LoadBalancer
+  loadBalancerIP: 172.21.0.171
+  ports:
+  - port: 80
+  selector:
+    app: test-web-app
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: clusterip
+  namespace: test-web-app
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+  selector:
+    app: test-web-app
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: treafik-ingress
+  namespace: test-web-app
+spec:
+  entryPoints:
+  - web
+  - websecure
+  routes:
+  - match: Host(`emerconnelly.com`)
+    kind: Rule
+    services:
+    - name: clusterip
+      port: 80
+  tls:
+    secretName: example-com-tls
