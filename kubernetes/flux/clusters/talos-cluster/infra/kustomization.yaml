@@ -3,10 +3,10 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - cert-manager
+- traefik
 - vault-secrets-operator
 - cilium.yaml
 - ../../../infra/classes/ingress/ingress-nginx.yaml
-
 - ../../../infra/classes/storage/nfs-subdir-external-provisioner.yaml
 - ../../../infra/components/system/snapshot-controller.yaml
 - ../../../infra/components/external-secrets.yaml
