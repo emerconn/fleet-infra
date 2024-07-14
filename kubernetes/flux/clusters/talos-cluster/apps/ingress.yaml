@@ -42,6 +42,13 @@ spec:
     services:
     - name: clusterip
       port: 80
+      passHostHeader: true
+      sticky:
+        cookie:
+          name: traefik-ingress
+          secure: true
+          httpOnly: true
+          sameSite: strict
   tls:
     secretName: cert-manager-tls
 ---
