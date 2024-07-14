@@ -9,6 +9,7 @@ resources:
 - ../../../infra/components/system/snapshot-controller.yaml
 - ../../../infra/components/cert-manager.yaml
 - ../../../infra/components/external-secrets.yaml
+- ../../../infra/components/reflector.yaml
 - ../../../infra/components/vault-secrets-operator.yaml
 patches:
 - patch: |-
