@@ -58,7 +58,7 @@ metadata:
   name: test-web-app-tls
   namespace: test-web-app
 spec:
-  secretName: homelab-emerconnelly-com-tls
+  secretName: test-web-app-tls
   issuerRef:
     name: letsencrypt-dns01-issuer
     kind: ClusterIssuer
