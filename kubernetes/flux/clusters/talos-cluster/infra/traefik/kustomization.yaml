@@ -12,7 +12,7 @@ patches:
       name: traefik
       namespace: flux-system
     spec:
-      values: # https://github.com/traefik/traefik-helm-chart/blob/master/traefik/values.yaml
+      values:
         deployment:
           kind: DaemonSet
         ingressClass:
