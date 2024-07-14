@@ -3,5 +3,6 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - hcp-auth.yaml
-- service-principal.yaml
 - ../../../../infra/components/vault-secrets-operator.yaml
+patchesStrategicMerge:
+- service-principal.yaml
