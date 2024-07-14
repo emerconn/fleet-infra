@@ -60,7 +60,6 @@ metadata:
 spec:
   entryPoints:
   - web
-  - websecure
   routes:
   - match: Host(`test-web-app.workshop.emerconnelly.com`)
     kind: Rule
