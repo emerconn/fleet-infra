@@ -11,18 +11,18 @@ patches:
     metadata:
       name: traefik
       namespace: flux-system
-          values: # https://github.com/traefik/traefik-helm-chart/blob/master/traefik/values.yaml
-    deployment:
-      kind: DaemonSet
-    ingressClass:
-      name: traefik
-      enabled: true
-      isDefaultClass: false
-    ingressRoute:
-      dashboard:
+    values: # https://github.com/traefik/traefik-helm-chart/blob/master/traefik/values.yaml
+      deployment:
+        kind: DaemonSet
+      ingressClass:
+        name: traefik
         enabled: true
-        matchRule: Host(`traefik.homelab.emerconnelly.com`) && (PathPrefix(`/dashboard`) || PathPrefix(`/api`))
-        entryPoints: ["websecure", "web", "traefik"]
-    service:
-      spec:
-        loadBalancerIP: 172.21.0.170
+        isDefaultClass: false
+      ingressRoute:
+        dashboard:
+          enabled: true
+          matchRule: Host(`traefik.homelab.emerconnelly.com`) && (PathPrefix(`/dashboard`) || PathPrefix(`/api`))
+          entryPoints: ["websecure", "web", "traefik"]
+      service:
+        spec:
+          loadBalancerIP: 172.21.0.170
