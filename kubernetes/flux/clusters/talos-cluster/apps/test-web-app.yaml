@@ -62,7 +62,7 @@ spec:
   - web
   - websecure
   routes:
-  - match: Host(`emerconnelly.com`)
+  - match: Host(`test-web-app.workshop.emerconnelly.com`)
     kind: Rule
     services:
     - name: clusterip
