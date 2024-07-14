@@ -1,18 +1,3 @@
 # yaml-language-server: $schema=https://json.schemastore.org/kustomization
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-resources:
-- secret.yaml
-patches:
-- target:
-    kind: Secret
-    name: hashicorpcloud-serviceprincipal-taloscluster
-    namespace: vault-secrets-operator-system
-  patch: |-
-    - op: add
-      path: /metadata/annotations
-      value:
-        reflector.v1.k8s.emberstack.com/reflection-allowed: "true"
-        reflector.v1.k8s.emberstack.com/reflection-allowed-namespaces: ""
-        reflector.v1.k8s.emberstack.com/reflection-auto-enabled: "true"
-        reflector.v1.k8s.emberstack.com/reflection-auto-namespaces: "reflector"
