@@ -52,7 +52,7 @@ spec:
     spec:
       containers:
       - name: write
-        image: ubuntu:xenial
+        image: ubuntu:latest
         command: ["dd", "if=/dev/zero", "of=/mnt/pv/test.img", "bs=1G", "count=1", "oflag=dsync"]
         volumeMounts:
         - mountPath: "/mnt/pv"
