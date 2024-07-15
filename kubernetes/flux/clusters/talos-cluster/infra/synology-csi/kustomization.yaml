@@ -5,6 +5,7 @@ kind: Kustomization
 resources:
 - controller.yaml
 - namespace.yaml
+- node.yaml
 - secret-sops-client-info.yaml
 - storage-class.yaml
 - volume-snapshot-class.yaml
