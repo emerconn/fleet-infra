@@ -11,7 +11,7 @@ patches:
     metadata:
       name: kube-prometheus-stack
       labels:
-        pod-security.kubernetes.io/enforce: priviledged
+        pod-security.kubernetes.io/enforce: privileged
 - patch: |-
     apiVersion: helm.toolkit.fluxcd.io/v2
     kind: HelmRelease
