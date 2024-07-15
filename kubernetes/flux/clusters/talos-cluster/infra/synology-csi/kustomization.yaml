@@ -1,16 +1,6 @@
 # yaml-language-server: $schema=https://json.schemastore.org/kustomization
-# https://www.talos.dev/v1.7/kubernetes-guides/configuration/synology-csi/
-# snapshotter requires:
-#   Volume Snapshot CRDs https://github.com/kubernetes-csi/external-snapshotter/tree/master/client/config/crd
-#   snapshot-controller  https://github.com/piraeusdatastore/helm-charts/tree/main/charts/snapshot-controller
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-- controller.yaml
-- csi-driver.yaml
-- namespace.yaml
-- node.yaml
 - secret-sops-client-info.yaml
-- snapshotter.yaml
-- storage-class.yaml
-- volume-snapshot-class.yaml
+- ../../../../infra/components/storage/synology-csi
