@@ -29,10 +29,10 @@ kind: StorageClass
 metadata:
   annotations:
     storageclass.kubernetes.io/is-default-class: "false"
-  name: synology-csi-btfrs-retain
+  name: synology-csi-btrfs-retain
 provisioner: csi.san.synology.com
 parameters:
-  csi.storage.k8s.io/fstype: 'btfrs'
+  csi.storage.k8s.io/fstype: 'btrfs'
   location: '/volume1'
 reclaimPolicy: Retain
 allowVolumeExpansion: true
@@ -42,10 +42,10 @@ kind: StorageClass
 metadata:
   annotations:
     storageclass.kubernetes.io/is-default-class: "false"
-  name: synology-csi-btfrs-delete
+  name: synology-csi-btrfs-delete
 provisioner: csi.san.synology.com
 parameters:
-  csi.storage.k8s.io/fstype: 'btfrs'
+  csi.storage.k8s.io/fstype: 'btrfs'
   location: '/volume1'
 reclaimPolicy: Delete
 allowVolumeExpansion: true

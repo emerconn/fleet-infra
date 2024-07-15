@@ -14,10 +14,10 @@
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: test-claim-btfrs
+  name: test-claim-btrfs
   namespace: default
 spec:
-  storageClassName: synology-csi-btfrs-delete
+  storageClassName: synology-csi-btrfs-delete
   accessModes:
   - ReadWriteOnce
   resources:
@@ -86,5 +86,5 @@ spec:
       volumes:
       - name: test-volume
         persistentVolumeClaim:
-          claimName: test-claim-btfrs
+          claimName: test-claim-btrfs
       restartPolicy: Never
