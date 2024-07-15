@@ -13,3 +13,13 @@ patches:
       name: synology-csi-talos
       labels:
         pod-security.kubernetes.io/enforce: privileged
+- patch: |-
+    apiVersion: helm.toolkit.fluxcd.io/v2
+    kind: HelmRelease
+    metadata:
+      name: synology-csi
+      namespace: flux-system
+    spec:
+      values:
+        storageClasses:
+          disabled: false
