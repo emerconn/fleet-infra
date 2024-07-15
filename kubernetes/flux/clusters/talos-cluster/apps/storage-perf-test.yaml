@@ -4,7 +4,7 @@ metadata:
   name: test-claim
   namespace: default
 spec:
-  storageClassName: synology-csi-ext4-delete
+  storageClassName: synology-csi-talos
   accessModes:
   - ReadWriteOnce
   resources:
