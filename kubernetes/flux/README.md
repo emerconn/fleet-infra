@@ -9,6 +9,9 @@ just about everything on the clusters is deployed via flux, except for
   - installed with talos
   - could be migrated to flux
   - required for metrics-server
+- cilium
+  - installed post-boostrap via helm, not with talos
+  - flux depends on a CNI to work, so can't be managed by flux
 - secret/sops-age -n flux-system
   - manually created
   - needed for automated secrets
