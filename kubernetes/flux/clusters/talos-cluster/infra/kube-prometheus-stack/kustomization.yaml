@@ -22,5 +22,3 @@ patches:
       values:
         alertmanager:
           enabled: false
-        nodeExporter:
-          enabled: false
