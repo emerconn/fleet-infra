@@ -2,7 +2,7 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-- certificate.yaml
+- cert.yaml
 - ../../../../infra/classes/ingress/traefik.yaml
 patches:
 - patch: |-
@@ -25,13 +25,13 @@ patches:
             matchRule: Host(`traefik.homelab.emerconnelly.com`)
             entryPoints: ["websecure"]
             tls:
-              secretName: cert-manager-tls
+              secretName: ingress-tls
           healthcheck:
             enabled: true
             matchRule: Host(`traefik.homelab.emerconnelly.com`) && Path(`/ping`)
             entryPoints: ["websecure", "web"]
             tls:
-              secretName: cert-manager-tls
+              secretName: ingress-tls
         service:
           spec:
             loadBalancerIP: 172.21.0.170
