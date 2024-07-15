@@ -6,5 +6,5 @@ flux bootstrap github \
   --owner=$GITHUB_USER \
   --repository=fleet-infra \
   --branch=main \
-  --path=./kubernetes/clusters/talos-cluster \
+  --path=./kubernetes/flux/clusters/talos-cluster \
   --personal
