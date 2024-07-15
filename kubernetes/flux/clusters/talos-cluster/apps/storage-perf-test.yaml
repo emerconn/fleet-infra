@@ -10,7 +10,6 @@
 #   resources:
 #     requests:
 #       storage: 50G
----
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
