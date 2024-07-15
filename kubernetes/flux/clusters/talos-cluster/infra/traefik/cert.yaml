@@ -4,7 +4,7 @@ metadata:
   name: ingress-tls
   namespace: traefik
 spec:
-  secretName: cert-manager-tls
+  secretName: ingress-tls
   issuerRef:
     name: letsencrypt-dns01-issuer
     kind: ClusterIssuer
