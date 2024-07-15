@@ -17,7 +17,7 @@ patches:
     apiVersion: helm.toolkit.fluxcd.io/v2
     kind: HelmRelease
     metadata:
-      name: synology-csi
+      name: synology-csi-talos
       namespace: flux-system
     spec:
       values:
