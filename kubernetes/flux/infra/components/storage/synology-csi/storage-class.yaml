@@ -6,7 +6,7 @@ metadata:
   name: synology-csi-ext4-retain
 provisioner: csi.san.synology.com
 parameters:
-  fsType: 'ext4'
+  csi.storage.k8s.io/fstype: 'ext4'
   dsm: '172.21.0.20'
   location: '/volume1'
 reclaimPolicy: Retain
@@ -20,7 +20,7 @@ metadata:
   name: synology-csi-ext4-delete
 provisioner: csi.san.synology.com
 parameters:
-  fsType: 'ext4'
+  csi.storage.k8s.io/fstype: 'ext4'
   dsm: '172.21.0.20'
   location: '/volume1'
 reclaimPolicy: Delete
@@ -34,7 +34,7 @@ metadata:
   name: synology-csi-btfrs-retain
 provisioner: csi.san.synology.com
 parameters:
-  fsType: 'btfrs'
+  csi.storage.k8s.io/fstype: 'btfrs'
   dsm: '172.21.0.20'
   location: '/volume1'
 reclaimPolicy: Retain
@@ -48,7 +48,7 @@ metadata:
   name: synology-csi-btfrs-delete
 provisioner: csi.san.synology.com
 parameters:
-  fsType: 'btfrs'
+  csi.storage.k8s.io/fstype: 'btfrs'
   dsm: '172.21.0.20'
   location: '/volume1'
 reclaimPolicy: Delete
