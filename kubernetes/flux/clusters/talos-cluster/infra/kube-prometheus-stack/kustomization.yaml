@@ -5,6 +5,13 @@ resources:
 - ingress.yaml
 - ../../../../infra/components/kube-prometheus-stack.yaml
 patches:
+- patch: |- # https://www.talos.dev/v1.7/kubernetes-guides/configuration/pod-security/
+    apiVersion: v1
+    kind: Namespace
+    metadata:
+      name: kube-prometheus-stack
+      labels:
+        pod-security.kubernetes.io/enforce: priviledged
 - patch: |-
     apiVersion: helm.toolkit.fluxcd.io/v2
     kind: HelmRelease
