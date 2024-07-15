@@ -7,7 +7,6 @@ metadata:
 provisioner: csi.san.synology.com
 parameters:
   csi.storage.k8s.io/fstype: 'ext4'
-  dsm: '172.21.0.20'
   location: '/volume1'
 reclaimPolicy: Retain
 allowVolumeExpansion: true
@@ -21,7 +20,6 @@ metadata:
 provisioner: csi.san.synology.com
 parameters:
   csi.storage.k8s.io/fstype: 'ext4'
-  dsm: '172.21.0.20'
   location: '/volume1'
 reclaimPolicy: Delete
 allowVolumeExpansion: true
@@ -35,7 +33,6 @@ metadata:
 provisioner: csi.san.synology.com
 parameters:
   csi.storage.k8s.io/fstype: 'btfrs'
-  dsm: '172.21.0.20'
   location: '/volume1'
 reclaimPolicy: Retain
 allowVolumeExpansion: true
@@ -49,7 +46,6 @@ metadata:
 provisioner: csi.san.synology.com
 parameters:
   csi.storage.k8s.io/fstype: 'btfrs'
-  dsm: '172.21.0.20'
   location: '/volume1'
 reclaimPolicy: Delete
 allowVolumeExpansion: true
