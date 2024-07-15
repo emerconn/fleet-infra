@@ -4,7 +4,7 @@ kind: Kustomization
 resources:
 - cert-manager
 - kube-prometheus-stack
-# - synology-csi
+- synology-csi
 - traefik
 - vault-secrets-operator
 - cilium.yaml
