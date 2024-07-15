@@ -1,4 +1,5 @@
 # yaml-language-server: $schema=https://json.schemastore.org/kustomization
+# https://www.talos.dev/v1.7/kubernetes-guides/configuration/synology-csi/
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
