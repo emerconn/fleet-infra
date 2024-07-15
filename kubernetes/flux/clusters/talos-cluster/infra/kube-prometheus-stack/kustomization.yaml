@@ -15,3 +15,7 @@ patches:
       values:
         alertmanager:
           enabled: false
+        grafana:
+          enabled: false
+        nodeExporter:
+          enabled: false
