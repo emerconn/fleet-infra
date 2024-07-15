@@ -43,6 +43,7 @@ mountOptions:
 - nfsvers=4.1
 reclaimPolicy: Retain
 volumeBindingMode: Immediate
+allowVolumeExpansion: true
 ---
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
@@ -58,3 +59,4 @@ mountOptions:
 - nfsvers=4.1
 reclaimPolicy: Delete
 volumeBindingMode: Immediate
+allowVolumeExpansion: true
