@@ -1,0 +1,55 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  annotations:
+    storageclass.kubernetes.io/is-default-class: "false"
+  name: synology-csi-ext4-retain
+provisioner: csi.san.synology.com
+parameters:
+  fsType: 'ext4'
+  dsm: '172.21.0.20'
+  location: '/volume1'
+reclaimPolicy: Retain
+allowVolumeExpansion: true
+---
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  annotations:
+    storageclass.kubernetes.io/is-default-class: "false"
+  name: synology-csi-ext4-delete
+provisioner: csi.san.synology.com
+parameters:
+  fsType: 'ext4'
+  dsm: '172.21.0.20'
+  location: '/volume1'
+reclaimPolicy: Delete
+allowVolumeExpansion: true
+---
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  annotations:
+    storageclass.kubernetes.io/is-default-class: "false"
+  name: synology-csi-btfrs-retain
+provisioner: csi.san.synology.com
+parameters:
+  fsType: 'btfrs'
+  dsm: '172.21.0.20'
+  location: '/volume1'
+reclaimPolicy: Retain
+allowVolumeExpansion: true
+---
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  annotations:
+    storageclass.kubernetes.io/is-default-class: "false"
+  name: synology-csi-btfrs-delete
+provisioner: csi.san.synology.com
+parameters:
+  fsType: 'btfrs'
+  dsm: '172.21.0.20'
+  location: '/volume1'
+reclaimPolicy: Delete
+allowVolumeExpansion: true
