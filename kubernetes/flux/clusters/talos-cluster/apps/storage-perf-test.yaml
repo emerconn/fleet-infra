@@ -9,7 +9,7 @@ spec:
   - ReadWriteOnce
   resources:
     requests:
-      storage: 10G
+      storage: 50G
 ---
 kind: PersistentVolumeClaim
 apiVersion: v1
@@ -22,7 +22,7 @@ spec:
   - ReadWriteOnce
   resources:
     requests:
-      storage: 10G
+      storage: 50G
 ---
 kind: PersistentVolumeClaim
 apiVersion: v1
@@ -35,7 +35,7 @@ spec:
   - ReadWriteOnce
   resources:
     requests:
-      storage: 10G
+      storage: 50G
 ---
 # apiVersion: batch/v1
 # kind: Job
