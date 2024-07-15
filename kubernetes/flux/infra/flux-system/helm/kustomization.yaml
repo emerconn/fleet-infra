@@ -12,4 +12,5 @@ resources:
 - nfs-subdir-external-provisioner.yaml
 - openobserve.yaml
 - piraeus.yaml
+- prometheus-community.yaml
 - traefik.yaml
