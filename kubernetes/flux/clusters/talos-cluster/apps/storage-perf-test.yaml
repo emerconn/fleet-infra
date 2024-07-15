@@ -24,18 +24,18 @@ spec:
 #     requests:
 #       storage: 150G
 ---
-# kind: PersistentVolumeClaim
-# apiVersion: v1
-# metadata:
-#   name: test-claim-nfs
-#   namespace: default
-# spec:
-#   storageClassName: nfs-client-delete
-#   accessModes:
-#   - ReadWriteOnce
-#   resources:
-#     requests:
-#       storage: 150G
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: test-claim-nfs
+  namespace: default
+spec:
+  storageClassName: nfs-client-delete
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 150G
 ---
 # apiVersion: batch/v1
 # kind: Job
@@ -82,9 +82,12 @@ spec:
         command: ["dd", "if=/dev/zero", "of=/mnt/pv/test.img", "bs=1G", "count=100", "oflag=dsync", "status=progress"]
         volumeMounts:
         - mountPath: "/mnt/pv"
-          name: test-volume
+          name: test-volume-nfs
       volumes:
-      - name: test-volume
+      - name: test-claim-ext4
         persistentVolumeClaim:
           claimName: test-claim-ext4
+      - name: test-claim-nfs
+        persistentVolumeClaim:
+          claimName: test-claim-nfs
       restartPolicy: Never
