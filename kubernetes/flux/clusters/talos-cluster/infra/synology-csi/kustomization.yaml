@@ -22,4 +22,5 @@ patches:
     spec:
       values:
         storageClasses:
-          disabled: false
+          synology-iscsi-storage:
+            disabled: false
