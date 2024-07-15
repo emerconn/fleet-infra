@@ -5,3 +5,5 @@ kind: Kustomization
 resources:
 - namespace.yaml
 - secret-sops-client-info.yaml
+- storage-class.yaml
+- volume-snapshot-class.yaml
