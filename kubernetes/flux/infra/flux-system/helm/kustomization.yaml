@@ -10,5 +10,6 @@ resources:
 - ingress-nginx.yaml
 - jetstack.yaml
 - nfs-subdir-external-provisioner.yaml
+- openobserve.yaml
 - piraeus.yaml
 - traefik.yaml
