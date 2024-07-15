@@ -1,27 +1,28 @@
-# kind: PersistentVolumeClaim
-# apiVersion: v1
-# metadata:
-#   name: test-claim-ext4
-#   namespace: default
-# spec:
-#   storageClassName: synology-csi-ext4-delete
-#   accessModes:
-#   - ReadWriteOnce
-#   resources:
-#     requests:
-#       storage: 50G
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: test-claim-btrfs
+  name: test-claim-ext4
   namespace: default
 spec:
-  storageClassName: synology-csi-btrfs-delete
+  storageClassName: synology-csi-ext4-delete
   accessModes:
   - ReadWriteOnce
   resources:
     requests:
-      storage: 50G
+      storage: 150G
+---
+# kind: PersistentVolumeClaim
+# apiVersion: v1
+# metadata:
+#   name: test-claim-btrfs
+#   namespace: default
+# spec:
+#   storageClassName: synology-csi-btrfs-delete
+#   accessModes:
+#   - ReadWriteOnce
+#   resources:
+#     requests:
+#       storage: 150G
 ---
 # kind: PersistentVolumeClaim
 # apiVersion: v1
@@ -34,7 +35,7 @@ spec:
 #   - ReadWriteOnce
 #   resources:
 #     requests:
-#       storage: 50G
+#       storage: 150G
 ---
 # apiVersion: batch/v1
 # kind: Job
@@ -78,12 +79,12 @@ spec:
       containers:
       - name: write
         image: ubuntu:latest
-        command: ["dd", "if=/dev/zero", "of=/mnt/pv/test.img", "bs=1G", "count=40", "oflag=dsync", "status=progress"]
+        command: ["dd", "if=/dev/zero", "of=/mnt/pv/test.img", "bs=1G", "count=100", "oflag=dsync", "status=progress"]
         volumeMounts:
         - mountPath: "/mnt/pv"
           name: test-volume
       volumes:
       - name: test-volume
         persistentVolumeClaim:
-          claimName: test-claim-btrfs
+          claimName: test-claim-ext4
       restartPolicy: Never
