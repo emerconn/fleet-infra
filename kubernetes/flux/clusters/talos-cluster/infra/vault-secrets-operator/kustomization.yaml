@@ -4,4 +4,4 @@ kind: Kustomization
 resources:
 - hcp-auth.yaml
 - secret-sops-service-principal.yaml
-- ../../../../infra/components/vault-secrets-operator.yaml
+# - ../../../../infra/components/vault-secrets-operator.yaml
