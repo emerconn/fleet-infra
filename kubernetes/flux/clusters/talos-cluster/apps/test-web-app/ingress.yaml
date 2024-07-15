@@ -45,7 +45,7 @@ spec:
       passHostHeader: true
       sticky:
         cookie:
-          name: traefik-ingress
+          name: traefik
           secure: true
           httpOnly: true
           sameSite: lax
