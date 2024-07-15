@@ -9,7 +9,7 @@ just about everything on the clusters is deployed via flux, except for:
   - installed with talos
   - could be migrated to flux
   - required for metrics-server
-- secret/flux-system/sops-age
+- secret/sops-age -n flux-system
   - manually created
   - needed for automated secrets
   - primarily using this to GitOps the init secrets for external-secrets, vault-secrets-operator, etc.
