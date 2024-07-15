@@ -44,8 +44,7 @@ metadata:
   name: prometheus-http
   namespace: kube-prometheus-stack
 spec:
-  entryPoints:
-  - web
+  entryPoints: ["web"]
   routes:
   - match: Host(`prometheus.homelab.emerconnelly.com`)
     kind: Rule
@@ -62,8 +61,7 @@ metadata:
   name: prometheus-https
   namespace: kube-prometheus-stack
 spec:
-  entryPoints:
-  - websecure
+  entryPoints: ["websecure"]
   routes:
   - match: Host(`prometheus.homelab.emerconnelly.com`)
     kind: Rule
