@@ -13,4 +13,5 @@ resources:
 - openobserve.yaml
 - piraeus.yaml
 - prometheus-community.yaml
+- synology-csi-talos.yaml
 - traefik.yaml
