@@ -82,7 +82,7 @@ spec:
         command: ["dd", "if=/dev/zero", "of=/mnt/pv/test.img", "bs=1G", "count=100", "oflag=dsync", "status=progress"]
         volumeMounts:
         - mountPath: "/mnt/pv"
-          name: test-volume-nfs
+          name: test-claim-nfs
       volumes:
       - name: test-claim-ext4
         persistentVolumeClaim:
