@@ -87,7 +87,7 @@ spec:
         securityContext:
           privileged: true
         imagePullPolicy: IfNotPresent
-        image: ghcr.io/emer.connelly/synology-csi:v1.1.3
+        image: ghcr.io/emerconnelly/synology-csi:v1.1.3
         args:
         - --nodeid=$(KUBE_NODE_NAME)
         - --endpoint=$(CSI_ENDPOINT)
