@@ -9,7 +9,7 @@ metadata:
   name: reflector
   namespace: flux-system
 spec:
-  releaseName: emberstack
+  releaseName: reflector
   targetNamespace: reflector
   chart:
     spec:
