@@ -27,5 +27,34 @@ spec:
     nfs:
       server: 172.21.0.20
     storageClass:
-      provisionerName: nfs-subdir-external-provisioner
+      create: false
 ---
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: nfs-client-retain
+  annotations:
+    storageclass.kubernetes.io/is-default-class: "false"
+provisioner: cluster.local/nfs-subdir-external-provisioner
+parameters:
+  archiveOnDelete: "true"
+mountOptions:
+- hard
+- nfsvers=4.1
+reclaimPolicy: Retain
+volumeBindingMode: Immediate
+---
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: nfs-client-delete
+  annotations:
+    storageclass.kubernetes.io/is-default-class: "false"
+provisioner: cluster.local/nfs-subdir-external-provisioner
+parameters:
+  archiveOnDelete: "true"
+mountOptions:
+- hard
+- nfsvers=4.1
+reclaimPolicy: Delete
+volumeBindingMode: Immediate
