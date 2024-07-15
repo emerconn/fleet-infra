@@ -4,11 +4,12 @@ kind: Kustomization
 resources:
 - secret-sops-client-info.yaml
 # - ../../../../infra/components/storage/synology-csi
-# patches:
-# - patch: |- # https://www.talos.dev/v1.7/kubernetes-guides/configuration/pod-security/
-#     apiVersion: v1
-#     kind: Namespace
-#     metadata:
-#       name: synology-csi
-#       labels:
-#         pod-security.kubernetes.io/enforce: privileged
+- ../../../../infra/components/storage/synology-csi-talos.yaml
+patches:
+- patch: |- # https://www.talos.dev/v1.7/kubernetes-guides/configuration/pod-security/
+    apiVersion: v1
+    kind: Namespace
+    metadata:
+      name: synology-csi-talos
+      labels:
+        pod-security.kubernetes.io/enforce: privileged
