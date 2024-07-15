@@ -1,6 +1,6 @@
 # flux
 
-just about everything on the clusters is deployed via flux, except for:
+just about everything on the clusters is deployed via flux, except for
 
 - metrics-server
   - installed with talos
