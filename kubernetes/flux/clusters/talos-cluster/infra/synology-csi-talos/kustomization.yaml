@@ -22,7 +22,7 @@ patches:
       values:
         storageClasses:
           synology-iscsi-storage:
-            disabled: false
+            disabled: true
         volumeSnapshotClasses:
           synology-snapshotclass:
-            disabled: false
+            disabled: true
