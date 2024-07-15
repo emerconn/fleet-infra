@@ -15,6 +15,7 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: read
+  namespace: default
 spec:
   template:
     metadata:
@@ -40,6 +41,7 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: write
+  namespace: default
 spec:
   template:
     metadata:
