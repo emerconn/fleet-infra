@@ -6,7 +6,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
 data:
-  dashboard.json: |- # https://grafana.com/grafana/dashboards/17346-traefik-official-standalone-dashboard/
+  traefik.json: |- # https://grafana.com/grafana/dashboards/17346-traefik-official-standalone-dashboard/
     {
       "__inputs": [
         {
