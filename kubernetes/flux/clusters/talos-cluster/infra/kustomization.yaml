@@ -46,7 +46,7 @@ patches:
       namespace: flux-system
     spec:
       values:
-        kind: Deployment
+        kind: CronJob
         service:
           enabled: true
         serviceMonitor:
