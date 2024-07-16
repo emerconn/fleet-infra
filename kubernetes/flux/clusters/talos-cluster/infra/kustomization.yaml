@@ -3,11 +3,11 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - cert-manager
+- cilium
 - kube-prometheus-stack
 - synology-csi-talos
 - traefik
 - vault-secrets-operator
-- cilium.yaml
 # - ../../../infra/components/ingress/ingress-nginx.yaml
 - ../../../infra/components/storage/nfs-subdir-external-provisioner.yaml
 - ../../../infra/components/system/snapshot-controller.yaml
