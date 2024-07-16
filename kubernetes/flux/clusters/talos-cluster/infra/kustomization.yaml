@@ -13,7 +13,7 @@ resources:
 - ../../../infra/components/system/snapshot-controller.yaml
 - ../../../infra/components/eraser.yaml
 - ../../../infra/components/external-secrets.yaml
-# - ../../../infra/components/descheduler.yaml
+- ../../../infra/components/descheduler.yaml
 - ../../../infra/components/reflector.yaml
 patches:
 - patch: |-
@@ -38,17 +38,17 @@ patches:
           components:
             scanner:
               enabled: false
-# - patch: |-
-#     apiVersion: helm.toolkit.fluxcd.io/v2
-#     kind: HelmRelease
-#     metadata:
-#       name: descheduler
-#       namespace: flux-system
-#     spec:
-#       values:
-#         kind: Deployment
-#         service:
-#           enabled: true
-#         serviceMonitor:
-#           enabled: true
-#           namespace: kube-prometheus-stack
+- patch: |-
+    apiVersion: helm.toolkit.fluxcd.io/v2
+    kind: HelmRelease
+    metadata:
+      name: descheduler
+      namespace: flux-system
+    spec:
+      values:
+        kind: Deployment
+        service:
+          enabled: true
+        serviceMonitor:
+          enabled: true
+          namespace: kube-prometheus-stack
