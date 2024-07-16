@@ -35,10 +35,7 @@ patches:
           defaultDashboardsTimezone: browser
           sidecar:
             dashboards:
-              custom:
-                traefik:
-                  gnetId: 17346
-                  revision: 8
-                  datasource: Prometheus
+              provider:
+                foldersFromFilesStructure: true
         alertmanager:
           enabled: false
