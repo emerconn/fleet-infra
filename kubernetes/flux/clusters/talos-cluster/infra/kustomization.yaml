@@ -51,7 +51,7 @@ patches:
           enabled: true
         serviceMonitor:
           enabled: true
-          namespace: kube-prometheus-stack
+          namespace: descheduler
 - patch: |-
     apiVersion: helm.toolkit.fluxcd.io/v2
     kind: HelmRelease
