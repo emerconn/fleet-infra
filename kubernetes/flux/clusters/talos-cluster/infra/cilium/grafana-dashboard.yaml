@@ -6,7 +6,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
 data:
-  dashboard.json: |- # https://grafana.com/grafana/dashboards/21431-cilium-metrics/
+  cilium.json: |- # https://grafana.com/grafana/dashboards/21431-cilium-metrics/
     {
       "__inputs": [
         {
