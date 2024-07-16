@@ -1510,7 +1510,7 @@ data:
       "timepicker": {},
       "timezone": "",
       "title": "Traefik Official Standalone Dashboard",
-      "folder": "Kubernetes/Networking"
+      "folder": "Kubernetes/Networking",
       "uid": "n5bu_kv45",
       "version": 7,
       "weekStart": ""
