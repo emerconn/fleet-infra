@@ -33,9 +33,5 @@ patches:
                       storage: 50Gi
         grafana:
           defaultDashboardsTimezone: browser
-          sidecar:
-            dashboards:
-              provider:
-                foldersFromFilesStructure: true
         alertmanager:
           enabled: false
