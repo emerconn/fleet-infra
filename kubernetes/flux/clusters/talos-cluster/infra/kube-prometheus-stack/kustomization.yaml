@@ -38,5 +38,11 @@ patches:
             storageClassName: synology-csi-ext4-retain
             accessModes: ["ReadWriteOnce"]
             size: 5Gi
+          dashboards:
+            default:
+              traefik:
+                gnetId: 17346
+                revision: 8
+                datasource: Prometheus
         alertmanager:
           enabled: false
