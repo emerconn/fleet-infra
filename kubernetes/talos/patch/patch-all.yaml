@@ -18,6 +18,7 @@ cluster:
 
 machine:
   install:
+    image: factory.talos.dev/installer/446d7bb4b23caecb9134bcab115e52d55af742da8e04760817f6a31997dc32d9:v1.7.5 # iscsi-tools & btrfs, from Image Factory
     disk: /dev/sda
     wipe: true
     extraKernelArgs:
@@ -29,7 +30,3 @@ machine:
   time:
     servers:
     - time.cloudflare.com
-
-# post-boostrap installed system extensions
-# - iscsi-tools
-# - btrfs

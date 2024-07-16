@@ -183,7 +183,7 @@ machine:
         # Allows for supplying extra kernel args via the bootloader.
         extraKernelArgs:
             - talos.platform=metal
-        image: ghcr.io/siderolabs/installer:v1.7.5 # Allows for supplying the image used to perform the installation.
+        image: factory.talos.dev/installer/446d7bb4b23caecb9134bcab115e52d55af742da8e04760817f6a31997dc32d9:v1.7.5
         wipe: true # Indicates if the installation disk should be wiped at installation time.
         
         # # Look up disk using disk attributes like model, size, serial and others.
