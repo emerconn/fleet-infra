@@ -4,6 +4,7 @@ kind: Kustomization
 resources:
 - cilium.yaml
 - cloudflare.yaml
+- descheduler.yaml
 - emberstack.yaml
 - eraser.yaml
 - external-secrets.yaml
