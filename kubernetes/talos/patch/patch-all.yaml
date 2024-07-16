@@ -25,8 +25,11 @@ machine:
   kubelet:
     image: ghcr.io/siderolabs/kubelet:v1.30.2
     extraArgs:
-      rotate-server-certificates: true 
+      rotate-server-certificates: true
   time:
     servers:
     - time.cloudflare.com
 
+# post-boostrap installed system extensions
+# - iscsi-tools
+# - btrfs
