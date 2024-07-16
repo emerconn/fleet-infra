@@ -52,3 +52,13 @@ patches:
         serviceMonitor:
           enabled: true
           namespace: kube-prometheus-stack
+- patch: |-
+    apiVersion: helm.toolkit.fluxcd.io/v2
+    kind: HelmRelease
+    metadata:
+      name: snapshot-controller
+      namespace: flux-system
+    spec:
+      values:
+        serviceMontior:
+          create: true
