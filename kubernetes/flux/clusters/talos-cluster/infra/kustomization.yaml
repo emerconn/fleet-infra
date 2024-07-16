@@ -61,5 +61,5 @@ patches:
     spec:
       values:
         controller:
-          serviceMontior:
+          serviceMonitor:
             create: true
