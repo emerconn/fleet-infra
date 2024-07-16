@@ -11,6 +11,7 @@ resources:
 # - ../../../infra/components/ingress/ingress-nginx.yaml
 - ../../../infra/components/storage/nfs-subdir-external-provisioner.yaml
 - ../../../infra/components/system/snapshot-controller.yaml
+- ../../../infra/components/eraser.yaml
 - ../../../infra/components/external-secrets.yaml
 - ../../../infra/components/reflector.yaml
 patches:
