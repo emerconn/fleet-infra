@@ -14,6 +14,10 @@ helm upgrade \
     --set cgroup.hostRoot=/sys/fs/cgroup \
     --set k8sServiceHost=localhost \
     --set k8sServicePort=7445 \
+    --set prometheus.enabled=true \
+    --set prometheus.serviceMonitor.enabled=true \
+    --set operator.prometheus.enabled=true \
+    --set operator.prometheus.serviceMonitor.enabled=true \
     --set hubble.relay.enabled=true \
     --set hubble.ui.enabled=true \
     --set l2announcements.enabled=true \
