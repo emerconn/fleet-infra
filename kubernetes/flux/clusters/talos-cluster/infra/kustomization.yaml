@@ -60,5 +60,6 @@ patches:
       namespace: flux-system
     spec:
       values:
-        serviceMontior:
-          create: true
+        controller:
+          serviceMontior:
+            create: true
