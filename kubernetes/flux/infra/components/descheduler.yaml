@@ -23,4 +23,4 @@ spec:
   install:
     remediation:
       retries: -1
-  values: # https://github.com/eraser-dev/eraser/blob/main/charts/eraser/values.yaml
+  values: # https://github.com/kubernetes-sigs/descheduler/blob/master/charts/descheduler/values.yaml
