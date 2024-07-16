@@ -35,3 +35,6 @@ patches:
         service:
           spec:
             loadBalancerIP: 172.21.0.170
+        metrics:
+          serviceMonitor:
+            enabled: true
