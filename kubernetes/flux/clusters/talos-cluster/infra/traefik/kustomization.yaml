@@ -42,3 +42,4 @@ patches:
             disableAPICheck: false
             serviceMonitor:
               enabled: true
+              honorLabels: true
