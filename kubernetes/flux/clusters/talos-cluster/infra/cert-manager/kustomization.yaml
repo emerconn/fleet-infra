@@ -22,7 +22,7 @@ patches:
           - "1.1.1.1"
           - "8.8.8.8"
           - "10.96.0.10" # `kubectl get svc -n kube-system | grep dns`
-        prometheues:
+        prometheus:
           serviceMonitor:
             enabled: true
             namespace: kube-prometheus-stack
