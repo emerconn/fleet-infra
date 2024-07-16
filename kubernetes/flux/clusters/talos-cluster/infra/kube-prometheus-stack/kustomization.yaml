@@ -33,5 +33,12 @@ patches:
                       storage: 50Gi
         grafana:
           defaultDashboardsTimezone: browser
+          sidecar:
+            dashboards:
+              default:
+                traefik:
+                  gnetId: 17346
+                  revision: 8
+                  datasource: Prometheus
         alertmanager:
           enabled: false
