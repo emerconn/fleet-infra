@@ -46,6 +46,7 @@ patches:
       namespace: flux-system
     spec:
       values:
+        kind: Deployment
         serviceMonitor:
           enabled: true
           namespace: kube-prometheus-stack
