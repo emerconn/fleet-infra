@@ -22,7 +22,7 @@ patches:
       values:
         prometheus:
           prometheusSpec:
-            storageSpec: 
+            storageSpec:
               volumeClaimTemplate:
                 spec:
                   storageClassName: synology-csi-ext4-retain
