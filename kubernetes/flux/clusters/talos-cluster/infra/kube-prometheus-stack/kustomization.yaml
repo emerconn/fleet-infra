@@ -35,7 +35,7 @@ patches:
           defaultDashboardsTimezone: browser
           sidecar:
             dashboards:
-              default:
+              custom:
                 traefik:
                   gnetId: 17346
                   revision: 8
