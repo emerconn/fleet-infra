@@ -30,5 +30,13 @@ patches:
                   resources:
                     requests:
                       storage: 50Gi
+        grafana:
+          defaultDashboardsTimezone: browser
+          persistence:
+            enabled: true
+            storageClassName: synology-csi-ext4-retain
+            accessModes:
+              - ReadWriteOnce
+            size: 5Gi
         alertmanager:
           enabled: false
