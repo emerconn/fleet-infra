@@ -23,12 +23,12 @@ patches:
         prometheus:
           prometheusSpec:
             storageSpec: 
-            volumeClaimTemplate:
-              spec:
-                storageClassName: synology-csi-ext4-retain
-                accessModes: ["ReadWriteOnce"]
-                resources:
-                  requests:
-                    storage: 50Gi
+              volumeClaimTemplate:
+                spec:
+                  storageClassName: synology-csi-ext4-retain
+                  accessModes: ["ReadWriteOnce"]
+                  resources:
+                    requests:
+                      storage: 50Gi
         alertmanager:
           enabled: false
