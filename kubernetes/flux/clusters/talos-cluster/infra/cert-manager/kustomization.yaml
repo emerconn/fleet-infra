@@ -25,4 +25,4 @@ patches:
         prometheus:
           servicemonitor:
             enabled: true
-            namespace: kube-prometheus-stack
+            namespace: cert-manager
