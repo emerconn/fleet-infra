@@ -35,8 +35,7 @@ patches:
           persistence:
             enabled: true
             storageClassName: synology-csi-ext4-retain
-            accessModes:
-              - ReadWriteOnce
+            accessModes: ["ReadWriteOnce"]
             size: 5Gi
         alertmanager:
           enabled: false
