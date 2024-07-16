@@ -33,11 +33,6 @@ patches:
                       storage: 50Gi
         grafana:
           defaultDashboardsTimezone: browser
-          persistence:
-            enabled: true
-            storageClassName: synology-csi-ext4-retain
-            accessModes: ["ReadWriteOnce"]
-            size: 5Gi
           dashboards:
             default:
               traefik:
