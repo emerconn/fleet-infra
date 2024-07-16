@@ -47,6 +47,8 @@ patches:
     spec:
       values:
         kind: Deployment
+        service:
+          enabled: true
         serviceMonitor:
           enabled: true
           namespace: kube-prometheus-stack
