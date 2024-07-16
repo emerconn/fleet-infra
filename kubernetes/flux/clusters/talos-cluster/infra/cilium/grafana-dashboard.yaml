@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: grafana-dashboard
-  namespace: kube-system
+  namespace: kube-prometheus-stack # grafana missing permission to scan from namespace/kube-system
   labels:
     grafana_dashboard: "1"
 data:
