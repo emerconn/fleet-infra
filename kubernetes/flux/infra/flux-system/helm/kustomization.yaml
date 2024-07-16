@@ -5,6 +5,7 @@ resources:
 - cilium.yaml
 - cloudflare.yaml
 - emberstack.yaml
+- eraser.yaml
 - external-secrets.yaml
 - hashicorp.yaml
 - ingress-nginx.yaml
