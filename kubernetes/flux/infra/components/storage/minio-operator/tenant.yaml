@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   releaseName: minio-operator
-  targetNamespace: minio-operator
+  targetNamespace: ""
   chart:
     spec:
       chart: tenant
