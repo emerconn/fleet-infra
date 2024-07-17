@@ -4,5 +4,3 @@ kind: Kustomization
 resources:
 - ingress.yaml
 - ../../../../infra/components/storage/minio.yaml
-patches:
-- patch: ""
