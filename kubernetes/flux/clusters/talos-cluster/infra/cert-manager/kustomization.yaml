@@ -18,7 +18,7 @@ patches:
           enabled: true
         podDnsPolicy: "None"
         podDnsConfig:
-          nameservers:
+          nameservers: # avoid internal DNS caching issues with TXT records
           - "1.1.1.1"
           - "8.8.8.8"
           - "10.96.0.10" # `kubectl get svc -n kube-system | grep dns`
