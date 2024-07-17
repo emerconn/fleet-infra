@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
-export GITHUB_TOKEN=<replace_me>
 export GITHUB_USER=emerconnelly
+export GITHUB_TOKEN=replace_me
 
 flux bootstrap github \
   --token-auth \
