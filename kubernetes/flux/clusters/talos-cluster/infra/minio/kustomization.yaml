@@ -4,16 +4,3 @@ kind: Kustomization
 resources:
 - ingress.yaml
 # - ../../../../infra/components/storage/minio.yaml
-patches:
-- patch: |-
-    apiVersion: helm.toolkit.fluxcd.io/v2
-    kind: HelmRelease
-    metadata:
-      name: minio
-      namespace: flux-system
-    spec:
-      values:
-        persistence:
-          enabled: true
-          storageClass: synology-csi-ext4-retain
-          size: 10Gi
