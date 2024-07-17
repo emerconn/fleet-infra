@@ -9,7 +9,7 @@ spec:
     name: letsencrypt-dns01-issuer
     kind: ClusterIssuer
   dnsNames:
-  - hubble.homelab.emerconnelly.com
+  - minio.homelab.emerconnelly.com
 ---
 apiVersion: traefik.io/v1alpha1
 kind: Middleware
