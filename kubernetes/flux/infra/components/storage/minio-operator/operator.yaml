@@ -16,7 +16,7 @@ spec:
       chart: operator
       sourceRef:
         kind: HelmRepository
-        name: minio-operator # officially maintained operator
+        name: minio-operator # officially maintained
         namespace: flux-system
       version: "5.0.15"
   interval: 1h
