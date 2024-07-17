@@ -27,7 +27,7 @@ patches:
         kind: Deployment
         service:
           enabled: true
-        serviceMonitor:
+        serviceMonitor: # TODO: create Grafana dashboard
           enabled: true
           namespace: descheduler
 - patch: |-
@@ -61,5 +61,5 @@ patches:
     spec:
       values:
         controller:
-          serviceMonitor:
+          serviceMonitor: # TODO: create Grafana dashboard
             create: true
