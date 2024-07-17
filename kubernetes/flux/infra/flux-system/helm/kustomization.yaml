@@ -11,7 +11,7 @@ resources:
 - hashicorp.yaml
 - ingress-nginx.yaml
 - jetstack.yaml
-- minio.yaml
+- minio-operator.yaml
 - nfs-subdir-external-provisioner.yaml
 - openobserve.yaml
 - piraeus.yaml
