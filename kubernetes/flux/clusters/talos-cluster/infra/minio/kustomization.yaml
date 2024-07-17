@@ -15,5 +15,5 @@ patches:
       values:
         persistence:
           enabled: true
-          storageClass: 
+          storageClass: synology-csi-ext4-retain
           size: 10Gi
