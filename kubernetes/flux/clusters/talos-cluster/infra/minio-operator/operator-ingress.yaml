@@ -4,7 +4,7 @@ metadata:
   name: operator-ingress-tls
   namespace: minio-operator
 spec:
-  secretName: ingress-tls
+  secretName: operator-ingress-tls
   issuerRef:
     name: letsencrypt-dns01-issuer
     kind: ClusterIssuer
