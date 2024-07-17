@@ -1,3 +1,5 @@
+#!/usr/bin/bash
+
 export GITHUB_TOKEN=<replace_me>
 export GITHUB_USER=emerconnelly
 
