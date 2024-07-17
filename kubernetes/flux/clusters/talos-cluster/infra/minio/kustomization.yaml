@@ -17,3 +17,6 @@ patches:
           enabled: true
           storageClass: synology-csi-ext4-retain
           size: 10Gi
+        metrics:
+          serviceMonitor:
+            enabled: true
