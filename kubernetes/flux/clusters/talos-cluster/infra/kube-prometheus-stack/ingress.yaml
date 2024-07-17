@@ -26,17 +26,6 @@ spec:
   dnsNames:
   - grafana.homelab.emerconnelly.com
 ---
-# shared redirect middleware
-apiVersion: traefik.io/v1alpha1
-kind: Middleware
-metadata:
-  name: https-redirect
-  namespace: kube-prometheus-stack
-spec:
-  redirectScheme:
-    scheme: https
-    permanent: true
----
 # promethues http ingress
 apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
@@ -50,6 +39,7 @@ spec:
     kind: Rule
     middlewares:
     - name: https-redirect
+      namespace: traefik
     services:
     - name: noop@internal
       kind: TraefikService
@@ -91,6 +81,7 @@ spec:
     kind: Rule
     middlewares:
     - name: https-redirect
+      namespace: traefik
     services:
     - name: noop@internal
       kind: TraefikService

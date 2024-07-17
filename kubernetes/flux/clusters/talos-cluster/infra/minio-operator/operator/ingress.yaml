@@ -12,16 +12,6 @@ spec:
   - minio-operator.homelab.emerconnelly.com
 ---
 apiVersion: traefik.io/v1alpha1
-kind: Middleware
-metadata:
-  name: https-redirect
-  namespace: minio-operator
-spec:
-  redirectScheme:
-    scheme: https
-    permanent: true
----
-apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
   name: operator-http
@@ -33,6 +23,7 @@ spec:
     kind: Rule
     middlewares:
     - name: https-redirect
+      namespace: traefik
     services:
     - name: noop@internal
       kind: TraefikService
