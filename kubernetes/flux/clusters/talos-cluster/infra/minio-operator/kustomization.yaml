@@ -3,7 +3,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - operator-ingress.yaml
-# - ../../../../infra/components/storage/minio-operator/operator.yaml
+- ../../../../infra/components/storage/minio-operator/operator.yaml
 # - ../../../../infra/components/storage/minio-operator/tenant.yaml
 # patches:
 # - patch: |-
