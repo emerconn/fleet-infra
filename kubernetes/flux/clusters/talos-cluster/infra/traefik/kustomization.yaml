@@ -4,6 +4,7 @@ kind: Kustomization
 resources:
 - cert.yaml
 - grafana-dashboard.yaml
+- middleware.yaml
 - ../../../../infra/components/ingress/traefik.yaml
 patches:
 - patch: |-
