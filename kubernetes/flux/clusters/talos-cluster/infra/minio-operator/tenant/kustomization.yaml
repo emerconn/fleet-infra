@@ -12,10 +12,10 @@ patches:
       name: minio-tenant
       namespace: flux-system
     spec:
-      targetNamespace: minio-tenant-test
+      targetNamespace: minio-tenant-cherry
       values:
         tenant:
-          name: minio
+          name: cherry
           pools:
           - servers: 1
             name: pool-0
