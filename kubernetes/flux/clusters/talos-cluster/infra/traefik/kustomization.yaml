@@ -5,6 +5,7 @@ resources:
 - cert.yaml
 - grafana-dashboard.yaml
 - middleware.yaml
+- tls-option.yaml
 - ../../../../infra/components/ingress/traefik.yaml
 patches:
 - patch: |-
