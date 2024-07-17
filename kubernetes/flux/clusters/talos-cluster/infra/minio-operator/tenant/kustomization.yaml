@@ -25,9 +25,9 @@ patches:
             storageClassName: synology-csi-ext4-delete
           metrics:
             enabled: true
-          ingress:
-            console:
-              enabled: true
-              ingressClassName: traefik
-              tls: ["tenant-cherry-ingress-tls"]
-              host: cherry.minio-tenant.homelab.emerconnelly.com
+        ingress:
+          console:
+            enabled: true
+            ingressClassName: traefik
+            tls: ["tenant-cherry-ingress-tls"]
+            host: cherry.minio-tenant.homelab.emerconnelly.com
