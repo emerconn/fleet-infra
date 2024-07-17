@@ -2,7 +2,7 @@ apiVersion: secrets.hashicorp.com/v1beta1
 kind: HCPAuth
 metadata:
   name: talos-cluster
-  namespace: vault-secrets-operator-system
+  namespace: vault-secrets-operator
 spec:
   organizationID: 410917a3-77d5-441b-b030-063cab461377
   projectID: c9dc34a9-87d7-4e2d-9a1c-3d3e759f8261
