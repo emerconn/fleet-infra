@@ -21,5 +21,6 @@ patches:
             name: pool-0
             volumesPerServer: 1
             size: 10Gi
+            storageClass: synology-csi-ext4-delete
           metrics:
             enabled: true
