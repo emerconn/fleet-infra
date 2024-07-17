@@ -48,8 +48,8 @@ spec:
   - match: Host(`minio.homelab.emerconnelly.com`)
     kind: Rule
     services:
-    - name: hubble-ui
-      port: 80
+    - name: console
+      port: 9090
       passHostHeader: true
       sticky:
         cookie:
