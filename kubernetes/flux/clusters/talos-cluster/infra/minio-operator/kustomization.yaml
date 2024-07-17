@@ -2,8 +2,9 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-- ingress.yaml
+- operator-ingress.yaml
 - ../../../../infra/components/storage/minio-operator/operator.yaml
+- ../../../../infra/components/storage/minio-operator/tenant.yaml
 patches:
 - patch: |-
     apiVersion: helm.toolkit.fluxcd.io/v2
@@ -15,3 +16,20 @@ patches:
       values:
         operator:
           replicaCount: 1
+- patch: |-
+    apiVersion: helm.toolkit.fluxcd.io/v2
+    kind: HelmRelease
+    metadata:
+      name: minio-tenant
+      namespace: flux-system
+    spec:
+      values:
+        tenant:
+          name: minio
+          pools:
+          - servers: 1
+            name: pool-0
+            volumesPerServer: 1
+            size: 10Gi
+          metrics:
+            enabled: true

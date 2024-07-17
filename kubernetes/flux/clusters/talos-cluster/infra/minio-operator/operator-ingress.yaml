@@ -1,7 +1,7 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: ingress-tls
+  name: operator-ingress-tls
   namespace: minio-operator
 spec:
   secretName: ingress-tls
@@ -9,7 +9,7 @@ spec:
     name: letsencrypt-dns01-issuer
     kind: ClusterIssuer
   dnsNames:
-  - minio.homelab.emerconnelly.com
+  - minio-operator.homelab.emerconnelly.com
 ---
 apiVersion: traefik.io/v1alpha1
 kind: Middleware
@@ -24,12 +24,12 @@ spec:
 apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
-  name: http
+  name: operator-http
   namespace: minio-operator
 spec:
   entryPoints: ["web"]
   routes:
-  - match: Host(`minio.homelab.emerconnelly.com`)
+  - match: Host(`minio-operator.homelab.emerconnelly.com`)
     kind: Rule
     middlewares:
     - name: https-redirect
@@ -40,12 +40,12 @@ spec:
 apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
-  name: https
+  name: operator-https
   namespace: minio-operator
 spec:
   entryPoints: ["websecure"]
   routes:
-  - match: Host(`minio.homelab.emerconnelly.com`)
+  - match: Host(`minio-operator.homelab.emerconnelly.com`)
     kind: Rule
     services:
     - name: console
@@ -58,4 +58,4 @@ spec:
           httpOnly: true
           sameSite: lax
   tls:
-    secretName: ingress-tls
+    secretName: operator-ingress-tls
