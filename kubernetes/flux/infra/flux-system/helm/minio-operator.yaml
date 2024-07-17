@@ -2,7 +2,7 @@
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRepository
 metadata:
-  name: minio-operator
+  name: minio-operator # officially maintained operator
   namespace: flux-system
 spec:
   interval: 24h

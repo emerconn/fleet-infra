@@ -16,7 +16,7 @@ spec:
       chart: minio
       sourceRef:
         kind: HelmRepository
-        name: minio
+        name: minio # community maintained
         namespace: flux-system
       version: "5.2.0"
   interval: 1h
