@@ -10,7 +10,7 @@ metadata:
   namespace: flux-system
 spec:
   releaseName: minio-operator
-  targetNamespace: minio
+  targetNamespace: minio-operator
   chart:
     spec:
       chart: operator
