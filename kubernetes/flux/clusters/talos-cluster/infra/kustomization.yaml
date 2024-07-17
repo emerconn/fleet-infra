@@ -5,6 +5,7 @@ resources:
 - cert-manager
 - cilium
 - kube-prometheus-stack
+- minio
 - synology-csi-talos
 - traefik
 - vault-secrets-operator
