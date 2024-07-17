@@ -11,41 +11,41 @@ spec:
   dnsNames:
   - cherry.minio-tenant.homelab.emerconnelly.com
 ---
-apiVersion: traefik.io/v1alpha1
-kind: IngressRoute
-metadata:
-  name: tenant-test-http
-  namespace: minio-tenant-cherry
-spec:
-  entryPoints: ["web"]
-  routes:
-  - match: Host(`cherry.minio-tenant.homelab.emerconnelly.com`)
-    kind: Rule
-    middlewares:
-    - name: https-redirect
-      namespace: traefik
-    services:
-    - name: noop@internal
-      kind: TraefikService
----
-apiVersion: traefik.io/v1alpha1
-kind: IngressRoute
-metadata:
-  name: tenant-test-https
-  namespace: minio-tenant-cherry
-spec:
-  entryPoints: ["websecure"]
-  routes:
-  - match: Host(`cherry.minio-tenant.homelab.emerconnelly.com`)
-    kind: Rule
-    services:
-    - name: cherry-console
-      port: 9443
-      sticky:
-        cookie:
-          name: traefik
-          secure: true
-          httpOnly: true
-          sameSite: lax
-  tls:
-    secretName: tenant-cherry-ingress-tls
+# apiVersion: traefik.io/v1alpha1
+# kind: IngressRoute
+# metadata:
+#   name: tenant-test-http
+#   namespace: minio-tenant-cherry
+# spec:
+#   entryPoints: ["web"]
+#   routes:
+#   - match: Host(`cherry.minio-tenant.homelab.emerconnelly.com`)
+#     kind: Rule
+#     middlewares:
+#     - name: https-redirect
+#       namespace: traefik
+#     services:
+#     - name: noop@internal
+#       kind: TraefikService
+# ---
+# apiVersion: traefik.io/v1alpha1
+# kind: IngressRoute
+# metadata:
+#   name: tenant-test-https
+#   namespace: minio-tenant-cherry
+# spec:
+#   entryPoints: ["websecure"]
+#   routes:
+#   - match: Host(`cherry.minio-tenant.homelab.emerconnelly.com`)
+#     kind: Rule
+#     services:
+#     - name: cherry-console
+#       port: 9443
+#       sticky:
+#         cookie:
+#           name: traefik
+#           secure: true
+#           httpOnly: true
+#           sameSite: lax
+#   tls:
+#     secretName: tenant-cherry-ingress-tls
