@@ -41,7 +41,6 @@ spec:
     services:
     - name: cherry-console
       port: 9443
-      passHostHeader: true
       sticky:
         cookie:
           name: traefik
