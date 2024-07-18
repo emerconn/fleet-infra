@@ -5,14 +5,33 @@ metadata:
   namespace: cert-manager
 spec:
   acme:
-    server: https://acme-staging-v02.api.letsencrypt.org/directory # substantially higher rate limits https://letsencrypt.org/docs/staging-environment/
-    email: emerconn7@gmail.com # your email address for updates
+    server: https://acme-v02.api.letsencrypt.org/directory
+    email: emerconn7@gmail.com
     privateKeySecretRef:
       name: letsencrypt-dns01-private-key
     solvers:
     - dns01:
         cloudflare:
-          email: emerconn7@gmail.com # your cloudflare account email address
+          email: emerconn7@gmail.com
+          apiTokenSecretRef:
+            name: hcp-secrets
+            key: cloudflare_api_token_secret
+---
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: letsencrypt-dns01-issuer-staging
+  namespace: cert-manager
+spec:
+  acme:
+    server: https://acme-staging-v02.api.letsencrypt.org/directory # substantially higher rate limits https://letsencrypt.org/docs/staging-environment/
+    email: emerconn7@gmail.com
+    privateKeySecretRef:
+      name: letsencrypt-dns01-private-key
+    solvers:
+    - dns01:
+        cloudflare:
+          email: emerconn7@gmail.com
           apiTokenSecretRef:
             name: hcp-secrets
             key: cloudflare_api_token_secret
