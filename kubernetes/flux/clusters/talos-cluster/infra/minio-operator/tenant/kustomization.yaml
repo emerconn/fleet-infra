@@ -18,6 +18,8 @@ patches:
       values:
         tenant:
           name: cherry
+          configuration:
+            name: cherry-env-config
           pools:
           - servers: 1
             name: pool-0
