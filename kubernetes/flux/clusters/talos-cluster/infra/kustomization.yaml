@@ -6,6 +6,7 @@ resources:
 - cilium
 - kube-prometheus-stack
 - minio-operator
+- openobserve
 - synology-csi-talos
 - traefik
 - vault-secrets-operator
