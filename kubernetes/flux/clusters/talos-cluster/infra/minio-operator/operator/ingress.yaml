@@ -9,7 +9,7 @@ spec:
     name: letsencrypt-dns01-issuer
     kind: ClusterIssuer
   dnsNames:
-  - minio-operator.homelab.emerconnelly.com
+  - operator.minio.homelab.emerconnelly.com
 ---
 apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
@@ -19,7 +19,7 @@ metadata:
 spec:
   entryPoints: ["web"]
   routes:
-  - match: Host(`minio-operator.homelab.emerconnelly.com`)
+  - match: Host(`operator.minio.homelab.emerconnelly.com`)
     kind: Rule
     middlewares:
     - name: https-redirect
@@ -36,7 +36,7 @@ metadata:
 spec:
   entryPoints: ["websecure"]
   routes:
-  - match: Host(`minio-operator.homelab.emerconnelly.com`)
+  - match: Host(`operator.minio.homelab.emerconnelly.com`)
     kind: Rule
     services:
     - name: console
