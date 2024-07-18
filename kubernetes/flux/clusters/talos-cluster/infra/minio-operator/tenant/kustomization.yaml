@@ -17,6 +17,7 @@ patches:
     spec:
       targetNamespace: minio-tenant-cherry
       values:
+        secrets: {}
         tenant:
           name: cherry
           configuration:
