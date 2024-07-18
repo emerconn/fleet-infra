@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=https://json.schemastore.org/kustomization
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+# resources:
+# - ingress.yaml
+patches:
+- patch: |-
+    apiVersion: helm.toolkit.fluxcd.io/v2
+    kind: HelmRelease
+    metadata:
+      name: openobserve
+      namespace: flux-system
+    spec:
+      values:
+        auth:
+          ZO_S3_ACCESS_KEY: "openobserve"
+          ZO_S3_SECRET_KEY: "openobserve"
+        config:
+          ZO_S3_SERVER_URL: "https://main.minio.homelab.emerconnelly.com"
+          ZO_S3_BUCKET_NAME: "openobserve"
+          ZO_S3_PROVIDER: "minio"
