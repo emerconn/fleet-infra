@@ -20,6 +20,7 @@ patches:
           name: cherry
           configuration:
             name: cherry-env-config
+            existingSecret: true
           pools:
           - servers: 1
             name: pool-0
