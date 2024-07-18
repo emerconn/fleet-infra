@@ -24,7 +24,7 @@ patches:
           - servers: 1
             name: pool-0
             volumesPerServer: 1
-            size: 10Gi
+            size: 50Gi
             storageClassName: synology-csi-ext4-delete
             resources:
               limits:
