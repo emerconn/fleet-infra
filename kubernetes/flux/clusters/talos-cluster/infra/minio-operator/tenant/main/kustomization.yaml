@@ -5,3 +5,39 @@ resources:
 - ingress.yaml
 - secret-sops-main-user-openobserve.yaml
 - secret-sops-main-env-config.yaml
+patches:
+- patch: |-
+    apiVersion: helm.toolkit.fluxcd.io/v2
+    kind: HelmRelease
+    metadata:
+      name: minio-tenant
+      namespace: flux-system
+    spec:
+      values:
+        tenant:
+          name: main
+          configuration:
+            name: main-env-config
+          configSecret:
+            existingSecret: true
+          pools:
+          - servers: 1
+            name: pool-0
+            volumesPerServer: 1
+            size: 10Gi
+            storageClassName: synology-csi-ext4-delete
+            resources:
+              limits:
+                cpu: "1"
+                memory: 2Gi
+              requests:
+                cpu: "1"
+                memory: 2Gi
+          metrics:
+            enabled: true
+          certificate:
+            requestAutoCert: false # disable tls
+          buckets:
+            - name: openobserve
+          # users:
+          #   - name: main-user-openobserve # TODO: make this work
