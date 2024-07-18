@@ -17,7 +17,7 @@ patches:
     spec:
       targetNamespace: minio-tenant-cherry
       values:
-        secrets: ""
+        secrets: "" # depricating, use configSecret
         tenant:
           name: cherry
           configuration:
@@ -40,7 +40,7 @@ patches:
           metrics:
             enabled: true
           certificate:
-            requestAutoCert: false
+            requestAutoCert: false # disable tls
           buckets:
             - name: openobserve
           users:
