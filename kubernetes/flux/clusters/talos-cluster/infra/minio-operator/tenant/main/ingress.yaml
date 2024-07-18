@@ -1,15 +1,15 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: cherry-ingress-tls
+  name: main-ingress-tls
   namespace: minio-tenant
 spec:
-  secretName: cherry-ingress-tls
+  secretName: main-ingress-tls
   issuerRef:
     name: letsencrypt-dns01-issuer
     kind: ClusterIssuer
   dnsNames:
-  - cherry.minio.homelab.emerconnelly.com
+  - main.minio.homelab.emerconnelly.com
 ---
 apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
@@ -19,7 +19,7 @@ metadata:
 spec:
   entryPoints: ["web"]
   routes:
-  - match: Host(`cherry.minio.homelab.emerconnelly.com`)
+  - match: Host(`main.minio.homelab.emerconnelly.com`)
     kind: Rule
     middlewares:
     - name: https-redirect
@@ -36,10 +36,10 @@ metadata:
 spec:
   entryPoints: ["websecure"]
   routes:
-  - match: Host(`cherry.minio.homelab.emerconnelly.com`)
+  - match: Host(`main.minio.homelab.emerconnelly.com`)
     kind: Rule
     services:
-    - name: cherry-console
+    - name: main-console
       port: 9090
       sticky:
         cookie:
@@ -48,4 +48,4 @@ spec:
           httpOnly: true
           sameSite: lax
   tls:
-    secretName: cherry-ingress-tls
+    secretName: main-ingress-tls
