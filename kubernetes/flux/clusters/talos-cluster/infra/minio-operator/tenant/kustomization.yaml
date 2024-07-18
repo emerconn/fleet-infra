@@ -37,3 +37,5 @@ patches:
             enabled: true
           certificate:
             requestAutoCert: false
+          features:
+            enableSFTP: true
