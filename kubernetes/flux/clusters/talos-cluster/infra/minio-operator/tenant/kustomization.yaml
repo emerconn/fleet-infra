@@ -4,7 +4,8 @@ kind: Kustomization
 resources:
 - ingress.yaml
 - namespace.yaml
-- secret-sops-minio-env-config.yaml
+- secret-sops-cherry-user-openobserve.yaml
+- secret-sops-cherry-env-config.yaml
 - ../../../../../infra/components/storage/minio-operator/tenant.yaml
 patches:
 - patch: |-
@@ -41,3 +42,5 @@ patches:
             requestAutoCert: false
           buckets:
             - name: openobserve
+          users:
+            - cherry-user-openobserve
