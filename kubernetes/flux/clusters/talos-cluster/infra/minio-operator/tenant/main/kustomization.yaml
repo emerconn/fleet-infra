@@ -6,7 +6,11 @@ resources:
 - secret-sops-main-user-openobserve.yaml
 - secret-sops-main-env-config.yaml
 patches:
-- patch: |-
+- target:
+    kind: HelmRelease
+    name: minio-tenant
+    namespace: flux-system
+  patch: |-
     apiVersion: helm.toolkit.fluxcd.io/v2
     kind: HelmRelease
     metadata:
