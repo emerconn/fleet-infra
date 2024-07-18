@@ -27,9 +27,3 @@ patches:
             enabled: true
           certificate:
             requestAutoCert: false
-        ingress:
-          console:
-            enabled: true
-            ingressClassName: traefik
-            # tls: ["tenant-cherry-ingress-tls"]
-            host: cherry.minio-tenant.homelab.emerconnelly.com
