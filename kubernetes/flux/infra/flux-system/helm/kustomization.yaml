@@ -4,6 +4,7 @@ kind: Kustomization
 resources:
 - cilium.yaml
 - cloudflare.yaml
+- cloudnative-pg.yaml
 - descheduler.yaml
 - emberstack.yaml
 - eraser.yaml

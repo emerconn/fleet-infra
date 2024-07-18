@@ -14,6 +14,7 @@ resources:
 - ../../../infra/components/descheduler.yaml
 - ../../../infra/components/reflector.yaml
 # - ../../../infra/components/ingress/ingress-nginx.yaml
+- ../../../infra/components/database/cloudnative-pg-operator.yaml
 - ../../../infra/components/storage/nfs-subdir-external-provisioner.yaml
 - ../../../infra/components/system/snapshot-controller.yaml
 patches:
