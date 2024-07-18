@@ -44,4 +44,4 @@ patches:
           buckets:
             - name: openobserve
           users:
-            - cherry-user-openobserve
+            - name: fuck
