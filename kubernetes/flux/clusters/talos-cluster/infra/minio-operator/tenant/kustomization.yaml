@@ -12,3 +12,32 @@ patches:
       name: minio-tenant
       namespace: flux-system
     spec:
+      values:
+        secrets: "" # depricating, use configSecret
+        tenant:
+          name: main
+          configuration:
+            name: main-env-config
+          configSecret:
+            existingSecret: true
+          pools:
+          - servers: 1
+            name: pool-0
+            volumesPerServer: 1
+            size: 50Gi
+            storageClassName: synology-csi-ext4-retain
+            resources:
+              limits:
+                cpu: "1"
+                memory: 2Gi
+              requests:
+                cpu: "1"
+                memory: 2Gi
+          metrics:
+            enabled: true
+          certificate:
+            requestAutoCert: false # disable tls
+          buckets:
+            - name: openobserve
+          # users:
+          #   - name: main-user-openobserve # TODO: make this work
