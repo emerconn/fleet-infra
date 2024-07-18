@@ -25,6 +25,8 @@ patches:
             storageClassName: synology-csi-ext4-delete
           metrics:
             enabled: true
+        certificate:
+          requestAutoCert: false
         ingress:
           console:
             enabled: true
