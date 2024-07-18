@@ -4,6 +4,7 @@ kind: Kustomization
 resources:
 - ingress.yaml
 - namespace.yaml
+- secret-sops-minio-env-config.yaml
 - ../../../../../infra/components/storage/minio-operator/tenant.yaml
 patches:
 - patch: |-
