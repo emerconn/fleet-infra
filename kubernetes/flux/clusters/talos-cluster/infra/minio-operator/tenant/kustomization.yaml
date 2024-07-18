@@ -15,7 +15,7 @@ patches:
       name: minio-tenant
       namespace: flux-system
     spec:
-      targetNamespace: minio-tenant-cherry
+      targetNamespace: minio-tenant
       values:
         secrets: "" # depricating, use configSecret
         tenant:

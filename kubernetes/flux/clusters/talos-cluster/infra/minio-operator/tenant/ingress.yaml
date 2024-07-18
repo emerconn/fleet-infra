@@ -2,7 +2,7 @@ apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: cherry-ingress-tls
-  namespace: minio-tenant-cherry
+  namespace: minio-tenant
 spec:
   secretName: cherry-ingress-tls
   issuerRef:
@@ -15,7 +15,7 @@ apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
   name: tenant-test-http
-  namespace: minio-tenant-cherry
+  namespace: minio-tenant
 spec:
   entryPoints: ["web"]
   routes:
@@ -32,7 +32,7 @@ apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
   name: tenant-test-https
-  namespace: minio-tenant-cherry
+  namespace: minio-tenant
 spec:
   entryPoints: ["websecure"]
   routes:
