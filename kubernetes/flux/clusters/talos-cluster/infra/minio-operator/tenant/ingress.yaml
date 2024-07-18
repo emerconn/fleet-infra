@@ -1,10 +1,10 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: tenant-cherry-ingress-tls
+  name: cherry-ingress-tls
   namespace: minio-tenant-cherry
 spec:
-  secretName: tenant-cherry-ingress-tls
+  secretName: cherry-ingress-tls
   issuerRef:
     name: letsencrypt-dns01-issuer
     kind: ClusterIssuer
@@ -48,4 +48,4 @@ spec:
           httpOnly: true
           sameSite: lax
   tls:
-    secretName: tenant-cherry-ingress-tls
+    secretName: cherry-ingress-tls
