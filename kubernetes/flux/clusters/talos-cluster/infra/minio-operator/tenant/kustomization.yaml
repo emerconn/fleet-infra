@@ -6,42 +6,42 @@ resources:
 - namespace.yaml
 - secret-sops-cherry-user-openobserve.yaml
 - secret-sops-cherry-env-config.yaml
-# - ../../../../../infra/components/storage/minio-operator/tenant.yaml
-# patches:
-# - patch: |-
-#     apiVersion: helm.toolkit.fluxcd.io/v2
-#     kind: HelmRelease
-#     metadata:
-#       name: minio-tenant
-#       namespace: flux-system
-#     spec:
-#       targetNamespace: minio-tenant-cherry
-#       values:
-#         secrets: "" # depricating, use configSecret
-#         tenant:
-#           name: cherry
-#           configuration:
-#             name: cherry-env-config
-#           configSecret:
-#             existingSecret: true
-#           pools:
-#           - servers: 1
-#             name: pool-0
-#             volumesPerServer: 1
-#             size: 10Gi
-#             storageClassName: synology-csi-ext4-delete
-#             resources:
-#               limits:
-#                 cpu: "1"
-#                 memory: 2Gi
-#               requests:
-#                 cpu: "1"
-#                 memory: 2Gi
-#           metrics:
-#             enabled: true
-#           certificate:
-#             requestAutoCert: false # disable tls
-#           buckets:
-#             - name: openobserve
-#           users:
-#             - name: cherry-user-openobserve
+- ../../../../../infra/components/storage/minio-operator/tenant.yaml
+patches:
+- patch: |-
+    apiVersion: helm.toolkit.fluxcd.io/v2
+    kind: HelmRelease
+    metadata:
+      name: minio-tenant
+      namespace: flux-system
+    spec:
+      targetNamespace: minio-tenant-cherry
+      values:
+        secrets: "" # depricating, use configSecret
+        tenant:
+          name: cherry
+          configuration:
+            name: cherry-env-config
+          configSecret:
+            existingSecret: true
+          pools:
+          - servers: 1
+            name: pool-0
+            volumesPerServer: 1
+            size: 10Gi
+            storageClassName: synology-csi-ext4-delete
+            resources:
+              limits:
+                cpu: "1"
+                memory: 2Gi
+              requests:
+                cpu: "1"
+                memory: 2Gi
+          metrics:
+            enabled: true
+          certificate:
+            requestAutoCert: false # disable tls
+          buckets:
+            - name: openobserve
+          users:
+            - name: cherry-user-openobserve
