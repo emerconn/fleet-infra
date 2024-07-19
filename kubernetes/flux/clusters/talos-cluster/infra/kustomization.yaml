@@ -4,6 +4,7 @@ kind: Kustomization
 resources:
 - cert-manager
 - cilium
+- fluent-operator
 - kube-prometheus-stack
 - minio-operator
 - openobserve
