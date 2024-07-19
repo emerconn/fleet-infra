@@ -39,7 +39,7 @@ spec:
   - match: Host(`openobserve.homelab.emerconnelly.com`)
     kind: Rule
     services:
-    - name: main-console
+    - name: openobserve-router
       port: 5080
       sticky:
         cookie:
