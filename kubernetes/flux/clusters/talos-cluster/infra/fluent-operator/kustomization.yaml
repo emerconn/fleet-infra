@@ -13,3 +13,6 @@ patches:
     spec:
       values:
         containerRuntime: containerd
+        fluentbit:
+          serviceMonitor:
+          enable: true
