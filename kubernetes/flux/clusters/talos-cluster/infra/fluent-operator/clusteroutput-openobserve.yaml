@@ -6,16 +6,24 @@ metadata:
   labels:
     fluentbit.fluent.io/enabled: "true"
 spec:
+  match: "*"
   http:
-    match: "*"
     host: openobserve.homelab.emerconnelly.com
-    port: 443
     uri: /api/default/default/_json
-    format: json
+    port: 443
     tls:
       verify: false
+    format: json
+    jsonDateKey: _timestamp
+    jsonDateFormat: iso8601
+    httpUser:
+      valueFrom:
+        secretKeyRef:
+          name: http-openobserve
+          key: httpUser
+    httpPassword:
+      valuesFrom:
+        secretKeyRef:
+          name: http-openobserve
+          key: httpPassword
     compress: gzip
-    json_date_key: _timestamp
-    json_date_format: iso8601
-    http_user: root@example.com
-    http_passwd: oUMkjxUXbTUkGX7Z
