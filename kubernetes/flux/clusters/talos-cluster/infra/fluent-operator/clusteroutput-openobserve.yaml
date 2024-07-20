@@ -2,6 +2,7 @@ apiVersion: fluentbit.fluent.io/v1alpha2
 kind: ClusterOutput
 metadata:
   name: openobserve
+  namespace: fluent-operator
   labels:
     fluentbit.fluent.io/enabled: "true"
 spec:
