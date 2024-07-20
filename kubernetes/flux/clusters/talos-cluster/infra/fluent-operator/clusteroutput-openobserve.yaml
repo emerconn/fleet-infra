@@ -22,7 +22,7 @@ spec:
           name: http-openobserve
           key: httpUser
     httpPassword:
-      valuesFrom:
+      valueFrom:
         secretKeyRef:
           name: http-openobserve
           key: httpPassword
