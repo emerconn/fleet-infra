@@ -1,0 +1,20 @@
+apiVersion: fluentbit.fluent.io/v1alpha2
+kind: ClusterOutput
+metadata:
+  name: openobserve
+  labels:
+    fluentbit.fluent.io/enabled: "true"
+spec:
+  http:
+    match: "*"
+    host: openobserve.homelab.emerconnelly.com
+    port: 443
+    uri: /api/default/default/_json
+    format: json
+    tls:
+      verify: false
+    compress: gzip
+    json_date_key: _timestamp
+    json_date_format: iso8601
+    http_user: root@example.com
+    http_passwd: oUMkjxUXbTUkGX7Z
