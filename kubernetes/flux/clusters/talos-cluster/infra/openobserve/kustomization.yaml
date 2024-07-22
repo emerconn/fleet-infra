@@ -20,3 +20,4 @@ patches:
           ZO_S3_SERVER_URL: "https://api.main.minio.homelab.emerconnelly.com"
           ZO_S3_BUCKET_NAME: "openobserve"
           ZO_S3_PROVIDER: "minio"
+          ZO_COMPACT_DATA_RETENTION_DAYS: "7"
