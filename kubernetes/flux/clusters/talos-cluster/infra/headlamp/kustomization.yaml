@@ -14,7 +14,6 @@ patches:
     spec:
       values:
         config:
-          baseURL: headlamp.homelab.emerconnelly.com
           oidc:
             secret:
               create: false
