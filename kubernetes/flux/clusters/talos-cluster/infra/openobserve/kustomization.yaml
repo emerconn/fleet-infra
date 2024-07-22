@@ -14,12 +14,12 @@ patches:
       namespace: flux-system
     spec:
       values:
-        externalSecret:
-          enabled: true
-          name: "openobserve-auth"
-      # auth:
-      #   ZO_S3_ACCESS_KEY: "openobserve"
-      #   ZO_S3_SECRET_KEY: "openobserve"
+      # externalSecret:
+      #   enabled: true
+      #   name: "openobserve-auth"
+        auth:
+          ZO_S3_ACCESS_KEY: "openobserve"
+          ZO_S3_SECRET_KEY: "openobserve"
         config:
           ZO_S3_SERVER_URL: "https://api.main.minio.homelab.emerconnelly.com"
           ZO_S3_BUCKET_NAME: "openobserve"
