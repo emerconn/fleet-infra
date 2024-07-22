@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=https://json.schemastore.org/kustomization
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- ../../../../infra/components/observe/opentelemetry-operator.yaml
+patches:
+- patch: |-
+    apiVersion: helm.toolkit.fluxcd.io/v2
+    kind: HelmRelease
+    metadata:
+      name: openobserve-collector
+      namespace: flux-system
+    spec:
+      values:
+        exporters:
+          otlphttp/openobserve:
+            endpoint: https://openobserve.homelab.emerconnelly.com/api/default/
+            headers:
+              Authorization: Basic cm9vdEBleGFtcGxlLmNvbTpDb21wbGV4cGFzcyMxMjM=
+          otlphttp/openobserve_k8s_events:
+            endpoint: https://openobserve.homelab.emerconnelly.com/api/default/
+            headers:
+              Authorization: Basic cm9vdEBleGFtcGxlLmNvbTpDb21wbGV4cGFzcyMxMjM=

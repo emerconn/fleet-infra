@@ -8,6 +8,7 @@ resources:
 - kube-prometheus-stack
 - minio-operator
 - openobserve
+- openobserve-collector
 - synology-csi-talos
 - traefik
 - vault-secrets-operator
