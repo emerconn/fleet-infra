@@ -16,8 +16,8 @@ resources:
 - minio-operator.yaml
 - minio.yaml
 - nfs-subdir-external-provisioner.yaml
-- open-telemetry.yaml
 - openobserve.yaml
+- opentelemetry.yaml
 - piraeus.yaml
 - prometheus-community.yaml
 - synology-csi-talos.yaml
