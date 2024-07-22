@@ -11,6 +11,7 @@ resources:
 - external-secrets.yaml
 - fluent.yaml
 - hashicorp.yaml
+- headlamp.yaml
 - ingress-nginx.yaml
 - jetstack.yaml
 - minio-operator.yaml
