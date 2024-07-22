@@ -16,6 +16,7 @@ resources:
 - ../../../infra/components/descheduler.yaml
 # - ../../../infra/components/ingress/ingress-nginx.yaml
 - ../../../infra/components/observe/opentelemetry-operator.yaml
+- ../../../infra/components/observe/headlamp.yaml
 - ../../../infra/components/database/cloudnative-pg-operator.yaml
 - ../../../infra/components/secrets/external-secrets.yaml
 - ../../../infra/components/secrets/reflector.yaml
