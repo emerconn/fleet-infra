@@ -50,13 +50,11 @@ patches:
             serviceMonitor:
               enabled: true
               honorLabels: true
+        tracing:
+          addInternals: true
           otlp:
             enabled: true
-            addEntryPointsLabels: true
-            addRoutersLabels: true
-            addServicesLabels: true
-            pushInterval: 10s
             grpc:
               enabled: true
-              endpoint: "openobserve-collector-agent-collector.openobserve-collector.svc.cluster.local:4317"
+              endpoint: "http://openobserve-collector-agent-collector.openobserve-collector.svc.cluster.local:4317"
               insecure: true
