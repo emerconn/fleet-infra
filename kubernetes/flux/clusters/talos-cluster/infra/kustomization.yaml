@@ -8,6 +8,7 @@ resources:
 - headlamp
 - kube-prometheus-stack
 - minio-operator
+- node-feature-discovery
 - openobserve
 - openobserve-collector
 - synology-csi-talos
@@ -15,7 +16,6 @@ resources:
 - vault-secrets-operator
 - ../../../infra/components/eraser.yaml
 - ../../../infra/components/descheduler.yaml
-- ../../../infra/components/node-feature-discovery.yaml
 # - ../../../infra/components/ingress/ingress-nginx.yaml
 - ../../../infra/components/observe/opentelemetry-operator.yaml
 - ../../../infra/components/database/cloudnative-pg-operator.yaml
