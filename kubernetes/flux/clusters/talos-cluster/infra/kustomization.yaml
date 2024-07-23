@@ -4,7 +4,7 @@ kind: Kustomization
 resources:
 - cert-manager
 - cilium
-- fluent-operator
+# - fluent-operator
 - headlamp
 - kube-prometheus-stack
 - minio-operator
