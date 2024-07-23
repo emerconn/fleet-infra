@@ -2,73 +2,71 @@ version: v1alpha1
 debug: false
 persist: true
 machine:
-    type: worker
-    token: 79m9pa.awtmtha3o7u6z6dd
-    ca:
-        crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJQakNCOGFBREFnRUNBaEJ3Y2NxZjErcGh2dmd0L3FoQndIZEhNQVVHQXl0bGNEQVFNUTR3REFZRFZRUUsKRXdWMFlXeHZjekFlRncweU5EQTNNVEV5TXpRMU5UWmFGdzB6TkRBM01Ea3lNelExTlRaYU1CQXhEakFNQmdOVgpCQW9UQlhSaGJHOXpNQ293QlFZREsyVndBeUVBWjNhSXc1VzBtaGpZTFFuVmNFUUV1WTArUllMdk16NGFtVko1CnBoODIwTWlqWVRCZk1BNEdBMVVkRHdFQi93UUVBd0lDaERBZEJnTlZIU1VFRmpBVUJnZ3JCZ0VGQlFjREFRWUkKS3dZQkJRVUhBd0l3RHdZRFZSMFRBUUgvQkFVd0F3RUIvekFkQmdOVkhRNEVGZ1FVZUhtUzQ5Z09XNjVKU0o0VQpkNEtyVjAwOE90UXdCUVlESzJWd0EwRUFrL0ZFYkNaSExGMW9ZZXJUR2JZMnZyblhPN1F5aG4xZTJjeWp3b0JZCjluK2R1YTYzQnoxeTlTL0xIN2lKRXVyVENqLzlUa3QxbkhwZmV0V1VDTFQvQ1E9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
-        key: ""
-    certSANs: []
-    kubelet:
-        image: ghcr.io/siderolabs/kubelet:v1.30.2
-        extraArgs:
-            rotate-server-certificates: "true"
-        defaultRuntimeSeccompProfileEnabled: true
-        disableManifestsDirectory: true
-    network: {}
-    install:
-        disk: /dev/sda
-        extraKernelArgs:
-            - talos.platform=metal
-        image: factory.talos.dev/installer/446d7bb4b23caecb9134bcab115e52d55af742da8e04760817f6a31997dc32d9:v1.7.5
-        wipe: true
-    time:
-        servers:
-            - time.cloudflare.com
-    features:
-        rbac: true
-        stableHostname: true
-        apidCheckExtKeyUsage: true
-        diskQuotaSupport: true
-        kubePrism:
-            enabled: true
-            port: 7445
-        hostDNS:
-            enabled: true
+  type: worker
+  token: 79m9pa.awtmtha3o7u6z6dd
+  ca:
+    crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJQakNCOGFBREFnRUNBaEJ3Y2NxZjErcGh2dmd0L3FoQndIZEhNQVVHQXl0bGNEQVFNUTR3REFZRFZRUUsKRXdWMFlXeHZjekFlRncweU5EQTNNVEV5TXpRMU5UWmFGdzB6TkRBM01Ea3lNelExTlRaYU1CQXhEakFNQmdOVgpCQW9UQlhSaGJHOXpNQ293QlFZREsyVndBeUVBWjNhSXc1VzBtaGpZTFFuVmNFUUV1WTArUllMdk16NGFtVko1CnBoODIwTWlqWVRCZk1BNEdBMVVkRHdFQi93UUVBd0lDaERBZEJnTlZIU1VFRmpBVUJnZ3JCZ0VGQlFjREFRWUkKS3dZQkJRVUhBd0l3RHdZRFZSMFRBUUgvQkFVd0F3RUIvekFkQmdOVkhRNEVGZ1FVZUhtUzQ5Z09XNjVKU0o0VQpkNEtyVjAwOE90UXdCUVlESzJWd0EwRUFrL0ZFYkNaSExGMW9ZZXJUR2JZMnZyblhPN1F5aG4xZTJjeWp3b0JZCjluK2R1YTYzQnoxeTlTL0xIN2lKRXVyVENqLzlUa3QxbkhwZmV0V1VDTFQvQ1E9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    key: ""
+  certSANs: []
+  kubelet:
+    image: ghcr.io/siderolabs/kubelet:v1.30.2
+    extraArgs:
+      rotate-server-certificates: "true"
+    defaultRuntimeSeccompProfileEnabled: true
+    disableManifestsDirectory: true
+  network: {}
+  install:
+    disk: /dev/nvme0n1
+    extraKernelArgs:
+    - talos.platform=metal
+    image: factory.talos.dev/installer/446d7bb4b23caecb9134bcab115e52d55af742da8e04760817f6a31997dc32d9:v1.7.5
+    wipe: true
+  time:
+    servers:
+    - time.cloudflare.com
+  features:
+    rbac: true
+    stableHostname: true
+    apidCheckExtKeyUsage: true
+    diskQuotaSupport: true
+    kubePrism:
+      enabled: true
+      port: 7445
+    hostDNS:
+      enabled: true
 cluster:
-    id: uRqa5St6bu4DrnneHOYOyq32XY3dooiydG_9RvRiDhE=
-    secret: rA4D4hDeypv/aLw+G50yY2iittyBK7btmgFLXY7Dk68=
-    controlPlane:
-        endpoint: https://172.21.0.2:6443
-    network:
-        cni:
-            name: none
-        dnsDomain: cluster.local
-        podSubnets:
-            - 10.244.0.0/16
-        serviceSubnets:
-            - 10.96.0.0/12
-    token: kd0qw7.dbi13hofeck1mawn
-    ca:
-        crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJpVENDQVMrZ0F3SUJBZ0lRQ2duU3UxaFBpY2k5L3lwdGFORWxWREFLQmdncWhrak9QUVFEQWpBVk1STXcKRVFZRFZRUUtFd3ByZFdKbGNtNWxkR1Z6TUI0WERUSTBNRGN4TVRJek5EVTFObG9YRFRNME1EY3dPVEl6TkRVMQpObG93RlRFVE1CRUdBMVVFQ2hNS2EzVmlaWEp1WlhSbGN6QlpNQk1HQnlxR1NNNDlBZ0VHQ0NxR1NNNDlBd0VICkEwSUFCS3FRU2YwRFpiMkluKzVld1dQeEwzdVJZalJpZEVLVVFoREE1ZHN3bUFreTdvbTJQZWtuSE5YeGdFZzcKbkhSejB4M0ZyYithblhCOVVwN3JjbC82TExDallUQmZNQTRHQTFVZER3RUIvd1FFQXdJQ2hEQWRCZ05WSFNVRQpGakFVQmdnckJnRUZCUWNEQVFZSUt3WUJCUVVIQXdJd0R3WURWUjBUQVFIL0JBVXdBd0VCL3pBZEJnTlZIUTRFCkZnUVVPRE9XVE1DeGwwWWw4elY3TUpDYWVEQnoyYnd3Q2dZSUtvWkl6ajBFQXdJRFNBQXdSUUlnQWtTSUZmTEUKb0haaldOSm5TKzF4TDN3UHAvekE2NDRSelRMbGxCcnp0a0FDSVFEVjVVYUhrY0JLWmZ2Ky9zajZPTUEyR1Y2egp4ZnVuZ1lyZXVLRVk5bVJzVVE9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
-        key: ""
-    apiServer:
-        image: registry.k8s.io/kube-apiserver:v1.30.2
-    controllerManager:
-        image: registry.k8s.io/kube-controller-manager:v1.30.2
-    proxy:
+  id: uRqa5St6bu4DrnneHOYOyq32XY3dooiydG_9RvRiDhE=
+  secret: rA4D4hDeypv/aLw+G50yY2iittyBK7btmgFLXY7Dk68=
+  controlPlane:
+    endpoint: https://172.21.0.2:6443
+  network:
+    cni:
+      name: none
+    dnsDomain: cluster.local
+    podSubnets:
+    - 10.244.0.0/16
+    serviceSubnets:
+    - 10.96.0.0/12
+  token: kd0qw7.dbi13hofeck1mawn
+  ca:
+    crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJpVENDQVMrZ0F3SUJBZ0lRQ2duU3UxaFBpY2k5L3lwdGFORWxWREFLQmdncWhrak9QUVFEQWpBVk1STXcKRVFZRFZRUUtFd3ByZFdKbGNtNWxkR1Z6TUI0WERUSTBNRGN4TVRJek5EVTFObG9YRFRNME1EY3dPVEl6TkRVMQpObG93RlRFVE1CRUdBMVVFQ2hNS2EzVmlaWEp1WlhSbGN6QlpNQk1HQnlxR1NNNDlBZ0VHQ0NxR1NNNDlBd0VICkEwSUFCS3FRU2YwRFpiMkluKzVld1dQeEwzdVJZalJpZEVLVVFoREE1ZHN3bUFreTdvbTJQZWtuSE5YeGdFZzcKbkhSejB4M0ZyYithblhCOVVwN3JjbC82TExDallUQmZNQTRHQTFVZER3RUIvd1FFQXdJQ2hEQWRCZ05WSFNVRQpGakFVQmdnckJnRUZCUWNEQVFZSUt3WUJCUVVIQXdJd0R3WURWUjBUQVFIL0JBVXdBd0VCL3pBZEJnTlZIUTRFCkZnUVVPRE9XVE1DeGwwWWw4elY3TUpDYWVEQnoyYnd3Q2dZSUtvWkl6ajBFQXdJRFNBQXdSUUlnQWtTSUZmTEUKb0haaldOSm5TKzF4TDN3UHAvekE2NDRSelRMbGxCcnp0a0FDSVFEVjVVYUhrY0JLWmZ2Ky9zajZPTUEyR1Y2egp4ZnVuZ1lyZXVLRVk5bVJzVVE9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    key: ""
+  apiServer:
+    image: registry.k8s.io/kube-apiserver:v1.30.2
+  controllerManager:
+    image: registry.k8s.io/kube-controller-manager:v1.30.2
+  proxy:
+    disabled: true
+    image: registry.k8s.io/kube-proxy:v1.30.2
+  scheduler:
+    image: registry.k8s.io/kube-scheduler:v1.30.2
+  discovery:
+    enabled: true
+    registries:
+      kubernetes:
         disabled: true
-        image: registry.k8s.io/kube-proxy:v1.30.2
-    scheduler:
-        image: registry.k8s.io/kube-scheduler:v1.30.2
-    discovery:
-        enabled: true
-        registries:
-            kubernetes:
-                disabled: true
-            service: {}
-    extraManifests:
-        - https://raw.githubusercontent.com/alex1989hu/kubelet-serving-cert-approver/main/deploy/standalone-install.yaml
-        - https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
-        - https://raw.githubusercontent.com/alex1989hu/kubelet-serving-cert-approver/main/deploy/standalone-install.yaml
-        - https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
-    allowSchedulingOnControlPlanes: true
+      service: {}
+  extraManifests:
+  - https://raw.githubusercontent.com/alex1989hu/kubelet-serving-cert-approver/main/deploy/standalone-install.yaml
+  - https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+  allowSchedulingOnControlPlanes: true
