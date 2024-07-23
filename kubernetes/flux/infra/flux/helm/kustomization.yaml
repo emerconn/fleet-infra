@@ -17,6 +17,7 @@ resources:
 - minio-operator.yaml
 - minio.yaml
 - nfs-subdir-external-provisioner.yaml
+- node-feature-discovery.yaml
 - openobserve.yaml
 - opentelemetry.yaml
 - piraeus.yaml
