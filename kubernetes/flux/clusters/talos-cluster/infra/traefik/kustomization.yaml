@@ -48,6 +48,9 @@ patches:
               honorLabels: true
           otlp:
             enabled: true
+            addEntryPointsLabels: true
+            addRoutersLabels: true
+            addServicesLabels: true
             pushInterval: 10s
             grpc:
               enabled: true
