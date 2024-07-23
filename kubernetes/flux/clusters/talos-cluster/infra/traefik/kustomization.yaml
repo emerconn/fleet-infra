@@ -56,5 +56,3 @@ patches:
               enabled: true
               endpoint: "openobserve-collector-agent-collector.openobserve-collector.svc.cluster.local:4317"
               insecure: true
-              tls:
-                insecureSkipVerify: true
