@@ -38,6 +38,10 @@ patches:
         service:
           spec:
             loadBalancerIP: 172.21.0.170
+        providers:
+          kubernetesCRD:
+            enabled: true
+            allowCrossNamespace: true
         metrics:
           prometheus:
             service:
