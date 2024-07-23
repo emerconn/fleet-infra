@@ -42,6 +42,10 @@ patches:
           kubernetesCRD:
             enabled: true
             allowCrossNamespace: true
+        logs:
+          access:
+            enabled: true
+            addInternals: true
         metrics:
           prometheus:
             service:
