@@ -60,7 +60,7 @@ patches:
             enabled: true
             grpc:
               enabled: true
-              endpoint: "openobserve-collector-agent-collector.openobserve-collector.svc.cluster.local:4317"
+              endpoint: "openobserve-collector-agent-collector-headless.openobserve-collector.svc.cluster.local:4317"
               insecure: true
         globalArguments: # manually set to remove anonymous usage data
         - "--global.checknewversion"
