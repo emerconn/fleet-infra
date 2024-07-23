@@ -54,7 +54,7 @@ patches:
             pushInterval: 10s
             grpc:
               enabled: true
-              endpoint: http://openobserve-collector-agent-collector.openobserve-collector.svc.cluster.local:4317
+              endpoint: "openobserve-collector-agent-collector.openobserve-collector.svc.cluster.local:4317"
               insecure: true
               tls:
                 insecureSkipVerify: true
