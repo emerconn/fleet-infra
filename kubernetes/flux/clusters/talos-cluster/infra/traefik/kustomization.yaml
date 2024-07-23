@@ -54,13 +54,13 @@ patches:
             serviceMonitor:
               enabled: true
               honorLabels: true
-        tracing:
-          addInternals: true
-          otlp:
-            enabled: true
-            grpc:
-              enabled: true
-              endpoint: "openobserve-collector-agent-collector-headless.openobserve-collector.svc.cluster.local:4317"
-              insecure: true
+        # tracing:
+        #   addInternals: true
+        #   otlp:
+        #     enabled: true
+        #     grpc:
+        #       enabled: true
+        #       endpoint: "openobserve-collector-agent-collector-headless.openobserve-collector.svc.cluster.local:4317"
+        #       insecure: true
         globalArguments: # manually set to remove anonymous usage data
         - "--global.checknewversion"
