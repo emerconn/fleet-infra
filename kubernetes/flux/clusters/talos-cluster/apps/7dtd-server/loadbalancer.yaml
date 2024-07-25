@@ -5,7 +5,7 @@ metadata:
   namespace: 7dtd-server
 spec:
   selector:
-    app: 7dtdserver
+    app: 7dtd-server
   ports:
   - name: game-tcp
     port: 26900
