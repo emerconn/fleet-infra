@@ -18,7 +18,7 @@ spec:
         image: vinanrra/7dtd-server
         envFrom:
         - configMapRef:
-            name: 7dtdserver-config
+            name: config
         ports:
         - containerPort: 26900
           protocol: TCP
@@ -41,8 +41,8 @@ spec:
           mountPath: /home/sdtdserver/lgsm/config-lgsm/sdtdserver
         - name: server-files
           mountPath: /home/sdtdserver/serverfiles/
-        # - name: logs
-        #   mountPath: /home/sdtdserver/log/
+          # - name: logs
+          #   mountPath: /home/sdtdserver/log/
       volumes:
       - name: 7dtd-data
         persistentVolumeClaim:
