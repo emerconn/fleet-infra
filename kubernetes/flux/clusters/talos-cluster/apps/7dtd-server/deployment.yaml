@@ -13,6 +13,8 @@ spec:
       labels:
         app: 7dtd-server
     spec:
+      nodeSelector:
+        kubernetes.io/hostname: talos-w-01
       containers:
       - name: 7dtd-server
         image: vinanrra/7dtd-server
