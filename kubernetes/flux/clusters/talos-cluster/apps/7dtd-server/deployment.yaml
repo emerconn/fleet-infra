@@ -1,0 +1,58 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: 7dtd-server
+  namespace: 7dtd-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: 7dtd-server
+  template:
+    metadata:
+      labels:
+        app: 7dtd-server
+    spec:
+      containers:
+      - name: 7dtd-server
+        image: vinanrra/7dtd-server
+        envFrom:
+        - configMapRef:
+            name: 7dtdserver-config
+        ports:
+        - containerPort: 26900
+          protocol: TCP
+        - containerPort: 26900
+          protocol: UDP
+        - containerPort: 26901
+          protocol: UDP
+        - containerPort: 26902
+          protocol: UDP
+        - containerPort: 8080
+          protocol: TCP
+        - containerPort: 8081
+          protocol: TCP
+        - containerPort: 8082
+          protocol: TCP
+        volumeMounts:
+        - name: 7dtd-data
+          mountPath: /home/sdtdserver/.local/share/7DaysToDie/
+        - name: lgsm-config
+          mountPath: /home/sdtdserver/lgsm/config-lgsm/sdtdserver
+        - name: server-files
+          mountPath: /home/sdtdserver/serverfiles/
+        # - name: logs
+        #   mountPath: /home/sdtdserver/log/
+      volumes:
+      - name: 7dtd-data
+        persistentVolumeClaim:
+          claimName: 7dtd
+      - name: lgsm-config
+        persistentVolumeClaim:
+          claimName: lgsm-config
+      - name: server-files
+        persistentVolumeClaim:
+          claimName: server-files
+      # - name: logs
+      #   persistentVolumeClaim:
+      #     claimName: logs
