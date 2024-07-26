@@ -4,6 +4,8 @@ metadata:
   name: loadbalancer
   namespace: 7dtd-server
 spec:
+  type: LoadBalancer
+  loadBalancerIP: 172.21.0.172
   selector:
     app: 7dtd-server
   ports:
@@ -35,4 +37,3 @@ spec:
     port: 8082
     targetPort: 8082
     protocol: TCP
-  type: LoadBalancer
