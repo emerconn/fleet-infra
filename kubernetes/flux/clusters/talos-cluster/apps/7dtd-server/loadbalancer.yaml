@@ -29,10 +29,10 @@ spec:
     port: 8080
     targetPort: 8080
     protocol: TCP
-  - name: telnet
-    port: 8081
-    targetPort: 8081
-    protocol: TCP
+  # - name: telnet
+  #   port: 8081
+  #   targetPort: 8081
+  #   protocol: TCP
   - name: webserver
     port: 8082
     targetPort: 8082
