@@ -25,4 +25,4 @@ data:
   BEPINEX: "NO"
   BEPINEX_UPDATE: "NO"
   BACKUP: "NO"
-  MONITOR: "YES"
+  MONITOR: "NO"
