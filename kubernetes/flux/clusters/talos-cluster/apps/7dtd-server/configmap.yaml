@@ -5,7 +5,7 @@ metadata:
   namespace: 7dtd-server
 data:
   START_MODE: "1"
-  VERSION: "latest_experimental"
+  VERSION: "v1.0"
   PUID: "1000"
   PGID: "1000"
   TimeZone: "US/Central"
