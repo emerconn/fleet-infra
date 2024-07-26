@@ -5,7 +5,7 @@ metadata:
   namespace: 7dtd-server
 data:
   START_MODE: "1"
-  VERSION: "public" # even with v1.0 https://steamdb.info/app/251570/depots/ 
+  VERSION: "public" # even with v1.0 https://github.com/vinanrra/Docker-7DaysToDie/pull/260 https://steamdb.info/app/251570/depots/ 
   PUID: "1000"
   PGID: "1000"
   TimeZone: "US/Central"
