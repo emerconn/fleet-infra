@@ -20,7 +20,8 @@ cluster:
 
 machine:
   install:
-    image: factory.talos.dev/installer/446d7bb4b23caecb9134bcab115e52d55af742da8e04760817f6a31997dc32d9:v1.7.5 # iscsi-tools & btrfs, from Image Factory
+    image: factory.talos.dev/installer/c4f93bf64691eedef63d31b4513f4339249f5d5d1c368ebc70693bbbfa31aeda:v1.7.5
+    # intel-ucode, i915-ucode, iscsi-tools & btrfs
     disk: /dev/sda
     wipe: true
     extraKernelArgs:
