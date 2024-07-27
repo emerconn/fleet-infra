@@ -21,4 +21,4 @@ patches:
       values:
         worker:
           tolerations: 
-          - operator: "Exists"
+          - operator: "Exists" # schedule daemonSet pods on tainted nodes

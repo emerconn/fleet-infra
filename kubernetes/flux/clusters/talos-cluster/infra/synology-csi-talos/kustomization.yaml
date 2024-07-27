@@ -22,7 +22,7 @@ patches:
       values:
         node:
           tolerations:
-          - operator: "Exists"
+          - operator: "Exists" # schedule daemonSet pods on tainted nodes
         storageClasses:
           synology-iscsi-storage:
             disabled: true

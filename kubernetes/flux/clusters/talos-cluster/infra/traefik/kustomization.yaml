@@ -65,4 +65,4 @@ patches:
         globalArguments: # manually set to remove anonymous usage data
         - "--global.checknewversion"
         tolerations:
-        - operator: "Exists"
+        - operator: "Exists" # schedule daemonSet pods on tainted nodes

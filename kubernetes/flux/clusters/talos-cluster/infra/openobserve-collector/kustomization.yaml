@@ -22,7 +22,7 @@ patches:
       values:
         agent:
           tolerations: 
-          - operator: "Exists"
+          - operator: "Exists" # schedule daemonSet pods on tainted nodes
         exporters:
           otlphttp/openobserve:
             endpoint: https://openobserve.homelab.emerconnelly.com/api/default/
