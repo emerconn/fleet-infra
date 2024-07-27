@@ -20,6 +20,9 @@ patches:
       namespace: flux-system
     spec:
       values:
+        node:
+          tolerations:
+          - operator: "Exists"
         storageClasses:
           synology-iscsi-storage:
             disabled: true
