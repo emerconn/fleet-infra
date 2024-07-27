@@ -13,8 +13,13 @@ spec:
       labels:
         app: 7dtd-server
     spec:
-      nodeSelector:
-        kubernetes.io/hostname: talos-w-01
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: node-role.kubernetes.io/control-plane
+                operator: DoesNotExist
       containers:
       - name: 7dtd-server
         image: vinanrra/7dtd-server:v0.7.7 # https://hub.docker.com/r/vinanrra/7dtd-server
