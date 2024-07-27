@@ -32,8 +32,8 @@ spec:
           protocol: UDP
         - containerPort: 8080
           protocol: TCP
-        # - containerPort: 8081
-        #   protocol: TCP
+        - containerPort: 8081
+          protocol: TCP
         - containerPort: 8082
           protocol: TCP
         volumeMounts:
