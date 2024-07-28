@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: config
+  namespace: 7dtd-server-maple
+data:
+  START_MODE: "1"
+  VERSION: "public" # even with v1.0 https://github.com/vinanrra/Docker-7DaysToDie/pull/260 https://steamdb.info/app/251570/depots/ 
+  PUID: "1000"
+  PGID: "1000"
+  TimeZone: "US/Central"
+  TEST_ALERT: "NO"
+  UPDATE_MODS: "YES"
+  MODS_URLS: ""
+  ALLOC_FIXES: "YES"
+  ALLOC_FIXES_UPDATE: "YES"
+  UNDEAD_LEGACY: "NO"
+  UNDEAD_LEGACY_VERSION: "stable"
+  UNDEAD_LEGACY_UPDATE: "NO"
+  DARKNESS_FALLS: "NO"
+  DARKNESS_FALLS_UPDATE: "NO"
+  DARKNESS_FALLS_URL: "False"
+  CPM: "NO"
+  CPM_UPDATE: "NO"
+  BEPINEX: "NO"
+  BEPINEX_UPDATE: "NO"
+  BACKUP: "NO"
+  MONITOR: "NO"

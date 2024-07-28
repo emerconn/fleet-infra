@@ -1,0 +1,50 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: 7dtd
+  namespace: 7dtd-server-maple
+  accessModes:
+  - ReadWriteOnce
+  storageClassName: synology-csi-ext4-retain
+  resources:
+    requests:
+      storage: 1Gi
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: lgsm-config
+  namespace: 7dtd-server-maple
+spec:
+  accessModes:
+  - ReadWriteOnce
+  storageClassName: synology-csi-ext4-retain
+  resources:
+    requests:
+      storage: 1Gi
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: server-files
+  namespace: 7dtd-server-maple
+spec:
+  accessModes:
+  - ReadWriteOnce
+  storageClassName: synology-csi-ext4-retain
+  resources:
+    requests:
+      storage: 15Gi
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: logs
+  namespace: 7dtd-server-maple
+spec:
+  accessModes:
+  - ReadWriteOnce
+  storageClassName: synology-csi-ext4-retain
+  resources:
+    requests:
+      storage: 5Gi
