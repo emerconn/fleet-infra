@@ -22,7 +22,7 @@ spec:
   storageClassName: synology-csi-ext4-retain
   resources:
     requests:
-      storage: 20Mi
+      storage: 20Mi # minimuum required
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -36,16 +36,3 @@ spec:
   resources:
     requests:
       storage: 12Gi # minimum required
----
-# apiVersion: v1
-# kind: PersistentVolumeClaim
-# metadata:
-#   name: logs
-#   namespace: 7dtd-server-maple
-# spec:
-#   accessModes:
-#   - ReadWriteOnce
-#   storageClassName: synology-csi-ext4-delete
-#   resources:
-#     requests:
-#       storage: 5Gi
