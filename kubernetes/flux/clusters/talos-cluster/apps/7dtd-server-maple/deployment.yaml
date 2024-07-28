@@ -57,7 +57,7 @@ spec:
       volumes:
       - name: 7dtd-data
         persistentVolumeClaim:
-          claimName: 7dtd
+          claimName: 7dtd-data
       - name: lgsm-config
         persistentVolumeClaim:
           claimName: lgsm-config
