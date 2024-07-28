@@ -4,7 +4,7 @@ metadata:
   name: 7dtd-server
   namespace: 7dtd-server-maple
 spec:
-  replicas: 1
+  replicas: 0
   selector:
     matchLabels:
       app: 7dtd-server
