@@ -37,15 +37,15 @@ spec:
     requests:
       storage: 5Gi
 ---
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: logs
-  namespace: 7dtd-server-maple
-spec:
-  accessModes:
-  - ReadWriteOnce
-  storageClassName: synology-csi-ext4-retain
-  resources:
-    requests:
-      storage: 5Gi
+# apiVersion: v1
+# kind: PersistentVolumeClaim
+# metadata:
+#   name: logs
+#   namespace: 7dtd-server-maple
+# spec:
+#   accessModes:
+#   - ReadWriteOnce
+#   storageClassName: synology-csi-ext4-delete
+#   resources:
+#     requests:
+#       storage: 5Gi
