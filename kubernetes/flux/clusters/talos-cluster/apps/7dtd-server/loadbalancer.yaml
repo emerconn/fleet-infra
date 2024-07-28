@@ -37,3 +37,6 @@ spec:
     port: 8082
     targetPort: 8082
     protocol: TCP
+# firewall port forwarding:
+# 26900 TCP > 26900 TCP
+# 26900-26903 UDP > 26900-26903 UDP
