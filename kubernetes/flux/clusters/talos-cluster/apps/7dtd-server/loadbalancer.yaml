@@ -25,6 +25,10 @@ spec:
     port: 26902
     targetPort: 26902
     protocol: UDP
+  - name: game-udp-3
+    port: 26903
+    targetPort: 26903
+    protocol: UDP
   - name: webadmin
     port: 8080
     targetPort: 8080
@@ -39,4 +43,4 @@ spec:
     protocol: TCP
 # firewall port forwarding:
 # 26900 TCP > 26900 TCP
-# 26900-26902 UDP > 26900-26902 UDP
+# 26900-26903 UDP > 26900-26903 UDP
