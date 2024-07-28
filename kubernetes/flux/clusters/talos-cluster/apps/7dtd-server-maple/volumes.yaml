@@ -22,7 +22,7 @@ spec:
   storageClassName: synology-csi-ext4-retain
   resources:
     requests:
-      storage: 20Mi # minimuum required
+      storage: 1Gi # minimuum required for Synology CSI
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
