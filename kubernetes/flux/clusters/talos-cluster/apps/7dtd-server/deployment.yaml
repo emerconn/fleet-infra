@@ -53,7 +53,7 @@ spec:
       volumes:
       - name: 7dtd-data
         persistentVolumeClaim:
-          claimName: 7dtd
+          claimName: 7dtd # TODO: Change to 7dtd-data (migrate data!)
       - name: lgsm-config
         persistentVolumeClaim:
           claimName: lgsm-config

@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: 7dtd
+  name: 7dtd # TODO: change to 7dtd-data (migrate data!)
   namespace: 7dtd-server
 spec:
   accessModes:
