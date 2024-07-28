@@ -13,6 +13,13 @@ spec:
       labels:
         app: test-web-app
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: node-role.kubernetes.io/control-plane
+                operator: DoesNotExist
       containers:
       - name: aks-helloworld
         image: mcr.microsoft.com/azuredocs/aks-helloworld:v1
