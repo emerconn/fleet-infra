@@ -39,4 +39,4 @@ spec:
     protocol: TCP
 # firewall port forwarding:
 # 26900 TCP > 26900 TCP
-# 26900-26903 UDP > 26900-26903 UDP
+# 26900-26902 UDP > 26900-26902 UDP
