@@ -10,23 +10,23 @@ spec:
     app: 7dtd-server
   ports:
   - name: game-tcp
-    port: 26903
+    port: 26904
     targetPort: 26900
     protocol: TCP
   - name: game-udp-0
-    port: 26903
+    port: 26904
     targetPort: 26900
     protocol: UDP
   - name: game-udp-1
-    port: 26904
+    port: 26905
     targetPort: 26901
     protocol: UDP
   - name: game-udp-2
-    port: 26905
+    port: 26906
     targetPort: 26902
     protocol: UDP
   - name: game-udp-3
-    port: 26906
+    port: 26907
     targetPort: 26903
     protocol: UDP
   - name: webadmin
@@ -43,4 +43,4 @@ spec:
     protocol: TCP
 # firewall port forwarding:
 # 26904 TCP > 26904 TCP
-# 26904-26906 UDP > 26904-26906 UDP
+# 26904-26907 UDP > 26904-26907 UDP
