@@ -9,7 +9,7 @@ spec:
   storageClassName: synology-csi-ext4-retain
   resources:
     requests:
-      storage: 2Gi
+      storage: 12Gi
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -35,7 +35,7 @@ spec:
   storageClassName: synology-csi-ext4-retain
   resources:
     requests:
-      storage: 15Gi
+      storage: 5Gi
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
