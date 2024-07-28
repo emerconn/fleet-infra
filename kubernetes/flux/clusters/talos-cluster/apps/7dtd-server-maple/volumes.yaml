@@ -3,6 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: 7dtd
   namespace: 7dtd-server-maple
+spec:
   accessModes:
   - ReadWriteOnce
   storageClassName: synology-csi-ext4-retain
