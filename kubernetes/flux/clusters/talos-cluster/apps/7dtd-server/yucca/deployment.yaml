@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: 7dtd-server
+  name: yucca
   namespace: 7dtd-server
 spec:
   replicas: 0
@@ -48,19 +48,19 @@ spec:
         - containerPort: 8082
           protocol: TCP
         volumeMounts:
-        - name: 7dtd-data
+        - name: data
           mountPath: /home/sdtdserver/.local/share/7DaysToDie/
-        - name: lgsm-config
+        - name: lgsm
           mountPath: /home/sdtdserver/lgsm/config-lgsm/sdtdserver
-        - name: server-files
+        - name: game
           mountPath: /home/sdtdserver/serverfiles/
       volumes:
-      - name: 7dtd-data
+      - name: data
         persistentVolumeClaim:
-          claimName: 7dtd-data
-      - name: lgsm-config
+          claimName: yucca-data
+      - name: lgsm
         persistentVolumeClaim:
-          claimName: lgsm-config
-      - name: server-files
+          claimName: yucca-lgsm
+      - name: game
         persistentVolumeClaim:
-          claimName: server-files
+          claimName: yucca-game

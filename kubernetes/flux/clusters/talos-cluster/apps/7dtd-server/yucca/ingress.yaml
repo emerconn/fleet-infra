@@ -1,26 +1,26 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: ingress-tls
+  name: yucca-ingress-tls
   namespace: 7dtd-server
 spec:
-  secretName: ingress-tls
+  secretName: yucca-ingress-tls
   issuerRef:
     name: letsencrypt-dns01-issuer
     kind: ClusterIssuer
   dnsNames:
-  - 7dtd.homelab.emerconnelly.com
+  - yucca.7dtd.homelab.emerconnelly.com
 ---
 apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
-  name: http
+  name: yucca-http
   namespace: 7dtd-server
 spec:
   entryPoints:
   - web
   routes:
-  - match: Host(`7dtd.homelab.emerconnelly.com`)
+  - match: Host(`yucca.7dtd.homelab.emerconnelly.com`)
     kind: Rule
     middlewares:
     - name: https-redirect
@@ -32,13 +32,13 @@ spec:
 apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
-  name: https
+  name: yucca-https
   namespace: 7dtd-server
 spec:
   entryPoints:
   - websecure
   routes:
-  - match: Host(`7dtd.homelab.emerconnelly.com`)
+  - match: Host(`yucca.7dtd.homelab.emerconnelly.com`)
     kind: Rule
     services:
     - name: loadbalancer
@@ -51,4 +51,4 @@ spec:
           httpOnly: true
           sameSite: lax
   tls:
-    secretName: ingress-tls
+    secretName: yucca-ingress-tls

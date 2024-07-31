@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: config
+  name: yucca
   namespace: 7dtd-server
 data:
   START_MODE: "1"
