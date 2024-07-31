@@ -37,5 +37,5 @@ spec:
   storageClassName: synology-csi-ext4-retain
   resources:
     requests:
-      storage: 20Gi\
+      storage: 20Gi
   volumeName: pvc-cb1e9c6a-1e23-49b5-9dfa-eb1528b1e0a0
