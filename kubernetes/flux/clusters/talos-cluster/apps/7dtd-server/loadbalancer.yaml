@@ -9,38 +9,76 @@ spec:
   selector:
     app: 7dtd-server
   ports:
-  - name: game-tcp
+  # Yucca
+  - name: yucca-game-tcp
     port: 26900
     targetPort: 26900
     protocol: TCP
-  - name: game-udp-0
+  - name: yucca-game-udp-1
     port: 26900
     targetPort: 26900
     protocol: UDP
-  - name: game-udp-1
+  - name: yucca-game-udp-2
     port: 26901
     targetPort: 26901
     protocol: UDP
-  - name: game-udp-2
+  - name: yucca-game-udp-3
     port: 26902
     targetPort: 26902
     protocol: UDP
-  - name: game-udp-3
+  - name: yucca-game-udp-4
     port: 26903
     targetPort: 26903
     protocol: UDP
-  - name: webadmin
+  - name: yucca-webadmin
     port: 8080
     targetPort: 8080
     protocol: TCP
-  - name: telnet
+  - name: yucca-telnet
     port: 8081
     targetPort: 8081
     protocol: TCP
-  - name: webserver
+  - name: yucca-webserver
     port: 8082
     targetPort: 8082
     protocol: TCP
-# firewall port forwarding:
-# 26900 TCP > 26900 TCP
-# 26900-26903 UDP > 26900-26903 UDP
+  # firewall port forwarding:
+  # 26900 TCP > 26900 TCP
+  # 26900-26903 UDP > 26900-26903 UDP
+
+  # Maple
+  - name: maple-game-tcp
+    port: 26904
+    targetPort: 26900
+    protocol: TCP
+  - name: maple-game-udp-1
+    port: 26904
+    targetPort: 26900
+    protocol: UDP
+  - name: maple-game-udp-2
+    port: 26905
+    targetPort: 26901
+    protocol: UDP
+  - name: maple-game-udp-3
+    port: 26906
+    targetPort: 26902
+    protocol: UDP
+  - name: maple-game-udp-4
+    port: 26907
+    targetPort: 26903
+    protocol: UDP
+  - name: maple-webadmin
+    port: 8083
+    targetPort: 8080
+    protocol: TCP
+  - name: maple-telnet
+    port: 8084
+    targetPort: 8081
+    protocol: TCP
+  - name: maple-webserver
+    port: 8085
+    targetPort: 8082
+    protocol: TCP
+  # firewall port forwarding:
+  # 26904 TCP > 26904 TCP
+  # 26904-26907 UDP > 26904-26907 UDP

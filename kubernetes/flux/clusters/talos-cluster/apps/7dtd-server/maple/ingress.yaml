@@ -1,10 +1,10 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: ingress-tls
-  namespace: 7dtd-server-maple
+  name: maple-ingress-tls
+  namespace: 7dtd-server
 spec:
-  secretName: ingress-tls
+  secretName: maple-ingress-tls
   issuerRef:
     name: letsencrypt-dns01-issuer
     kind: ClusterIssuer
@@ -14,8 +14,8 @@ spec:
 apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
-  name: http
-  namespace: 7dtd-server-maple
+  name: maple-http
+  namespace: 7dtd-server
 spec:
   entryPoints:
   - web
@@ -32,8 +32,8 @@ spec:
 apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
-  name: https
-  namespace: 7dtd-server-maple
+  name: maple-https
+  namespace: 7dtd-server
 spec:
   entryPoints:
   - websecure
@@ -42,7 +42,7 @@ spec:
     kind: Rule
     services:
     - name: loadbalancer
-      port: 8080
+      port: 8083
       passHostHeader: true
       sticky:
         cookie:
@@ -51,4 +51,4 @@ spec:
           httpOnly: true
           sameSite: lax
   tls:
-    secretName: ingress-tls
+    secretName: maple-ingress-tls

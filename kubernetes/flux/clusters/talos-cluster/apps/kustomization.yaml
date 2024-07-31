@@ -2,7 +2,6 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - 7dtd-server
-- 7dtd-server-maple
 # - storage-perf-test.yaml
 # - network-test.yaml
 - test-web-app

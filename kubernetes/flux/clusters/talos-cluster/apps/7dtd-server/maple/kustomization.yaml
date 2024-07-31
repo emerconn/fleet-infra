@@ -4,6 +4,4 @@ resources:
 - configmap.yaml
 - deployment.yaml
 - ingress.yaml
-- loadbalancer.yaml
-- namespace.yaml
 - volumes.yaml
