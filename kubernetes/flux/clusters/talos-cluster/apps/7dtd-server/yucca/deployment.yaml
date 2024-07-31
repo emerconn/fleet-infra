@@ -29,7 +29,7 @@ spec:
             memory: "3Gi"
         envFrom:
         - configMapRef:
-            name: config
+            name: yucca
         ports:
         - containerPort: 26900
           protocol: TCP
