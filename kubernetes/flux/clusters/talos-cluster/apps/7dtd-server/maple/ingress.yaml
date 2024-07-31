@@ -42,7 +42,7 @@ spec:
     kind: Rule
     services:
     - name: loadbalancer
-      port: 8083
+      port: 8082
       passHostHeader: true
       sticky:
         cookie:
