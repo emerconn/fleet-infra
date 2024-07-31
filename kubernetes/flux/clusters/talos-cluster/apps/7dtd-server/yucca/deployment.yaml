@@ -4,7 +4,7 @@ metadata:
   name: yucca
   namespace: 7dtd-server
 spec:
-  replicas: 0
+  replicas: 1
   selector:
     matchLabels:
       app: 7dtd-server
