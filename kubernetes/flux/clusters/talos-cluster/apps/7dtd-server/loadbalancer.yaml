@@ -38,13 +38,9 @@ spec:
     port: 8081
     targetPort: 8081
     protocol: TCP
-  - name: yucca-webserver
-    port: 8082
-    targetPort: 8082
-    protocol: TCP
   # firewall port forwarding:
-  # 26900 TCP > 26900 TCP
-  # 26900-26903 UDP > 26900-26903 UDP
+  # WAN 26900 TCP > 172.21.0.172 26900 TCP
+  # WAN 26900-26903 UDP > 172.21.0.172 26900-26903 UDP
 
   # Maple
   - name: maple-game-tcp
@@ -68,17 +64,13 @@ spec:
     targetPort: 26903
     protocol: UDP
   - name: maple-webadmin
-    port: 8083
+    port: 8082
     targetPort: 8080
     protocol: TCP
   - name: maple-telnet
-    port: 8084
+    port: 8083
     targetPort: 8081
     protocol: TCP
-  - name: maple-webserver
-    port: 8085
-    targetPort: 8082
-    protocol: TCP
   # firewall port forwarding:
-  # 26904 TCP > 26904 TCP
-  # 26904-26907 UDP > 26904-26907 UDP
+  # WAN 26904 TCP > 172.21.0.172 26904 TCP
+  # WAN 26904-26907 UDP > 172.21.0.172 26904-26907 UDP

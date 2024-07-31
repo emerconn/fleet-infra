@@ -45,8 +45,6 @@ spec:
           protocol: TCP
         - containerPort: 8081
           protocol: TCP
-        - containerPort: 8082
-          protocol: TCP
         volumeMounts:
         - name: data
           mountPath: /home/sdtdserver/.local/share/7DaysToDie/
