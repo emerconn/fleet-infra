@@ -52,3 +52,4 @@ spec:
           sameSite: lax
   tls:
     secretName: maple-ingress-tls
+
