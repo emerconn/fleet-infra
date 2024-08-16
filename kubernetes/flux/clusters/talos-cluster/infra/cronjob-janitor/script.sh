@@ -15,12 +15,13 @@ delete_ns () {
   echo "case: $LABEL_UNIT"
 
   eval "DIFF_INT=\$DIFF_${LABEL_UNIT^^}"
+  echo "diff int: $DIFF_INT"
 
   if [[ "$DIFF_INT" -ge "$LABEL_INT" ]]; then
-    echo "deleting namespace: ${DIFF_INT}s >= ${LABEL_INT}s"
+    echo "deleting namespace: ${DIFF_INT}${LABEL_UNIT} >= ${LABEL_INT}${LABEL_UNIT}"
     kubectl delete ns "$ns" --wait=false # namespaces with finalized resources will be left in a perpetual Terminating state
   else 
-    echo "keeping namespace: ${DIFF_INT}s < ${LABEL_INT}s"
+    echo "keeping namespace: ${DIFF_INT}${LABEL_UNIT} < ${LABEL_INT}${LABEL_UNIT}"
   fi
 }
 
