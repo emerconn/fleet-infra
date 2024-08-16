@@ -9,7 +9,7 @@ metadata:
   name: namespace-cleaner
   namespace: janitor
 spec:
-  schedule: "0 0 * * *" # daily at 2400
+  schedule: "*/15 * * * *" # every 15 minutes
   jobTemplate:
     spec:
       template:
