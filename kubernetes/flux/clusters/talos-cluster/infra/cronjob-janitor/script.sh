@@ -57,4 +57,3 @@ for ns in $NAMESPACES; do
       ;;
   esac
 done
- 
