@@ -4,6 +4,7 @@ kind: Kustomization
 resources:
 - cert-manager
 - cilium
+- cronjob-janitor
 - fluent-operator
 - headlamp
 - kube-prometheus-stack

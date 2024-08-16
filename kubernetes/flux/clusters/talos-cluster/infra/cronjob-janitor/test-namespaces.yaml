@@ -1,0 +1,83 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: janitor-test-15s
+  labels:
+    janitor/ttl: 5s
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: janitor-test-15s
+  labels:
+    janitor/ttl: 15s
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: janitor-test-30s
+  labels:
+    janitor/ttl: 30s
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: janitor-test-45s
+  labels:
+    janitor/ttl: 45s
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: janitor-test-1m
+  labels:
+    janitor/ttl: 1m
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: janitor-test-2m
+  labels:
+    janitor/ttl: 2m
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: janitor-test-3m
+  labels:
+    janitor/ttl: 3m
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: janitor-test-4m
+  labels:
+    janitor/ttl: 4m
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: janitor-test-5m
+  labels:
+    janitor/ttl: 5m
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: janitor-test-1h
+  labels:
+    janitor/ttl: 1h
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: janitor-test-1d
+  labels:
+    janitor/ttl: 1d
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: janitor-test-1w
+  labels:
+    janitor/ttl: 1w
