@@ -15,7 +15,7 @@ spec:
       template:
         spec:
           serviceAccountName: namespace-cleaner-sa
-          restartPolicy: O
+          restartPolicy: OnFailure
           containers:
           - name: namespace-cleanup
             image: bitnami/kubectl:latest
