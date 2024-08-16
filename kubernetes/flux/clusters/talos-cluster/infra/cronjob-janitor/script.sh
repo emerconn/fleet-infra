@@ -3,13 +3,29 @@ set -e # exit on first error
 
 CURRENT_DATE=$(date -u +"%Y-%m-%dT%H:%M:%SZ") # UTC k8s format
 echo "current date: $CURRENT_DATE"
-CURRENT_SECONDS=$(date -d "$CURRENT_DATE" +%s) # seconds since epoch
-echo "current seconds since epoch: $CURRENT_SECONDS"
+CURRENT_EPOCH=$(date -d "$CURRENT_DATE" +%s) # seconds since epoch
+echo "current epoch: $CURRENT_EPOCH"
 
 LABEL="janitor/ttl"
 echo "label: $LABEL"
 NAMESPACES=$(kubectl get ns -l "$LABEL" -o jsonpath='{.items[*].metadata.name}')
 echo "labeled namespaces: $NAMESPACES"
+
+# stdout colors
+RED="\e[31m"
+GREEN="\e[32m"
+ENDCOLOR="\e[0m"
+
+delete_namespace() {
+  if [[ "$DIFF" -ge "$LABEL_INT" ]]; then
+    echo "diff: ${DIFF}${LABEL_UNIT} >= ${LABEL_INT}${LABEL_UNIT}"
+    echo -e "${RED}deleting namespace: $ns${ENDCOLOR}"
+    kubectl delete ns "$ns" --wait=false # namespaces with finalized resources will be left in a perpetual Terminating state
+  else
+    echo "diff: ${DIFF}${LABEL_UNIT} < ${LABEL_INT}${LABEL_UNIT}"
+    echo -e "${GREEN}keeping namespace: $ns${ENDCOLOR}"
+  fi
+}
 
 for ns in $NAMESPACES; do
   echo "===================="
@@ -24,34 +40,33 @@ for ns in $NAMESPACES; do
 
   CREATION_DATE=$(kubectl get ns "$ns" -o jsonpath='{.metadata.creationTimestamp}')
   echo "creation date: $CREATION_DATE"
-  CREATION_SECONDS=$(date -d "$CREATION_DATE" +%s) # seconds since epoch
-  echo "creation seconds since epoch: $CREATION_SECONDS"
+  CREATION_EPOCH=$(date -d "$CREATION_DATE" +%s) # seconds since epoch
+  echo "creation epoch: $CREATION_EPOCH"
 
-  DIFF_S=$(( CURRENT_SECONDS - CREATION_SECONDS ))
-  echo "diff second: $DIFF_S"
-  DIFF_M=$(( DIFF_S / 60 ))
-  echo "diff minute: $DIFF_M"
-  DIFF_H=$(( DIFF_M / 60 ))
-  echo "diff hour: $DIFF_H"
-  DIFF_D=$(( DIFF_H / 24 ))
-  echo "diff day: $DIFF_D"
-  DIFF_W=$(( DIFF_D / 7 ))
-  echo "diff week: $DIFF_W"
+  DIFF_EPOCH=$(( CURRENT_EPOCH - CREATION_EPOCH ))
+  echo "diff epoch: $DIFF_EPOCH"
 
   case "$LABEL_UNIT" in
-    "s" | "m" | "h" | "d" | "w")
-        echo "case: $LABEL_UNIT"
-
-        eval "DIFF_INT=\$DIFF_${LABEL_UNIT^^}"
-        echo "diff int: $DIFF_INT"
-
-        if [[ "$DIFF_INT" -ge "$LABEL_INT" ]]; then
-          echo "deleting namespace: ${DIFF_INT}${LABEL_UNIT} >= ${LABEL_INT}${LABEL_UNIT}"
-          kubectl delete ns "$ns" --wait=false # namespaces with finalized resources will be left in a perpetual Terminating state
-        else 
-          echo "keeping namespace: ${DIFF_INT}${LABEL_UNIT} < ${LABEL_INT}${LABEL_UNIT}"
-        fi
-      ;;
+    "s")
+      DIFF=$(( DIFF_EPOCH ))
+      delete_namespace
+      ;; # second
+    "m")
+      DIFF=$(( DIFF_EPOCH / 60 ))
+      delete_namespace
+      ;; # minute
+    "h")
+      DIFF=$(( DIFF_EPOCH / 3600 ))
+      delete_namespace
+      ;; # hour
+    "d")
+      DIFF=$(( DIFF_EPOCH / 86400 ))
+      delete_namespace
+      ;; # day
+    "w")
+      DIFF=$(( DIFF_EPOCH / 604800 ))
+      delete_namespace
+      ;; # week
     *)
       echo "invalid unit: $LABEL_UNIT"
       ;;
