@@ -3,6 +3,36 @@ kind: Namespace
 metadata:
   name: janitor
 ---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: namespace-cleaner-sa
+  namespace: janitor
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: namespace-cleaner-role
+  namespace: janitor
+rules:
+- apiGroups: [""]
+  resources: ["namespaces"]
+  verbs: ["get", "list", "delete"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: namespace-cleaner-rolebinding
+  namespace: janitor
+subjects:
+- kind: ServiceAccount
+  name: namespace-cleaner-sa
+  namespace: janitor
+roleRef:
+  kind: ClusterRole
+  name: namespace-cleaner-role
+  apiGroup: rbac.authorization.k8s.io
+---
 apiVersion: batch/v1
 kind: CronJob
 metadata:
