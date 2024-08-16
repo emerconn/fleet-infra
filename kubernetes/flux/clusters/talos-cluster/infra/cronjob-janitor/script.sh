@@ -11,20 +11,6 @@ echo "label: $LABEL"
 NAMESPACES=$(kubectl get ns -l "$LABEL" -o jsonpath='{.items[*].metadata.name}')
 echo "labeled namespaces: $NAMESPACES"
 
-delete_ns () {
-  echo "case: $LABEL_UNIT"
-
-  eval "DIFF_INT=\$DIFF_${LABEL_UNIT^^}"
-  echo "diff int: $DIFF_INT"
-
-  if [[ "$DIFF_INT" -ge "$LABEL_INT" ]]; then
-    echo "deleting namespace: ${DIFF_INT}${LABEL_UNIT} >= ${LABEL_INT}${LABEL_UNIT}"
-    kubectl delete ns "$ns" --wait=false # namespaces with finalized resources will be left in a perpetual Terminating state
-  else 
-    echo "keeping namespace: ${DIFF_INT}${LABEL_UNIT} < ${LABEL_INT}${LABEL_UNIT}"
-  fi
-}
-
 for ns in $NAMESPACES; do
   echo "===================="
   echo "namespace: $ns"
@@ -54,10 +40,21 @@ for ns in $NAMESPACES; do
 
   case "$LABEL_UNIT" in
     "s" | "m" | "h" | "d" | "w")
-      delete_ns
+        echo "case: $LABEL_UNIT"
+
+        eval "DIFF_INT=\$DIFF_${LABEL_UNIT^^}"
+        echo "diff int: $DIFF_INT"
+
+        if [[ "$DIFF_INT" -ge "$LABEL_INT" ]]; then
+          echo "deleting namespace: ${DIFF_INT}${LABEL_UNIT} >= ${LABEL_INT}${LABEL_UNIT}"
+          kubectl delete ns "$ns" --wait=false # namespaces with finalized resources will be left in a perpetual Terminating state
+        else 
+          echo "keeping namespace: ${DIFF_INT}${LABEL_UNIT} < ${LABEL_INT}${LABEL_UNIT}"
+        fi
       ;;
     *)
       echo "invalid unit: $LABEL_UNIT"
       ;;
   esac
 done
+ 
