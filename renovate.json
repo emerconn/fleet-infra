@@ -3,7 +3,7 @@
   "extends": [
     "config:recommended"
   ],
-  "asdfasdfasdf": {
+  "flux": {
     "fileMatch": ["(^|/)kubernetes/.+\\.ya?ml(?:\\.j2)?$"],
   }
 }
