@@ -10,38 +10,39 @@
   "kubernetes": {
     "fileMatch": ["(^|/)k8s/.+\\.ya?ml(?:\\.j2)?$"]
   },
+  "labels": ["renovate-bot"],
   "packageRules": [
     {
       "matchUpdateTypes": ["major"],
-      "labels": ["renovate-type/major"]
+      "labels": ["type/major"]
     },
     {
       "matchUpdateTypes": ["minor"],
-      "labels": ["renovate-type/minor"]
+      "labels": ["type/minor"]
     },
     {
       "matchUpdateTypes": ["patch"],
-      "labels": ["renovate-type/patch"]
+      "labels": ["type/patch"]
     },
     {
       "matchUpdateTypes": ["digest"],
-      "labels": ["renovate-type/digest"]
+      "labels": ["type/digest"]
     },
     {
       "matchDatasources": ["docker"],
-      "addLabels": ["renovate-source/container"]
+      "addLabels": ["source/container"]
     },
     {
       "matchDatasources": ["helm"],
-      "addLabels": ["renovate-source/helm"]
+      "addLabels": ["source/helm"]
     },
     {
       "matchDatasources": ["github-releases", "github-tags"],
-      "addLabels": ["renovate-source/github-release"]
+      "addLabels": ["source/github-release"]
     },
     {
       "matchManagers": ["github-actions"],
-      "addLabels": ["renovate-source/github-action"]
+      "addLabels": ["source/github-action"]
     }
   ]
 }
