@@ -7,7 +7,6 @@ resources:
 - cronjob-janitor
 - database
 - ingress
-- kube-prometheus-stack
 - minio-operator
 - minio-tenant
 - node-feature-discovery

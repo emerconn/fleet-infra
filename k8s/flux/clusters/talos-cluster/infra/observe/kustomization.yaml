@@ -4,5 +4,6 @@ kind: Kustomization
 resources:
 - fluent-operator
 - headlamp
+- kube-prometheus-stack
 - openobserve
 - openobserve-collector
