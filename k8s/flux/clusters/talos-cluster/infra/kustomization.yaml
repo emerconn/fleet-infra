@@ -13,7 +13,6 @@ resources:
 - minio-tenant
 - node-feature-discovery
 - observe
-- openobserve-collector
 - synology-csi-talos
 - vault-secrets-operator
 - ../../../infra/components/eraser.yaml
