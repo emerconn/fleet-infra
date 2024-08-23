@@ -25,7 +25,9 @@ Using domain `emerconnelly.com` for [`cert-manager`](https://cert-manager.io/)'s
 
 Exposing the K8s API, ingress & egress to a tailnet
  
-### Vault Secrets | HashiCorp Cloud Platform [![HCP Vault Secrets](https://img.shields.io/badge/Vault_Secrets-000?logo=hashicorp)](https://portal.cloud.hashicorp.com/services/secrets?project_id=c9dc34a9-87d7-4e2d-9a1c-3d3e759f8261)
+### Vault Secrets | HashiCorp Cloud Platform
+
+[![HCP Vault Secrets](https://img.shields.io/badge/Vault_Secrets-000?logo=hashicorp)](https://portal.cloud.hashicorp.com/services/secrets?project_id=c9dc34a9-87d7-4e2d-9a1c-3d3e759f8261)
 
 ## k8s internal
 
