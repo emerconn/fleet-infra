@@ -26,14 +26,3 @@ patches:
           components:
             scanner:
               enabled: false
-- patch: |-
-    apiVersion: helm.toolkit.fluxcd.io/v2
-    kind: HelmRelease
-    metadata:
-      name: snapshot-controller
-      namespace: flux-system
-    spec:
-      values:
-        controller:
-          serviceMonitor: # TODO: create Grafana dashboard
-            create: true
