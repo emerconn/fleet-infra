@@ -33,5 +33,8 @@ My homelab infra, featuring horrible commit messages.
 
 ### Cilium [![Cilium Hubble](https://img.shields.io/badge/Hubble-f8c517?logo=cilium&logoColor=000)](https://hubble.homelab.emerconnelly.com/)
 
+- Visual map & event log of the eBPF-based kube network
+
 ### OpenObserve [![OpenObserve Home](https://img.shields.io/badge/Home-651708)](https://openobserve.homelab.emerconnelly.com/)
 
+- Full-stack observability (logs, traces, & metrics), ~71 compression ratio, & a clean web UI for queries and dashboards.
