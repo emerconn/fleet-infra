@@ -1,4 +1,5 @@
 # fleet-infra
-Kubernetes and flux and stuff and other things
+
+My homelab infra, featuring horrible commit messages.
 
 [Renovate Dashboard](https://developer.mend.io/github/emerconnelly/fleet-infra)
