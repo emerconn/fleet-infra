@@ -31,8 +31,8 @@ Exposing the K8s API, ingress & egress to a tailnet
 
 ## k8s internal
 
-### OpenObserve
+### OpenObserve [![HCP Vault Secrets](https://img.shields.io/badge/OpenObserve-000)](https://openobserve.homelab.emerconnelly.com/)
 
 Full-stack observability (logs, traces, and metrics), ~71 compression ration (perfect for limited homelab storage), and a clean web UI for queries and dashboards.
 
-[![HCP Vault Secrets](https://img.shields.io/badge/OpenObserve-000)](https://openobserve.homelab.emerconnelly.com/)
+
