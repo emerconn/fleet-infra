@@ -13,4 +13,5 @@ patches:
       namespace: flux-system
     spec:
       values:
-        hostname: "talos-cluster"
+        operatorConfig:
+          hostname: "talos-cluster"
