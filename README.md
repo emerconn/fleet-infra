@@ -31,7 +31,7 @@ Exposing the K8s API, ingress & egress to a tailnet
 
 ## k8s internal
 
-### Cilium [![Cilium Hubble](https://img.shields.io/badge/Hubble-f8c517?logo=cilium&logoColor=000)](https://openobserve.homelab.emerconnelly.com/)
+### Cilium [![Cilium Hubble](https://img.shields.io/badge/Hubble-f8c517?logo=cilium&logoColor=000)](https://hubble.homelab.emerconnelly.com/)
 
 ### OpenObserve [![OpenObserve Home](https://img.shields.io/badge/Home-651708)](https://openobserve.homelab.emerconnelly.com/)
 
