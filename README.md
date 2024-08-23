@@ -10,7 +10,7 @@ Configured as a [GitHub app](https://github.com/apps/renovate) (migrate to GitHu
 
 ## Cloudflare
 
-Using the `emerconnelly.com `domain for (cert-manager DNS01 Challenge Provider)[https://cert-manager.io/docs/configuration/acme/dns01/]
+Using the domain `emerconnelly.com` for (`cert-manager` DNS01 Challenge Provider)[https://cert-manager.io/docs/configuration/acme/dns01/]
 
 ## Tailscale
 
