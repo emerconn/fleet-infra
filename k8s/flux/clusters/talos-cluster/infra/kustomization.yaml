@@ -2,16 +2,15 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-- cert-manager
-- cronjob-janitor
 - database
+- general
 - ingress
 - kube-system
 - observe
 - storage
 - secrets
-- ../../../infra/components/eraser.yaml
-- ../../../infra/components/secrets/reflector.yaml
+- ../../../infra/components/general/eraser.yaml
+- ../../../infra/components/general/reflector.yaml
 patches:
 - patch: |-
     apiVersion: helm.toolkit.fluxcd.io/v2
