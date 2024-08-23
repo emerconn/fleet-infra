@@ -8,6 +8,7 @@ resources:
 - database
 - fluent-operator
 - headlamp
+- ingress
 - kube-prometheus-stack
 - minio-operator
 - minio-tenant
@@ -15,7 +16,6 @@ resources:
 - openobserve
 - openobserve-collector
 - synology-csi-talos
-- traefik
 - vault-secrets-operator
 - ../../../infra/components/eraser.yaml
 - ../../../infra/components/descheduler.yaml
