@@ -2,13 +2,13 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:recommended"],
   "flux": {
-    "fileMatch": ["(^|/)kubernetes/.+\\.ya?ml(?:\\.j2)?$"]
+    "fileMatch": ["(^|/)k8s/.+\\.ya?ml(?:\\.j2)?$"]
   },
   "helm-values": {
-    "fileMatch": ["(^|/)kubernetes/.+\\.ya?ml(?:\\.j2)?$"]
+    "fileMatch": ["(^|/)k8s/.+\\.ya?ml(?:\\.j2)?$"]
   },
   "kubernetes": {
-    "fileMatch": ["(^|/)kubernetes/.+\\.ya?ml(?:\\.j2)?$"]
+    "fileMatch": ["(^|/)k8s/.+\\.ya?ml(?:\\.j2)?$"]
   },
   "packageRules": [
     {
