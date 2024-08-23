@@ -2,12 +2,4 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-- database
-- general
-- ingress
-- kube-system
-- network
-- observe
-- secrets
-- security
-- storage
+- ../../../../../infra/security/tetragon.yaml
