@@ -2,7 +2,9 @@
 
 My homelab infra, featuring horrible commit messages.
 
-## Renovate [![Renovate Dashboard](https://img.shields.io/badge/Dashboard-1a1f6c?logo=renovate)](https://developer.mend.io/github/emerconnelly/fleet-infra)
+## Renovate
+
+[![Renovate Dashboard](https://img.shields.io/badge/Dashboard-1a1f6c?logo=renovate)](https://developer.mend.io/github/emerconnelly/fleet-infra)
 
 Configured as a [GitHub app](https://github.com/apps/renovate) (migrate to GitHub Action because it looks cooler?)
 
@@ -27,8 +29,8 @@ Exposing the K8s API, ingress & egress to a tailnet
 
 ## k8s internal
 
-### OpenObserve [![HCP Vault Secrets](https://img.shields.io/badge/OpenObserve-000)](https://openobserve.homelab.emerconnelly.com/)
+### OpenObserve
+
+[![HCP Vault Secrets](https://img.shields.io/badge/OpenObserve-000)](https://openobserve.homelab.emerconnelly.com/)
 
 Full-stack observability (logs, traces, and metrics), ~71 compression ration (perfect for limited homelab storage), and a clean web UI for queries and dashboards.
-
-
