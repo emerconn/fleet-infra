@@ -3,6 +3,4 @@ kind: Kustomization
 resources:
 - 7dtd-server
 - mongodb
-# - storage-perf-test.yaml
-# - network-test.yaml
 - test-web-app
