@@ -12,23 +12,8 @@ resources:
 - storage
 - secrets
 - ../../../infra/components/eraser.yaml
-- ../../../infra/components/kube-system/descheduler.yaml
 - ../../../infra/components/secrets/reflector.yaml
 patches:
-- patch: |-
-    apiVersion: helm.toolkit.fluxcd.io/v2
-    kind: HelmRelease
-    metadata:
-      name: descheduler
-      namespace: flux-system
-    spec:
-      values:
-        kind: Deployment
-        service:
-          enabled: true
-        serviceMonitor: # TODO: create Grafana dashboard
-          enabled: true
-          namespace: kube-system
 - patch: |-
     apiVersion: helm.toolkit.fluxcd.io/v2
     kind: HelmRelease
