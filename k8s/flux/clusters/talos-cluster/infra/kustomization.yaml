@@ -10,7 +10,7 @@ resources:
 - kube-prometheus-stack
 - minio-operator
 - minio-tenant
-# - mongodb
+- mongodb
 - node-feature-discovery
 - openobserve
 - openobserve-collector
