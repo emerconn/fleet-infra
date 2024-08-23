@@ -19,7 +19,6 @@ resources:
 - vault-secrets-operator
 - ../../../infra/components/eraser.yaml
 - ../../../infra/components/descheduler.yaml
-# - ../../../infra/components/ingress/ingress-nginx.yaml
 - ../../../infra/components/observe/opentelemetry-operator.yaml
 - ../../../infra/components/secrets/external-secrets.yaml
 - ../../../infra/components/secrets/reflector.yaml
