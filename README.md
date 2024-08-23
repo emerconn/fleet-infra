@@ -22,6 +22,8 @@ Using domain `emerconnelly.com` for [`cert-manager`](https://cert-manager.io/)'s
 
 [![Tailscale Machines](https://img.shields.io/badge/Machines-242424?logo=tailscale)](https://login.tailscale.com/admin/machines)
 [![Tailscale ACL Editor](https://img.shields.io/badge/ACL%20Editor-242424?logo=tailscale)](https://login.tailscale.com/admin/machines)
+
+Exposing ingress, egress, & Kubernetes API via TailNet.
  
 ### Vault Secrets | HashiCorp Cloud Platform
 
