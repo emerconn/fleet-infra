@@ -6,6 +6,28 @@ metadata:
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
+  name: mongodb-atlas-operator-crds
+  namespace: flux-system
+spec:
+  releaseName: mongodb-atlas-operator-crds
+  targetNamespace: atlas-operator
+  chart:
+    spec:
+      chart: mongodb-atlas-operator-crds
+      sourceRef:
+        kind: HelmRepository
+        name: mongodb
+        namespace: flux-system
+      version: "2.4.1"
+  interval: 1h
+  install:
+    remediation:
+      retries: -1
+  values: # https://github.com/mongodb/helm-charts/blob/main/charts/atlas-operator-crds/values.yaml
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
   name: atlas-operator-crds
   namespace: flux-system
 spec:
@@ -13,7 +35,7 @@ spec:
   targetNamespace: atlas-operator
   chart:
     spec:
-      chart: mongodb-atlas-operator-crds
+      chart: mongodb-atlas-operator
       sourceRef:
         kind: HelmRepository
         name: mongodb
