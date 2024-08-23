@@ -11,7 +11,7 @@ resources:
 - minio-tenant
 - node-feature-discovery
 - observe
-- synology-csi-talos
+- storage
 - vault-secrets-operator
 - ../../../infra/components/eraser.yaml
 - ../../../infra/components/descheduler.yaml
