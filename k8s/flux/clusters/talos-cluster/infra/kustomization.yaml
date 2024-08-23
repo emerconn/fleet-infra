@@ -4,7 +4,6 @@ kind: Kustomization
 resources:
 - database
 - general
-- ingress
 - kube-system
 - network
 - observe
