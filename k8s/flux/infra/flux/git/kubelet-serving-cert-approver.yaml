@@ -1,4 +1,4 @@
-apiVersion: source.toolkit.fluxcd.io/v1beta2
+apiVersion: ssource.toolkit.fluxcd.io/v1
 kind: URLRepository
 metadata:
   name: kubelet-serving-cert-approver
