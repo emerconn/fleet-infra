@@ -5,6 +5,7 @@ resources:
 - cert-manager
 - cilium
 - cronjob-janitor
+- database
 - fluent-operator
 - headlamp
 - kube-prometheus-stack
