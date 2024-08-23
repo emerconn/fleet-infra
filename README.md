@@ -10,7 +10,7 @@ Configured as a [GitHub app](https://github.com/apps/renovate) (migrate to GitHu
 
 ## Cloudflare
 
-[![Cloudflare API Tokens](https://img.shields.io/badge/API_Tokens%20Log-F38020?logo=cloudflare&logoColor=fff)]([https://dash.cloudflare.com/923309f860b1a7e801fd81224c5f56c9/audit-log](https://dash.cloudflare.com/profile/api-tokens))
+[![Cloudflare API Tokens](https://img.shields.io/badge/API_Tokens-%20Log-F38020?logo=cloudflare&logoColor=fff)]([https://dash.cloudflare.com/923309f860b1a7e801fd81224c5f56c9/audit-log](https://dash.cloudflare.com/profile/api-tokens))
 [![Cloudflare Audit Log](https://img.shields.io/badge/Audit%20Log-F38020?logo=cloudflare&logoColor=fff)](https://dash.cloudflare.com/923309f860b1a7e801fd81224c5f56c9/audit-log)
 
 Using domain `emerconnelly.com` for [`cert-manager`](https://cert-manager.io/)'s [Let's Encrypt](https://letsencrypt.org/) [ACME DNS01 Challenge Provider](https://cert-manager.io/docs/configuration/acme/dns01/).
