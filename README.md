@@ -10,7 +10,7 @@ Renovate manages versions and dependecies via automated PRs. For example, Flux `
 
 ## Tailscale
 
-![Static Badge](https://img.shields.io/badge/Tailscale%20Machines-242424?logo=tailscale)
+![Tailscale Machines](https://img.shields.io/badge/Machines-242424?logo=tailscale)
 
 [ACL Editor](https://login.tailscale.com/admin/acls/file)
 
