@@ -3,7 +3,7 @@
 helm upgrade \
     cilium \
     cilium/cilium \
-    --version 1.15.7 \
+    --version 1.16.1 \
     --install \
     --namespace kube-system \
     --set ipam.mode=kubernetes \
