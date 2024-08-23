@@ -28,7 +28,7 @@ patches:
           enabled: true
         serviceMonitor: # TODO: create Grafana dashboard
           enabled: true
-          namespace: descheduler
+          namespace: kube-system
 - patch: |-
     apiVersion: helm.toolkit.fluxcd.io/v2
     kind: HelmRelease
