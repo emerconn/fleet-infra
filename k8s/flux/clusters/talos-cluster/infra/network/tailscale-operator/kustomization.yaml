@@ -15,3 +15,5 @@ patches:
       values:
         operatorConfig:
           hostname: "talos-cluster"
+        apiServerProxyConfig:
+          mode: "noauth"
