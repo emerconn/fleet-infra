@@ -13,7 +13,6 @@ resources:
 - secrets
 - ../../../infra/components/eraser.yaml
 - ../../../infra/components/descheduler.yaml
-- ../../../infra/components/secrets/external-secrets.yaml
 - ../../../infra/components/secrets/reflector.yaml
 patches:
 - patch: |-
