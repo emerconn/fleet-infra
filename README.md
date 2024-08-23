@@ -23,7 +23,7 @@ My homelab infra, featuring horrible commit messages.
 [![Tailscale Machines](https://img.shields.io/badge/Machines-242424?logo=tailscale)](https://login.tailscale.com/admin/machines)
 [![Tailscale ACL Editor](https://img.shields.io/badge/ACL%20Editor-242424?logo=tailscale)](https://login.tailscale.com/admin/machines)
 
-- Exposing ingress, egress, & K8s API to a tailnet
+- Exposing ingress, egress, & K8s API to a [tailnet](https://tailscale.com/kb/1136/tailnet)
  
 ### Vault Secrets | HashiCorp Cloud Platform
 
