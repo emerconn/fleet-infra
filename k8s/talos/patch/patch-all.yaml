@@ -12,7 +12,7 @@ cluster:
   controllerManager:
     image: registry.k8s.io/kube-controller-manager:v1.30.2
   scheduler:
-    image: registry.k8s.io/kube-scheduler:v1.30.2
+    image: registry.k8s.io/kube-scheduler:v1.31.0
   extraManifests: # install metrics server
   - https://raw.githubusercontent.com/alex1989hu/kubelet-serving-cert-approver/main/deploy/standalone-install.yaml
   - https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml

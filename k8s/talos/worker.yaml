@@ -59,7 +59,7 @@ cluster:
     disabled: true
     image: registry.k8s.io/kube-proxy:v1.30.2
   scheduler:
-    image: registry.k8s.io/kube-scheduler:v1.30.2
+    image: registry.k8s.io/kube-scheduler:v1.31.0
   discovery:
     enabled: true
     registries:
