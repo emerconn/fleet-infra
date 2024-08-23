@@ -5,6 +5,7 @@ resources:
 - fluent-operator
 - headlamp
 - kube-prometheus-stack
+- metrics-server
 - openobserve
 - openobserve-collector
 - ../../../../infra/observe/opentelemetry-operator.yaml

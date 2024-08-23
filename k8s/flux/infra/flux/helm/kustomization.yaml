@@ -15,6 +15,7 @@ resources:
 - headlamp.yaml
 - ingress-nginx.yaml
 - jetstack.yaml
+- metrics-server.yaml
 - minio-operator.yaml
 - minio.yaml
 - mongodb.yaml
