@@ -7,7 +7,6 @@ resources:
 - database
 - ingress
 - kube-system
-- node-feature-discovery
 - observe
 - storage
 - secrets

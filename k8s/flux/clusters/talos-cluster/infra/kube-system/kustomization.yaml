@@ -4,4 +4,5 @@ kind: Kustomization
 resources:
 - cilium # TODO: figure out how to add the helmrelease here
 - descheduler
+- node-feature-discovery
 - snapshot-controller
