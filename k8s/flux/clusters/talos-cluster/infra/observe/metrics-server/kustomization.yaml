@@ -12,6 +12,7 @@ patches:
       namespace: flux-system
     spec:
       values:
+        replicas: 2
         metrics:
           enabled: true
         serviceMonitor:
