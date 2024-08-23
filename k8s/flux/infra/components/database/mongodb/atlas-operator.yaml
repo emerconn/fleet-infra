@@ -13,10 +13,10 @@ spec:
   targetNamespace: atlas-operator
   chart:
     spec:
-      chart: mongodb
+      chart: mongodb-atlas-operator-crds
       sourceRef:
         kind: HelmRepository
-        name: mongodb-atlas-operator-crds
+        name: mongodb
         namespace: flux-system
       version: "2.4.1"
   interval: 1h
