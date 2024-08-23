@@ -29,6 +29,8 @@ My homelab infra, featuring horrible commit messages.
 
 [![HCP Vault Secrets](https://img.shields.io/badge/Vault_Secrets-000?logo=hashicorp)](https://portal.cloud.hashicorp.com/services/secrets?project_id=c9dc34a9-87d7-4e2d-9a1c-3d3e759f8261)
 
+- Free cloud-based SaaS secret manager controlled via the `vault-secrets-operator`
+
 ## k8s internal
 
 ### Cilium [![Cilium Hubble](https://img.shields.io/badge/Hubble-f8c517?logo=cilium&logoColor=000)](https://hubble.homelab.emerconnelly.com/)
