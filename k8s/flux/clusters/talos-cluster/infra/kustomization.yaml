@@ -6,7 +6,6 @@ resources:
 - cilium
 - cronjob-janitor
 - database
-- headlamp
 - ingress
 - kube-prometheus-stack
 - minio-operator
