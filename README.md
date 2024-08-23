@@ -4,7 +4,7 @@ My homelab infra, featuring horrible commit messages.
 
 ## Renovate
 
-![Static Badge](https://img.shields.io/badge/Dashboard-1A1F6C?logo=tailscale&link=https%3A%2F%2Fdeveloper.mend.io%2Fgithub%2Femerconnelly%2Ffleet-infra)
+![Static Badge](https://img.shields.io/badge/Dashboard-1A1F6C?logo=renovate&link=https%3A%2F%2Fdeveloper.mend.io%2Fgithub%2Femerconnelly%2Ffleet-infra)
 
 Renovate manages versions and dependecies via automated PRs. For example, Flux `HelmRelease`'s are scanned for new versions. This repo has Renovate configured as a GitHub bot via a GitHub app. (move this to a GitHub Action because it looks cooler?)
 
