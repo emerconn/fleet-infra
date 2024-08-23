@@ -33,6 +33,6 @@ Exposing the K8s API, ingress & egress to a tailnet
 
 ### OpenObserve
 
-https://openobserve.homelab.emerconnelly.com/
+Full-stack observability (logs, traces, and metrics), ~71 compression ration (perfect for limited homelab storage), and a clean web UI for queries and dashboards.
 
-Full-stack observability (logs, traces, and metrics), 71 compression ration, and a clean front-end UI for queries and dashboards.
+https://openobserve.homelab.emerconnelly.com/
