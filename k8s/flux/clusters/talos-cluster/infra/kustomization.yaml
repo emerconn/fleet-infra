@@ -7,8 +7,6 @@ resources:
 - database
 - ingress
 - kube-system
-- minio-operator
-- minio-tenant
 - node-feature-discovery
 - observe
 - storage
