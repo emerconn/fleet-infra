@@ -6,7 +6,7 @@ resources:
 - grafana-dashboard.yaml
 - middleware.yaml
 - tls-option.yaml
-- ../../../../../infra/components/ingress/traefik.yaml
+- ../../../../../infra/ingress/traefik.yaml
 patches:
 - patch: |-
     apiVersion: helm.toolkit.fluxcd.io/v2

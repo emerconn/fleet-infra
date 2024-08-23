@@ -4,7 +4,7 @@ kind: Kustomization
 resources:
 - ingress.yaml
 - service-account-token.yaml
-- ../../../../../infra/components/observe/headlamp.yaml
+- ../../../../../infra/observe/headlamp.yaml
 patches:
 - patch: |-
     apiVersion: helm.toolkit.fluxcd.io/v2

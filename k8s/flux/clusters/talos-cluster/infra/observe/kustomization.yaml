@@ -7,4 +7,4 @@ resources:
 - kube-prometheus-stack
 - openobserve
 - openobserve-collector
-- ../../../../infra/components/observe/opentelemetry-operator.yaml
+- ../../../../infra/observe/opentelemetry-operator.yaml

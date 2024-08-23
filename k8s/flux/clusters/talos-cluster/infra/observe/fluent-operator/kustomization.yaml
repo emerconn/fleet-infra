@@ -4,7 +4,7 @@ kind: Kustomization
 resources:
 - clusteroutput-openobserve.yaml
 - secret-sops-http-openobserve.yaml
-- ../../../../../infra/components/observe/fluent-operator.yaml
+- ../../../../../infra/observe/fluent-operator.yaml
 patches:
 - patch: |- # https://www.talos.dev/v1.7/kubernetes-guides/configuration/pod-security/
     apiVersion: v1

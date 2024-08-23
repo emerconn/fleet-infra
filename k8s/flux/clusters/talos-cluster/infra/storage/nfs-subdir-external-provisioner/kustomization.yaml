@@ -2,7 +2,7 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-- ../../../../../infra/components/storage/nfs-subdir-external-provisioner.yaml
+- ../../../../../infra/storage/nfs-subdir-external-provisioner.yaml
 patches:
 - patch: |-
     apiVersion: helm.toolkit.fluxcd.io/v2
