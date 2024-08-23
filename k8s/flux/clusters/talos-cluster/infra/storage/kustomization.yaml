@@ -5,4 +5,5 @@ resources:
 - minio-operator
 - minio-tenant
 - nfs-subdir-external-provisioner
+- snapshot-controller
 - synology-csi-talos

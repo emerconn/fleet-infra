@@ -7,4 +7,3 @@ resources:
 - kubelet-serving-cert-approver
 - node-feature-discovery
 - node-problem-detector
-- snapshot-controller
