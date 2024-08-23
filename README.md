@@ -8,7 +8,12 @@ My homelab infra, featuring horrible commit messages.
 
 Configured as a [GitHub app](https://github.com/apps/renovate) (migrate to GitHub Action because it looks cooler?)
 
+## Cloudflare
+
+Using the `emerconnelly.com `domain for (cert-manager DNS01 Challenge Provider)[https://cert-manager.io/docs/configuration/acme/dns01/]
+
 ## Tailscale
 
 [![Tailscale Machines](https://img.shields.io/badge/Machines-242424?logo=tailscale)](https://login.tailscale.com/admin/machines)
 [![Tailscale ACL Editor](https://img.shields.io/badge/ACL%20Editor-242424?logo=tailscale)](https://login.tailscale.com/admin/machines)
+ 
