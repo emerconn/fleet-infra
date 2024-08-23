@@ -18,7 +18,7 @@ spec:
         kind: HelmRepository
         name: prometheus-community
         namespace: flux-system
-      version: "61.3.1"
+      version: "62.2.1"
   interval: 1h
   install:
     remediation:
