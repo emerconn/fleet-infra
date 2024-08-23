@@ -6,13 +6,13 @@ resources:
 - cilium
 - cronjob-janitor
 - database
-- fluent-operator
 - headlamp
 - ingress
 - kube-prometheus-stack
 - minio-operator
 - minio-tenant
 - node-feature-discovery
+- observe
 - openobserve
 - openobserve-collector
 - synology-csi-talos
