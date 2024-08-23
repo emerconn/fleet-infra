@@ -5,6 +5,7 @@ resources:
 - cilium.yaml
 - cloudflare.yaml
 - cloudnative-pg.yaml
+- deliveryhero.yaml
 - descheduler.yaml
 - emberstack.yaml
 - eraser.yaml
