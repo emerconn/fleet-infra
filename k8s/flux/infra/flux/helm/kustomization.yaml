@@ -16,6 +16,7 @@ resources:
 - jetstack.yaml
 - minio-operator.yaml
 - minio.yaml
+- mongodb.yaml
 - nfs-subdir-external-provisioner.yaml
 - node-feature-discovery.yaml
 - openobserve.yaml
