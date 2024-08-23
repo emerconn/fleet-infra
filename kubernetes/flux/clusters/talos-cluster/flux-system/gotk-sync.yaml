@@ -19,7 +19,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m0s
-  path: ./kubernetes/flux/clusters/talos-cluster
+  path: ./k8s/flux/clusters/talos-cluster
   prune: true
   sourceRef:
     kind: GitRepository
