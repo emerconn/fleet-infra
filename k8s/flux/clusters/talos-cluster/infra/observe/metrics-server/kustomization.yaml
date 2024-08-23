@@ -8,7 +8,7 @@ patches:
     apiVersion: helm.toolkit.fluxcd.io/v2
     kind: HelmRelease
     metadata:
-      name: headlamp
+      name: metrics-server
       namespace: flux-system
     spec:
       values:
