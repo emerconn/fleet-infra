@@ -6,7 +6,7 @@ My homelab infra, featuring horrible commit messages.
 
 [![Static Badge](https://img.shields.io/badge/Dashboard-1A1F6C?logo=renovate)](https://developer.mend.io/github/emerconnelly/fleet-infra)
 
-Configured as a bot via a GitHub app. (move this to a GitHub Action because it looks cooler?)
+Configured as a [GitHub app](https://github.com/apps/renovate). (move this to a GitHub Action because it looks cooler?)
 
 ## Tailscale
 
