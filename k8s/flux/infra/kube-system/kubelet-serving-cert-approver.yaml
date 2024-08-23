@@ -10,5 +10,5 @@ spec:
     kind: GitRepository
     name: kubelet-serving-cert-approver
     namespace: flux-system
-  path: "./deploy"
+  path: "./deploy/ha"
   prune: true
