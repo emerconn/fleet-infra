@@ -9,6 +9,7 @@ resources:
 - headlamp
 - kube-prometheus-stack
 - minio-operator
+- minio-tenant
 - node-feature-discovery
 - openobserve
 - openobserve-collector
