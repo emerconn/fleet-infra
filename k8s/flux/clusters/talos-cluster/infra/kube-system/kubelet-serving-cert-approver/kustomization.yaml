@@ -3,5 +3,3 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - ../../../../../infra/kube-system/kubelet-serving-cert-approver.yaml
-patches:
-- patch: "apiVersion: helm.toolkit.fluxcd.io/v2\nkind: HelmRelease\nmetadata:\n  name: node-feature-discovery\n  namespace: flux-system\nspec:\n  values:\n    worker:\n      tolerations: \n      - operator: \"Exists\" # schedule daemonSet pods on tainted nodes"
