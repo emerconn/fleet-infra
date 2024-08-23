@@ -26,4 +26,5 @@ resources:
 - piraeus.yaml
 - prometheus-community.yaml
 - synology-csi-talos.yaml
+- tailscale.yaml
 - traefik.yaml
