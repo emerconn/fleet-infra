@@ -41,7 +41,7 @@ spec:
     kind: Rule
     services:
     - name: kubernetes-dashboard-kong-proxy
-      port: 443
+      port: 80
       passHostHeader: true
       sticky:
         cookie:
