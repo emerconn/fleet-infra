@@ -67,7 +67,7 @@ My homelab infra, with horrible commit messages.
 
 ### Grafana [![Grafana Dashboards](https://img.shields.io/badge/Dashboards-555?logo=grafana&logoColor=f46800&labelColor=000)](https://grafana.homelab.emerconnelly.com/dashboards)
 
-- Visualize metrics with dashboards & analytics 
+- Visualize metrics, logs, & traces from multiple sources
 - Deployed via `kube-prometheus-stack` Helm chart
 
 ### Cilium Hubble [![Cilium Hubble](https://img.shields.io/badge/Hubble-555?logo=cilium&logoColor=f9c31f&labelColor=000)](https://hubble.homelab.emerconnelly.com)
