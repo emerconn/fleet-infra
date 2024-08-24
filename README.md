@@ -39,12 +39,12 @@ My homelab infra, with horrible commit messages.
 ### Tailscale [![Tailscale Machines](https://img.shields.io/badge/Machines-555?logo=tailscale&logoColor=fff&labelColor=242424)](https://login.tailscale.com/admin/machines) [![Tailscale ACL Editor](https://img.shields.io/badge/ACL_Editor-555?logo=tailscale&logoColor=fff&labelColor=242424)](https://login.tailscale.com/admin/machines)
 
 - Secure external access by exposing ingress, egress, & the K8s API to my [tailnet](https://tailscale.com/kb/1136/tailnet)
-- Controlled by the [`tailscale-operator`](https://tailscale.com/kb/1236/kubernetes-operator)
+- Controlled via [`tailscale-operator`](https://tailscale.com/kb/1236/kubernetes-operator)
 
 ### HCP Vault Secrets [![HCP Vault Secrets](https://img.shields.io/badge/Vault_Secrets-555?logo=hashicorp&logoColor=fff&labelColor=000)](https://portal.cloud.hashicorp.com/services/secrets?project_id=c9dc34a9-87d7-4e2d-9a1c-3d3e759f8261)
 
 - Cloud-based secrets manager
-- Controlled by the [`vault-secrets-operator`](https://github.com/hashicorp/vault-secrets-operator)
+- Controlled via [`vault-secrets-operator`](https://github.com/hashicorp/vault-secrets-operator)
 
 ## k8s internal
 
@@ -62,12 +62,12 @@ My homelab infra, with horrible commit messages.
 
 ### Prometheus [![Prometheus Targets](https://img.shields.io/badge/Targets-555?logo=prometheus&logoColor=e6522c&labelColor=000)](https://prometheus.homelab.emerconnelly.com/targets)
 
-- Gathers & stores metrics, & alerts on defined thresholds
+- Gather & stores metric, & alert on defined thresholds
 - Deployed via `kube-prometheus-stack` Helm chart
 
 ### Grafana [![Grafana Dashboards](https://img.shields.io/badge/Dashboards-555?logo=grafana&logoColor=f46800&labelColor=000)](https://grafana.homelab.emerconnelly.com/dashboards)
 
-- Visulaizes metrics with dashboards & analytics 
+- Visualize metrics with dashboards & analytics 
 - Deployed via `kube-prometheus-stack` Helm chart
 
 ### Cilium Hubble [![Cilium Hubble](https://img.shields.io/badge/Hubble-555?logo=cilium&logoColor=f9c31f&labelColor=000)](https://hubble.homelab.emerconnelly.com)
@@ -80,5 +80,5 @@ My homelab infra, with horrible commit messages.
 
 ### MinIO [![MinIO Main Tenant](https://img.shields.io/badge/Main_Tenant-555?logo=minio&logoColor=c72e49&labelColor=000)](https://main.minio.homelab.emerconnelly.com)
 
-- deploys highly-available & fully API-compliant S3 storage tenants
-- controlled via the [`minio-operator`](https://min.io/docs/minio/kubernetes/upstream/operations/installation.html)
+- Deploy highly-available & fully API-compliant S3 storage tenants
+- Controlled via [`minio-operator`](https://min.io/docs/minio/kubernetes/upstream/operations/installation.html)
