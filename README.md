@@ -42,7 +42,7 @@ My homelab infra, featuring horrible commit messages.
 
 ## k8s internal
 
-### Headlamp [![Headlamp Main](https://img.shields.io/badge/Headlamp-555)](https://headlamp.homelab.emerconnelly.com/c/main)
+### Headlamp [![Headlamp Main](https://img.shields.io/badge/Main-555)](https://headlamp.homelab.emerconnelly.com/c/main)
 
 - K8s web UI & resource explorer
 
