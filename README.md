@@ -46,10 +46,6 @@ My homelab infra, featuring horrible commit messages.
 
 - K8s web UI & resource explorer
 
-### Cilium [![Cilium Hubble](https://img.shields.io/badge/Hubble-555?logo=cilium&logoColor=fff&labelColor=000)](https://hubble.homelab.emerconnelly.com)
-
-- Visual map & event log of the Cilium eBPF-based CNI
-
 ### OpenObserve [![OpenObserve Home](https://img.shields.io/badge/Home-555)](https://openobserve.homelab.emerconnelly.com/web)
 
 - Full-stack observability (logs, traces & metrics), ~71:1 compression ratio & clean web UI for queries & dashboards
@@ -61,3 +57,7 @@ My homelab infra, featuring horrible commit messages.
 ### Grafana [![Grafana Dashboards](https://img.shields.io/badge/Dashboards-555?logo=grafana&logoColor=fff&labelColor=000)](https://grafana.homelab.emerconnelly.com/dashboards)
 
 - managed via [`kube-prometheus-stack`](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack/)
+
+### Cilium Hubble [![Cilium Hubble](https://img.shields.io/badge/Hubble-555?logo=cilium&logoColor=fff&labelColor=000)](https://hubble.homelab.emerconnelly.com)
+
+- Visual map & event log of the Cilium eBPF-based CNI
