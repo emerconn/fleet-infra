@@ -14,6 +14,10 @@ patches:
       namespace: flux-system
     spec:
       values:
+        kong:
+          proxy:
+            http:
+              enabled: true
         extras:
           serviceMonitor:
             enabled: true
