@@ -10,5 +10,6 @@ spec:
   selector:
     app: mktxp-exporter
   ports:
-  - port: 49090
+  - name: metrics
+    port: 49090
     targetPort: 49090

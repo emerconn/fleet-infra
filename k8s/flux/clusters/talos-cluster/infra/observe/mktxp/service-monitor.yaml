@@ -10,6 +10,6 @@ spec:
     matchLabels:
       app: mktxp-exporter
   endpoints:
-  - port: 49090
+  - port: metrics
     path: /
     interval: 30s
