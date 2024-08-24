@@ -61,3 +61,7 @@ My homelab infra, featuring horrible commit messages.
 ### Cilium Hubble [![Cilium Hubble](https://img.shields.io/badge/Hubble-555?logo=cilium&logoColor=fff&labelColor=000)](https://hubble.homelab.emerconnelly.com)
 
 - Visual map & event log of the Cilium eBPF-based CNI
+
+## Traefik [![Traefik Dashboard](https://img.shields.io/badge/Dashboard-555?logo=traefikproxy&logoColor=fff&labelColor=000)](https://traefik.homelab.emerconnelly.com/dashboard/)
+
+- K8s Ingress & Gateway API controller
