@@ -41,7 +41,7 @@ spec:
     kind: Rule
     services:
     - name: kubernetes-dashboard-web
-      port: 80
+      port: 8000
       passHostHeader: true
       sticky:
         cookie:
