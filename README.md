@@ -14,7 +14,7 @@ My homelab infra, featuring horrible commit messages.
 
 ### Tailscale [![Tailscale Machines](https://img.shields.io/badge/Machines-242424?logo=tailscale)](https://login.tailscale.com/admin/machines) [![Tailscale ACL Editor](https://img.shields.io/badge/ACL%20Editor-242424?logo=tailscale)](https://login.tailscale.com/admin/machines)
 
-- Exposing ingress, egress, & K8s API to a [tailnet](https://tailscale.com/kb/1136/tailnet)
+- Exposing ingress, egress, & the K8s API to my [tailnet](https://tailscale.com/kb/1136/tailnet)
  
 ### HCP Vault Secrets [![HCP Vault Secrets](https://img.shields.io/badge/Vault_Secrets-000?logo=hashicorp)](https://portal.cloud.hashicorp.com/services/secrets?project_id=c9dc34a9-87d7-4e2d-9a1c-3d3e759f8261)
 
