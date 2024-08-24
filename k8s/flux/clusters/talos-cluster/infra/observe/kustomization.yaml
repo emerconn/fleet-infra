@@ -6,7 +6,7 @@ resources:
 - headlamp
 - kube-prometheus-stack
 - metrics-server
-- mxtxp
+- mktxp
 - openobserve
 - openobserve-collector
 - opentelemetry-operator
