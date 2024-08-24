@@ -1,19 +1,19 @@
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-  name: mktxp
-  namespace: mktxp
+  name: mikrotik-exporter
+  namespace: mikrotik-exporter
   labels:
-    app: mktxp-exporter
+    app: mikrotik-exporter
 spec:
-  jobLabel: mktxp
+  jobLabel: mikrotik-exporter
   endpoints:
   - port: metrics
     path: /
     interval: 30s
   selector:
     matchLabels:
-      app: mktxp-exporter
+      app: mikrotik-exporter
   namespaceSelector:
     matchNames:
-    - mktxp
+    - mikrotik-exporter

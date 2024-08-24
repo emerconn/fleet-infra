@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mktxp-exporter
-  namespace: mktxp
+  name: mikrotik-exporter
+  namespace: mikrotik-exporter
 spec:
   selector:
     matchLabels:
-      app: mktxp-exporter
+      app: mikrotik-exporter
   template:
     metadata:
       labels:
-        app: mktxp-exporter
+        app: mikrotik-exporter
     spec:
       containers:
-      - name: mktxp-exporter
+      - name: mikrotik-exporter
         image: ghcr.io/akpw/mktxp:latest
         args:
           - --cfg-dir
@@ -24,11 +24,11 @@ spec:
             memory: "512Mi"
             cpu: "500m"
         volumeMounts:
-          - name: mktxp-credentials
+          - name: mikrotik-exporter-config
             mountPath: /mktxp_config
         ports:
         - containerPort: 49090
       volumes:
-        - name: mktxp-credentials
+        - name: mikrotik-exporter-config
           secret:
-            secretName: mktxp-credentials
+            secretName: mikrotik-exporter-config
