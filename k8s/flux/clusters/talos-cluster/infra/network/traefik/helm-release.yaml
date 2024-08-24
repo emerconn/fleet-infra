@@ -2,6 +2,7 @@
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
+  name: traefik
   namespace: flux-system
 spec:
   values:
@@ -49,7 +50,7 @@ spec:
         enabled: true
         grpc:
           enabled: true
-          endpoint: "openobserve-collector-agent-collector-headless.openobserve-collector.svc.cluster.local:4317" # TODO: get traces working
+          endpoint: "openobserve-collector-agent-collector-headless.openobserve-collector.svc.cluster.local:4317"
           insecure: true
     globalArguments: # manually set to remove anonymous usage data
     - "--global.checknewversion"
