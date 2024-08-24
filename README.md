@@ -27,7 +27,7 @@ My homelab infra, with horrible commit messages.
 
 ### Renovate [![Renovate Dashboard](https://img.shields.io/badge/Dashboard-555?logo=renovate&logoColor=497b9c&labelColor=000)](https://developer.mend.io/github/emerconnelly/fleet-infra)
 
-- Automatically create detailed PRs for new versions of Flux `HelmRelease`s, container image tags & K8s `.yaml` resources
+- Automatically creates detailed PRs for new versions of Flux `HelmRelease`s, container image tags, & K8s `.yaml` resources
 - Configured as a [GitHub app](https://github.com/apps/renovate) (migrate to GitHub Action cause it looks cooler?)
 
 ## k8s external
@@ -38,11 +38,13 @@ My homelab infra, with horrible commit messages.
 
 ### Tailscale [![Tailscale Machines](https://img.shields.io/badge/Machines-555?logo=tailscale&logoColor=fff&labelColor=242424)](https://login.tailscale.com/admin/machines) [![Tailscale ACL Editor](https://img.shields.io/badge/ACL_Editor-555?logo=tailscale&logoColor=fff&labelColor=242424)](https://login.tailscale.com/admin/machines)
 
-- Secure external access by exposing ingress, egress & the K8s API to my [tailnet](https://tailscale.com/kb/1136/tailnet), controlled by the [`tailscale-operator`](https://tailscale.com/kb/1236/kubernetes-operator)
+- Secure external access by exposing ingress, egress, & the K8s API to my [tailnet](https://tailscale.com/kb/1136/tailnet)
+- Controlled by the [`tailscale-operator`](https://tailscale.com/kb/1236/kubernetes-operator)
 
 ### HCP Vault Secrets [![HCP Vault Secrets](https://img.shields.io/badge/Vault_Secrets-555?logo=hashicorp&logoColor=fff&labelColor=000)](https://portal.cloud.hashicorp.com/services/secrets?project_id=c9dc34a9-87d7-4e2d-9a1c-3d3e759f8261)
 
-- Cloud-based secrets manager, controlled by the [`vault-secrets-operator`](https://github.com/hashicorp/vault-secrets-operator)
+- Cloud-based secrets manager
+- Controlled by the [`vault-secrets-operator`](https://github.com/hashicorp/vault-secrets-operator)
 
 ## k8s internal
 
@@ -56,7 +58,7 @@ My homelab infra, with horrible commit messages.
 
 ### OpenObserve [![OpenObserve Home](https://img.shields.io/badge/Home-555)](https://openobserve.homelab.emerconnelly.com/web)
 
-- Full-stack observability (logs, traces & metrics), ~71:1 compression ratio & clean web UI for queries & dashboards
+- Full-stack observability (logs, traces, metrics), ~71:1 compression ratio, & a web UI for queries & dashboards
 
 ### Prometheus [![Prometheus Targets](https://img.shields.io/badge/Targets-555?logo=prometheus&logoColor=e6522c&labelColor=000)](https://prometheus.homelab.emerconnelly.com/targets)
 
@@ -76,5 +78,5 @@ My homelab infra, with horrible commit messages.
 
 ### MinIO [![MinIO Main Tenant](https://img.shields.io/badge/Main_Tenant-555?logo=minio&logoColor=c72e49&labelColor=000)](https://main.minio.homelab.emerconnelly.com)
 
-- controlled via the [`minio-operator`](https://min.io/docs/minio/kubernetes/upstream/operations/installation.html)
 - deploys highly-available & fully API-compliant S3 storage tenants
+- controlled via the [`minio-operator`](https://min.io/docs/minio/kubernetes/upstream/operations/installation.html)
