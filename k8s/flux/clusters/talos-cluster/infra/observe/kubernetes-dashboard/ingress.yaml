@@ -40,8 +40,8 @@ spec:
   - match: Host(`k8s-dashboard.homelab.emerconnelly.com`) || Host(`kubernetes-dashboard.homelab.emerconnelly.com`)
     kind: Rule
     services:
-    - name: kubernetes-dashboard-web
-      port: 8000
+    - name: kubernetes-dashboard-kong-proxy
+      port: 443
       passHostHeader: true
       sticky:
         cookie:
