@@ -74,4 +74,4 @@ My homelab infra, featuring horrible commit messages.
 ### MinIO [![MinIO Main Tenant](https://img.shields.io/badge/Main_Tenant-555?logo=minio&logoColor=fff&labelColor=000)](https://main.minio.homelab.emerconnelly.com)
 
 - controlled via the [`minio-operator`](https://min.io/docs/minio/kubernetes/upstream/operations/installation.html)
-- deploys API-compliant & highly-available S3 storage tenants
+- deploys highly-available & fully API-compliant S3 storage tenants
