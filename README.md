@@ -62,7 +62,7 @@ My homelab infra, with horrible commit messages.
 
 ### Prometheus [![Prometheus Targets](https://img.shields.io/badge/Targets-555?logo=prometheus&logoColor=e6522c&labelColor=000)](https://prometheus.homelab.emerconnelly.com/targets)
 
-- Monitoring system & time-series database for collecting & alterting on application & infrastructure metrics
+- Time-series database for collecting & alterting on application & infrastructure metrics
 - Deployed via `kube-prometheus-stack`
 
 ### Grafana [![Grafana Dashboards](https://img.shields.io/badge/Dashboards-555?logo=grafana&logoColor=f46800&labelColor=000)](https://grafana.homelab.emerconnelly.com/dashboards)
