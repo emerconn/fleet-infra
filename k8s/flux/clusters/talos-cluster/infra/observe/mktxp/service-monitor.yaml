@@ -6,6 +6,7 @@ metadata:
   labels:
     app: mktxp-exporter
 spec:
+  jobLabel: mktxp
   endpoints:
   - port: metrics
     path: /
