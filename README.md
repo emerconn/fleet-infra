@@ -32,7 +32,7 @@ My homelab infra, featuring horrible commit messages.
 
 ## k8s external
 
-### Cloudflare [![Cloudflare DNS Records](https://img.shields.io/badge/DNS_Records-555?logo=cloudflare&logoColor=f38020&labelColor=fff)](https://dash.cloudflare.com/923309f860b1a7e801fd81224c5f56c9/emerconnelly.com/dns/records) [![Cloudflare Audit Log](https://img.shields.io/badge/Audit_Log-555?logo=cloudflare&logoColor=f38020&labelColor=fff)](https://dash.cloudflare.com/923309f860b1a7e801fd81224c5f56c9/audit-log) [![Cloudflare API Tokens](https://img.shields.io/badge/API_Tokens-555?logo=cloudflare&logoColor=f38020&labelColor=fff)](https://dash.cloudflare.com/profile/api-tokens)
+### Cloudflare [![Cloudflare DNS Records](https://img.shields.io/badge/DNS_Records-555?logo=cloudflare&logoColor=f38020&labelColor=000)](https://dash.cloudflare.com/923309f860b1a7e801fd81224c5f56c9/emerconnelly.com/dns/records) [![Cloudflare Audit Log](https://img.shields.io/badge/Audit_Log-555?logo=cloudflare&logoColor=f38020&labelColor=000)](https://dash.cloudflare.com/923309f860b1a7e801fd81224c5f56c9/audit-log) [![Cloudflare API Tokens](https://img.shields.io/badge/API_Tokens-555?logo=cloudflare&logoColor=f38020&labelColor=000)](https://dash.cloudflare.com/profile/api-tokens)
 
 - Automated HTTPS cert lifecycle using [`cert-manager`](https://cert-manager.io/docs/installation/helm)'s [ACME DNS01 Challenge Provider](https://cert-manager.io/docs/configuration/acme/dns01) via [Let's Encrypt](https://letsencrypt.org) with my domain [emerconnelly.com](https://www.emerconnelly.com)
 
@@ -46,7 +46,7 @@ My homelab infra, featuring horrible commit messages.
 
 ## k8s internal
 
-### Kubernetes Dashboard [![Kubernetes Dashboard](https://img.shields.io/badge/Dashboard-555?logo=kubernetes&logoColor=326ce5&labelColor=fff)](https://k8s-dashboard.homelab.emerconnelly.com)
+### Kubernetes Dashboard [![Kubernetes Dashboard](https://img.shields.io/badge/Dashboard-555?logo=kubernetes&logoColor=326ce5&labelColor=000)](https://k8s-dashboard.homelab.emerconnelly.com)
 
 ### Headlamp [![Headlamp Main](https://img.shields.io/badge/Main-555)](https://headlamp.homelab.emerconnelly.com/c/main)
 
@@ -56,7 +56,7 @@ My homelab infra, featuring horrible commit messages.
 
 - Full-stack observability (logs, traces & metrics), ~71:1 compression ratio & clean web UI for queries & dashboards
 
-### Prometheus [![Prometheus Targets](https://img.shields.io/badge/Targets-555?logo=prometheus&logoColor=e6522c&labelColor=fff)](https://prometheus.homelab.emerconnelly.com/targets)
+### Prometheus [![Prometheus Targets](https://img.shields.io/badge/Targets-555?logo=prometheus&logoColor=e6522c&labelColor=000)](https://prometheus.homelab.emerconnelly.com/targets)
 
 - managed via [`kube-prometheus-stack`](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack/)
 
