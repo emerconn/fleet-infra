@@ -65,3 +65,8 @@ My homelab infra, featuring horrible commit messages.
 ### Traefik [![Traefik Dashboard](https://img.shields.io/badge/Dashboard-555?logo=traefikproxy&logoColor=fff&labelColor=000)](https://traefik.homelab.emerconnelly.com/dashboard/)
 
 - K8s Ingress & Gateway API controller
+
+### MinIO [![MinIO Main Tenant](https://img.shields.io/badge/Main_Tenant-555?logo=minio&logoColor=fff&labelColor=000)](https://main.minio.homelab.emerconnelly.com)
+
+- controlled via the [`minio-operator`](https://min.io/docs/minio/kubernetes/upstream/operations/installation.html)
+- deploys API-compliant & highly-available S3 storage tenants
