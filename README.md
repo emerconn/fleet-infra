@@ -48,9 +48,12 @@ My homelab infra, featuring horrible commit messages.
 
 ### Kubernetes Dashboard [![Kubernetes Dashboard](https://img.shields.io/badge/Dashboard-555?logo=kubernetes&logoColor=326ce5&labelColor=000)](https://k8s-dashboard.homelab.emerconnelly.com)
 
+- K8s web UI & resource explorer
+
 ### Headlamp [![Headlamp Main](https://img.shields.io/badge/Main-555)](https://headlamp.homelab.emerconnelly.com/c/main)
 
 - K8s web UI & resource explorer
+- [Helm chart](https://github.com/headlamp-k8s/headlamp/tree/main/charts/headlamp)
 
 ### OpenObserve [![OpenObserve Home](https://img.shields.io/badge/Home-555)](https://openobserve.homelab.emerconnelly.com/web)
 
