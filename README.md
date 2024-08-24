@@ -46,7 +46,7 @@ My homelab infra, featuring horrible commit messages.
 
 - Visual map & event log of the Cilium eBPF-based CNI
 
-### OpenObserve [![OpenObserve Home](https://img.shields.io/badge/Home-555)](https://openobserve.homelab.emerconnelly.com)
+### OpenObserve [![OpenObserve Home](https://img.shields.io/badge/Home-555)](https://openobserve.homelab.emerconnelly.com/web)
 
 - Full-stack observability (logs, traces & metrics), ~71:1 compression ratio & clean web UI for queries & dashboards
 
