@@ -17,4 +17,4 @@ patches:
         operatorConfig:
           hostname: talos-cluster
         apiServerProxyConfig:
-          mode: true
+          mode: "true"
