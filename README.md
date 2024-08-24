@@ -56,7 +56,7 @@ My homelab infra, featuring horrible commit messages.
 
 - Full-stack observability (logs, traces & metrics), ~71:1 compression ratio & clean web UI for queries & dashboards
 
-### Prometheus [![Prometheus Targets](https://img.shields.io/badge/Targets-555?logo=prometheus&logoColor=fff&labelColor=000)](https://prometheus.homelab.emerconnelly.com/targets)
+### Prometheus [![Prometheus Targets](https://img.shields.io/badge/Targets-555?logo=prometheus&logoColor=e6522c&labelColor=fff)](https://prometheus.homelab.emerconnelly.com/targets)
 
 - managed via [`kube-prometheus-stack`](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack/)
 
