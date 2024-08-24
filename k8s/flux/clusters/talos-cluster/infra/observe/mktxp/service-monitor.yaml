@@ -6,10 +6,13 @@ metadata:
   labels:
     app: mktxp-exporter
 spec:
-  selector:
-    matchLabels:
-      app: mktxp-exporter
   endpoints:
   - port: metrics
     path: /
     interval: 30s
+  selector:
+    matchLabels:
+      app: mktxp-exporter
+  namespaceSelector:
+    matchNames:
+    - mktxp
