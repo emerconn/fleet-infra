@@ -4,9 +4,10 @@ My homelab infra, featuring horrible commit messages.
 
 ## hardware
 
-K8s bare-metal on Talos Linux
+Talos Linux bare-metal K8s, running on mini-desktop PCs
+
 - 3 control-plane nodes
-  - Dell 9020 Optiplex Micros
+  - Dell 9020 Optiplex Micro
   - CPU: [Intel i7-4785T 4-core 3.2GHz 8M Cache](https://www.intel.com/content/www/us/en/products/sku/80814/intel-core-i74785t-processor-8m-cache-up-to-3-20-ghz/specifications.html)
   - RAM: 8GB DDR3 1600 CL11 SODIMM
   - Storage
