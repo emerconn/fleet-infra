@@ -6,14 +6,14 @@ My homelab infra, featuring horrible commit messages.
 
 [Talos Linux](https://www.talos.dev/v1.7/introduction/what-is-talos/) bare-metal [Kubernetes](https://kubernetes.io/docs/concepts/overview/) cluster, running on mini-desktop PCs
 
-- 3 control-plane nodes
+- 3 (three) control-plane nodes
   - Dell 9020 Optiplex Micro
   - CPU: [Intel i7-4785T 4-core 3.2GHz 8M Cache](https://www.intel.com/content/www/us/en/products/sku/80814/intel-core-i74785t-processor-8m-cache-up-to-3-20-ghz/specifications.html)
   - RAM: [Crucial 8GB DDR3 1600 CL11](https://eu.crucial.com/memory/ddr3/ct102464bf160b)
   - Storage
     - 256GB M.2 SSD
     - [Crucial MX500 2TB SATA SSD](https://www.crucial.com/ssd/mx500/ct2000mx500ssd1)
-- 1 worker node
+- 1 (one) worker node
   - [Intel NUC10I5FNKN1](https://mitxpc.com/products/bxnuc10i5fnkn1)
   - CPU: [Intel i5-10210U 4-core 4.2GHz 6M Cache](https://www.intel.com/content/www/us/en/products/sku/195436/intel-core-i510210u-processor-6m-cache-up-to-4-20-ghz/specifications.html)
   - RAM: [Samsung 64GB DDR4 2666 CL19](https://semiconductor.samsung.com/us/dram/module/sodimm/m471a4g43mb1-ctd/)
