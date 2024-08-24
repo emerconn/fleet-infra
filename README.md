@@ -42,6 +42,10 @@ My homelab infra, featuring horrible commit messages.
 
 ## k8s internal
 
+### Headlamp [![Headlamp Main](https://img.shields.io/badge/Headlamp-555)](https://headlamp.homelab.emerconnelly.com/c/main)
+
+- K8s web UI & resource explorer
+
 ### Cilium [![Cilium Hubble](https://img.shields.io/badge/Hubble-555?logo=cilium&logoColor=fff&labelColor=000)](https://hubble.homelab.emerconnelly.com)
 
 - Visual map & event log of the Cilium eBPF-based CNI
