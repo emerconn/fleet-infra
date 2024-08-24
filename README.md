@@ -36,7 +36,7 @@ My homelab infra, featuring horrible commit messages.
 
 - Secure external access by exposing ingress, egress & the K8s API to my [tailnet](https://tailscale.com/kb/1136/tailnet), controlled by the [`tailscale-operator`](https://tailscale.com/kb/1236/kubernetes-operator)
  
-### HCP Vault Secrets [![HCP Vault Secrets](https://img.shields.io/badge/Vault_Secrets-000?logo=hashicorp)](https://portal.cloud.hashicorp.com/services/secrets?project_id=c9dc34a9-87d7-4e2d-9a1c-3d3e759f8261)
+### HCP Vault Secrets [![HCP Vault Secrets](https://img.shields.io/badge/Vault_Secrets-555?logo=hashicorp&logoColor=fff&labelColor=000)](https://portal.cloud.hashicorp.com/services/secrets?project_id=c9dc34a9-87d7-4e2d-9a1c-3d3e759f8261)
 
 - Cloud-based secrets manager, controlled by the [`vault-secrets-operator`](https://github.com/hashicorp/vault-secrets-operator)
 
