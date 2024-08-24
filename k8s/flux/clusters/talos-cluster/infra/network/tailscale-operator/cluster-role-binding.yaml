@@ -1,0 +1,13 @@
+# grant Tailscale user access to the cluster-admin role
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: alice-view
+subjects:
+- kind: User
+  name: "emerconn7@gmail.com"
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: ClusterRole
+  name: cluster-admin
+  apiGroup: rbac.authorization.k8s.io
