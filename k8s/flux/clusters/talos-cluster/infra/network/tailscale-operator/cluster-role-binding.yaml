@@ -2,7 +2,7 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  name: alice-view
+  name: emerconn7-at-gmaildotcom-cluster-admin
 subjects:
 - kind: User
   name: "emerconn7@gmail.com"
