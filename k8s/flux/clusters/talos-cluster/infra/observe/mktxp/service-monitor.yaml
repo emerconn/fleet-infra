@@ -1,0 +1,14 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: mktxp
+  labels:
+    app: mktxp-exporter
+spec:
+  selector:
+    matchLabels:
+      app: mktxp-exporter
+  endpoints:
+  - port: 49090
+    path: /
+    interval: 30s

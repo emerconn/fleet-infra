@@ -5,4 +5,5 @@ resources:
 - deployment.yaml
 - secret-sops-credentials.yaml
 - namespace.yaml
+- service-monitor.yaml
 - service.yaml
