@@ -63,12 +63,12 @@ My homelab infra, with horrible commit messages.
 ### Prometheus [![Prometheus Targets](https://img.shields.io/badge/Targets-555?logo=prometheus&logoColor=e6522c&labelColor=000)](https://prometheus.homelab.emerconnelly.com/targets)
 
 - Gather & stores metric, & alert on defined thresholds
-- Deployed via `kube-prometheus-stack` Helm chart
+- Deployed via `kube-prometheus-stack`
 
 ### Grafana [![Grafana Dashboards](https://img.shields.io/badge/Dashboards-555?logo=grafana&logoColor=f46800&labelColor=000)](https://grafana.homelab.emerconnelly.com/dashboards)
 
 - Visualize metrics, logs, & traces from multiple sources
-- Deployed via `kube-prometheus-stack` Helm chart
+- Deployed via `kube-prometheus-stack`
 
 ### Cilium Hubble [![Cilium Hubble](https://img.shields.io/badge/Hubble-555?logo=cilium&logoColor=f9c31f&labelColor=000)](https://hubble.homelab.emerconnelly.com)
 
