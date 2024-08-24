@@ -52,4 +52,8 @@ My homelab infra, featuring horrible commit messages.
 
 ### Prometheus [![Prometheus Targets](https://img.shields.io/badge/Targets-555?logo=prometheus&logoColor=fff&labelColor=000)](https://prometheus.homelab.emerconnelly.com/targets)
 
-### Grafana [![Grafana Dashboards](https://img.shields.io/badge/Dashboards-555?logo=grafana&logoColor=fff&labelColor=000)](https://grafana.homelab.emerconnelly.com)
+- managed via [`kube-prometheus-stack`](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack/)
+
+### Grafana [![Grafana Dashboards](https://img.shields.io/badge/Dashboards-555?logo=grafana&logoColor=fff&labelColor=000)](https://grafana.homelab.emerconnelly.com/dashboards)
+
+- managed via [`kube-prometheus-stack`](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack/)
