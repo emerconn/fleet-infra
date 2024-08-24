@@ -5,6 +5,7 @@ resources:
 - fluent-operator
 - headlamp
 - kube-prometheus-stack
+- kubernetes-dashboard
 - metrics-server
 - mikrotik-exporter
 - openobserve
