@@ -42,7 +42,7 @@ My homelab infra, featuring horrible commit messages.
 
 ## k8s internal
 
-### Cilium [![Cilium Hubble](https://img.shields.io/badge/Hubble-555?logo=cilium&logoColor=f8c517&labelColor=000)](https://hubble.homelab.emerconnelly.com)
+### Cilium [![Cilium Hubble](https://img.shields.io/badge/Hubble-555?logo=cilium&logoColor=fff&labelColor=000)](https://hubble.homelab.emerconnelly.com)
 
 - Visual map & event log of the Cilium eBPF-based CNI
 
