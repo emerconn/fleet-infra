@@ -2,6 +2,16 @@
 
 My homelab infra, featuring horrible commit messages.
 
+## hardware
+
+- K8s bare-metal running Talos Linux
+  - control-plane
+    - (3) Dell 9020 Optiplex Micros
+      - CPU: [Intel i7-4785T 4-core 3.20GHz 8M Cache](https://www.intel.com/content/www/us/en/products/sku/80814/intel-core-i74785t-processor-8m-cache-up-to-3-20-ghz/specifications.html)
+      - RAM: 16GB 
+  - workers
+  - 
+
 ## Renovate [![Renovate Dashboard](https://img.shields.io/badge/Dashboard-1a1f6c?logo=renovate)](https://developer.mend.io/github/emerconnelly/fleet-infra)
 
 - Automatically creates PRs with new versions of Flux `HelmRelease`s, container images & K8s `.yaml` resources
