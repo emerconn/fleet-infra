@@ -18,3 +18,8 @@ patches:
           oidc:
             secret:
               create: false
+        serviceAccount:
+          create: true
+          name: headlamp
+        clusterRoleBinding:
+          create: false
