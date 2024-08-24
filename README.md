@@ -4,7 +4,7 @@ My homelab infra, featuring horrible commit messages.
 
 ## hardware
 
-[Talos Linux](https://www.talos.dev/v1.7/introduction/what-is-talos/) bare-metal [Kubernetes](https://kubernetes.io/docs/concepts/overview/) cluster, running on mini-desktop PCs
+[Talos Linux](https://www.talos.dev/v1.7/introduction/what-is-talos) bare-metal [Kubernetes](https://kubernetes.io/docs/concepts/overview) cluster, running on mini-desktop PCs
 
 - 3 control-plane nodes
   - Dell 9020 Optiplex Micro
@@ -16,7 +16,7 @@ My homelab infra, featuring horrible commit messages.
 - 1 worker node
   - [Intel NUC10I5FNKN1](https://mitxpc.com/products/bxnuc10i5fnkn1)
   - CPU: [Intel i5-10210U 4-core 4.2GHz 6M Cache](https://www.intel.com/content/www/us/en/products/sku/195436/intel-core-i510210u-processor-6m-cache-up-to-4-20-ghz/specifications.html)
-  - RAM: [Samsung 64GB DDR4 2666 CL19](https://semiconductor.samsung.com/us/dram/module/sodimm/m471a4g43mb1-ctd/)
+  - RAM: [Samsung 64GB DDR4 2666 CL19](https://semiconductor.samsung.com/us/dram/module/sodimm/m471a4g43mb1-ctd)
   - Storage: 256GB M.2 NVMe SSD
 
 ## repository management
@@ -30,7 +30,7 @@ My homelab infra, featuring horrible commit messages.
 
 ### Cloudflare [![Cloudflare DNS Records](https://img.shields.io/badge/DNS_Records-f38020?logo=cloudflare&logoColor=000)](https://dash.cloudflare.com/923309f860b1a7e801fd81224c5f56c9/emerconnelly.com/dns/records) [![Cloudflare Audit Log](https://img.shields.io/badge/Audit_Log-f38020?logo=cloudflare&logoColor=000)](https://dash.cloudflare.com/923309f860b1a7e801fd81224c5f56c9/audit-log) [![Cloudflare API Tokens](https://img.shields.io/badge/API_Tokens-f38020?logo=cloudflare&logoColor=000)](https://dash.cloudflare.com/profile/api-tokens)
 
-- Automated HTTPS cert lifecycle using [`cert-manager`](https://cert-manager.io/docs/installation/helm/)'s [ACME DNS01 Challenge Provider](https://cert-manager.io/docs/configuration/acme/dns01/) via [Let's Encrypt](https://letsencrypt.org/) with my domain [emerconnelly.com](https://www.emerconnelly.com)
+- Automated HTTPS cert lifecycle using [`cert-manager`](https://cert-manager.io/docs/installation/helm)'s [ACME DNS01 Challenge Provider](https://cert-manager.io/docs/configuration/acme/dns01) via [Let's Encrypt](https://letsencrypt.org) with my domain [emerconnelly.com](https://www.emerconnelly.com)
 
 ### Tailscale [![Tailscale Machines](https://img.shields.io/badge/Machines-242424?logo=tailscale)](https://login.tailscale.com/admin/machines) [![Tailscale ACL Editor](https://img.shields.io/badge/ACL%20Editor-242424?logo=tailscale)](https://login.tailscale.com/admin/machines)
 
@@ -42,12 +42,12 @@ My homelab infra, featuring horrible commit messages.
 
 ## k8s internal
 
-### Cilium [![Cilium Hubble](https://img.shields.io/badge/Hubble-555?logo=cilium)](https://hubble.homelab.emerconnelly.com/)
+### Cilium [![Cilium Hubble](https://img.shields.io/badge/Hubble-555?logo=cilium)](https://hubble.homelab.emerconnelly.com)
 
 - Visual map & event log of the Cilium eBPF-based CNI
 
-### OpenObserve [![OpenObserve Home](https://img.shields.io/badge/Home-555)](https://openobserve.homelab.emerconnelly.com/)
+### OpenObserve [![OpenObserve Home](https://img.shields.io/badge/Home-555)](https://openobserve.homelab.emerconnelly.com)
 
 - Full-stack observability (logs, traces & metrics), ~71:1 compression ratio & clean web UI for queries & dashboards
 
-### Prometheus [![OpenObserve Home](https://img.shields.io/badge/Targets-555?logo=prometheus)](https://prometheus.homelab.emerconnelly.com/)
+### Prometheus [![Prometheus Targets](https://img.shields.io/badge/Targets-555?logo=prometheus)](https://prometheus.homelab.emerconnelly.com)
