@@ -17,18 +17,18 @@ spec:
         image: ghcr.io/akpw/mktxp:latest
         args:
           - --cfg-dir
-          - /mktxp_config
+          - /config
           - export
         resources:
           limits:
             memory: "512Mi"
             cpu: "500m"
         volumeMounts:
-          - name: mikrotik-exporter-config
-            mountPath: /mktxp_config
+          - name: config
+            mountPath: /config
         ports:
         - containerPort: 49090
       volumes:
-        - name: mikrotik-exporter-config
+        - name: config
           secret:
             secretName: mikrotik-exporter-config
