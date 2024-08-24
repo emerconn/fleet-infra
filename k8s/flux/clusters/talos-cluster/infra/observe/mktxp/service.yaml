@@ -3,9 +3,8 @@ kind: Service
 metadata:
   name: mktxp-exporter
   namespace: mktxp
-  annotations:
-    prometheus.io/port: "49090"
-    prometheus.io/scrape: "true"
+  labels:
+    app: mktxp-exporter
 spec:
   selector:
     app: mktxp-exporter
