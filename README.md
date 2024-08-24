@@ -4,7 +4,7 @@ My homelab infra, featuring horrible commit messages.
 
 ## Renovate [![Renovate Dashboard](https://img.shields.io/badge/Dashboard-1a1f6c?logo=renovate)](https://developer.mend.io/github/emerconnelly/fleet-infra)
 
-- Automatically creates PRs with new versions of Flux `HelmRelease`s, container images, and K8s versions
+- Automatically creates PRs with new versions of Flux `HelmRelease`s, container images, & K8s versions
 - Configured as a [GitHub app](https://github.com/apps/renovate) (migrate to GitHub Action because it looks cooler?)
 
 ## k8s external
@@ -29,4 +29,4 @@ My homelab infra, featuring horrible commit messages.
 
 ### OpenObserve [![OpenObserve Home](https://img.shields.io/badge/Home-651708)](https://openobserve.homelab.emerconnelly.com/)
 
-- Full-stack observability (logs, traces, & metrics), ~71 compression ratio, & a clean web UI for queries and dashboards.
+- Full-stack observability (logs, traces, & metrics), ~71 compression ratio, & clean web UI for queries & dashboards
