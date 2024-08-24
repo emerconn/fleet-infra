@@ -46,7 +46,7 @@ My homelab infra, featuring horrible commit messages.
 
 ## k8s internal
 
-### Kubernetes Dashboard [![Kubernetes Dashboard](https://img.shields.io/badge/Dashboard-555?logo=kubernetes&logoColor=fff&labelColor=000)](https://k8s-dashboard.homelab.emerconnelly.com)
+### Kubernetes Dashboard [![Kubernetes Dashboard](https://img.shields.io/badge/Dashboard-555?logo=kubernetes&logoColor=326ce5&labelColor=fff)](https://k8s-dashboard.homelab.emerconnelly.com)
 
 ### Headlamp [![Headlamp Main](https://img.shields.io/badge/Main-555)](https://headlamp.homelab.emerconnelly.com/c/main)
 
