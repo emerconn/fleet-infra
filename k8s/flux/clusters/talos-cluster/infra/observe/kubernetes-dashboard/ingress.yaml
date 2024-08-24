@@ -43,11 +43,5 @@ spec:
     - name: kubernetes-dashboard-kong-proxy
       port: 80
       passHostHeader: true
-      sticky:
-        cookie:
-          name: traefik
-          secure: true
-          httpOnly: true
-          sameSite: lax
   tls:
     secretName: ingress-tls
