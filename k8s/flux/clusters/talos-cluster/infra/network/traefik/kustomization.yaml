@@ -9,9 +9,3 @@ resources:
 - ../../../../../infra/network/traefik.yaml
 patches:
 - path: helm-release.yaml
-  target:
-    group: helm.toolkit.fluxcd.io
-    version: v2
-    kind: HelmRelease
-    name: traefik
-    namespace: flux-system
