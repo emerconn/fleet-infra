@@ -4,3 +4,4 @@ kind: Kustomization
 resources:
 - secret-sops-credentials.yaml
 - namespace.yaml
+- service.yaml
