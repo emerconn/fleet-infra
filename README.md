@@ -15,7 +15,7 @@ K8s bare-metal running Talos Linux
 - 1 worker node
   - [Intel NUC10I5FNKN1](https://mitxpc.com/products/bxnuc10i5fnkn1)
   - CPU: [Intel i5-10210U 4-core 4.2GHz 6M Cache](https://www.intel.com/content/www/us/en/products/sku/195436/intel-core-i510210u-processor-6m-cache-up-to-4-20-ghz/specifications.html)
-  - RAM: 64GB DDR4 2666 CL19 SODIMM
+  - RAM: [64GB DDR4 2666 CL19 SODIMM](https://semiconductor.samsung.com/us/dram/module/sodimm/m471a4g43mb1-ctd/)
   - Storage: 256GB M.2 NVMe SSD
 
 ## Renovate [![Renovate Dashboard](https://img.shields.io/badge/Dashboard-1a1f6c?logo=renovate)](https://developer.mend.io/github/emerconnelly/fleet-infra)
