@@ -4,7 +4,7 @@ My homelab infra, featuring horrible commit messages.
 
 ## hardware
 
-[Talos Linux](https://www.talos.dev/v1.7/introduction/what-is-talos/) bare-metal K8s cluster, running on mini-desktops
+[Talos Linux](https://www.talos.dev/v1.7/introduction/what-is-talos/) bare-metal K8s cluster, running on mini-desktop PCs
 
 - 3 control-plane nodes
   - Dell 9020 Optiplex Micro
