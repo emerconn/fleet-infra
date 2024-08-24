@@ -4,7 +4,7 @@ My homelab infra, featuring horrible commit messages.
 
 ## Renovate [![Renovate Dashboard](https://img.shields.io/badge/Dashboard-1a1f6c?logo=renovate)](https://developer.mend.io/github/emerconnelly/fleet-infra)
 
-- Automatically creates PRs with new versions of Flux `HelmRelease`s, container images, & K8s `.yaml` resources
+- Automatically creates PRs with new versions of Flux `HelmRelease`s, container images & K8s `.yaml` resources
 - Configured as a [GitHub app](https://github.com/apps/renovate) (migrate to GitHub Action because it looks cooler?)
 
 ## k8s external
@@ -15,7 +15,7 @@ My homelab infra, featuring horrible commit messages.
 
 ### Tailscale [![Tailscale Machines](https://img.shields.io/badge/Machines-242424?logo=tailscale)](https://login.tailscale.com/admin/machines) [![Tailscale ACL Editor](https://img.shields.io/badge/ACL%20Editor-242424?logo=tailscale)](https://login.tailscale.com/admin/machines)
 
-- Secure external access by exposing ingress, egress, & the K8s API to my [tailnet](https://tailscale.com/kb/1136/tailnet), controlled by the [`tailscale-operator`](https://tailscale.com/kb/1236/kubernetes-operator)
+- Secure external access by exposing ingress, egress & the K8s API to my [tailnet](https://tailscale.com/kb/1136/tailnet), controlled by the [`tailscale-operator`](https://tailscale.com/kb/1236/kubernetes-operator)
  
 ### HCP Vault Secrets [![HCP Vault Secrets](https://img.shields.io/badge/Vault_Secrets-000?logo=hashicorp)](https://portal.cloud.hashicorp.com/services/secrets?project_id=c9dc34a9-87d7-4e2d-9a1c-3d3e759f8261)
 
@@ -29,4 +29,4 @@ My homelab infra, featuring horrible commit messages.
 
 ### OpenObserve [![OpenObserve Home](https://img.shields.io/badge/Home-651708)](https://openobserve.homelab.emerconnelly.com/)
 
-- Full-stack observability (logs, traces, & metrics), ~71 compression ratio, & clean web UI for queries & dashboards
+- Full-stack observability (logs, traces & metrics), ~71 compression ratio & clean web UI for queries & dashboards
