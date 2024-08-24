@@ -48,4 +48,4 @@ My homelab infra, featuring horrible commit messages.
 
 ### OpenObserve [![OpenObserve Home](https://img.shields.io/badge/Home-651708)](https://openobserve.homelab.emerconnelly.com/)
 
-- Full-stack observability (logs, traces & metrics), ~71 compression ratio & clean web UI for queries & dashboards
+- Full-stack observability (logs, traces & metrics), ~71:1 compression ratio & clean web UI for queries & dashboards
