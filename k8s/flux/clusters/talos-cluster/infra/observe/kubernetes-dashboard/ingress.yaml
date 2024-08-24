@@ -40,7 +40,7 @@ spec:
   - match: Host(`k8s-dashboard.homelab.emerconnelly.com`) || Host(`kubernetes-dashboard.homelab.emerconnelly.com`)
     kind: Rule
     services:
-    - name: headlamp
+    - name: kubernetes-dashboard-web
       port: 80
       passHostHeader: true
       sticky:
