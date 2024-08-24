@@ -64,7 +64,7 @@ My homelab infra, featuring horrible commit messages.
 
 - managed via [`kube-prometheus-stack`](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack/)
 
-### Cilium Hubble [![Cilium Hubble](https://img.shields.io/badge/Hubble-555?logo=cilium&logoColor=fff&labelColor=000)](https://hubble.homelab.emerconnelly.com)
+### Cilium Hubble [![Cilium Hubble](https://img.shields.io/badge/Hubble-555?logo=cilium&logoColor=f9c31f&labelColor=000)](https://hubble.homelab.emerconnelly.com)
 
 - Visual map & event log of the Cilium eBPF-based CNI
 
