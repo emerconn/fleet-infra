@@ -72,7 +72,7 @@ My homelab infra, featuring horrible commit messages.
 
 - K8s Ingress & Gateway API controller
 
-### MinIO [![MinIO Main Tenant](https://img.shields.io/badge/Main_Tenant-555?logo=minio&logoColor=fff&labelColor=000)](https://main.minio.homelab.emerconnelly.com)
+### MinIO [![MinIO Main Tenant](https://img.shields.io/badge/Main_Tenant-555?logo=minio&logoColor=c72e49&labelColor=000)](https://main.minio.homelab.emerconnelly.com)
 
 - controlled via the [`minio-operator`](https://min.io/docs/minio/kubernetes/upstream/operations/installation.html)
 - deploys highly-available & fully API-compliant S3 storage tenants
