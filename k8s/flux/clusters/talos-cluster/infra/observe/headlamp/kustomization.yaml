@@ -22,4 +22,4 @@ patches:
           create: true
           name: headlamp
         clusterRoleBinding:
-          create: false
+          create: true
