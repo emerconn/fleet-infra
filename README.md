@@ -9,7 +9,7 @@ My homelab infra, featuring horrible commit messages.
 
 
 ### servers 
-[Talos Linux](https://www.talos.dev/v1.7/introduction/what-is-talos) bare-metal [Kubernetes](https://kubernetes.io/docs/concepts/overview) cluster, running on mini-desktop PCs
+[Talos Linux](https://www.talos.dev/v1.7/introduction/what-is-talos) bare-metal [Kubernetes](https://kubernetes.io/docs/concepts/overview) cluster, running on mini-desktop PCs.
 
 - 3 control-plane nodes
   - Dell 9020 Optiplex Micro
