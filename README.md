@@ -32,7 +32,7 @@ My homelab infra, featuring horrible commit messages.
 
 - Automated HTTPS cert lifecycle using [`cert-manager`](https://cert-manager.io/docs/installation/helm)'s [ACME DNS01 Challenge Provider](https://cert-manager.io/docs/configuration/acme/dns01) via [Let's Encrypt](https://letsencrypt.org) with my domain [emerconnelly.com](https://www.emerconnelly.com)
 
-### Tailscale [![Tailscale Machines](https://img.shields.io/badge/Machines-555?logo=tailscale&logoColor=000&labelColor=f38020)](https://login.tailscale.com/admin/machines) [![Tailscale ACL Editor](https://img.shields.io/badge/ACL%20Editor-242424?logo=tailscale)](https://login.tailscale.com/admin/machines)
+### Tailscale [![Tailscale Machines](https://img.shields.io/badge/Machines-555?logo=tailscale&logoColor=000&labelColor=242424)](https://login.tailscale.com/admin/machines) [![Tailscale ACL Editor](https://img.shields.io/badge/ACL%20Editor-242424?logo=tailscale)](https://login.tailscale.com/admin/machines)
 
 - Secure external access by exposing ingress, egress & the K8s API to my [tailnet](https://tailscale.com/kb/1136/tailnet), controlled by the [`tailscale-operator`](https://tailscale.com/kb/1236/kubernetes-operator)
  
