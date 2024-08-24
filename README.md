@@ -62,6 +62,6 @@ My homelab infra, featuring horrible commit messages.
 
 - Visual map & event log of the Cilium eBPF-based CNI
 
-## Traefik [![Traefik Dashboard](https://img.shields.io/badge/Dashboard-555?logo=traefikproxy&logoColor=fff&labelColor=000)](https://traefik.homelab.emerconnelly.com/dashboard/)
+# Traefik [![Traefik Dashboard](https://img.shields.io/badge/Dashboard-555?logo=traefikproxy&logoColor=fff&labelColor=000)](https://traefik.homelab.emerconnelly.com/dashboard/)
 
 - K8s Ingress & Gateway API controller
