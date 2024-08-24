@@ -11,7 +11,7 @@ K8s bare-metal running Talos Linux
   - RAM: 8GB DDR3 1600 CL11 SODIMM
   - Storage
     - 256GB M.2 SSD
-    - 2TB SATA SSD
+    - [Crucial MX500 2TB SATA SSD](https://www.crucial.com/ssd/mx500/ct2000mx500ssd1)
 - 1 worker node
   - [Intel NUC10I5FNKN1](https://mitxpc.com/products/bxnuc10i5fnkn1)
   - CPU: [Intel i5-10210U 4-core 4.2GHz 6M Cache](https://www.intel.com/content/www/us/en/products/sku/195436/intel-core-i510210u-processor-6m-cache-up-to-4-20-ghz/specifications.html)
