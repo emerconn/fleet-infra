@@ -53,7 +53,6 @@ My homelab infra, featuring horrible commit messages.
 ### Headlamp [![Headlamp Main](https://img.shields.io/badge/Main-555)](https://headlamp.homelab.emerconnelly.com/c/main)
 
 - K8s web UI & resource explorer
-- [Helm chart](https://github.com/headlamp-k8s/headlamp/tree/main/charts/headlamp)
 
 ### OpenObserve [![OpenObserve Home](https://img.shields.io/badge/Home-555)](https://openobserve.homelab.emerconnelly.com/web)
 
@@ -61,11 +60,11 @@ My homelab infra, featuring horrible commit messages.
 
 ### Prometheus [![Prometheus Targets](https://img.shields.io/badge/Targets-555?logo=prometheus&logoColor=e6522c&labelColor=000)](https://prometheus.homelab.emerconnelly.com/targets)
 
-- managed via [`kube-prometheus-stack`](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack/)
+- deployed via `kube-prometheus-stack` Helm chart
 
 ### Grafana [![Grafana Dashboards](https://img.shields.io/badge/Dashboards-555?logo=grafana&logoColor=f46800&labelColor=000)](https://grafana.homelab.emerconnelly.com/dashboards)
 
-- managed via [`kube-prometheus-stack`](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack/)
+- deployed via `kube-prometheus-stack` Helm chart
 
 ### Cilium Hubble [![Cilium Hubble](https://img.shields.io/badge/Hubble-555?logo=cilium&logoColor=f9c31f&labelColor=000)](https://hubble.homelab.emerconnelly.com)
 
