@@ -6,7 +6,7 @@ My homelab infra, featuring horrible commit messages.
 
 [Talos Linux](https://www.talos.dev/v1.7/introduction/what-is-talos/) bare-metal [Kubernetes](https://kubernetes.io/docs/concepts/overview/) cluster, running on mini-desktop PCs
 
-- 3 (control-plane nodes
+- 3 control-plane nodes
   - Dell 9020 Optiplex Micro
   - CPU: [Intel i7-4785T 4-core 3.2GHz 8M Cache](https://www.intel.com/content/www/us/en/products/sku/80814/intel-core-i74785t-processor-8m-cache-up-to-3-20-ghz/specifications.html)
   - RAM: [Crucial 8GB DDR3 1600 CL11](https://eu.crucial.com/memory/ddr3/ct102464bf160b)
