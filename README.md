@@ -27,7 +27,7 @@ My homelab infra, with horrible commit messages.
 
 ### Renovate [![Renovate Dashboard](https://img.shields.io/badge/Dashboard-555?logo=renovate&logoColor=497b9c&labelColor=000)](https://developer.mend.io/github/emerconnelly/fleet-infra)
 
-- Automatically creates detailed PRs for new versions of Flux `HelmRelease`s, container image tags, & K8s `.yaml` resources
+- Automated detailed PRs for version upgrades of Flux `HelmRelease`s, container image tags, & K8s `.yaml` resources
 - Configured as a [GitHub app](https://github.com/apps/renovate) (migrate to GitHub Action cause it looks cooler?)
 
 ## k8s external
