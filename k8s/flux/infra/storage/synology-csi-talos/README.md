@@ -37,7 +37,7 @@ The install docs are a bit scattered. Try to follow along below.
 
 ### `snapshotter` (optional)
 
-The optional `snapshotter` requires the following components installed
+Requires the following components installed
 
 - [Volume Snapshot CRDs](https://github.com/kubernetes-csi/external-snapshotter/tree/master/client/config/crd)
 - [`snapshot-controller`](https://github.com/piraeusdatastore/helm-charts/tree/main/charts/snapshot-controller)
