@@ -3,8 +3,8 @@ name: "Renovate"
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "0 * * * *" # Every hour
+  # schedule:
+  #   - cron: "0 * * * *" # Every hour
   push:
     branches: ["main"]
     paths:
