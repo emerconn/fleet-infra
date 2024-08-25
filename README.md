@@ -73,7 +73,7 @@ My homelab infra, with horrible commit messages.
 ### Cilium
 
 - K8s CNI utilizing eBPF, & `kube-proxy` replacement
-- K8s K8s Ingress & Gateway API controller
+- K8s Ingress & Gateway API controller
 - Load balancer via L2 advertisments using gratuitous ARP 
 
 #### Cilium Hubble [![Cilium Hubble](https://img.shields.io/badge/Hubble-555?logo=cilium&logoColor=f9c31f&labelColor=000)](https://hubble.homelab.emerconnelly.com)
