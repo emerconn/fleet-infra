@@ -1,6 +1,6 @@
 # synology-csi-talos
 
-[`synology-csi-talos`](https://github.com/zebernst/synology-csi-talos) is a Talos-specific version of [`synology-csi`](https://github.com/SynologyOpenSource/synology-csi)
+[`synology-csi-talos`](https://github.com/zebernst/synology-csi-talos) is a Talos-specific iteration of [`synology-csi`](https://github.com/SynologyOpenSource/synology-csi)
 
 ## install
 
