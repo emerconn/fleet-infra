@@ -10,7 +10,6 @@
   "kubernetes": {
     "fileMatch": ["(^|/)k8s/.+\\.ya?ml(?:\\.j2)?$"]
   },
-  "ignoreDeps": ["factory.talos.dev"],
   "labels": ["renovate-bot"],
   "packageRules": [
     {
