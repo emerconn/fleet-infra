@@ -4,7 +4,7 @@
 
 ## install
 
-The install docs are a bit scattered. Try to follow along below.
+Talos' install docs are a bit scattered. Try to follow along below.
 
 - install the [`iscsi-tools`](https://github.com/siderolabs/extensions/tree/main/storage/iscsi-tools) Talos system extension
   - ise [Talos Linux Image Factory](https://factory.talos.dev/) for a prebuilt image and install instructions
