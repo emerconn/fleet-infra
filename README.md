@@ -1,6 +1,6 @@
 # fleet-infra
 
-My homelab infra, with horrible commit messages.
+My homelab as code, with horrible commit messages.
 
 ## hardware
 
