@@ -8,7 +8,7 @@ Talos' install docs are a bit scattered. Try to follow along below.
 
 - install the [`iscsi-tools`](https://github.com/siderolabs/extensions/tree/main/storage/iscsi-tools) Talos system extension
   - use [Talos Linux Image Factory](https://factory.talos.dev/) for a prebuilt image and install instructions
-- create a K8s secret to auth against the Synology DSM host(s), using a DSM account with full administrator permissions
+- create a K8s secret to auth against the Synology DSM host(s), using a DSM account with **full administrator permissions**
 
   ```yaml
   apiVersion: v1
