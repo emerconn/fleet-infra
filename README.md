@@ -70,9 +70,15 @@ My homelab infra, with horrible commit messages.
 - Visualize metrics, logs, & traces from multiple sources
 - Deployed via `kube-prometheus-stack`
 
-### Cilium Hubble [![Cilium Hubble](https://img.shields.io/badge/Hubble-555?logo=cilium&logoColor=f9c31f&labelColor=000)](https://hubble.homelab.emerconnelly.com)
+### Cilium
 
-- Visual map & event log of the Cilium eBPF-based CNI
+- K8s CNI utilizing eBPF, & `kube-proxy` replacement
+- K8s K8s Ingress & Gateway API controller
+- Load balancer via L2 advertisments using gratuitous ARP 
+
+#### Cilium Hubble [![Cilium Hubble](https://img.shields.io/badge/Hubble-555?logo=cilium&logoColor=f9c31f&labelColor=000)](https://hubble.homelab.emerconnelly.com)
+
+- Visual map & event log of the Cilium CNI
 
 ### Traefik [![Traefik Dashboard](https://img.shields.io/badge/Dashboard-555?logo=traefikproxy&logoColor=24a1c1&labelColor=000)](https://traefik.homelab.emerconnelly.com/dashboard/)
 
