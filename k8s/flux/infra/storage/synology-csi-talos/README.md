@@ -1,14 +1,14 @@
 # synology-csi-talos
 
-[`synology-csi-talos`](https://github.com/zebernst/synology-csi-talos) is a talos customized version of [`synology-csi`](https://github.com/SynologyOpenSource/synology-csi)
+[`synology-csi-talos`](https://github.com/zebernst/synology-csi-talos) is a Talos-specific version of [`synology-csi`](https://github.com/SynologyOpenSource/synology-csi)
 
 ## install
 
-The install documentation is a bit scattered. Try to follow along below.
+The install docs are a bit scattered. Try to follow along below.
 
 - install the [`iscsi-tools`](https://github.com/siderolabs/extensions/tree/main/storage/iscsi-tools) Talos system extension
-  - see [Talos Linux Image Factory](https://factory.talos.dev/) for a prebuilt image and install instructions
-- create a Kubernetes secret to auth against the Synology DSM host(s), using a DSM account with full administrator permissions
+  - ise [Talos Linux Image Factory](https://factory.talos.dev/) for a prebuilt image and install instructions
+- create a K8s secret to auth against the Synology DSM host(s), using a DSM account with full administrator permissions
 
   ```yaml
   apiVersion: v1
@@ -21,12 +21,12 @@ The install documentation is a bit scattered. Try to follow along below.
       client-info.yml: |
           clients:
           - host: 172.21.0.20
-            port: 5000
+            port: 5000 (plain-text)
             https: false
             username: <username>
             password: <password>
           - host: 172.21.0.21
-            port: 5001
+            port: 5001 (encrypted)
             https: true
             username: <username>
             password: <password>
