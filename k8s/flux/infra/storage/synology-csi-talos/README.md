@@ -21,12 +21,12 @@ Talos' install docs are a bit scattered. Try to follow along below.
       client-info.yml: |
           clients:
           - host: 172.21.0.20
-            port: 5000 (plain-text)
+            port: 5000
             https: false
             username: <username>
             password: <password>
           - host: 172.21.0.21
-            port: 5001 (encrypted)
+            port: 5001
             https: true
             username: <username>
             password: <password>
