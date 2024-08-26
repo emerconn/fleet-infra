@@ -39,8 +39,8 @@ spec:
   - match: Host(`uptime-kuma.homelab.emerconnelly.com`)
     kind: Rule
     services:
-    - name: headlamp
-      port: 80
+    - name: uptime-kuma
+      port: 3001
       passHostHeader: true
       sticky:
         cookie:
