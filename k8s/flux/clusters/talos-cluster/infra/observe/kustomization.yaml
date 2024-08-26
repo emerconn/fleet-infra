@@ -11,3 +11,4 @@ resources:
 - openobserve
 - openobserve-collector
 - opentelemetry-operator
+- uptime-kuma

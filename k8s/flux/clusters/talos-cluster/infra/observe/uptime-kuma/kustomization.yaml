@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=https://json.schemastore.org/kustomization
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- ingress.yaml
+- ../../../../../infra/observe/uptime-kuma.yaml
+patches:
+- patch: |-
+    apiVersion: helm.toolkit.fluxcd.io/v2
+    kind: HelmRelease
+    metadata:
+      name: uptime-kuma
+      namespace: flux-system
+    spec:
+      values:
+        volume:
+          enabled: true
+          accessMode: ReadWriteOnce
+          size: 4Gi
+          storageClassName: synology-csi-ext4-retain
+        serviceMonitor:
+          enabled: true
