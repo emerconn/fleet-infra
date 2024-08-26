@@ -18,7 +18,7 @@ spec:
         kind: HelmRepository
         name: openobserve
         namespace: flux-system
-      version: "0.10.52"
+      version: "0.10.53"
   interval: 1h
   install:
     remediation:
