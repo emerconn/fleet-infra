@@ -29,3 +29,4 @@ resources:
 - synology-csi-talos.yaml
 - tailscale.yaml
 - traefik.yaml
+- uptime-kuma.yaml
