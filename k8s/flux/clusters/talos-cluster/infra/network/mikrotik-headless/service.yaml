@@ -1,3 +1,9 @@
+# some cool shit going on here.
+# it's headless service. no cluster IP, k8s proxying, or load-balancing.
+# there's no selector, so there's no pods to create endpoints with.
+# so we define our own endpoint, which is an IP external to the cluster.
+# basically, this is just using the k8s CNI as a reverse-proxy.
+# tight, tight, tight.
 apiVersion: v1
 kind: Service
 metadata:
