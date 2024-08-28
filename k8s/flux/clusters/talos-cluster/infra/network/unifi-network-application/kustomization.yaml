@@ -4,5 +4,5 @@ kind: Kustomization
 resources:
 - ingress.yaml
 - mongodb-atlas-deployment.yaml
-- secret-sops-atlas-deployment.yaml
+- secret-sops-atlas-deployment-config.yaml
 - ../../../../../infra/network/unifi-network-application
