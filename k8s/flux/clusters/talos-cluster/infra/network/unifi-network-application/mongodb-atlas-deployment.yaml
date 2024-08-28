@@ -21,7 +21,7 @@ spec:
   values: # https://github.com/mongodb/helm-charts/blob/main/charts/atlas-deployment/values.yaml
     atlas:
       secret:
-        exsitingSecret: atlas-deployment-config
+        existing: atlas-deployment-config
     project:
       atlasProjectName: "My Project"
       projectIpAccessList:
