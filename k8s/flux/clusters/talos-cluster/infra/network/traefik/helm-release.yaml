@@ -36,6 +36,8 @@ spec:
       kubernetesGateway:
         enabled: true
     logs:
+      general:
+        level: DEBUG
       access:
         enabled: true
         addInternals: true
