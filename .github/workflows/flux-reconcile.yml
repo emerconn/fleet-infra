@@ -1,4 +1,5 @@
 name: flux-reconcile
+run-name: "Flux `reconcile`"
 
 on:
   workflow_dispatch:
