@@ -10,17 +10,13 @@ spec:
   ports:
   - name: web-admin
     port: 8443
-    targetPort: 8443
     protocol: TCP
   - name: stun
     port: 3478
-    targetPort: 3478
     protocol: UDP
   - name: ap-discovery
     port: 10001
-    targetPort: 10001
     protocol: UDP
   - name: device-communication
     port: 8080
-    targetPort: 8080
     protocol: TCP
