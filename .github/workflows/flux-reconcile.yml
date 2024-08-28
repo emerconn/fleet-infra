@@ -22,10 +22,23 @@ jobs:
           oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
           tags: tag:github-actions
 
+      - name: Tailscale version
+        run: tailscale version
+
+      - name: Set up kubectl
+        uses: azure/setup-kubectl@v4
+
+      - name: kubectl version
+        run: kubectl version
+
+      - name: Configure kubeconfig
+        run: tailscale configure kubeconfig talos-cluster
+
+      - name: kubectl get nodes
+        run: kubectl get nodes
+  
       - name: Set up Flux
         uses: fluxcd/flux2/action@main
-        with:
-          version: "2.3.0"
 
       - name: Flux version
         run: flux version --client
