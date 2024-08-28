@@ -12,17 +12,20 @@ jobs:
   components:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out code
+      - name: Checkout
         uses: actions/checkout@v4
-      - name: Tailscale
+
+      - name: Setup Tailscale
         uses: tailscale/github-action@v2
         with:
           oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
           oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
           tags: tag:github-actions
-      - name: Setup Flux CLI
+
+      - name: Setup Flux
         uses: fluxcd/flux2/action@main
         with:
           version: "2.3.0"
-      - name: Run Flux CLI
+
+      - name: Flux version
         run: flux version --client
