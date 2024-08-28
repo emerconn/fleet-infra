@@ -42,3 +42,6 @@ jobs:
 
       - name: Flux version
         run: flux version --client
+
+      - name: Flux reconcile
+        run: flux reconcile source git flux-system --timeout "120s" && flux reconcile kustomization flux-system --timeout "120s"
