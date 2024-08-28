@@ -6,6 +6,20 @@ My homelab-as-code, with horrible commit messages.
 
 ### network [![MikroTik Router](https://img.shields.io/badge/RouterOS-555?logo=mikrotik&logoColor=293239&labelColor=fff)](https://unifi.homelab.emerconnelly.com)  [![Unifi Network Server](https://img.shields.io/badge/Unifi_Network_Server-555?logo=ubiquiti&logoColor=fff&labelColor=0559c9)](https://unifi.homelab.emerconnelly.com) 
 
+- MikroTik router
+  - DNS via [containerized](https://help.mikrotik.com/docs/display/ROS/Container) AdGuard Home
+  - WireGuard for secure external access
+- Unifi 8 port switch
+- Unifi AP6 over POE
+
+### storage
+
+- Synology NAS 720+
+  - Storage: 4(x) 1TB SATA SSD
+  - Cache: 2(x) 256GB NVMe M.2 SD
+  - RAM: 16GB
+  - Network: 2(x) 1GB ports with LAG ([link aggregation](https://support.hostifi.com/en/articles/6454249-unifi-how-to-enable-link-aggregation-on-switches-lag))
+
 ### servers
 
 [Talos Linux](https://www.talos.dev/v1.7/introduction/what-is-talos) bare-metal [Kubernetes](https://kubernetes.io/docs/concepts/overview) cluster running on mini-desktop PCs. Cheap and simple, unlike my ex.
