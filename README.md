@@ -14,7 +14,7 @@ My homelab-as-code, with horrible commit messages.
 - Unifi 8 port switch
 - Unifi AP6 over POE
 
-### storage
+### storage [![MikroTik Router](https://img.shields.io/badge/RouterOS-555?logo=mikrotik&logoColor=293239&labelColor=fff)](https://mikrotik.homelab.emerconnelly.com/)
 
 - Synology NAS 720+
   - Storage: 4x 1TB SATA SSD
@@ -22,7 +22,7 @@ My homelab-as-code, with horrible commit messages.
   - RAM: 16GB
   - Network: 2x 1GbE ports with LAG ([link aggregation](https://support.hostifi.com/en/articles/6454249-unifi-how-to-enable-link-aggregation-on-switches-lag))
 
-### servers
+### servers [![Synology DSM](https://img.shields.io/badge/Synology_DSM-555?logo=synology&logoColor=b5b5b6&labelColor=fff)](https://synology.homelab.emerconnelly.com/)
 
 [Talos Linux](https://www.talos.dev/v1.7/introduction/what-is-talos) bare-metal [Kubernetes](https://kubernetes.io/docs/concepts/overview) cluster running on mini-desktop PCs. Cheap and simple, unlike my ex.
 
