@@ -47,7 +47,7 @@ My homelab-as-code, with horrible commit messages.
 ### FluxCD
 
 - automatically manage Kubernetes resources as code
-- when `main` is pushed, this GitHub Action remotely reconcile 
+- whenever `main` is updated, [this GitHub Action](https://github.com/emerconnelly/fleet-infra/actions/workflows/flux-reconcile.yml) remotely connects to my K8s cluster API with Tailscale and reconciles the cluster
 
 # kubernetes
 
