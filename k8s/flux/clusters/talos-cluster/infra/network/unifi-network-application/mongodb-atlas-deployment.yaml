@@ -1,0 +1,39 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: atlas-deployment
+  namespace: unifi-network-application
+spec:
+  releaseName: atlas-deployment
+  targetNamespace: unifi-network-application
+  chart:
+    spec:
+      chart: atlas-deployment
+      sourceRef:
+        kind: HelmRepository
+        name: mongodb
+        namespace: flux-system
+      version: "1.0.1"
+  interval: 1h
+  install:
+    remediation:
+      retries: -1
+  values: # https://github.com/mongodb/helm-charts/blob/main/charts/atlas-deployment/values.yaml
+    atlas:
+      secret:
+        exsitingSecret: atlas-deployment
+        project:
+          atlasProjectName: "My Project"
+          projectIpAccessList:
+          - cidrBlock: "0.0.0.0/0"
+        users:
+        - username: dbadmin
+          databaseName: admin
+          roles:
+          - databaseName: admin-role
+            roleName: dbAdmin
+        - username: dbuser
+          databaseName: admin
+          roles:
+          - databaseName: user-role
+            roleName: readWrite
