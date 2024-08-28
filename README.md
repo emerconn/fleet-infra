@@ -95,7 +95,7 @@ My homelab-as-code, with horrible commit messages.
 
 ### Cilium
 
-- K8s CNI using eBPF, & `kube-proxy` replacement
+- K8s CNI using eBPF & `kube-proxy` replacement
 - K8s Ingress & Gateway API controller
 - K8s native LoadBalancer service via L2 Advertisments using gratuitous ARP 
 
