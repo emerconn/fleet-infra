@@ -4,7 +4,7 @@ My homelab-as-code, with horrible commit messages.
 
 ## hardware 
 
-### network [![Unifi Network Application](https://img.shields.io/badge/Unifi-555?logo=ubiquiti&logoColor=fff&labelColor=0559c9)](https://unifi.homelab.emerconnelly.com)
+### network [![MikroTik Router](https://img.shields.io/badge/RouterOS-555?logo=mikrotik&logoColor=293239&labelColor=fff)](https://unifi.homelab.emerconnelly.com)  [![Unifi Network Application](https://img.shields.io/badge/Unifi-555?logo=ubiquiti&logoColor=fff&labelColor=0559c9)](https://unifi.homelab.emerconnelly.com) 
 
 ### servers
 
