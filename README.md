@@ -7,7 +7,7 @@ My homelab-as-code, with horrible commit messages.
 ### network [![MikroTik Router](https://img.shields.io/badge/RouterOS-555?logo=mikrotik&logoColor=293239&labelColor=fff)](https://unifi.homelab.emerconnelly.com)  [![Unifi Network Server](https://img.shields.io/badge/Unifi_Network_Server-555?logo=ubiquiti&logoColor=fff&labelColor=0559c9)](https://unifi.homelab.emerconnelly.com) 
 
 - MikroTik router
-  - DNS via [containerized](https://help.mikrotik.com/docs/display/ROS/Container) AdGuard Home
+  - DNS with [containerized](https://help.mikrotik.com/docs/display/ROS/Container) AdGuard Home (yes, MikroTik routers are based af, they can run containers)
   - WireGuard for secure external access
 - Unifi 8 port switch
 - Unifi AP6 over POE
