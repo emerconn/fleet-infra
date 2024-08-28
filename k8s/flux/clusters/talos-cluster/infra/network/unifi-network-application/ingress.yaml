@@ -39,7 +39,7 @@ spec:
   - match: Host(`unifi.homelab.emerconnelly.com`)
     kind: Rule
     services:
-    - name: web-admin
+    - name: unifi-network-application
       port: 8443
       passHostHeader: true
       sticky:
