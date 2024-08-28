@@ -37,7 +37,7 @@ spec:
         enabled: true
     logs:
       general:
-        level: DEBUG
+        level: INFO # DEBUG, PANIC, FATAL, ERROR, WARN, INFO
       access:
         enabled: true
         addInternals: true
