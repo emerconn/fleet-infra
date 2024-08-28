@@ -97,7 +97,7 @@ My homelab-as-code, with horrible commit messages.
 
 - K8s CNI using eBPF, & `kube-proxy` replacement
 - K8s Ingress & Gateway API controller
-- Load balancer via L2 advertisments using gratuitous ARP 
+- K8s native LoadBalancer service via L2 Advertisments using gratuitous ARP 
 
 #### Hubble [![Cilium Hubble](https://img.shields.io/badge/Hubble-555?logo=cilium&logoColor=f9c31f&labelColor=000)](https://hubble.homelab.emerconnelly.com)
 
