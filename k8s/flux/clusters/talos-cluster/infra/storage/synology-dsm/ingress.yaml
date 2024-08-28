@@ -1,0 +1,52 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: ingress-tls
+  namespace: synology-dsm
+spec:
+  secretName: ingress-tls
+  issuerRef:
+    name: letsencrypt-dns01-issuer
+    kind: ClusterIssuer
+  dnsNames:
+  - synology.homelab.emerconnelly.com
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: http
+  namespace: synology-dsm
+spec:
+  entryPoints: ["web"]
+  routes:
+  - match: Host(`synology.homelab.emerconnelly.com`)
+    kind: Rule
+    middlewares:
+    - name: https-redirect
+      namespace: traefik
+    services:
+    - name: noop@internal
+      kind: TraefikService
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: https
+  namespace: synology-dsm
+spec:
+  entryPoints: ["websecure"]
+  routes:
+  - match: Host(`synology.homelab.emerconnelly.com`)
+    kind: Rule
+    services:
+    - name: synology-dsm
+      port: 5000
+      passHostHeader: true
+      sticky:
+        cookie:
+          name: traefik
+          secure: true
+          httpOnly: true
+          sameSite: lax
+  tls:
+    secretName: ingress-tls
