@@ -13,8 +13,7 @@ spec:
   type: ClusterIP
   clusterIP: None # https://kubernetes.io/docs/concepts/services-networking/service/#headless-services
   ports:
-  - name: web-admin
-    protocol: TCP
+  - protocol: TCP
     port: 80
     targetPort: 80
 ---
