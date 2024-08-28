@@ -22,18 +22,18 @@ spec:
     atlas:
       secret:
         exsitingSecret: atlas-deployment
-        project:
-          atlasProjectName: "My Project"
-          projectIpAccessList:
-          - cidrBlock: "0.0.0.0/0"
-        users:
-        - username: dbadmin
-          databaseName: admin
-          roles:
-          - databaseName: admin-role
-            roleName: dbAdmin
-        - username: dbuser
-          databaseName: admin
-          roles:
-          - databaseName: user-role
-            roleName: readWrite
+    project:
+      atlasProjectName: "My Project"
+      projectIpAccessList:
+      - cidrBlock: "0.0.0.0/0"
+    users:
+    - username: dbadmin
+      databaseName: admin
+      roles:
+      - databaseName: admin-role
+        roleName: dbAdmin
+    - username: dbuser
+      databaseName: admin
+      roles:
+      - databaseName: user-role
+        roleName: readWrite
