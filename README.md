@@ -44,6 +44,11 @@ My homelab-as-code, with horrible commit messages.
 - Automated detailed PRs for version upgrades of Flux `HelmRelease`s, container image tags, & K8s `.yaml` resources
 - Configured as a [GitHub app](https://github.com/apps/renovate) (migrate to GitHub Action cause it looks cooler?)
 
+### FluxCD
+
+- automatically manage Kubernetes resources as code
+- when `main` is pushed, this GitHub Action remotely reconcile 
+
 # kubernetes
 
 ## external
