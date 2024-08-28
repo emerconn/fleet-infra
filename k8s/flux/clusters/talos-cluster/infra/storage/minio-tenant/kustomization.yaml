@@ -13,7 +13,6 @@ patches:
       namespace: flux-system
     spec:
       values:
-        secrets: "" # depricating, use configSecret
         tenant:
           name: main
           configuration:
