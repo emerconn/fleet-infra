@@ -41,11 +41,5 @@ spec:
     services:
     - name: mikrotik-headless-proxy
       port: 80
-      sticky:
-        cookie:
-          name: traefik
-          secure: true
-          httpOnly: true
-          sameSite: lax
   tls:
     secretName: ingress-tls
