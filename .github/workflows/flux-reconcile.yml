@@ -8,7 +8,7 @@ on:
       - main
     paths:
       - '.github/workflows/flux-reconcile.yml'
-      - '/k8s/flux/**'
+      - 'k8s/flux/**'
 
 jobs:
   flux-reconcile:
