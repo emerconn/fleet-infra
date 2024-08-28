@@ -2,9 +2,9 @@
 
 My homelab-as-code, with horrible commit messages.
 
-## hardware 
+# hardware 
 
-### network [![MikroTik Router](https://img.shields.io/badge/RouterOS-555?logo=mikrotik&logoColor=293239&labelColor=fff)](https://mikrotik.homelab.emerconnelly.com/) [![AdGuard Home](https://img.shields.io/badge/AdGuard_Home-555?logo=adguard&logoColor=68bc71&labelColor=fff)](https://adguard.homelab.emerconnelly.com/) [![Unifi Network Server](https://img.shields.io/badge/Unifi_Network_Server-555?logo=ubiquiti&logoColor=fff&labelColor=0559c9)](https://unifi.homelab.emerconnelly.com/) 
+## network [![MikroTik Router](https://img.shields.io/badge/RouterOS-555?logo=mikrotik&logoColor=293239&labelColor=fff)](https://mikrotik.homelab.emerconnelly.com/) [![AdGuard Home](https://img.shields.io/badge/AdGuard_Home-555?logo=adguard&logoColor=68bc71&labelColor=fff)](https://adguard.homelab.emerconnelly.com/) [![Unifi Network Server](https://img.shields.io/badge/Unifi_Network_Server-555?logo=ubiquiti&logoColor=fff&labelColor=0559c9)](https://unifi.homelab.emerconnelly.com/) 
 
 - MikroTik router
   - DNS with [containerized](https://help.mikrotik.com/docs/display/ROS/Container) AdGuard Home (yes, MikroTik routers are based af, they can run containers)
@@ -12,7 +12,7 @@ My homelab-as-code, with horrible commit messages.
 - Unifi 8 port switch
 - Unifi AP6 over POE
 
-### storage
+## storage
 
 - Synology NAS 720+
   - Storage: 4x 1TB SATA SSD
@@ -20,7 +20,7 @@ My homelab-as-code, with horrible commit messages.
   - RAM: 16GB
   - Network: 2x 1GbE ports with LAG ([link aggregation](https://support.hostifi.com/en/articles/6454249-unifi-how-to-enable-link-aggregation-on-switches-lag))
 
-### servers
+## servers
 
 [Talos Linux](https://www.talos.dev/v1.7/introduction/what-is-talos) bare-metal [Kubernetes](https://kubernetes.io/docs/concepts/overview) cluster running on mini-desktop PCs. Cheap and simple, unlike my ex.
 
@@ -37,14 +37,16 @@ My homelab-as-code, with horrible commit messages.
   - RAM: [Samsung 64GB DDR4 2666 CL19](https://semiconductor.samsung.com/us/dram/module/sodimm/m471a4g43mb1-ctd)
   - Storage: 256GB M.2 NVMe SSD
 
-## repository management
+# repository management
 
 ### Renovate [![Renovate Dashboard](https://img.shields.io/badge/Dashboard-555?logo=renovate&logoColor=497b9c&labelColor=000)](https://developer.mend.io/github/emerconnelly/fleet-infra)
 
 - Automated detailed PRs for version upgrades of Flux `HelmRelease`s, container image tags, & K8s `.yaml` resources
 - Configured as a [GitHub app](https://github.com/apps/renovate) (migrate to GitHub Action cause it looks cooler?)
 
-## k8s external
+# kubernetes
+
+## external
 
 ### Cloudflare [![Cloudflare DNS Records](https://img.shields.io/badge/DNS_Records-555?logo=cloudflare&logoColor=f38020&labelColor=000)](https://dash.cloudflare.com/923309f860b1a7e801fd81224c5f56c9/emerconnelly.com/dns/records) [![Cloudflare Audit Log](https://img.shields.io/badge/Audit_Log-555?logo=cloudflare&logoColor=f38020&labelColor=000)](https://dash.cloudflare.com/923309f860b1a7e801fd81224c5f56c9/audit-log) [![Cloudflare API Tokens](https://img.shields.io/badge/API_Tokens-555?logo=cloudflare&logoColor=f38020&labelColor=000)](https://dash.cloudflare.com/profile/api-tokens)
 
@@ -60,7 +62,7 @@ My homelab-as-code, with horrible commit messages.
 - Cloud-based secrets manager
 - Controlled via [`vault-secrets-operator`](https://github.com/hashicorp/vault-secrets-operator)
 
-## k8s internal
+## internal
 
 ### Kubernetes Dashboard [![Kubernetes Dashboard](https://img.shields.io/badge/Dashboard-555?logo=kubernetes&logoColor=326ce5&labelColor=000)](https://k8s-dashboard.homelab.emerconnelly.com)
 
