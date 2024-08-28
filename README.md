@@ -106,6 +106,7 @@ My homelab-as-code, with horrible commit messages.
 ### Traefik [![Traefik Dashboard](https://img.shields.io/badge/Dashboard-555?logo=traefikproxy&logoColor=24a1c1&labelColor=000)](https://traefik.homelab.emerconnelly.com/dashboard/)
 
 - K8s Ingress & Gateway API controller
+- all `*.homelab.emerconnelly.com` links are forwarded, via AdGuard Home DNS configuration, to the LoadBalancer service for Traefik's IngressClass
 
 ### MinIO [![MinIO Main Tenant](https://img.shields.io/badge/Main_Tenant-555?logo=minio&logoColor=c72e49&labelColor=000)](https://main.minio.homelab.emerconnelly.com)
 
