@@ -2,9 +2,9 @@
 
 My homelab-as-code, with horrible commit messages.
 
-## hardware
+## hardware 
 
-### network
+### network [![Unifi Network Application](https://img.shields.io/badge/Unifi-555?logo=minio&logoColor=000&labelColor=0559c9)](https://unifi.homelab.emerconnelly.com)
 
 ### servers
 
