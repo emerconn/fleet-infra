@@ -28,11 +28,11 @@ jobs:
       - name: Set up kubectl
         uses: azure/setup-kubectl@v4
 
-      - name: kubectl version
-        run: kubectl version
-
       - name: Configure kubeconfig
         run: tailscale configure kubeconfig talos-cluster
+
+      - name: kubectl version
+        run: kubectl version
 
       - name: kubectl get nodes
         run: kubectl get nodes
