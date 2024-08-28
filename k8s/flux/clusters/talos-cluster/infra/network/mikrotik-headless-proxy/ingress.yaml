@@ -9,7 +9,7 @@ spec:
     name: letsencrypt-dns01-issuer
     kind: ClusterIssuer
   dnsNames:
-  - mikrotik.homelab.emerconnelly.com
+  - unifi.homelab.emerconnelly.com
 ---
 apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
@@ -19,24 +19,34 @@ metadata:
 spec:
   entryPoints: ["web"]
   routes:
-  - match: Host(`mikrotik.homelab.emerconnelly.com`)
+  - match: Host(`unifi.homelab.emerconnelly.com`)
+    kind: Rule
+    middlewares:
+    - name: https-redirect
+      namespace: traefik
+    services:
+    - name: noop@internal
+      kind: TraefikService
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: https
+  namespace: mikrotik-headless-proxy
+spec:
+  entryPoints: ["websecure"]
+  routes:
+  - match: Host(`unifi.homelab.emerconnelly.com`)
     kind: Rule
     services:
     - name: mikrotik-headless-proxy
       port: 80
----
-# apiVersion: traefik.io/v1alpha1
-# kind: IngressRoute
-# metadata:
-#   name: https
-#   namespace: mikrotik-headless-proxy
-# spec:
-#   entryPoints: ["websecure"]
-#   routes:
-#   - match: Host(`mikrotik.homelab.emerconnelly.com`)
-#     kind: Rule
-#     services:
-#     - name: mikrotik-headless-proxy
-#       port: 80
-#   tls:
-#     secretName: ingress-tls
+      passHostHeader: true
+      sticky:
+        cookie:
+          name: traefik
+          secure: true
+          httpOnly: true
+          sameSite: lax
+  tls:
+    secretName: ingress-tls
