@@ -41,7 +41,6 @@ spec:
     services:
     - name: mikrotik-headless-proxy
       port: 80
-      passHostHeader: true
       sticky:
         cookie:
           name: traefik
