@@ -4,9 +4,9 @@ metadata:
   name: unifi-data
   namespace: unifi-network-application
 spec:
+  storageClassName: synology-csi-ext4-retain
   accessModes:
   - ReadWriteOnce
   resources:
     requests:
       storage: 1Gi
-  storageClassName: synology-csi-ext4-retain
