@@ -3,11 +3,11 @@
   [![github-pages-deploy](https://github.com/emerconnelly/fleet-infra/actions/workflows/github-pages-deploy.yml/badge.svg)](https://github.com/emerconnelly/fleet-infra/actions/workflows/github-pages-deploy.yml)
   [![flux-reconcile](https://github.com/emerconnelly/fleet-infra/actions/workflows/flux-reconcile.yml/badge.svg?branch=main)](https://github.com/emerconnelly/fleet-infra/actions/workflows/flux-reconcile.yml)
 
+  # fleet-infra
+  
+  My homelab-as-code, with horrible commit messages.
+
 </div>
-
-# fleet-infra
-
-My homelab-as-code, with horrible commit messages.
 
 # hardware 
 
