@@ -20,7 +20,7 @@ My homelab-as-code, with horrible commit messages.
 
 ### storage [![Synology DSM](https://img.shields.io/badge/Synology_DSM-555?logo=synology&logoColor=000&labelColor=fff)](https://synology.homelab.emerconnelly.com/)
 
-- Synology NAS 720+
+- Synology DS720+
   - Storage: 4x 1TB SATA SSD
   - Cache: 2x 256GB NVMe M.2 SD
   - RAM: 16GB
