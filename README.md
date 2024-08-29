@@ -1,6 +1,6 @@
 <div align="center">
 
-  [![github-pages-deploy](https://github.com/emerconnelly/fleet-infra/actions/workflows/github-pages-deploy.yml/badge.svg)](https://github.com/emerconnelly/fleet-infra/actions/workflows/github-pages-deploy.yml)
+  [![github-pages](https://github.com/emerconnelly/fleet-infra/actions/workflows/github-pages.yml/badge.svg)](https://github.com/emerconnelly/fleet-infra/actions/workflows/github-pages.yml)
   [![flux-reconcile](https://github.com/emerconnelly/fleet-infra/actions/workflows/flux-reconcile.yml/badge.svg?branch=main)](https://github.com/emerconnelly/fleet-infra/actions/workflows/flux-reconcile.yml)
 
   # fleet-infra
