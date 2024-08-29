@@ -1,5 +1,5 @@
 [book]
-title = "Fleet Infra"
+title = "fleet-infra"
 description = "My homelab-as-code, with horrible commit messages."
 authors = ["Emerson Connelly"]
 language = "en"
