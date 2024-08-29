@@ -57,8 +57,9 @@ My homelab-as-code, with horrible commit messages.
 
 ### SOPS
 
-- encrypted K8s secrets which can be safely committed to Git
-- Flux uses a copy of the private key stored within the K8s cluster to decrypt the secrets before applying them
+- encrypts K8s secrets in Git with `age.key`, using the [age](https://github.com/FiloSottile/age) protocol
+- Flux decrypts the secrest before applying them, using a copy of `age.key` stored within the cluster
+- configured at [.sops.yaml](https://github.com/emerconnelly/fleet-infra/blob/main/.sops.yaml) & [k8s/flux/clusters/talos-cluster/flux-system/gotk-sync.yaml]
 
 # kubernetes
 
