@@ -24,7 +24,7 @@ My homelab-as-code, with horrible commit messages.
   - Storage: 4x 1TB SATA SSD
   - Cache: 2x 256GB NVMe M.2 SD
   - RAM: 16GB
-  - Network: 2x 1GbE ports with LAG ([link aggregation](https://support.hostifi.com/en/articles/6454249-unifi-how-to-enable-link-aggregation-on-switches-lag))
+  - Network: 2x 1GbE ports using LAG ([link aggregation](https://support.hostifi.com/en/articles/6454249-unifi-how-to-enable-link-aggregation-on-switches-lag))
 
 ### servers 
 
