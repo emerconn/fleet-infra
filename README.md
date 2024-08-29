@@ -19,7 +19,7 @@
 - Unifi Switch Lite 8 PoE
 - Unifi AP U6 Pro PoE
 
-### storage [![Synology DSM](https://img.shields.io/badge/Synology_DSM-555?logo=synology&logoColor=000&labelColor=fff)](https://synology.homelab.emerconnelly.com/)
+### storage [![Synology DSM](https://img.shields.io/badge/Synology_DSM-555)](https://synology.homelab.emerconnelly.com/)
 
 - Synology DS720+
   - Storage: 4x 1TB SATA SSD
