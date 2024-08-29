@@ -16,7 +16,7 @@ concurrency:
 jobs:
   flux-reconcile:
     environment:
-      name: k8s-flux
+      name: flux-reconcile
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
