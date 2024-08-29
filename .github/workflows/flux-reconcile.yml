@@ -33,7 +33,7 @@ jobs:
 
       - name: Set up kubectl
         uses: azure/setup-kubectl@v4
-      - name: Configure kubeconfig
+      - name: kubeconfig
         run: tailscale configure kubeconfig talos-cluster
       - run: kubectl version
   
@@ -41,4 +41,4 @@ jobs:
         uses: fluxcd/flux2/action@main
       - run: flux version
       - name: flux reconcile
-        run: flux reconcile source git flux-system --timeout "120s" && flux reconcile kustomization flux-system --timeout "120s"
+        run: flux reconcile source git flux-system --timeout "15s" && flux reconcile kustomization flux-system --timeout "60s"
