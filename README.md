@@ -15,8 +15,8 @@ My homelab-as-code, with horrible commit messages.
 - MikroTik router
   - DNS with [containerized](https://help.mikrotik.com/docs/display/ROS/Container) AdGuard Home (yes, MikroTik routers are based af, they can run containers)
   - WireGuard for secure external access
-- Unifi 8 port switch
-- Unifi AP6 over POE
+- Unifi 8-port 1GbE POE switch
+- Unifi AP6 POE
 
 ### storage [![Synology DSM](https://img.shields.io/badge/Synology_DSM-555?logo=synology&logoColor=000&labelColor=fff)](https://synology.homelab.emerconnelly.com/)
 
