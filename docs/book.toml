@@ -12,6 +12,7 @@ git-repository-icon = "fa-github"
 git-branch = "main"
 default-theme = "navy"
 preferred-dark-theme = "navy"
+no-section-label = true
 
 [output.html.fold]
 enable = true
