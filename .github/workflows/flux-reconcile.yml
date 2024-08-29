@@ -16,7 +16,7 @@ concurrency:
 jobs:
   flux-reconcile:
     environment:
-      name: flux-reconcile
+      name: flux
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
