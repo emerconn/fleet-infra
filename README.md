@@ -55,6 +55,11 @@ My homelab-as-code, with horrible commit messages.
 - automatically manage Kubernetes resources as code
 - whenever `main` is updated, [this GitHub Action](https://github.com/emerconnelly/fleet-infra/actions/workflows/flux-reconcile.yml) remotely reconciles my cluster by connecting to the K8s API via Tailscale
 
+### SOPS
+
+- encrypted K8s secrets which can be safely committed to Git
+- Flux uses a copy of the private key stored within the K8s cluster to decrypt the secrets before applying them
+
 # kubernetes
 
 ## external
