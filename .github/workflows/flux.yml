@@ -1,4 +1,4 @@
-name: flux-reconcile
+name: flux
 
 on:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
     branches:
       - main
     paths:
-      - '.github/workflows/flux-reconcile.yml'
+      - '.github/workflows/flux.yml'
       - 'k8s/flux/**'
 
 concurrency:
