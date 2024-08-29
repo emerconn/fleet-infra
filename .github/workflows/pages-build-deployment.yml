@@ -9,7 +9,7 @@ on:
     paths:
       - docs/**
       - README.md
-      - .github/workflows/pages-build-deployment.yaml
+      - .github/workflows/pages-build-deployment.yml
 
 permissions:
   actions: write
