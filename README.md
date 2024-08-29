@@ -124,3 +124,8 @@
 
 - Deploy highly-available & fully API-compliant S3 storage tenants
 - Controlled via [`minio-operator`](https://min.io/docs/minio/kubernetes/upstream/operations/installation.html)
+
+
+# GitHub Pages
+
+- deployed with [this GitHub Action](https://github.com/emerconnelly/fleet-infra/actions/workflows/github-pages.yml) using [Rust mdBook](https://github.com/rust-lang/mdBook)
