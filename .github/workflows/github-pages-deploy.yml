@@ -1,6 +1,6 @@
 ---
 # yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
-name: "pages-build-deployment"
+name: "github-pages-deploy"
 
 on:
   workflow_dispatch:
@@ -9,7 +9,7 @@ on:
     paths:
       - docs/**
       - README.md
-      - .github/workflows/pages-build-deployment.yml
+      - .github/workflows/github-pages-deploy.yml
 
 permissions:
   actions: write
