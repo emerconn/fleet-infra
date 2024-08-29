@@ -2,3 +2,6 @@ creation_rules:
 - path_regex: secret-sops.*.yaml
   encrypted_regex: ^(data|stringData)$
   age: age1q4s78mspzd665gj4tavetnwqym7zc8vx0fr3qj203saeldg223rqwzakhu
+stores:
+  yaml:
+    indent: 2
