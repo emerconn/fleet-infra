@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: trivy-operator
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: trivy-operator
+  namespace: trivy-operator
+spec:
+  releaseName: trivy-operator
+  targetNamespace: trivy-operator
+  chart:
+    spec:
+      sourceRef:
+        kind: HelmRepository
+        name: aqua
+        namespace: flux-system
+      chart: trivy-operator
+      version: "0.24.1"
+  interval: 1h
+  install:
+    remediation:
+      retries: -1
+  values: # https://github.com/aquasecurity/trivy-operator/blob/main/deploy/helm/values.yaml
