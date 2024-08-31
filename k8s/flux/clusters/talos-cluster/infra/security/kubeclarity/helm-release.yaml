@@ -5,3 +5,8 @@ metadata:
   namespace: kubeclarity
 spec:
   values:
+    kubeclarity:
+      prometheus:
+        enabled: false
+        serviceMonitor:
+          enabled: true
