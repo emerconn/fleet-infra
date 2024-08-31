@@ -1,8 +1,8 @@
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
-  name: traefik
-  namespace: flux-system
+  name: trivy-operator
+  namespace: trivy-operator
 spec:
   values:
     nodeCollector:
