@@ -5,6 +5,8 @@ metadata:
   namespace: trivy-operator
 spec:
   values:
+    operator:
+      metricsVulnIdEnabled: false # https://github.com/aquasecurity/trivy-operator/blob/0dead554cc5cc9fb1ca7bd671f86a65e00fce39c/deploy/helm/values.yaml#L121
     serviceMonitor:
       enabled: true
     nodeCollector:
