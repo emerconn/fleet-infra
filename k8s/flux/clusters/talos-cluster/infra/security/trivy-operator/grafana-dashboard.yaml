@@ -6,7 +6,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
 data:
-  cilium.json: |- # https://grafana.com/grafana/dashboards/17813-trivy-operator-dashboard/
+  trivy.json: |- # https://grafana.com/grafana/dashboards/17813-trivy-operator-dashboard/
     {
       "__inputs": [
         {
