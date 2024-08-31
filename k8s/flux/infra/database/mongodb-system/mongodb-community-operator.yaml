@@ -1,0 +1,21 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: mongodb-community-operator
+  namespace: mongodb-system
+spec:
+  releaseName: mongodb-community-operator
+  targetNamespace: mongodb-system
+  chart:
+    spec:
+      chart: community-operator
+      sourceRef:
+        kind: HelmRepository
+        name: mongodb
+        namespace: flux-system
+      version: "0.11.0"
+  interval: 1h
+  install:
+    remediation:
+      retries: -1
+  values: # https://github.com/mongodb/helm-charts/blob/main/charts/community-operator/values.yaml

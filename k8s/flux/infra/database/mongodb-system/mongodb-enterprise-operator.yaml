@@ -1,0 +1,21 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: mongodb-enterprise-operator
+  namespace: mongodb-system
+spec:
+  releaseName: mongodb-enterprise-operator
+  targetNamespace: mongodb-system
+  chart:
+    spec:
+      chart: enterprise-operator
+      sourceRef:
+        kind: HelmRepository
+        name: mongodb
+        namespace: flux-system
+      version: "1.27.0"
+  interval: 1h
+  install:
+    remediation:
+      retries: -1
+  values: # https://github.com/mongodb/helm-charts/blob/main/charts/enterprise-operator/values.yaml

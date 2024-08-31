@@ -1,0 +1,21 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: mongodb-atlas-deployment
+  namespace: mongodb-system
+spec:
+  releaseName: mongodb-atlas-deployment
+  targetNamespace: mongodb-system
+  chart:
+    spec:
+      chart: atlas-deployment
+      sourceRef:
+        kind: HelmRepository
+        name: mongodb
+        namespace: flux-system
+      version: "1.0.1"
+  interval: 1h
+  install:
+    remediation:
+      retries: -1
+  values: # https://github.com/mongodb/helm-charts/blob/main/charts/atlas-deployment/values.yaml
