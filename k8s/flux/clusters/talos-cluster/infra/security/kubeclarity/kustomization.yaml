@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=https://json.schemastore.org/kustomization
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- ../../../../../infra/security/kubeclarity.yaml
+patches:
+- path: helm-release.yaml
+- patch: |- # https://www.talos.dev/v1.7/kubernetes-guides/configuration/pod-security/
+    apiVersion: v1
+    kind: Namespace
+    metadata:
+      name: kubeclarity
+      labels:
+        pod-security.kubernetes.io/enforce: privileged
