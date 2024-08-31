@@ -12,7 +12,7 @@ spec:
           enabled: true
     kubeclarity-runtime-scan:
       cis-docker-benchmark-scanner:
-        timeout: "2m"
+        timeout: "5m"
       vulnerability-scanner:
         scanner:
           grype:
