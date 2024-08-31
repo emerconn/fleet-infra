@@ -10,3 +10,11 @@ spec:
         enabled: true
         serviceMonitor:
           enabled: true
+    kubeclarity-runtime-scan:
+      cis-docker-benchmark-scanner:
+        timeout: "2m"
+      vulnerability-scanner:
+        scanner:
+          grype:
+            remote-grype:
+              timeout: "5m"
