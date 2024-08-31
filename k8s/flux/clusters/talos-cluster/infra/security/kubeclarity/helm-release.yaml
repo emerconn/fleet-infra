@@ -7,6 +7,6 @@ spec:
   values:
     kubeclarity:
       prometheus:
-        enabled: false
+        enabled: true
         serviceMonitor:
           enabled: true
