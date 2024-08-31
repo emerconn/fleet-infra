@@ -16,6 +16,7 @@ resources:
 - headlamp.yaml
 - ingress-nginx.yaml
 - jetstack.yaml
+- kubeclarity.yaml
 - kubernetes-dashboard.yaml
 - metrics-server.yaml
 - minio-operator.yaml
