@@ -5,10 +5,12 @@ metadata:
   namespace: trivy-operator
 spec:
   values:
+    serviceMonitor:
+      enabled: true
     nodeCollector:
       volumeMounts:
-      # Talos has read-only directories
-      # remove these but keep the default ones defined in values.yaml
+      # Talos has some read-only directories
+      # remove those but keep the remaining defaults in values.yaml
       - name: var-lib-etcd
         mountPath: /var/lib/etcd
         readOnly: true
