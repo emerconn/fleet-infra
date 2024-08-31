@@ -2,6 +2,7 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
+- grafana-dashboards.yaml
 - ../../../../../infra/security/trivy-operator.yaml
 patches:
 - path: helm-release.yaml
