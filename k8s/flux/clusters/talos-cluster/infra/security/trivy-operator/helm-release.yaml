@@ -7,8 +7,8 @@ spec:
   values:
     nodeCollector:
       volumeMounts:
-      # most of /etc is read-only in Talos
-      # remove the read-only directories, but keep the default ones defined in values.yaml
+      # Talos has read-only directories
+      # remove these but keep the default ones defined in values.yaml
       - name: var-lib-etcd
         mountPath: /var/lib/etcd
         readOnly: true
@@ -20,9 +20,6 @@ spec:
         readOnly: true
       - name: var-lib-kube-controller-manager
         mountPath: /var/lib/kube-controller-manager
-        readOnly: true
-      - name: lib-systemd
-        mountPath: /lib/systemd/
         readOnly: true
       - name: etc-kubernetes
         mountPath: /etc/kubernetes
@@ -43,9 +40,6 @@ spec:
       - name: var-lib-kube-controller-manager
         hostPath:
           path: /var/lib/kube-controller-manager
-      - name: lib-systemd
-        hostPath:
-          path: /lib/systemd
       - name: etc-kubernetes
         hostPath:
           path: /etc/kubernetes
