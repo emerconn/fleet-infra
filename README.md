@@ -55,7 +55,7 @@
 ### FluxCD
 
 - automatically manage Kubernetes resources as code
-- whenever `main` is updated, [this GitHub Action](https://github.com/emerconnelly/fleet-infra/actions/workflows/flux-reconcile.yml) remotely reconciles my cluster by connecting to the K8s API via Tailscale
+- whenever `main` is updated, [this](https://github.com/emerconnelly/fleet-infra/actions/workflows/flux-reconcile.yml) GitHub Action remotely reconciles my cluster by connecting to the K8s API via Tailscale
 
 ### SOPS
 
@@ -129,4 +129,4 @@
 
 # GitHub Pages
 
-- deployed with [this GitHub Action](https://github.com/emerconnelly/fleet-infra/actions/workflows/github-pages.yml) using [Rust mdBook](https://github.com/rust-lang/mdBook)
+- deployed with [this](https://github.com/emerconnelly/fleet-infra/actions/workflows/github-pages.yml) GitHub Action using [Rust mdBook](https://github.com/rust-lang/mdBook)
