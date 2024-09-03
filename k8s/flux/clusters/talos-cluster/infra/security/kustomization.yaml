@@ -4,4 +4,4 @@ kind: Kustomization
 resources:
 - kubeclarity
 - tetragon
-- trivy-operator
+# - trivy-operator
