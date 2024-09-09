@@ -43,5 +43,5 @@ jobs:
       - name: Run flux reconcile
         id: flux-reconcile
         run: flux reconcile source git flux-system --timeout "15s" && flux reconcile kustomization flux-system --timeout "30s"
-      - if: steps.flux-reconcile.outcome == 'failure'
+      - if: failure() && steps.flux-reconcile.outcome == 'failure'
         run: flux get kustomization
