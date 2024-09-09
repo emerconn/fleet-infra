@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
 - loadbalancer.yaml
 - namespace.yaml
+- volumes.yaml

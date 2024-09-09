@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: world-data
+  namespace: valheim
+spec:
+  accessModes:
+  - ReadWriteOnce
+  storageClassName: synology-csi-ext4-retain
+  resources:
+    requests:
+      storage: 5Gi
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: server-config
+  namespace: valheim
+spec:
+  accessModes:
+  - ReadWriteOnce
+  storageClassName: synology-csi-ext4-retain
+  resources:
+    requests:
+      storage: 1Gi
