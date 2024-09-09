@@ -18,7 +18,7 @@ spec:
         kind: HelmRepository
         name: uptime-kuma
         namespace: flux-system
-      version: "2.19.3"
+      version: "2.19.4"
   interval: 1h
   install:
     remediation:
