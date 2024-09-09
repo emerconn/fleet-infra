@@ -11,39 +11,39 @@
   "kubernetes": {
     "fileMatch": ["(^|/)k8s/.+\\.ya?ml(?:\\.j2)?$"]
   },
-  "labels": ["renovate-bot"],
+  "labels": ["renovate"],
   "packageRules": [
     {
       "matchUpdateTypes": ["major"],
-      "addLabels": ["type/major"]
+      "addLabels": ["renovate/type/major"]
     },
     {
       "matchUpdateTypes": ["minor"],
-      "addLabels": ["type/minor"]
+      "addLabels": ["renovate/type/minor"]
     },
     {
       "matchUpdateTypes": ["patch"],
-      "addLabels": ["type/patch"]
+      "addLabels": ["renovate/type/patch"]
     },
     {
       "matchUpdateTypes": ["digest"],
-      "addLabels": ["type/digest"]
+      "addLabels": ["renovate/type/digest"]
     },
     {
       "matchDatasources": ["docker"],
-      "addLabels": ["source/container"]
+      "addLabels": ["renovate/source/container"]
     },
     {
       "matchDatasources": ["helm"],
-      "addLabels": ["source/helm"]
+      "addLabels": ["renovate/source/helm"]
     },
     {
       "matchDatasources": ["github-releases", "github-tags"],
-      "addLabels": ["source/github-release"]
+      "addLabels": ["renovate/source/github-release"]
     },
     {
       "matchManagers": ["github-actions"],
-      "addLabels": ["source/github-action"]
+      "addLabels": ["renovate/source/github-action"]
     }
   ]
 }
