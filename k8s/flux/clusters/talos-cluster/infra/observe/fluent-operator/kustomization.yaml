@@ -26,7 +26,10 @@ patches:
         operator:
           disableComponentControllers: "fluentd"
         fluentbit:
-          serviceMonitor:
+          crdsEnable: true
           enable: true
+          serviceMonitor:
+            enable: true
         fluentd:
           crdsEnable: false
+          enable: false
