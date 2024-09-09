@@ -5,10 +5,10 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1h
-  targetNamespace: kube-system
+  targetNamespace: kubelet-serving-cert-approver
   sourceRef:
     kind: GitRepository
     name: kubelet-serving-cert-approver
     namespace: flux-system
-  path: "./deploy/ha"
+  path: "./deploy/standalone"
   prune: true
