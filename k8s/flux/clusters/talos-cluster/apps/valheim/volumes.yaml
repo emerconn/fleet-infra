@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: world-data
+  name: data
   namespace: valheim
 spec:
   accessModes:
@@ -14,7 +14,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: server-config
+  name: config
   namespace: valheim
 spec:
   accessModes:
