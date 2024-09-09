@@ -22,7 +22,9 @@ patches:
     spec:
       values:
         containerRuntime: containerd
-        Kubernetes: true # default fluent-bit pipeline (incl fluent-bit input, filter, and output) to collect Kubernetes logs
+        Kubernetes: true # default fluent-bit pipeline (input, filter, output) to collect K8s logs
+        operator:
+          disableComponentControllers: "fluentd"
         fluentbit:
           serviceMonitor:
           enable: true
