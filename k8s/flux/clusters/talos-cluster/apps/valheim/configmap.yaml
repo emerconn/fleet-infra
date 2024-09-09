@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: valehim
+  namespace: valheim
+data:
+  SERVER_NAME: "Nemmy's Server"
+  WORLD_NAME: "Nemmy's World"
+  SERVER_PASS: "password"
+  TZ: "US/Central"
