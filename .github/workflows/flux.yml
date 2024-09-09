@@ -41,4 +41,7 @@ jobs:
         uses: fluxcd/flux2/action@main
       - run: flux version
       - name: Run flux reconcile
-        run: flux reconcile source git flux-system --timeout "15s" && flux reconcile kustomization flux-system --timeout "60s"
+        id: flux-reconcile
+        run: flux reconcile source git flux-system --timeout "15s" && flux reconcile kustomization flux-system --timeout "30s"
+      - if: steps.flux-reconcile.outcome == 'failure'
+        run: flux get kustomization
