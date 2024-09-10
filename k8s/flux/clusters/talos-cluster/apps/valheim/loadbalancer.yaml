@@ -15,6 +15,8 @@ spec:
   - name: steam-2
     port: 2457
     protocol: UDP
+  - name: supervisor
+    port: 9001
+    protocol: TCP
   # firewall port forwarding:
-  # WAN 26900 TCP > 172.21.0.172 26900 TCP
-  # WAN 26900-26903 UDP > 172.21.0.172 26900-26903 UDP
+  # WAN 26908-26909 UDP > 172.21.0.176 2456-2457 UDP

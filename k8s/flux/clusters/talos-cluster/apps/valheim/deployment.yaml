@@ -33,10 +33,15 @@ spec:
         - secretRef:
             name: valheim
         ports:
-        - containerPort: 2456
+        - name: steam-1
+          containerPort: 2456
           protocol: UDP
-        - containerPort: 2457
+        - name: steam-2
+          containerPort: 2457
           protocol: UDP
+        - name: supervisor
+          containerPort: 9001
+          protocol: TCP
         volumeMounts:
         - name: data
           mountPath: /opt/valheim

@@ -4,9 +4,13 @@ metadata:
   name: valheim
   namespace: valheim
 data:
-  SERVER_NAME: Nemmy's Server
-  WORLD_NAME: Nemmy's World
-  TZ: US/Central
+  SERVER_NAME: "Nemmy's Server"
+  SERVER_PORT: "2456"
   SERVER_PUBLIC: "true"
+  SERVER_ARGS: "-crossplay" # enables join code
   STATUS_HTTP: "true"
-  SERVER_ARGS: "-crossplay"
+  SUPERVISOR_HTTP: "true"
+  SUPERVISOR_HTTP_PORT: "9001"
+  SUPERVISOR_HTTP_USER: "admin"
+  WORLD_NAME: "Nemmy's World"
+  TZ: "US/Central"
