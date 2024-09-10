@@ -4,7 +4,8 @@ metadata:
   name: valheim
   namespace: valheim
 data:
-  SERVER_NAME: "Nemmy's Server"
-  WORLD_NAME: "Nemmy's World"
-  SERVER_PASS: "password"
-  TZ: "US/Central"
+  SERVER_NAME: Nemmy's Server
+  WORLD_NAME: Nemmy's World
+  TZ: US/Central
+  SERVER_PUBLIC: "true"
+  STATUS_HTTP: "true"

@@ -30,6 +30,8 @@ spec:
         envFrom:
         - configMapRef:
             name: valheim
+        - secretRef:
+            name: valheim
         ports:
         - containerPort: 2456
           protocol: UDP

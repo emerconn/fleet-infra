@@ -5,4 +5,5 @@ resources:
 - deployment.yaml
 - loadbalancer.yaml
 - namespace.yaml
+- secret.yaml
 - volumes.yaml
