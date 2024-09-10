@@ -9,3 +9,4 @@ data:
   TZ: US/Central
   SERVER_PUBLIC: "true"
   STATUS_HTTP: "true"
+  SERVER_ARGS: "-crossplay"
