@@ -18,7 +18,7 @@ spec:
         kind: HelmRepository
         name: kubernetes-dashboard
         namespace: flux-system
-      version: "7.6.0"
+      version: "7.6.1"
   interval: 1h
   install:
     remediation:
