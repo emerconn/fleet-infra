@@ -15,4 +15,4 @@ data:
   WORLD_NAME: "Nemmy's World"
   TZ: "US/Central"
   BEPINEX: "true"
-  BEPINEXCFG_Logging_DOT_Console_Enabled: "true"
+  # BEPINEXCFG_Logging_DOT_Console_Enabled: "true"
