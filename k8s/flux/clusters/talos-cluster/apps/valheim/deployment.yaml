@@ -22,7 +22,7 @@ spec:
                 operator: DoesNotExist
       containers:
       - name: valheim
-        image: lloesche/valheim-server:latest@sha256:59a4cc0b61dd4b47855282bcc962330f5e74e0450733f07e77d6037ef981effa # https://github.com/lloesche/valheim-server-docker
+        image: lloesche/valheim-server:latest@sha256:b97da1038714e5156cf28d042422a1c5af41e03189572025e615bde61395c678 # https://github.com/lloesche/valheim-server-docker
         resources:
           requests:
             cpu: "1500m"
