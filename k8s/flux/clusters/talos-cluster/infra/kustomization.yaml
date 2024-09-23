@@ -8,5 +8,5 @@ resources:
 - network
 - observe
 - secrets
-- security
+# - security
 - storage
