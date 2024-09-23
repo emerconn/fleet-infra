@@ -24,6 +24,13 @@ patches:
         containerRuntime: containerd
         Kubernetes: true # default fluent-bit pipeline (input, filter, output) to collect K8s logs
         operator:
+          resources:
+            limits:
+              cpu: 100m
+              memory: 100Mi
+            requests:
+              cpu: 100m
+              memory: 20Mi
           disableComponentControllers: "fluentd"
         fluentbit:
           crdsEnable: true
