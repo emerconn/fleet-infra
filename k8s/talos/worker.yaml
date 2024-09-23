@@ -19,7 +19,7 @@ machine:
     disk: /dev/nvme0n1
     extraKernelArgs:
     - talos.platform=metal
-    image: factory.talos.dev/installer/c4f93bf64691eedef63d31b4513f4339249f5d5d1c368ebc70693bbbfa31aeda:v1.7.6
+    image: factory.talos.dev/installer/c4f93bf64691eedef63d31b4513f4339249f5d5d1c368ebc70693bbbfa31aeda:v1.8.0
     wipe: true
   time:
     servers:
