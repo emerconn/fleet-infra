@@ -47,7 +47,7 @@
 
 # repository management
 
-### Renovate [![Renovate Dashboard](https://img.shields.io/badge/Dashboard-555?logo=renovate&logoColor=497b9c&labelColor=000)](https://developer.mend.io/github/emerconnelly/fleet-infra)
+### Renovate [![Renovate Dashboard](https://img.shields.io/badge/Dashboard-555?logo=renovate&logoColor=497b9c&labelColor=000)](https://developer.mend.io/github/emerconn/fleet-infra)
 
 - Automated detailed PRs for version upgrades of Flux `HelmRelease`s, container image tags, & K8s `.yaml` resources
 - Configured as a [GitHub app](https://github.com/apps/renovate) (migrate to GitHub Action cause it looks cooler?)
