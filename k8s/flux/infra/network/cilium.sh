@@ -24,8 +24,13 @@ helm upgrade \
     --set hubble.enabled=true \
     --set hubble.ui.enabled=true \
     --set hubble.relay.enabled=true \
-    --set hubble.metrics.enableOpenMetrics=true \
+    --set hubble.relay.prometheus.enabled=true \
+    --set hubble.relay.prometheus.serviceMonitor.enabled=true \
     --set hubble.metrics.enabled="{dns,drop,tcp,flow,port-distribution,icmp,httpV2:exemplars=true;labelsContext=source_ip\,source_namespace\,source_workload\,destination_ip\,destination_namespace\,destination_workload\,traffic_direction}" \
+    --set hubble.metrics.enableOpenMetrics=true \
+    --set hubble.metrics.prometheus.serviceMonitor.enabled=true \
+    --set envoy.prometheus.enabled=true \
+    --set envoy.prometheus.serviceMonitor.enabled=true \
     --set ingressController.enabled=true \
     --set gatewayAPI.enabled=true \
     --set l2announcements.enabled=true \
