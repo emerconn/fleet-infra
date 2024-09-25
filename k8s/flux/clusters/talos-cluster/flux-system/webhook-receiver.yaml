@@ -20,7 +20,7 @@ metadata:
   name: webhook-receiver-custom
   namespace: flux-system
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: notification-controller
   ports:
