@@ -40,6 +40,6 @@ spec:
   - match: Host(`e7290e1d83bf.sn.mynetname.net`) # MikroTik RouterOS DDNS
     kind: Rule
     services:
-    - name: receiver
+    - name: webhook-receiver
       port: 9292
       passHostHeader: true
