@@ -6,11 +6,11 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m0s
+  url: https://github.com/emerconn/fleet-infra.git
   ref:
     branch: main
   secretRef:
     name: flux-system
-  url: https://github.com/emerconn/fleet-infra.git
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
