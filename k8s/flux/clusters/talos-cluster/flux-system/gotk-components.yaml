@@ -12279,7 +12279,7 @@ metadata:
 spec:
   ports:
   - name: http
-    port: 80
+    port: 9292 # custom port for port-forwarding
     protocol: TCP
     targetPort: http-webhook
   selector:
