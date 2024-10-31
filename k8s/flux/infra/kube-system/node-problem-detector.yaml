@@ -13,7 +13,7 @@ spec:
         kind: HelmRepository
         name: deliveryhero
         namespace: flux-system
-      version: "2.3.13"
+      version: "2.3.14"
   interval: 1h
   install:
     remediation:
