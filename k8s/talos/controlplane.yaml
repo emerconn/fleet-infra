@@ -9,7 +9,7 @@ machine:
     key: LS0tLS1CRUdJTiBFRDI1NTE5IFBSSVZBVEUgS0VZLS0tLS0KTUM0Q0FRQXdCUVlESzJWd0JDSUVJTEtySy9kcC9LNmVxZXJnYitPdS9jaW1GMVhaTXRQaXNpcEIzZTViOThFVQotLS0tLUVORCBFRDI1NTE5IFBSSVZBVEUgS0VZLS0tLS0K
   certSANs: []
   kubelet:
-    image: ghcr.io/siderolabs/kubelet:v1.31.1
+    image: ghcr.io/siderolabs/kubelet:v1.31.2
     extraArgs:
       rotate-server-certificates: "true"
     defaultRuntimeSeccompProfileEnabled: true
