@@ -13,7 +13,7 @@
 
 ### network [![MikroTik Router](https://img.shields.io/badge/RouterOS-555?logo=mikrotik&logoColor=293239&labelColor=fff)](https://mikrotik.homelab.emerconnelly.com/) [![AdGuard Home](https://img.shields.io/badge/AdGuard_Home-555?logo=adguard&logoColor=68bc71&labelColor=000)](https://adguard.homelab.emerconnelly.com/) [![Unifi Network Server](https://img.shields.io/badge/Unifi_Network_Server-555?logo=ubiquiti&logoColor=fff&labelColor=0559c9)](https://unifi.homelab.emerconnelly.com/) 
 
-- MikroTik hAP ac³
+- MikroTik hAP ax³
   - DNS via containerized AdGuard Home (yes, MikroTik routers are based af, they can [run containers](https://help.mikrotik.com/docs/display/ROS/Container))
   - WireGuard for secure external access
   - IKEv2 IPSec tunnels to my Azure subscription
