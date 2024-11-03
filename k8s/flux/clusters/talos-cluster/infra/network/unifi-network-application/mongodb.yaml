@@ -1,7 +1,7 @@
 apiVersion: mongodbcommunity.mongodb.com/v1
 kind: MongoDBCommunity
 metadata:
-  name: mongodb-database
+  name: unifi
   namespace: unifi-network-application
 spec:
   members: 1
@@ -14,13 +14,20 @@ spec:
   - name: my-user
     db: admin
     passwordSecretRef:
-      name: mongodb-database-password
+      name: mongodb-my-user-password
     roles:
     - name: clusterAdmin
       db: admin
     - name: userAdminAnyDatabase
       db: admin
-    scramCredentialsSecretName: mongodb
+    scramCredentialsSecretName: mongodb-my-user
+  - name: unifi
+    db: unifi
+    passwordSecretRef:
+      name: mongodb-unifi-password
+    roles:
+    - name: readWrite
+      db: unifi
   additionalMongodConfig:
     storage.wiredTiger.engineConfig.journalCompressor: zlib
 ---

@@ -17,7 +17,7 @@ metadata:
   name: http
   namespace: unifi-network-application
 spec:
-  entryPoints: ["web"]
+  entryPoints: [ "web" ]
   routes:
   - match: Host(`unifi.homelab.emerconnelly.com`)
     kind: Rule
@@ -34,7 +34,7 @@ metadata:
   name: https
   namespace: unifi-network-application
 spec:
-  entryPoints: ["websecure"]
+  entryPoints: [ "websecure" ]
   routes:
   - match: Host(`unifi.homelab.emerconnelly.com`)
     kind: Rule
