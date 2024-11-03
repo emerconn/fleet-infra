@@ -20,7 +20,7 @@ spec:
       db: admin
     - name: userAdminAnyDatabase
       db: admin
-    scramCredentialsSecretName: mongodb-unifi-network-application-scram
+    scramCredentialsSecretName: mongodb
   additionalMongodConfig:
     storage.wiredTiger.engineConfig.journalCompressor: zlib
 ---
