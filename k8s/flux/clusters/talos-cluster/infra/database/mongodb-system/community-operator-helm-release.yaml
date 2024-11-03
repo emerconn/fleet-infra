@@ -6,4 +6,4 @@ metadata:
 spec:
   values:
     operator:
-      watchNamespace: "unifi-network-application"
+      watchNamespace: "*"
