@@ -16,9 +16,9 @@ spec:
         - name: TZ
           value: "America/Chicago"
         - name: MONGO_USER
-          value: "my-user"
+          value: "unifi"
         - name: MONGO_PASS
-          value: "7asRk4X49nL1ywJVkbp2"
+          value: "4ltYHqP1nIlidYJ4JIBB"
         - name: MONGO_HOST
           value: "mongodb-database-svc.unifi-network-application.svc.cluster.local"
         - name: MONGO_PORT
