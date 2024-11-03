@@ -4,7 +4,8 @@ kind: Kustomization
 resources:
 - ingress.yaml
 - mongodb.yaml
-- secret-sops-mongodb-password.yaml
+- secret-sops-mongodb-my-user-password.yaml
+- secret-sops-mongodb-unifi-password.yaml
 - ../../../../../infra/network/unifi-network-application
 patches:
 - path: deployment.yaml
