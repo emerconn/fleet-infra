@@ -1,7 +1,7 @@
 apiVersion: mongodbcommunity.mongodb.com/v1
 kind: MongoDBCommunity
 metadata:
-  name: unifi
+  name: mongodb-unifi
   namespace: unifi-network-application
 spec:
   members: 1
