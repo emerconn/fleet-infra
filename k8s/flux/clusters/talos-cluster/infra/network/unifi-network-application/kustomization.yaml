@@ -3,6 +3,6 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - ingress.yaml
-# - mongodb-atlas-deployment.yaml
-- secret-sops-atlas-deployment-config.yaml
+- mongodb.yaml
+- secret-sops-mongodb-password.yaml
 - ../../../../../infra/network/unifi-network-application
