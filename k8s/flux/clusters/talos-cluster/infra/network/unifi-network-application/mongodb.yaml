@@ -2,7 +2,7 @@ apiVersion: mongodbcommunity.mongodb.com/v1
 kind: MongoDBCommunity
 metadata:
   name: mongodb-unifi-network-application
-  namespace: unifi-network-appliation
+  namespace: unifi-network-application
 spec:
   members: 1
   type: ReplicaSet
