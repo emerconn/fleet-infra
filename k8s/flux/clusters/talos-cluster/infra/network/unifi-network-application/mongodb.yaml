@@ -2,9 +2,9 @@ apiVersion: mongodbcommunity.mongodb.com/v1
 kind: MongoDBCommunity
 metadata:
   name: mongodb-unifi-network-application
-  namespace: mongodb-system
+  namespace: unifi-network-appliation
 spec:
-  members: 3
+  members: 1
   type: ReplicaSet
   version: "7.0.14"
   security:
@@ -15,7 +15,7 @@ spec:
     db: admin
     passwordSecretRef:
       # a reference to the secret that will be used to generate the user's password
-      name: mongodb-password
+      name: mongodb-unifi-network-application-password
     roles:
     - name: clusterAdmin
       db: admin
