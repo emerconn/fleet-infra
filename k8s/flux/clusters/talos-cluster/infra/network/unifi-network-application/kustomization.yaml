@@ -6,3 +6,5 @@ resources:
 - mongodb.yaml
 - secret-sops-mongodb-password.yaml
 - ../../../../../infra/network/unifi-network-application
+patches:
+- path: deployment.yaml

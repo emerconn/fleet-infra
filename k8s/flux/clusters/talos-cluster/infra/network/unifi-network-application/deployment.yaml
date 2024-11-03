@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: unifi-network-application
+  namespace: unifi-network-application
+spec:
+  template:
+    spec:
+      containers:
+      - name: unifi-network-application
+        env:
+        - name: PUID
+          value: "1000"
+        - name: PGID
+          value: "1000"
+        - name: TZ
+          value: "America/Chicago"
+        - name: MONGO_USER
+          value: "my-user"
+        - name: MONGO_PASS
+          value: "7asRk4X49nL1ywJVkbp2"
+        - name: MONGO_HOST
+          value: "mongodb-database-svc.unifi-network-application.svc.cluster.local"
+        - name: MONGO_PORT
+          value: "27017"
+        - name: MONGO_DBNAME
+          value: "unifi"
+        - name: MONGO_AUTHSOURCE
+          value: "admin"
+        - name: MEM_LIMIT
+          value: "1024"
+        - name: MEM_STARTUP
+          value: "1024"
+        - name: MONGO_TLS
+          value: ""
