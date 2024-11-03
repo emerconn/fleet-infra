@@ -63,3 +63,18 @@ roleRef:
   kind: Role
   name: mongodb-database
   apiGroup: rbac.authorization.k8s.io
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongodb-loadbalancer
+  namespace: unifi-network-application
+spec:
+  type: LoadBalancer
+  ports:
+  - name: mongodb
+    port: 27017
+    protocol: TCP
+    targetPort: 27017
+  selector:
+    app: mongodb-database-svc
