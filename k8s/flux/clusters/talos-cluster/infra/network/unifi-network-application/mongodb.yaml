@@ -10,7 +10,7 @@ spec:
   security:
     authentication:
       modes:
-      - "SCRAM"
+      - "SCRAM" # SHA-256
       - "SCRAM-SHA-1"
   users:
   - name: my-user
