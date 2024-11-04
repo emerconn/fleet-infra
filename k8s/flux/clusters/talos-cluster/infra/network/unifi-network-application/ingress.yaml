@@ -40,7 +40,7 @@ spec:
     kind: Rule
     services:
     - name: unifi-network-application
-      port: 8443
+      port: 8080
       passHostHeader: true
       sticky:
         cookie:
