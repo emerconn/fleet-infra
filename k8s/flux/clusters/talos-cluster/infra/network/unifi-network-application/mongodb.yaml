@@ -24,7 +24,7 @@ spec:
       db: admin
     scramCredentialsSecretName: mongodb-my-user
   - name: unifi
-    db: unifi
+    db: admin
     passwordSecretRef:
       name: mongodb-unifi-password
     roles:
