@@ -17,7 +17,7 @@ metadata:
   name: http
   namespace: unifi-network-application
 spec:
-  entryPoints: ["web"]
+  entryPoints: [ "web" ]
   routes:
   - match: Host(`unifi.homelab.emerconnelly.com`)
     kind: Rule
@@ -34,7 +34,7 @@ metadata:
   name: https
   namespace: unifi-network-application
 spec:
-  entryPoints: ["websecure"]
+  entryPoints: [ "websecure" ]
   routes:
   - match: Host(`unifi.homelab.emerconnelly.com`)
     kind: Rule
@@ -42,6 +42,7 @@ spec:
     - name: unifi-network-application
       port: 8443
       passHostHeader: true
+      serversTransport: unifi-transport
       sticky:
         cookie:
           name: traefik
@@ -50,3 +51,11 @@ spec:
           sameSite: lax
   tls:
     secretName: ingress-tls
+---
+apiVersion: traefik.io/v1alpha1
+kind: ServersTransport
+metadata:
+  name: unifi-transport
+  namespace: unifi-network-application
+spec:
+  insecureSkipVerify: true
