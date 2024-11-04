@@ -8,9 +8,9 @@ spec:
   selector:
     app: unifi-network-application
   ports:
-  # - name: web-admin
-  #   port: 8443
-  #   protocol: TCP
+  - name: web-admin
+    port: 8443
+    protocol: TCP
   - name: stun
     port: 3478
     protocol: UDP
