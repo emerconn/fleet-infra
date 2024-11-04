@@ -6,16 +6,16 @@ metadata:
 spec:
   template:
     spec:
-    affinity:
-      podAffinity:
-        requiredDuringSchedulingIgnoredDuringExecution:
-        - labelSelector:
-            matchExpressions:
-            - key: app
-              operator: In
-              values:
-              - unifi-network-application
-          topologyKey: kubernetes.io/hostname
+      affinity:
+        podAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: app
+                operator: In
+                values:
+                - unifi-network-application
+            topologyKey: kubernetes.io/hostname
       containers:
       - name: unifi-network-application
         env:
