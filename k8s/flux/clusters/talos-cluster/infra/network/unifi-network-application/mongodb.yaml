@@ -75,7 +75,7 @@ roleRef:
 apiVersion: v1
 kind: Service
 metadata:
-  name: mongodb-loadbalancer
+  name: mongodb-unifi-lb
   namespace: unifi-network-application
 spec:
   type: LoadBalancer
@@ -85,4 +85,4 @@ spec:
     protocol: TCP
     targetPort: 27017
   selector:
-    app: mongodb-database-svc
+    app: mongodb-unifi-svc
