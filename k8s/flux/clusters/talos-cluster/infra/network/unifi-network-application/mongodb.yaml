@@ -30,6 +30,8 @@ spec:
     roles:
     - name: readWrite
       db: unifi
+    - name: readWrite
+      db: unifi_stat
     scramCredentialsSecretName: mongodb-unifi
   additionalMongodConfig:
     storage.wiredTiger.engineConfig.journalCompressor: zlib
