@@ -41,7 +41,7 @@ spec:
     services:
     - name: unifi-network-application
       port: 8080
-      passHostHeader: true
+      # passHostHeader: true
       sticky:
         cookie:
           name: traefik
