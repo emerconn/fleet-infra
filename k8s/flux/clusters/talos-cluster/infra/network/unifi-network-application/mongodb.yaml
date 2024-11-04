@@ -9,7 +9,9 @@ spec:
   version: "7.0.14"
   security:
     authentication:
-      modes: [ "SCRAM-SHA-1" ]
+      modes:
+      - "SCRAM"
+      - "SCRAM-SHA-1"
   users:
   - name: my-user
     db: admin
