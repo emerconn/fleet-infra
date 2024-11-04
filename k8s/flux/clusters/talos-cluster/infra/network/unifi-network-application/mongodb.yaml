@@ -9,7 +9,7 @@ spec:
   version: "7.0.14"
   security:
     authentication:
-      modes: [ "SCRAM" ]
+      modes: [ "SCRAM-SHA-1" ]
   users:
   - name: my-user
     db: admin
@@ -31,8 +31,6 @@ spec:
     scramCredentialsSecretName: mongodb-unifi
   additionalMongodConfig:
     storage.wiredTiger.engineConfig.journalCompressor: zlib
-    setParameter:
-      authenticationMechanisms: "SCRAM-SHA-256,SCRAM-SHA-1" # Unifi uses SCRAM-SHA-1, which is disabled by default
 ---
 apiVersion: v1
 kind: ServiceAccount
