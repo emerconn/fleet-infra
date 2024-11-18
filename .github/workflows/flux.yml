@@ -1,4 +1,4 @@
-name: flux
+name: Flux
 
 on:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
     branches:
       - main
     paths:
-      - '.github/workflows/flux.yml'
+      - '.github/workflows/flux.yaml'
       - 'k8s/flux/**'
 
 concurrency:
