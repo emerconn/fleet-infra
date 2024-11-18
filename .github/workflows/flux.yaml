@@ -4,10 +4,10 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - main
+    - main
     paths:
-      - '.github/workflows/flux.yaml'
-      - 'k8s/flux/**'
+    - '.github/workflows/flux.yaml'
+    - 'k8s/flux/**'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -19,29 +19,32 @@ jobs:
       name: flux
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+    - name: Checkout
+      uses: actions/checkout@v4
 
-      - name: Set up Tailscale
-        uses: tailscale/github-action@v2
-        with:
-          version: 1.72.1
-          oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
-          oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
-          tags: tag:github-actions
-      - run: tailscale version
+    # Tailscale
+    - name: Set up Tailscale
+      uses: tailscale/github-action@v2
+      with:
+        version: 1.72.1
+        oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
+        oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
+        tags: tag:github-actions
+    - run: tailscale version
 
-      - name: Set up kubectl
-        uses: azure/setup-kubectl@v4
-      - name: Configure kubeconfig
-        run: tailscale configure kubeconfig talos-cluster
-      - run: kubectl version
-  
-      - name: Set up Flux
-        uses: fluxcd/flux2/action@main
-      - run: flux version
-      - name: Run flux reconcile
-        id: flux-reconcile
-        run: flux reconcile source git flux-system --timeout "15s" && flux reconcile kustomization flux-system --timeout "30s"
-      - if: failure() && steps.flux-reconcile.outcome == 'failure'
-        run: flux get kustomization
+    # kubectl
+    - name: Set up kubectl
+      uses: azure/setup-kubectl@v4
+    - name: Configure kubeconfig
+      run: tailscale configure kubeconfig talos-cluster
+    - run: kubectl version
+
+    # Flux
+    - name: Set up Flux
+      uses: fluxcd/flux2/action@main
+    - run: flux version
+    - name: Run flux reconcile
+      id: flux-reconcile
+      run: flux reconcile source git flux-system --timeout "15s" && flux reconcile kustomization flux-system --timeout "30s"
+    - if: failure() && steps.flux-reconcile.outcome == 'failure'
+      run: flux get kustomization
