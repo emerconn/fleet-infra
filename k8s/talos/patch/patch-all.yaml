@@ -24,7 +24,7 @@ machine:
     extraKernelArgs:
     - talos.platform=metal
   kubelet:
-    image: ghcr.io/siderolabs/kubelet:v1.31.2
+    image: ghcr.io/siderolabs/kubelet:v1.31.3
     extraArgs:
       rotate-server-certificates: true
   time:
