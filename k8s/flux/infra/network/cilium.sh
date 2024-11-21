@@ -41,4 +41,4 @@ helm upgrade \
 
 # or
 
-helm upgrade cilium cilium/cilium --version 1.16.3 --reuse-value
+helm upgrade cilium cilium/cilium --version 1.16.3 --reuse-values
