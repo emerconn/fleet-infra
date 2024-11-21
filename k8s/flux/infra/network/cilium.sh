@@ -38,3 +38,7 @@ helm upgrade \
     --set l2announcements.leaseDuration="3s" \
     --set l2announcements.leaseRenewDeadline="1s" \
     --set l2announcements.leaseRetryPeriod="500ms"
+
+# or
+
+helm upgrade cilium cilium/cilium --version 1.16.3 --reuse-value
