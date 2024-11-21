@@ -41,4 +41,4 @@ helm upgrade \
 
 # or
 
-helm upgrade cilium cilium/cilium --version 1.16.3 --reuse-values
+helm upgrade cilium cilium/cilium --namespace kube-system --version 1.16.3 --reuse-values
