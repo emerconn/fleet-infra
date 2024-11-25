@@ -6,7 +6,7 @@ metadata:
 spec:
   url: https://github.com/kubernetes-sigs/gateway-api
   ref:
-    branch: main
+    tag: v1.2.0
   interval: 12h
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
