@@ -30,6 +30,7 @@ helm upgrade \
     --set hubble.metrics.enableOpenMetrics=true \
     --set hubble.metrics.prometheus.enabled=true \
     --set hubble.metrics.prometheus.serviceMonitor.enabled=true \
+    --set envoy.initialFetchTimeoutSeconds=30 \
     --set envoy.prometheus.enabled=true \
     --set envoy.prometheus.serviceMonitor.enabled=true \
     --set ingressController.enabled=true \
