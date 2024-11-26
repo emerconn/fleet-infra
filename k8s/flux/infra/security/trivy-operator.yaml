@@ -18,7 +18,7 @@ spec:
         name: aqua
         namespace: flux-system
       chart: trivy-operator
-      version: "0.24.1"
+      version: "0.25.0"
   interval: 1h
   install:
     remediation:
