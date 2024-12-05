@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=https://json.schemastore.org/kustomization
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- ../../../../../infra/storage/rook-ceph
+patches:
+- patch: |- # https://www.talos.dev/v1.7/kubernetes-guides/configuration/pod-security/
+    apiVersion: v1
+    kind: Namespace
+    metadata:
+      name: rook-ceph
+      labels:
+        pod-security.kubernetes.io/enforce: privileged
