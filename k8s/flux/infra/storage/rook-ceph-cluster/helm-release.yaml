@@ -4,7 +4,7 @@ metadata:
   name: rook-ceph-cluster
   namespace: flux-system
 spec:
-  releaseName: rook-ceph
+  releaseName: rook-ceph-cluster
   targetNamespace: rook-ceph
   chart:
     spec:
