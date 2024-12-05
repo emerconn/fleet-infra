@@ -15,3 +15,7 @@ spec:
       dashboard:
         enabled: true
         ssl: false
+      mgr:
+        modules:
+        - name: rook
+          enabled: true
