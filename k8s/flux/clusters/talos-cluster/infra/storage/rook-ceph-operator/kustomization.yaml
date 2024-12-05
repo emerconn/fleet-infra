@@ -11,3 +11,4 @@ patches:
       name: rook-ceph
       labels:
         pod-security.kubernetes.io/enforce: privileged
+- path: helm-release.yaml
