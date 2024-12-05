@@ -9,7 +9,7 @@ spec:
     clusterName: rook-ceph
     monitoring:
       enabled: true
-      createPrometheusRules: true
+      createPrometheusRules: false
     cephClusterSpec:
       dashboard:
         enabled: true
