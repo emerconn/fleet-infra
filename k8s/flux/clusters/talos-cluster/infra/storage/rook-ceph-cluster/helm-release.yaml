@@ -19,3 +19,4 @@ spec:
         modules:
         - name: rook
           enabled: true
+      removeOSDsIfOutAndSafeToRemove: true
