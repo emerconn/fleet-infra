@@ -6,6 +6,6 @@ metadata:
 spec:
   values:
     enableDiscoveryDaemon: true
-    discoveryDaemonInterval: 5m
+    discoveryDaemonInterval: 1m
     monitoring:
       enabled: true
