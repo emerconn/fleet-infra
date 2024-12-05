@@ -8,7 +8,7 @@ spec:
     operatorNamespace: rook-ceph
     clusterName: rook-ceph
     monitoring:
-      enabled: true
+      enabled: false
       createPrometheusRules: false
       rulesNamespaceOverride: kube-prometheus-stack
     cephClusterSpec:
