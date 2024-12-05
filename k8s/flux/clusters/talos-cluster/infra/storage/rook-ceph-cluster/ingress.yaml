@@ -48,4 +48,4 @@ spec:
           httpOnly: true
           sameSite: lax
   tls:
-    secretName: main-ingress-tls
+    secretName: ingress-tls
