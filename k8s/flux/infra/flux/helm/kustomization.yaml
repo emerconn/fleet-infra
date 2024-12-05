@@ -28,6 +28,7 @@ resources:
 - opentelemetry.yaml
 - piraeus.yaml
 - prometheus-community.yaml
+- rook-release.yaml
 - synology-csi-talos.yaml
 - tailscale.yaml
 - traefik.yaml
