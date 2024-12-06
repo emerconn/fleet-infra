@@ -11,48 +11,52 @@
 
 - create job to wipe disks, double-check node & disk names
 
-  ```yaml
-  apiVersion: batch/v1
-  kind: Job
-  metadata:
-    name: disk-wipe
-    namespace: rook-ceph
-  spec:
-    completions: 3 # Set this to match the number of nodes in your list
-    parallelism: 3 # Run all pods in parallel
-    template:
-      spec:
-        containers:
-        - name: disk-wipe
-          image: ubuntu:latest
-          command:
-          - "/bin/bash"
-          - "-c"
-          - "apt-get update && apt-get install -y gdisk && sgdisk --zap-all /dev/sda"
-          securityContext:
-            privileged: true
-        affinity:
-          podAntiAffinity:
-            requiredDuringSchedulingIgnoredDuringExecution:
-            - labelSelector:
-                matchExpressions:
-                - key: job-name
-                  operator: In
-                  values:
-                  - disk-wipe
-              topologyKey: kubernetes.io/hostname
-          nodeAffinity:
-            requiredDuringSchedulingIgnoredDuringExecution:
-              nodeSelectorTerms:
-              - matchExpressions:
-                - key: kubernetes.io/hostname
-                  operator: In
-                  values:
-                  - talos-cp-01
-                  - talos-cp-02
-                  - talos-cp-03
-        restartPolicy: Never
-  ```
+```yaml
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: disk-wipe
+  namespace: rook-ceph
+spec:
+  completions: 3 # Set this to match the number of nodes in your list
+  parallelism: 3 # Run all pods in parallel
+  template:
+    spec:
+      containers:
+      - name: disk-wipe
+        image: alpine
+        command:
+        - /bin/sh
+        - -c
+        - |
+          apk add --no-cache sgdisk
+          DISK="/dev/sda"
+          dd if=/dev/zero of="$DISK" bs=1M count=100 && sync
+          sgdisk --zap-all "$DISK"
+        securityContext:
+          privileged: true
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: job-name
+                operator: In
+                values:
+                - disk-wipe
+            topologyKey: kubernetes.io/hostname
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: kubernetes.io/hostname
+                operator: In
+                values:
+                - talos-cp-01
+                - talos-cp-02
+                - talos-cp-03
+      restartPolicy: Never
+```
 
 ## Watch cluster deployment
 
