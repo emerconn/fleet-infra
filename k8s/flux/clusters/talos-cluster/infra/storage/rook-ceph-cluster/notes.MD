@@ -11,91 +11,91 @@
 
 - create job to wipe disks, double-check node & disk names
 
-```yaml
-apiVersion: batch/v1
-kind: Job
-metadata:
-  name: rook-ceph-cleanup-job
-  namespace: rook-ceph
-spec:
-  completions: 3 # replace with total node count
-  parallelism: 3 # replace with total node count
-  template:
-    spec:
-      restartPolicy: Never
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-            - matchExpressions:
-              - key: kubernetes.io/hostname
-                operator: In
-                values: # replace with node names
-                - talos-cp-01
-                - talos-cp-02
-                - talos-cp-03
-        podAntiAffinity: # ensures jobs do not schedule on same node
-          requiredDuringSchedulingIgnoredDuringExecution:
-          - labelSelector:
-              matchExpressions:
-              - key: job-name
-                operator: In
-                values:
-                - rook-ceph-cleanup-job
-            topologyKey: kubernetes.io/hostname
-      containers:
-      - name: wipe-data-disk # CHANGE DISK VARIABLE
-        image: ubuntu
-        securityContext:
-          privileged: true
-        command: ["/bin/bash"]
-        args:
-          - "-c"
-          - |
-            set -ex
-            apt-get update
-            apt-get install -y gdisk
-            DISK="/dev/sda"
-            lsblk
-            gdisk -l $DISK
-            sgdisk --zap-all $DISK
-            sleep 3
-            dd if=/dev/zero of="$DISK" bs=1M count=100 oflag=direct,dsync; sync
-            sleep 3
-            blkdiscard $DISK &
-            wait
-            sleep 3
-            gdisk -l $DISK
-            echo "done!"
-        volumeMounts:
+  ```yaml
+  apiVersion: batch/v1
+  kind: Job
+  metadata:
+    name: rook-ceph-cleanup-job
+    namespace: rook-ceph
+  spec:
+    completions: 3 # replace with total node count
+    parallelism: 3 # replace with total node count
+    template:
+      spec:
+        restartPolicy: Never
+        affinity:
+          nodeAffinity:
+            requiredDuringSchedulingIgnoredDuringExecution:
+              nodeSelectorTerms:
+              - matchExpressions:
+                - key: kubernetes.io/hostname
+                  operator: In
+                  values: # replace with node names
+                  - talos-cp-01
+                  - talos-cp-02
+                  - talos-cp-03
+          podAntiAffinity: # ensures jobs do not schedule on same node
+            requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchExpressions:
+                - key: job-name
+                  operator: In
+                  values:
+                  - rook-ceph-cleanup-job
+              topologyKey: kubernetes.io/hostname
+        containers:
+        - name: wipe-data-disk # CHANGE DISK VARIABLE
+          image: ubuntu
+          securityContext:
+            privileged: true
+          command: ["/bin/bash"]
+          args:
+            - "-c"
+            - |
+              set -ex
+              apt-get update
+              apt-get install -y gdisk
+              DISK="/dev/sda"
+              lsblk
+              gdisk -l $DISK
+              sgdisk --zap-all $DISK
+              sleep 3
+              dd if=/dev/zero of="$DISK" bs=1M count=100 oflag=direct,dsync; sync
+              sleep 3
+              blkdiscard $DISK &
+              wait
+              sleep 3
+              gdisk -l $DISK
+              echo "done!"
+          volumeMounts:
+          - name: host-dev
+            mountPath: /dev
+        - name: sanitize-talos-ephemeral
+          # cephcluster CRD uses `dataDirHostPath` for mons
+          # kubectl -n rook-ceph get cephcluster -o yaml
+          # init-mon-fs debug [...] -1 '/var/lib/ceph/mon/ceph-a' already exists and is not empty: monitor may already exist
+          image: ubuntu
+          securityContext:
+            privileged: true
+          command: ["/bin/bash"]
+          args:
+            - "-c"
+            - |
+              set -ex
+              ls -al /var/lib
+              rm -rf /var/lib/ceph /var/lib/rook
+              echo "done!"
+          volumeMounts:
+          - name: host-var
+            mountPath: /var
+        volumes:
         - name: host-dev
-          mountPath: /dev
-      - name: sanitize-talos-ephemeral
-        # cephcluster CRD uses `dataDirHostPath` for mons
-        # kubectl -n rook-ceph get cephcluster -o yaml
-        # init-mon-fs debug [...] -1 '/var/lib/ceph/mon/ceph-a' already exists and is not empty: monitor may already exist
-        image: ubuntu
-        securityContext:
-          privileged: true
-        command: ["/bin/bash"]
-        args:
-          - "-c"
-          - |
-            set -ex
-            ls -al /var/lib
-            rm -rf /var/lib/ceph /var/lib/rook
-            echo "done!"
-        volumeMounts:
+          hostPath:
+            path: /dev
         - name: host-var
-          mountPath: /var
-      volumes:
-      - name: host-dev
-        hostPath:
-          path: /dev
-      - name: host-var
-        hostPath:
-          path: /var
-```
+          hostPath:
+            path: /var
+  ```
 
 ## Watch cluster deployment
 
@@ -172,26 +172,26 @@ ceph status
 
 - operator won't delete `cephcluster` resource until dependencies are deleted (e.g. CephBlockPool, CephFilesystem, etc.)
 
-```bash
-kubectl delete -n rook-ceph cephcluster rook-ceph
-kubectl logs -n rook-ceph -l app=rook-ceph-operator -f # find dependencies
-kubectl edit -n rook-ceph cephblockpool <resource-name> # do for each dependency
-# remove finalizers and save
-```
+  ```bash
+  kubectl delete -n rook-ceph cephcluster rook-ceph
+  kubectl logs -n rook-ceph -l app=rook-ceph-operator -f # find dependencies
+  kubectl edit -n rook-ceph cephblockpool <resource-name> # do for each dependency
+  # remove finalizers and save
+  ```
 
 - delete all default dependencies
 
-```bash
-# CephBlockPools
-kubectl patch -n rook-ceph cephblockpools.ceph.rook.io ceph-blockpool -p '{"metadata":{"finalizers":[]}}' --type=merge
-kubectl delete -n rook-ceph cephblockpools.ceph.rook.io ceph-blockpool --wait=false
-# CephObjectStores
-kubectl patch -n rook-ceph cephobjectstores.ceph.rook.io ceph-objectstore -p '{"metadata":{"finalizers":[]}}' --type=merge
-kubectl delete -n rook-ceph cephobjectstores.ceph.rook.io ceph-objectstore --wait=false
-# CephFileSystem
-kubectl patch -n rook-ceph cephfilesystems.ceph.rook.io ceph-filesystem -p '{"metadata":{"finalizers":[]}}' --type=merge
-kubectl delete -n rook-ceph cephfilesystems.ceph.rook.io ceph-filesystem --wait=false
-# CephFileSystemSubVolumeGroups
-kubectl patch -n rook-ceph cephfilesystemsubvolumegroups.ceph.rook.io ceph-filesystem-csi -p '{"metadata":{"finalizers":[]}}' --type=merge
-kubectl delete -n rook-ceph cephfilesystemsubvolumegroups.ceph.rook.io ceph-filesystem-csi --wait=false
-```
+  ```bash
+  # CephBlockPools
+  kubectl patch -n rook-ceph cephblockpools.ceph.rook.io ceph-blockpool -p '{"metadata":{"finalizers":[]}}' --type=merge
+  kubectl delete -n rook-ceph cephblockpools.ceph.rook.io ceph-blockpool --wait=false
+  # CephObjectStores
+  kubectl patch -n rook-ceph cephobjectstores.ceph.rook.io ceph-objectstore -p '{"metadata":{"finalizers":[]}}' --type=merge
+  kubectl delete -n rook-ceph cephobjectstores.ceph.rook.io ceph-objectstore --wait=false
+  # CephFileSystem
+  kubectl patch -n rook-ceph cephfilesystems.ceph.rook.io ceph-filesystem -p '{"metadata":{"finalizers":[]}}' --type=merge
+  kubectl delete -n rook-ceph cephfilesystems.ceph.rook.io ceph-filesystem --wait=false
+  # CephFileSystemSubVolumeGroups
+  kubectl patch -n rook-ceph cephfilesystemsubvolumegroups.ceph.rook.io ceph-filesystem-csi -p '{"metadata":{"finalizers":[]}}' --type=merge
+  kubectl delete -n rook-ceph cephfilesystemsubvolumegroups.ceph.rook.io ceph-filesystem-csi --wait=false
+  ```
