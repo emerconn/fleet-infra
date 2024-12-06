@@ -60,6 +60,8 @@
 watch kubectl -n rook-ceph get cephcluster rook-ceph
 ```
 
+- looking for `HEALTH_OK`
+
 ## Get dashboard password
 
 ```bash
