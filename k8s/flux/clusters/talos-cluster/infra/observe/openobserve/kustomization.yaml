@@ -25,4 +25,4 @@ patches:
         postgres:
           spec:
             storage:
-              size: 15Gi
+              size: 20Gi
