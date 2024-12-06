@@ -5,7 +5,7 @@ resources:
 - minio-operator
 - minio-tenant
 - nfs-subdir-external-provisioner
-# - rook-ceph-cluster
+- rook-ceph-cluster
 - rook-ceph-operator
 - snapshot-controller
 - synology-csi-talos
