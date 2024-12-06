@@ -56,17 +56,19 @@
 
 ## Watch cluster deployment
 
-```bash
-watch kubectl -n rook-ceph get cephcluster rook-ceph
-```
-
 - looking for `HEALTH_OK`
+
+  ```bash
+  watch kubectl -n rook-ceph get cephcluster rook-ceph
+  ```
 
 ## Get dashboard password
 
-```bash
-kubectl -n rook-ceph get secret rook-ceph-dashboard-password -o jsonpath="{['data']['password']}" | base64 --decode && echo
-```
+- default username `admin`
+
+  ```bash
+  kubectl -n rook-ceph get secret rook-ceph-dashboard-password -o jsonpath="{['data']['password']}" | base64 -d && echo
+  ```
 
 ## Ceph debug pod
 
