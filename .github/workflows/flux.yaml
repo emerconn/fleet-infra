@@ -24,7 +24,7 @@ jobs:
 
     # Tailscale
     - name: Set up Tailscale
-      uses: emerconn/tailscale-gh-action-cache@main
+      uses: tailscale/github-action@v2
       with:
         version: 1.76.6
         oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
