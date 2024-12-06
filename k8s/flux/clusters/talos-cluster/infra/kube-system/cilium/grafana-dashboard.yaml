@@ -10890,7 +10890,7 @@ data:
       "tags": [
         "cilium",
         "network",
-        "kubernetes-mixin"
+        "kubernetes"
       ],
       "templating": {
         "list": [
