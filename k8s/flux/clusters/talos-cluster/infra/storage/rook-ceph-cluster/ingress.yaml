@@ -14,12 +14,12 @@ spec:
 apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
-  name: rook-ceph-http
+  name: rook-ceph-dashboard-http
   namespace: rook-ceph
 spec:
   entryPoints: [ "web" ]
   routes:
-  - match: Host(`rook-ceph.minio.homelab.emerconnelly.com`)
+  - match: Host(`rook-ceph.homelab.emerconnelly.com`)
     kind: Rule
     middlewares:
     - name: https-redirect
@@ -31,7 +31,7 @@ spec:
 apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
-  name: rook-ceph-https
+  name: rook-ceph-dashboard-https
   namespace: rook-ceph
 spec:
   entryPoints: [ "websecure" ]
@@ -41,6 +41,45 @@ spec:
     services:
     - name: rook-ceph-mgr-dashboard
       port: 7000
+      sticky:
+        cookie:
+          name: traefik
+          secure: true
+          httpOnly: true
+          sameSite: lax
+  tls:
+    secretName: ingress-tls
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: rook-ceph-api-http
+  namespace: rook-ceph
+spec:
+  entryPoints: [ "web" ]
+  routes:
+  - match: Host(`api.rook-ceph.homelab.emerconnelly.com`)
+    kind: Rule
+    middlewares:
+    - name: https-redirect
+      namespace: traefik
+    services:
+    - name: noop@internal
+      kind: TraefikService
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: rook-ceph-api-https
+  namespace: rook-ceph
+spec:
+  entryPoints: [ "websecure" ]
+  routes:
+  - match: Host(`api.rook-ceph.homelab.emerconnelly.com`)
+    kind: Rule
+    services:
+    - name: rook-ceph-rgw-ceph-objectstore
+      port: 80
       sticky:
         cookie:
           name: traefik
