@@ -18,23 +18,34 @@ metadata:
   name: disk-wipe
   namespace: rook-ceph
 spec:
-  completions: 3 # Set this to match the number of nodes in your list
-  parallelism: 3 # Run all pods in parallel
+  completions: 3
+  parallelism: 3
   template:
     spec:
       containers:
       - name: disk-wipe
-        image: alpine
+        image: ubuntu
         command:
-        - /bin/sh
+        - /bin/bash
         - -c
         - |
-          apk add --no-cache sgdisk
+          apt update
+          apt install -y fdisk gdisk parted util-linux
           DISK="/dev/sda"
-          dd if=/dev/zero of="$DISK" bs=1M count=100 && sync
           sgdisk --zap-all "$DISK"
+          dd if=/dev/zero of="$DISK" bs=1M count=100 oflag=direct,dsync
+          blkdiscard $DISK
+          partprobe $DISK
+          fdisk -l /dev/sda
         securityContext:
           privileged: true
+        volumeMounts:
+        - name: host-dev
+          mountPath: /dev
+      volumes:
+      - name: host-dev
+        hostPath:
+          path: /dev
       affinity:
         podAntiAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
