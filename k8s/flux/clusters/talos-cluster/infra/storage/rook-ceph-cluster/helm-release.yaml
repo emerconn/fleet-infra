@@ -34,13 +34,6 @@ spec:
     #     name: ceph-bucket-delete
     #     isDefault: false
     #     reclaimPolicy: Delete
-    # cephFileSystems:
-    # - name: ceph-filesystem
-    #   storageClass:
-    #     enabled: true
-    #     name: ceph-ext4-retain
-    #     isDefault: false
-    #     reclaimPolicy: Retain
     cephFileSystems:
       - name: ceph-filesystem
         spec:
