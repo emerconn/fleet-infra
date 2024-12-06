@@ -10,6 +10,7 @@
   ```
 
 - create job to wipe disks, double-check node & disk names
+  - see <https://www.talos.dev/v1.8/kubernetes-guides/configuration/ceph-with-rook/>
 
   ```yaml
   apiVersion: batch/v1
@@ -45,6 +46,8 @@
               topologyKey: kubernetes.io/hostname
         containers:
         - name: wipe-data-disk # CHANGE DISK VARIABLE
+          # talosctl get discoveredvolumes -n 172.21.0.2 # talos-cp-01
+          # see https://rook.io/docs/rook/v1.9/Storage-Configuration/ceph-teardown/#zapping-devices 
           image: ubuntu
           securityContext:
             privileged: true
@@ -53,27 +56,21 @@
             - "-c"
             - |
               set -ex
-              apt-get update
-              apt-get install -y gdisk
               DISK="/dev/sda"
-              lsblk
-              gdisk -l $DISK
+              apt update && apt install -y gdisk
               sgdisk --zap-all $DISK
               sleep 3
-              dd if=/dev/zero of="$DISK" bs=1M count=100 oflag=direct,dsync; sync
+              dd if=/dev/zero of="$DISK" bs=1M count=100 oflag=direct,dsync
               sleep 3
               blkdiscard $DISK &
               wait
               sleep 3
               gdisk -l $DISK
               echo "done!"
-          volumeMounts:
-          - name: host-dev
-            mountPath: /dev
         - name: sanitize-talos-ephemeral
-          # cephcluster CRD uses `dataDirHostPath` for mons
+          # cephcluster CRD uses `dataDirHostPath`
           # kubectl -n rook-ceph get cephcluster -o yaml
-          # init-mon-fs debug [...] -1 '/var/lib/ceph/mon/ceph-a' already exists and is not empty: monitor may already exist
+          # log eg: init-mon-fs debug [...] -1 '/var/lib/ceph/mon/ceph-a' already exists and is not empty: monitor may already exist
           image: ubuntu
           securityContext:
             privileged: true
@@ -88,10 +85,6 @@
           volumeMounts:
           - name: host-var
             mountPath: /var
-        volumes:
-        - name: host-dev
-          hostPath:
-            path: /dev
         - name: host-var
           hostPath:
             path: /var
