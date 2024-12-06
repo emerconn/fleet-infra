@@ -44,8 +44,7 @@ spec:
                 - ceph-cleanup-job
             topologyKey: kubernetes.io/hostname
       containers:
-      - name: wipe-data-disk
-        # CHANGE DISK VARIABLE
+      - name: wipe-data-disk # CHANGE DISK VARIABLE
         image: ubuntu
         securityContext:
           privileged: true
