@@ -3,8 +3,6 @@ kind: ObjectBucketClaim
 metadata:
   name: openobserve
   namespace: openobserve
-  annotations:
-    kustomize.toolkit.fluxcd.io/dependsOn: flux-system/rook-ceph-cluster
 spec:
   generateBucketName: openobserve
   storageClassName: ceph-bucket
