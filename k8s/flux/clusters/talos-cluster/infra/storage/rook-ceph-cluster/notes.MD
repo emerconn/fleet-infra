@@ -15,11 +15,11 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: disk-cleanup-job
+  name: ceph-cleanup-job
   namespace: rook-ceph
 spec:
-  completions: 3
-  parallelism: 3
+  completions: 3 # change to total node number
+  parallelism: 3 # change to total node number
   template:
     spec:
       restartPolicy: Never
@@ -30,21 +30,21 @@ spec:
             - matchExpressions:
               - key: kubernetes.io/hostname
                 operator: In
-                values:
+                values: # replace with your node names
                 - talos-cp-01
                 - talos-cp-02
                 - talos-cp-03
-        podAntiAffinity:
+        podAntiAffinity: # ensures jobs do not schedule on same node
           requiredDuringSchedulingIgnoredDuringExecution:
           - labelSelector:
               matchExpressions:
               - key: job-name
                 operator: In
                 values:
-                - disk-cleanup-job
+                - ceph-cleanup-job
             topologyKey: kubernetes.io/hostname
       containers:
-      - name: disk-cleanup
+      - name: wipe-data-disk
         image: ubuntu
         securityContext:
           privileged: true
@@ -65,20 +65,40 @@ spec:
             blkdiscard $DISK &
             wait
             sleep 10
-            wipefs -a /dev/sda*
+            wipefs -a $DISK*
             sleep 10
             partprobe $DISK
             sleep 10
             fdisk -l $DISK
-            rm -rf /var/lib/rook
             echo "done!"
         volumeMounts:
         - name: host-dev
           mountPath: /dev
+      - name: sanitize-talos-ephemeral
+        # cephcluster CRD uses `dataDirHostPath: /var/lib/rook` for mons
+        # kubectl -n rook-ceph get cephcluster -o yaml
+        # init-mon-fs debug [...] -1 '/var/lib/ceph/mon/ceph-a' already exists and is not empty: monitor may already exist
+        image: ubuntu
+        securityContext:
+          privileged: true
+        command: ["/bin/bash"]
+        args:
+          - "-c"
+          - |
+            set -ex
+            ls -al /var/lib
+            rm -rf /var/lib/ceph /var/lib/rook
+            echo "done!"
+        volumeMounts:
+        - name: host-var
+          mountPath: /var
       volumes:
       - name: host-dev
         hostPath:
           path: /dev
+      - name: host-var
+        hostPath:
+          path: /var
 ```
 
 ## Watch cluster deployment
