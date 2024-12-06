@@ -75,7 +75,7 @@ spec:
         - name: host-dev
           mountPath: /dev
       - name: sanitize-talos-ephemeral
-        # cephcluster CRD uses `dataDirHostPath: /var/lib/rook` for mons
+        # cephcluster CRD uses `dataDirHostPath` for mons
         # kubectl -n rook-ceph get cephcluster -o yaml
         # init-mon-fs debug [...] -1 '/var/lib/ceph/mon/ceph-a' already exists and is not empty: monitor may already exist
         image: ubuntu
