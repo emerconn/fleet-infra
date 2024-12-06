@@ -35,7 +35,7 @@ spec:
         isDefault: false
         reclaimPolicy: Delete
     cephFileSystems:
-    - name: ceph-filesystem-retain
+    - name: ceph-filesystem
       storageClass:
         enabled: true
         name: ceph-ext4-retain
