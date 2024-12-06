@@ -10889,7 +10889,7 @@ data:
       "schemaVersion": 39,
       "tags": [
         "cilium",
-        "prometheus"
+        "network"
       ],
       "templating": {
         "list": [
