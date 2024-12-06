@@ -124,3 +124,14 @@ spec:
 kubectl exec -it -n rook-ceph ceph-debug -- bash
 ceph status
 ```
+
+## Deleting a cluster
+
+- operator won't delete `cephcluster` resource until dependencies are deleted (e.g. CephBlockPool, CephFilesystem, etc.)
+
+  ```bash
+  kubectl delete -n rook-ceph cephcluster rook-ceph
+  kubectl logs -n rook-ceph -l app=rook-ceph-operator -f # find dependencies
+  kubectl edit -n rook-ceph cephblockpool <resource-name> # do for each dependency
+  # remove finalizers and save
+  ```
