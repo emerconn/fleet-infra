@@ -5,6 +5,5 @@ resources:
 - ../../../../../infra/storage/rook-ceph-cluster
 - grafana-dashboard.yaml
 - ingress.yaml
-
-# patches:
-# - path: helm-release.yaml
+patches:
+- path: helm-release.yaml
