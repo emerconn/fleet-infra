@@ -11,6 +11,8 @@ spec:
       enabled: true
       createPrometheusRules: true
       rulesNamespaceOverride: kube-prometheus-stack
+    toolbox:
+      enabled: true
     cephClusterSpec:
       dashboard:
         enabled: true
