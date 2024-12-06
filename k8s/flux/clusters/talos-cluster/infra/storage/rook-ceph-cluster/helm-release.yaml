@@ -38,6 +38,6 @@ spec:
     - name: ceph-filesystem-retain
       storageClass:
         enabled: true
-        name: cephfs-delete
+        name: ceph-ext4-delete
         isDefault: false
         reclaimPolicy: Retain
