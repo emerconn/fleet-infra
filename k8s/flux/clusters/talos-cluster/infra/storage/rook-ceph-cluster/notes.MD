@@ -85,6 +85,7 @@
           volumeMounts:
           - name: host-var
             mountPath: /var
+        volumes:
         - name: host-var
           hostPath:
             path: /var
