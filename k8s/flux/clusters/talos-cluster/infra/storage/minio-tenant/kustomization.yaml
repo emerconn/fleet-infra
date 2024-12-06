@@ -17,8 +17,8 @@ patches:
           name: main
           configuration:
             name: main-env-config
-          configSecret:
-            existingSecret: true
+          # configSecret:
+          #   existingSecret: true
           pools:
           - servers: 1
             name: pool-0
