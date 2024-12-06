@@ -56,6 +56,7 @@ spec:
             apt-get update
             apt-get install -y gdisk parted
             DISK="/dev/sda"
+            lsblk
             sgdisk --zap-all $DISK
             sleep 2
             dd if=/dev/zero of="$DISK" bs=1M count=100 oflag=direct,dsync
