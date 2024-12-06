@@ -20,11 +20,7 @@ spec:
         - name: rook
           enabled: true
       removeOSDsIfOutAndSafeToRemove: true
-    cephBlockPools:
-    - name: ceph-blockpool
-      spec:
-        replicated:
-          size: 0
+    # cephBlockPools: [ "" ]
     # cephObjectStores: [ "" ]
     cephFileSystems:
     - name: ceph-filesystem
