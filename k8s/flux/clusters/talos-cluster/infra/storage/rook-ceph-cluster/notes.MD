@@ -54,22 +54,26 @@ spec:
           - |
             set -ex
             apt-get update
-            apt-get install -y gdisk parted
+            apt-get install -y fdisk gdisk parted
             DISK="/dev/sda"
             lsblk
-            sudo fdisk -l $DISK
+            fdisk -l $DISK
             sgdisk --zap-all $DISK
             sleep 10
+            fdisk -l $DISK
             dd if=/dev/zero of="$DISK" bs=1M count=100 oflag=direct,dsync; sync
             sleep 10
+            fdisk -l $DISK
             blkdiscard $DISK &
             wait
             sleep 10
+            fdisk -l $DISK
             wipefs -a /dev/sda*
             sleep 10
+            fdisk -l $DISK
             partprobe $DISK
             sleep 10
-            sudo fdisk -l $DISK
+            fdisk -l $DISK
         volumeMounts:
         - name: host-dev
           mountPath: /dev
