@@ -23,17 +23,17 @@ spec:
     cephBlockPools:
     - name: ceph-blockpool
       storageClass:
-        enabled: true
-        name: ceph-block-delete
-        isDefault: false
-        reclaimPolicy: Delete
+        enabled: false
+        # name: ceph-block-delete
+        # isDefault: false
+        # reclaimPolicy: Delete
     cephObjectStores:
     - name: ceph-objectstore
       storageClass:
-        enabled: true
-        name: ceph-bucket-delete
-        isDefault: false
-        reclaimPolicy: Delete
+        enabled: false
+        # name: ceph-bucket-delete
+        # isDefault: false
+        # reclaimPolicy: Delete
     cephFileSystems:
     - name: ceph-filesystem
       storageClass:
