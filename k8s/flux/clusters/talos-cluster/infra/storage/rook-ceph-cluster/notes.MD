@@ -60,9 +60,8 @@ spec:
             sleep 2
             dd if=/dev/zero of="$DISK" bs=1M count=100 oflag=direct,dsync
             sleep 2
-            blkdiscard $DISK &
-            wait
-            sleep 2
+            blkdiscard $DISK
+            sleep 10
             partprobe $DISK
         volumeMounts:
         - name: host-dev
