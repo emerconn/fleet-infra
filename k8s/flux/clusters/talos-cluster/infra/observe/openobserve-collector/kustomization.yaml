@@ -12,6 +12,7 @@ patches:
       namespace: flux-system
     spec:
       values:
+        replicaCount: 4
         agent:
           tolerations:
           - operator: "Exists"
