@@ -60,7 +60,7 @@
               apt update && apt install -y gdisk
               sgdisk --zap-all $DISK
               sleep 3
-              dd if=/dev/zero of="$DISK" bs=1M count=100 oflag=direct,dsync
+              dd if=/dev/zero bs=1M count=100 oflag=direct,dsync of="$DISK" 
               sleep 3
               blkdiscard $DISK &
               wait
@@ -85,7 +85,6 @@
           volumeMounts:
           - name: host-var
             mountPath: /var
-        volumes:
         - name: host-var
           hostPath:
             path: /var
