@@ -5433,7 +5433,8 @@ data:
       "refresh": "1m",
       "schemaVersion": 40,
       "tags": [
-        "ceph"
+        "ceph",
+        "storage"
       ],
       "templating": {
         "list": [
@@ -6869,7 +6870,8 @@ data:
       "refresh": "5m",
       "schemaVersion": 40,
       "tags": [
-        "ceph"
+        "ceph",
+        "storage"
       ],
       "templating": {
         "list": [
@@ -7711,7 +7713,8 @@ data:
       "refresh": "1m",
       "schemaVersion": 40,
       "tags": [
-        "ceph"
+        "ceph",
+        "storage"
       ],
       "templating": {
         "list": [
