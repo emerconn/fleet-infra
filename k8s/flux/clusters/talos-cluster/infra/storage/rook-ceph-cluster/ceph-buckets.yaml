@@ -3,6 +3,8 @@ kind: ObjectBucketClaim
 metadata:
   name: bucket-1
   namespace: rook-ceph
+  annotations:
+    kustomize.toolkit.fluxcd.io/dependsOn: flux-system/rook-ceph-cluster
 spec:
   generateBucketName: bucket-1
   storageClassName: ceph-bucket
@@ -12,6 +14,8 @@ kind: ObjectBucketClaim
 metadata:
   name: bucket-2
   namespace: rook-ceph
+  annotations:
+    kustomize.toolkit.fluxcd.io/dependsOn: flux-system/rook-ceph-cluster
 spec:
   generateBucketName: bucket-2
   storageClassName: ceph-bucket
@@ -21,6 +25,8 @@ kind: ObjectBucketClaim
 metadata:
   name: bucket-3
   namespace: rook-ceph
+  annotations:
+    kustomize.toolkit.fluxcd.io/dependsOn: flux-system/rook-ceph-cluster
 spec:
   generateBucketName: bucket-3
   storageClassName: ceph-bucket
