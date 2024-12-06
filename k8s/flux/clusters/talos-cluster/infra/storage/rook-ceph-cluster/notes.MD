@@ -16,7 +16,7 @@
   apiVersion: batch/v1
   kind: Job
   metadata:
-    name: rook-ceph-cleanup-job
+    name: rook-ceph-cleanup
     namespace: rook-ceph
   spec:
     completions: 3 # replace with total node count
@@ -42,39 +42,36 @@
                 - key: job-name
                   operator: In
                   values:
-                  - rook-ceph-cleanup-job
+                  - rook-ceph-cleanup
               topologyKey: kubernetes.io/hostname
         containers:
-        - name: wipe-data-disk # CHANGE DISK VARIABLE
+        - name: disk-wipe # CHANGE DISK VARIABLE
           # talosctl get discoveredvolumes -n 172.21.0.2 # talos-cp-01
-          # see https://rook.io/docs/rook/v1.9/Storage-Configuration/ceph-teardown/#zapping-devices 
-          image: ubuntu
+          # see https://rook.io/docs/rook/v1.9/Storage-Configuration/ceph-teardown/#zapping-devices
+          # see https://www.talos.dev/v1.8/kubernetes-guides/configuration/ceph-with-rook/
+          image: busybox
           securityContext:
             privileged: true
-          command: ["/bin/bash"]
+          command: ["/bin/sh"]
           args:
             - "-c"
             - |
               set -ex
               DISK="/dev/sda"
-              apt update && apt install -y gdisk
-              sgdisk --zap-all $DISK
-              sleep 3
-              dd if=/dev/zero bs=1M count=100 oflag=direct,dsync of="$DISK" 
-              sleep 3
-              blkdiscard $DISK &
-              wait
-              sleep 3
-              gdisk -l $DISK
+              dd if=/dev/zero bs=1M count=100 oflag=direct of="$DISK" 
+              sleep 2
+              blkdiscard $DISK
+              sleep 2
+              fdisk -l $DISK
               echo "done!"
-        - name: sanitize-talos-ephemeral
+        - name: metadata-sanitize # CHANGE DISK VARIABLE
           # cephcluster CRD uses `dataDirHostPath`
           # kubectl -n rook-ceph get cephcluster -o yaml
-          # log eg: init-mon-fs debug [...] -1 '/var/lib/ceph/mon/ceph-a' already exists and is not empty: monitor may already exist
-          image: ubuntu
+          # log: init-mon-fs debug [...] -1 '/var/lib/ceph/mon/ceph-a' already exists and is not empty: monitor may already exist
+          image: busybox
           securityContext:
             privileged: true
-          command: ["/bin/bash"]
+          command: ["/bin/sh"]
           args:
             - "-c"
             - |
@@ -85,6 +82,7 @@
           volumeMounts:
           - name: host-var
             mountPath: /var
+        volumes:
         - name: host-var
           hostPath:
             path: /var
