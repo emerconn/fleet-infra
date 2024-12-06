@@ -15,47 +15,15 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: disk-wipe
+  name: disk-cleanup-job
   namespace: rook-ceph
 spec:
   completions: 3
   parallelism: 3
   template:
     spec:
-      containers:
-      - name: disk-wipe
-        image: ubuntu
-        command:
-        - /bin/bash
-        - -c
-        - |
-          apt update
-          apt install -y fdisk gdisk parted util-linux
-          DISK="/dev/sda"
-          sgdisk --zap-all "$DISK"
-          dd if=/dev/zero of="$DISK" bs=1M count=100 oflag=direct,dsync
-          blkdiscard $DISK
-          partprobe $DISK
-          fdisk -l /dev/sda
-        securityContext:
-          privileged: true
-        volumeMounts:
-        - name: host-dev
-          mountPath: /dev
-      volumes:
-      - name: host-dev
-        hostPath:
-          path: /dev
+      restartPolicy: Never
       affinity:
-        podAntiAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-          - labelSelector:
-              matchExpressions:
-              - key: job-name
-                operator: In
-                values:
-                - disk-wipe
-            topologyKey: kubernetes.io/hostname
         nodeAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
             nodeSelectorTerms:
@@ -66,7 +34,43 @@ spec:
                 - talos-cp-01
                 - talos-cp-02
                 - talos-cp-03
-      restartPolicy: Never
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: job-name
+                operator: In
+                values:
+                - disk-cleanup-job
+            topologyKey: kubernetes.io/hostname
+      containers:
+      - name: disk-cleanup
+        image: ubuntu
+        securityContext:
+          privileged: true
+        command: ["/bin/bash"]
+        args:
+          - "-c"
+          - |
+            set -ex
+            apt-get update
+            apt-get install -y gdisk parted
+            DISK="/dev/sda"
+            sgdisk --zap-all $DISK
+            sleep 2
+            dd if=/dev/zero of="$DISK" bs=1M count=100 oflag=direct,dsync
+            sleep 2
+            blkdiscard $DISK &
+            wait
+            sleep 2
+            partprobe $DISK
+        volumeMounts:
+        - name: host-dev
+          mountPath: /dev
+      volumes:
+      - name: host-dev
+        hostPath:
+          path: /dev
 ```
 
 ## Watch cluster deployment
