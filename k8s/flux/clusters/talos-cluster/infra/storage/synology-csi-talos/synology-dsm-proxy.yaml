@@ -35,13 +35,21 @@ spec:
   dnsNames:
   - synology.homelab.emerconnelly.com
 ---
+apiVersion: traefik.containo.us/v1alpha1
+kind: ServersTransport
+metadata:
+  name: skip-ssl-verify
+  namespace: synology-csi-talos
+spec:
+  insecureSkipVerify: true
+---
 apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
   name: http
   namespace: synology-csi-talos
 spec:
-  entryPoints: ["web"]
+  entryPoints: [ "web" ]
   routes:
   - match: Host(`synology.homelab.emerconnelly.com`)
     kind: Rule
@@ -58,7 +66,7 @@ metadata:
   name: https
   namespace: synology-csi-talos
 spec:
-  entryPoints: ["websecure"]
+  entryPoints: [ "websecure" ]
   routes:
   - match: Host(`synology.homelab.emerconnelly.com`)
     kind: Rule
@@ -66,6 +74,7 @@ spec:
     - name: synology-dsm-proxy
       port: 5000
       passHostHeader: true
+      serversTransport: skip-ssl-verify
       sticky:
         cookie:
           name: traefik
