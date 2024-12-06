@@ -14,7 +14,10 @@ patches:
       values:
         agent:
           tolerations:
-          - operator: \"Exists\"
+          - operator: "Exists"
+            effect: "NoSchedule"
+          - operator: "Exists"
+            effect: "NoExecute"
         exporters:
           otlphttp/openobserve:
             endpoint: https://openobserve.homelab.emerconnelly.com/api/default/
