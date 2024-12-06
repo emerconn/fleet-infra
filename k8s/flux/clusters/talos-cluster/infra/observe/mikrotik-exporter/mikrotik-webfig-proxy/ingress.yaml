@@ -2,7 +2,7 @@ apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: ingress-tls
-  namespace: mikrotik-routeros
+  namespace: mikrotik-exporter
 spec:
   secretName: ingress-tls
   issuerRef:
@@ -15,7 +15,7 @@ apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
   name: http
-  namespace: mikrotik-routeros
+  namespace: mikrotik-exporter
 spec:
   entryPoints: ["web"]
   routes:
@@ -32,14 +32,14 @@ apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
   name: https
-  namespace: mikrotik-routeros
+  namespace: mikrotik-exporter
 spec:
   entryPoints: ["websecure"]
   routes:
   - match: Host(`mikrotik.homelab.emerconnelly.com`)
     kind: Rule
     services:
-    - name: mikrotik-routeros
+    - name: mikrotik-webfig-proxy
       port: 80
       passHostHeader: true
       sticky:

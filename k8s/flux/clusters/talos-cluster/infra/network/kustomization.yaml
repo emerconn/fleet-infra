@@ -4,7 +4,6 @@ kind: Kustomization
 resources:
 - adguard-home
 - ingress-nginx
-- mikrotik-routeros
 - gateway-api
 - tailscale-operator
 - traefik
