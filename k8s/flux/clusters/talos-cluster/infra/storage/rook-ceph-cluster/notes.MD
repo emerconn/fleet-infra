@@ -5,8 +5,8 @@
 - check disks and volumes
 
   ```bash
-  talosctl get disks -n 172.21.0.4
-  talosctl get discoveredvolumes -n 172.21.0.4
+  talosctl get disks -n 172.21.0.2,172.21.0.3,172.21.0.4 | grep -e "MODEL" -e "sda"
+  talosctl get discoveredvolumes -n 172.21.0.2,172.21.0.3,172.21.0.4 | grep -e "DISCOVERED" -e "sda"
   ```
 
 - create job to wipe disks, double-check node & disk names
