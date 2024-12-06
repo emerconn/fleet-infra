@@ -43,4 +43,4 @@ patches:
           prometheus:
             monitor:
               enabled: true
-              interval: 5s
+              interval: 10s
