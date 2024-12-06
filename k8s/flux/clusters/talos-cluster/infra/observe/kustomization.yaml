@@ -8,7 +8,7 @@ resources:
 - kubernetes-dashboard
 - metrics-server
 - mikrotik-exporter
-- openobserve
+# - openobserve
 - openobserve-collector
-- opentelemetry-operator
+# - opentelemetry-operator
 - uptime-kuma
