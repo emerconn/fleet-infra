@@ -36,5 +36,8 @@ patches:
             enabled: true
           certificate:
             requestAutoCert: false # disable tls
+          # bucket only creates on initial install, look at COSI for dynamic bucket creation
+          # buckets: 
+          #   - name: openobserve
           # users:
           #   - name: main-user-openobserve # TODO: make this work
