@@ -129,26 +129,26 @@ ceph status
 
 - operator won't delete `cephcluster` resource until dependencies are deleted (e.g. CephBlockPool, CephFilesystem, etc.)
 
-  ```bash
-  kubectl delete -n rook-ceph cephcluster rook-ceph
-  kubectl logs -n rook-ceph -l app=rook-ceph-operator -f # find dependencies
-  kubectl edit -n rook-ceph cephblockpool <resource-name> # do for each dependency
-  # remove finalizers and save
-  ```
+```bash
+kubectl delete -n rook-ceph cephcluster rook-ceph
+kubectl logs -n rook-ceph -l app=rook-ceph-operator -f # find dependencies
+kubectl edit -n rook-ceph cephblockpool <resource-name> # do for each dependency
+# remove finalizers and save
+```
 
 - delete all default dependencies
 
-  ```bash
-  # CephBlockPools
-  kubectl patch -n rook-ceph cephblockpools.ceph.rook.io ceph-blockpool -p '{"metadata":{"finalizers":[]}}' --type=merge
-  kubectl delete -n rook-ceph cephblockpools.ceph.rook.io ceph-blockpool --wait=false
-  # CephObjectStores
-  kubectl patch -n rook-ceph cephobjectstores.ceph.rook.io ceph-objectstore -p '{"metadata":{"finalizers":[]}}' --type=merge
-  kubectl delete -n rook-ceph cephobjectstores.ceph.rook.io ceph-objectstore --wait=false
-  # CephFileSystem
-  kubectl patch -n rook-ceph cephfilesystems.ceph.rook.io ceph-filesystem -p '{"metadata":{"finalizers":[]}}' --type=merge
-  kubectl delete -n rook-ceph cephfilesystems.ceph.rook.io ceph-filesystem --wait=false
-  # CephFileSystemSubVolumeGroups
-  kubectl patch -n rook-ceph cephfilesystemsubvolumegroups.ceph.rook.io ceph-filesystem-csi -p '{"metadata":{"finalizers":[]}}' --type=merge
-  kubectl delete -n rook-ceph cephfilesystemsubvolumegroups.ceph.rook.io ceph-filesystem-csi --wait=false
-  ```
+```bash
+# CephBlockPools
+kubectl patch -n rook-ceph cephblockpools.ceph.rook.io ceph-blockpool -p '{"metadata":{"finalizers":[]}}' --type=merge
+kubectl delete -n rook-ceph cephblockpools.ceph.rook.io ceph-blockpool --wait=false
+# CephObjectStores
+kubectl patch -n rook-ceph cephobjectstores.ceph.rook.io ceph-objectstore -p '{"metadata":{"finalizers":[]}}' --type=merge
+kubectl delete -n rook-ceph cephobjectstores.ceph.rook.io ceph-objectstore --wait=false
+# CephFileSystem
+kubectl patch -n rook-ceph cephfilesystems.ceph.rook.io ceph-filesystem -p '{"metadata":{"finalizers":[]}}' --type=merge
+kubectl delete -n rook-ceph cephfilesystems.ceph.rook.io ceph-filesystem --wait=false
+# CephFileSystemSubVolumeGroups
+kubectl patch -n rook-ceph cephfilesystemsubvolumegroups.ceph.rook.io ceph-filesystem-csi -p '{"metadata":{"finalizers":[]}}' --type=merge
+kubectl delete -n rook-ceph cephfilesystemsubvolumegroups.ceph.rook.io ceph-filesystem-csi --wait=false
+```
