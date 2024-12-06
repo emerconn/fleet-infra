@@ -18,8 +18,8 @@ metadata:
   name: ceph-cleanup-job
   namespace: rook-ceph
 spec:
-  completions: 3 # change to total node number
-  parallelism: 3 # change to total node number
+  completions: 3 # change to total node count
+  parallelism: 3 # change to total node count
   template:
     spec:
       restartPolicy: Never
@@ -45,6 +45,7 @@ spec:
             topologyKey: kubernetes.io/hostname
       containers:
       - name: wipe-data-disk
+        # CHANGE DISK VARIABLE
         image: ubuntu
         securityContext:
           privileged: true
