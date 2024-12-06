@@ -54,22 +54,18 @@ spec:
           - |
             set -ex
             apt-get update
-            apt-get install -y fdisk gdisk parted
+            apt-get install -y gdisk
             DISK="/dev/sda"
             lsblk
-            fdisk -l $DISK
+            gdisk -l $DISK
             sgdisk --zap-all $DISK
-            sleep 10
+            sleep 3
             dd if=/dev/zero of="$DISK" bs=1M count=100 oflag=direct,dsync; sync
-            sleep 10
+            sleep 3
             blkdiscard $DISK &
             wait
-            sleep 10
-            wipefs -a $DISK*
-            sleep 10
-            partprobe $DISK
-            sleep 10
-            fdisk -l $DISK
+            sleep 3
+            gdisk -l $DISK
             echo "done!"
         volumeMounts:
         - name: host-dev
