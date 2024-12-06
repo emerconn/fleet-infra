@@ -5433,7 +5433,7 @@ data:
       "refresh": "1m",
       "schemaVersion": 40,
       "tags": [
-        "ceph-mixin"
+        "ceph"
       ],
       "templating": {
         "list": [
@@ -6869,8 +6869,7 @@ data:
       "refresh": "5m",
       "schemaVersion": 40,
       "tags": [
-        "ceph",
-        "osd"
+        "ceph"
       ],
       "templating": {
         "list": [
@@ -7712,8 +7711,7 @@ data:
       "refresh": "1m",
       "schemaVersion": 40,
       "tags": [
-        "ceph",
-        "pools"
+        "ceph"
       ],
       "templating": {
         "list": [
