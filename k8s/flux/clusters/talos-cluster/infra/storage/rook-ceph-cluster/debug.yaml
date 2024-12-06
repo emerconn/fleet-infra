@@ -33,7 +33,7 @@ metadata:
 spec:
   initContainers:
   - name: config-init
-    image: quay.io/ceph/ceph:v17
+    image: quay.io/ceph/ceph:v19
     command:
     - /bin/bash
     - -c
@@ -56,7 +56,7 @@ spec:
       mountPath: /mnt/config
   containers:
   - name: ceph-debug
-    image: quay.io/ceph/ceph:v17
+    image: quay.io/ceph/ceph:v19
     command: [ "/bin/sleep", "infinity" ]
     volumeMounts:
     - name: config
