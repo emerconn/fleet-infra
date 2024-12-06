@@ -12,4 +12,23 @@ patches:
       name: openobserve-collector
       labels:
         pod-security.kubernetes.io/enforce: privileged
-- patch: "apiVersion: helm.toolkit.fluxcd.io/v2\nkind: HelmRelease\nmetadata:\n  name: openobserve-collector\n  namespace: flux-system\nspec:\n  values:\n    agent:\n      tolerations: \n      - operator: \"Exists\" # schedule daemonSet pods on tainted nodes\n    exporters:\n      otlphttp/openobserve:\n        endpoint: https://openobserve.homelab.emerconnelly.com/api/default/\n        headers:\n          Authorization: Basic cm9vdEBleGFtcGxlLmNvbTpDb21wbGV4cGFzcyMxMjM=\n      otlphttp/openobserve_k8s_events:\n        endpoint: https://openobserve.homelab.emerconnelly.com/api/default/\n        headers:\n          Authorization: Basic cm9vdEBleGFtcGxlLmNvbTpDb21wbGV4cGFzcyMxMjM="
+- patch: |-
+    apiVersion: helm.toolkit.fluxcd.io/v2
+    kind: HelmRelease
+    metadata:
+      name: openobserve-collector
+       namespace: flux-system
+    spec:
+      values:
+        agent:
+          tolerations:
+          - operator: \"Exists\" # schedule daemonSet pods on tainted nodes
+        exporters:
+          otlphttp/openobserve:
+            endpoint: https://openobserve.homelab.emerconnelly.com/api/default/
+            headers:
+              Authorization: Basic cm9vdEBleGFtcGxlLmNvbTp0VkNSeE9xdTcxckprNUo1
+          otlphttp/openobserve_k8s_events:
+            endpoint: https://openobserve.homelab.emerconnelly.com/api/default/
+            headers:
+              Authorization: Basic cm9vdEBleGFtcGxlLmNvbTp0VkNSeE9xdTcxckprNUo1
