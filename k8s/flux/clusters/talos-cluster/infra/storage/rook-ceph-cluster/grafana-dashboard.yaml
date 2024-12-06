@@ -5435,7 +5435,7 @@ data:
       "tags": [
         "ceph",
         "storage",
-        "kubernetes"
+        "kubernetes-mixin"
       ],
       "templating": {
         "list": [
@@ -6873,7 +6873,7 @@ data:
       "tags": [
         "ceph",
         "storage",
-        "kubernetes"
+        "kubernetes-mixin"
       ],
       "templating": {
         "list": [
@@ -7717,7 +7717,7 @@ data:
       "tags": [
         "ceph",
         "storage",
-        "kubernetes"
+        "kubernetes-mixin"
       ],
       "templating": {
         "list": [
