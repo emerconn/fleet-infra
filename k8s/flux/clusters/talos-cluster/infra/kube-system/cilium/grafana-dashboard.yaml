@@ -10889,7 +10889,8 @@ data:
       "schemaVersion": 39,
       "tags": [
         "cilium",
-        "network"
+        "network",
+        "kubernetes-mixin"
       ],
       "templating": {
         "list": [
@@ -10968,7 +10969,7 @@ data:
         ]
       },
       "timezone": "",
-      "title": "Cilium Metrics",
+      "title": "Kubernetes / Cilium",
       "uid": "cilium-metrics",
       "version": 5,
       "weekStart": ""
