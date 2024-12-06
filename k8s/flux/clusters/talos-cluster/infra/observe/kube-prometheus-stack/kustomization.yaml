@@ -39,3 +39,8 @@ patches:
             size: 1Gi
         alertmanager:
           enabled: false
+        prometheus-node-exporter:
+          prometheus:
+            monitor:
+              enabled: true
+              interval: 5s
