@@ -17,7 +17,7 @@ metadata:
   name: http
   namespace: mikrotik-exporter
 spec:
-  entryPoints: ["web"]
+  entryPoints: [ "web" ]
   routes:
   - match: Host(`mikrotik.homelab.emerconnelly.com`)
     kind: Rule
@@ -34,7 +34,7 @@ metadata:
   name: https
   namespace: mikrotik-exporter
 spec:
-  entryPoints: ["websecure"]
+  entryPoints: [ "websecure" ]
   routes:
   - match: Host(`mikrotik.homelab.emerconnelly.com`)
     kind: Rule
