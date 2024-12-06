@@ -8954,7 +8954,7 @@ data:
       "schemaVersion": 39,
       "tags": [
         "mikrotik",
-        "mktxp"
+        "network"
       ],
       "templating": {
         "list": [
