@@ -1,6 +1,6 @@
 # Rook Ceph cluster
 
-## Wipe disks
+## Wipe disks & sanitize Talos ephemeral
 
 - check disks and volumes
 
