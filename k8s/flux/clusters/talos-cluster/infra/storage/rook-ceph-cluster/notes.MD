@@ -15,7 +15,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: ceph-cleanup-job
+  name: rook-ceph-cleanup-job
   namespace: rook-ceph
 spec:
   completions: 3 # replace with total node count
@@ -41,7 +41,7 @@ spec:
               - key: job-name
                 operator: In
                 values:
-                - ceph-cleanup-job
+                - rook-ceph-cleanup-job
             topologyKey: kubernetes.io/hostname
       containers:
       - name: wipe-data-disk # CHANGE DISK VARIABLE
