@@ -41,3 +41,15 @@ spec:
     #     name: ceph-ext4-retain
     #     isDefault: false
     #     reclaimPolicy: Retain
+    cephBlockPools:
+      - name: ceph-blockpool
+        storageClass:
+          enabled: false
+    cephFileSystems:
+      - name: ceph-filesystem
+        storageClass:
+          enabled: false
+    cephObjectStores:
+      - name: ceph-objectstore
+        storageClass:
+          enabled: false
