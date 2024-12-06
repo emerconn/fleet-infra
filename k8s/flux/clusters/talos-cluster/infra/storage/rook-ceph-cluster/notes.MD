@@ -60,27 +60,30 @@ spec:
             fdisk -l $DISK
             sgdisk --zap-all $DISK
             sleep 10
-            fdisk -l $DISK
             dd if=/dev/zero of="$DISK" bs=1M count=100 oflag=direct,dsync; sync
             sleep 10
-            fdisk -l $DISK
             blkdiscard $DISK &
             wait
             sleep 10
-            fdisk -l $DISK
             wipefs -a /dev/sda*
             sleep 10
-            fdisk -l $DISK
             partprobe $DISK
             sleep 10
             fdisk -l $DISK
+            rm -rf /var/lib/rook
+            echo "done!"
         volumeMounts:
         - name: host-dev
           mountPath: /dev
+        - name: host-var
+          mountPath: /var
       volumes:
       - name: host-dev
         hostPath:
           path: /dev
+      - name: host-var
+        hostPath:
+          path: /var
 ```
 
 ## Watch cluster deployment
