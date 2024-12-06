@@ -51,6 +51,14 @@ spec:
     secretName: ingress-tls
 ---
 apiVersion: traefik.io/v1alpha1
+kind: ServersTransport
+metadata:
+  name: skip-ssl-verify
+  namespace: rook-ceph
+spec:
+  insecureSkipVerify: true
+---
+apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
   name: rook-ceph-api-http
@@ -80,6 +88,8 @@ spec:
     services:
     - name: rook-ceph-rgw-ceph-objectstore
       port: 80
+      passHostHeader: true
+      serversTransport: skip-ssl-verify
       sticky:
         cookie:
           name: traefik
