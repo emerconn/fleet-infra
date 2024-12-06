@@ -36,7 +36,5 @@ patches:
             enabled: true
           certificate:
             requestAutoCert: false # disable tls
-          buckets:
-            - name: openobserve
           # users:
           #   - name: main-user-openobserve # TODO: make this work
