@@ -2,6 +2,8 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: openobserve
+  labels:
+    pod-security.kubernetes.io/enforce: privileged
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
