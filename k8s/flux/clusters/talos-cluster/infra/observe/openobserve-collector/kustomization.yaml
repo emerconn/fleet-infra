@@ -20,9 +20,6 @@ patches:
        namespace: flux-system
     spec:
       values:
-        agent:
-          tolerations:
-          - operator: \"Exists\" # schedule daemonSet pods on tainted nodes
         exporters:
           otlphttp/openobserve:
             endpoint: https://openobserve.homelab.emerconnelly.com/api/default/
