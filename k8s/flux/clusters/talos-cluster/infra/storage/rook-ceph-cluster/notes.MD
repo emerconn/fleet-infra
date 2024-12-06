@@ -75,15 +75,10 @@ spec:
         volumeMounts:
         - name: host-dev
           mountPath: /dev
-        - name: host-var
-          mountPath: /var
       volumes:
       - name: host-dev
         hostPath:
           path: /dev
-      - name: host-var
-        hostPath:
-          path: /var
 ```
 
 ## Watch cluster deployment
