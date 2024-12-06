@@ -5539,7 +5539,7 @@ data:
       },
       "timepicker": {},
       "timezone": "",
-      "title": "Ceph Cluster",
+      "title": "Ceph / Cluster",
       "uid": "tbO9LAiZK",
       "version": 2,
       "weekStart": ""
@@ -6994,7 +6994,7 @@ data:
       },
       "timepicker": {},
       "timezone": "browser",
-      "title": "Ceph - OSD (Single)",
+      "title": "Ceph / OSD",
       "uid": "Fj5fAfzik",
       "version": 2,
       "weekStart": ""
