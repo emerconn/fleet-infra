@@ -8,49 +8,6 @@ metadata:
 data:
   traefik.json: |- # https://grafana.com/grafana/dashboards/17346-traefik-official-standalone-dashboard/
     {
-      "__inputs": [
-        {
-          "name": "DS_PROMETHEUS",
-          "label": "Prometheus",
-          "description": "",
-          "type": "datasource",
-          "pluginId": "prometheus",
-          "pluginName": "Prometheus"
-        }
-      ],
-      "__elements": {},
-      "__requires": [
-        {
-          "type": "grafana",
-          "id": "grafana",
-          "name": "Grafana",
-          "version": "9.3.1"
-        },
-        {
-          "type": "panel",
-          "id": "piechart",
-          "name": "Pie chart",
-          "version": ""
-        },
-        {
-          "type": "datasource",
-          "id": "prometheus",
-          "name": "Prometheus",
-          "version": "1.0.0"
-        },
-        {
-          "type": "panel",
-          "id": "stat",
-          "name": "Stat",
-          "version": ""
-        },
-        {
-          "type": "panel",
-          "id": "timeseries",
-          "name": "Time series",
-          "version": ""
-        }
-      ],
       "annotations": {
         "list": [
           {
@@ -74,13 +31,11 @@ data:
         ]
       },
       "description": "Official dashboard for Standalone Traefik",
-      "editable": false,
+      "editable": true,
       "fiscalYearStartMonth": 0,
-      "gnetId": 17346,
       "graphTooltip": 0,
-      "id": null,
+      "id": 1417,
       "links": [],
-      "liveNow": false,
       "panels": [
         {
           "collapsed": false,
@@ -135,6 +90,7 @@ data:
             "graphMode": "area",
             "justifyMode": "auto",
             "orientation": "auto",
+            "percentChangeColorMode": "standard",
             "reduceOptions": {
               "calcs": [
                 "lastNotNull"
@@ -142,9 +98,11 @@ data:
               "fields": "",
               "values": false
             },
-            "textMode": "auto"
+            "showPercentChange": false,
+            "textMode": "auto",
+            "wideLayout": true
           },
-          "pluginVersion": "9.3.1",
+          "pluginVersion": "11.3.1",
           "targets": [
             {
               "datasource": {
@@ -173,11 +131,13 @@ data:
                 "mode": "palette-classic"
               },
               "custom": {
+                "axisBorderShow": false,
                 "axisCenteredZero": false,
                 "axisColorMode": "text",
                 "axisLabel": "",
                 "axisPlacement": "auto",
                 "barAlignment": 0,
+                "barWidthFactor": 0.6,
                 "drawStyle": "line",
                 "fillOpacity": 0,
                 "gradientMode": "none",
@@ -186,6 +146,7 @@ data:
                   "tooltip": false,
                   "viz": false
                 },
+                "insertNulls": false,
                 "lineInterpolation": "linear",
                 "lineWidth": 1,
                 "pointSize": 5,
@@ -244,6 +205,7 @@ data:
               "sort": "desc"
             }
           },
+          "pluginVersion": "11.3.1",
           "targets": [
             {
               "datasource": {
@@ -272,11 +234,13 @@ data:
                 "mode": "palette-classic"
               },
               "custom": {
+                "axisBorderShow": false,
                 "axisCenteredZero": false,
                 "axisColorMode": "text",
                 "axisLabel": "",
                 "axisPlacement": "auto",
                 "barAlignment": 0,
+                "barWidthFactor": 0.6,
                 "drawStyle": "line",
                 "fillOpacity": 0,
                 "gradientMode": "none",
@@ -285,6 +249,7 @@ data:
                   "tooltip": false,
                   "viz": false
                 },
+                "insertNulls": false,
                 "lineInterpolation": "linear",
                 "lineWidth": 1,
                 "pointSize": 5,
@@ -342,6 +307,7 @@ data:
               "sort": "desc"
             }
           },
+          "pluginVersion": "11.3.1",
           "targets": [
             {
               "datasource": {
@@ -410,6 +376,7 @@ data:
               "sort": "asc"
             }
           },
+          "pluginVersion": "11.3.1",
           "targets": [
             {
               "datasource": {
@@ -438,11 +405,13 @@ data:
                 "mode": "palette-classic"
               },
               "custom": {
+                "axisBorderShow": false,
                 "axisCenteredZero": false,
                 "axisColorMode": "text",
                 "axisLabel": "",
                 "axisPlacement": "auto",
                 "barAlignment": 0,
+                "barWidthFactor": 0.6,
                 "drawStyle": "line",
                 "fillOpacity": 0,
                 "gradientMode": "none",
@@ -451,6 +420,7 @@ data:
                   "tooltip": false,
                   "viz": false
                 },
+                "insertNulls": false,
                 "lineInterpolation": "linear",
                 "lineWidth": 1,
                 "pointSize": 5,
@@ -509,6 +479,7 @@ data:
               "sort": "desc"
             }
           },
+          "pluginVersion": "11.3.1",
           "targets": [
             {
               "datasource": {
@@ -537,11 +508,13 @@ data:
                 "mode": "palette-classic"
               },
               "custom": {
+                "axisBorderShow": false,
                 "axisCenteredZero": false,
                 "axisColorMode": "text",
                 "axisLabel": "",
                 "axisPlacement": "auto",
                 "barAlignment": 0,
+                "barWidthFactor": 0.6,
                 "drawStyle": "line",
                 "fillOpacity": 0,
                 "gradientMode": "none",
@@ -550,6 +523,7 @@ data:
                   "tooltip": false,
                   "viz": false
                 },
+                "insertNulls": false,
                 "lineInterpolation": "linear",
                 "lineWidth": 1,
                 "pointSize": 5,
@@ -608,6 +582,7 @@ data:
               "sort": "desc"
             }
           },
+          "pluginVersion": "11.3.1",
           "targets": [
             {
               "datasource": {
@@ -1433,28 +1408,27 @@ data:
           "type": "row"
         }
       ],
+      "preload": false,
       "refresh": false,
-      "schemaVersion": 37,
-      "style": "dark",
-      "tags": [],
+      "schemaVersion": 40,
+      "tags": [
+        "traefik",
+        "network"
+      ],
       "templating": {
         "list": [
           {
             "current": {
-              "selected": false,
               "text": "Prometheus",
               "value": "Prometheus"
             },
-            "hide": 0,
             "includeAll": false,
-            "multi": false,
-            "name": "DS_PROMETHEUS",
             "label": "datasource",
+            "name": "DS_PROMETHEUS",
             "options": [],
             "query": "prometheus",
             "refresh": 1,
             "regex": "",
-            "skipUrlSync": false,
             "type": "datasource"
           },
           {
@@ -1464,9 +1438,7 @@ data:
               "uid": "${DS_PROMETHEUS}"
             },
             "definition": "label_values(traefik_open_connections, entrypoint)",
-            "hide": 0,
             "includeAll": true,
-            "multi": false,
             "name": "entrypoint",
             "options": [],
             "query": {
@@ -1475,8 +1447,6 @@ data:
             },
             "refresh": 1,
             "regex": "",
-            "skipUrlSync": false,
-            "sort": 0,
             "type": "query"
           },
           {
@@ -1486,9 +1456,7 @@ data:
               "uid": "${DS_PROMETHEUS}"
             },
             "definition": "label_values(traefik_service_requests_total, service)",
-            "hide": 0,
             "includeAll": true,
-            "multi": false,
             "name": "service",
             "options": [],
             "query": {
@@ -1497,7 +1465,6 @@ data:
             },
             "refresh": 2,
             "regex": "",
-            "skipUrlSync": false,
             "sort": 1,
             "type": "query"
           }
@@ -1509,8 +1476,8 @@ data:
       },
       "timepicker": {},
       "timezone": "",
-      "title": "Traefik Official Standalone Dashboard",
+      "title": "Traefik",
       "uid": "n5bu_kv45",
-      "version": 7,
+      "version": 1,
       "weekStart": ""
     }
