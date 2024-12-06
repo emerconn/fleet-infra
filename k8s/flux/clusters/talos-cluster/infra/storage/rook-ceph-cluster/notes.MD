@@ -18,8 +18,8 @@ metadata:
   name: ceph-cleanup-job
   namespace: rook-ceph
 spec:
-  completions: 3 # change to total node count
-  parallelism: 3 # change to total node count
+  completions: 3 # replace with total node count
+  parallelism: 3 # replace with total node count
   template:
     spec:
       restartPolicy: Never
@@ -30,7 +30,7 @@ spec:
             - matchExpressions:
               - key: kubernetes.io/hostname
                 operator: In
-                values: # replace with your node names
+                values: # replace with node names
                 - talos-cp-01
                 - talos-cp-02
                 - talos-cp-03
