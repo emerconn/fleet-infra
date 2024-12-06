@@ -1,8 +1,32 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: synology-dsm-proxy
+  namespace: synology-csi-talos
+spec:
+  type: ClusterIP
+  clusterIP: None
+  ports:
+  - protocol: TCP
+    port: 5000
+    targetPort: 5000
+---
+apiVersion: v1
+kind: Endpoints
+metadata:
+  name: synology-dsm-proxy
+  namespace: synology-csi-talos
+subsets:
+- addresses:
+  - ip: 172.21.0.20
+  ports:
+  - port: 5000
+---
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: ingress-tls
-  namespace: synology-dsm
+  namespace: synology-csi-talos
 spec:
   secretName: ingress-tls
   issuerRef:
@@ -15,7 +39,7 @@ apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
   name: http
-  namespace: synology-dsm
+  namespace: synology-csi-talos
 spec:
   entryPoints: ["web"]
   routes:
@@ -32,14 +56,14 @@ apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
   name: https
-  namespace: synology-dsm
+  namespace: synology-csi-talos
 spec:
   entryPoints: ["websecure"]
   routes:
   - match: Host(`synology.homelab.emerconnelly.com`)
     kind: Rule
     services:
-    - name: synology-dsm
+    - name: synology-dsm-proxy
       port: 5000
       passHostHeader: true
       sticky:

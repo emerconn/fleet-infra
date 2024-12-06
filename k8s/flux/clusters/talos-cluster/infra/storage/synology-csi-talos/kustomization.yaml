@@ -2,6 +2,7 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
+- synology-dsm-proxy.yaml
 - secret-sops-client-info.yaml
 - ../../../../../infra/storage/synology-csi-talos
 patches:
