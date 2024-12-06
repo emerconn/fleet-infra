@@ -12,6 +12,9 @@ patches:
       namespace: flux-system
     spec:
       values:
+        agent:
+          tolerations:
+          - operator: "Exists"
         exporters:
           otlphttp/openobserve:
             endpoint: https://openobserve.homelab.emerconnelly.com/api/default/
