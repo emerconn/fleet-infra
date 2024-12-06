@@ -602,8 +602,8 @@ data:
       ],
       "schemaVersion": 39,
       "tags": [
-        "infra",
-        "node"
+        "node",
+        "kubernetes"
       ],
       "templating": {
         "list": [
