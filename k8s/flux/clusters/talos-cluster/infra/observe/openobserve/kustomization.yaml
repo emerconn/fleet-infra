@@ -19,7 +19,8 @@ patches:
           enabled: true
           name: "openobserve-auth"
         config:
-          ZO_S3_SERVER_URL: "http://api.rook-ceph.homelab.emerconnelly.com"
+          ZO_S3_SERVER_URL: "http://rook-ceph-rgw-ceph-objectstore.rook-ceph.svc"
+          rook-ceph-rgw-ceph-objectstore.rook-ceph.svc
           ZO_S3_BUCKET_NAME: "openobserve-21106f10-7d58-4834-9878-379bbd96903e"
           ZO_S3_PROVIDER: "s3"
           ZO_COMPACT_DATA_RETENTION_DAYS: "7"
