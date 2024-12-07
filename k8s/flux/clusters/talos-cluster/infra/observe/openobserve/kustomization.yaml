@@ -31,6 +31,7 @@ patches:
         config:
           ZO_S3_SERVER_URL: "https://api.rook-ceph.homelab.emerconnelly.com"
           ZO_S3_BUCKET_NAME: "openobserve-21106f10-7d58-4834-9878-379bbd96903e"
+          ZO_S3_BUCKET_PREFIX: "files"
           ZO_S3_PROVIDER: "s3"
           ZO_S3_FEATURE_FORCE_PATH_STYLE: "true"
           ZO_S3_ALLOW_INVALID_CERTIFICATES: "true"
