@@ -29,7 +29,7 @@ patches:
           ZO_TRACING_HEADER_KEY: Authorization
           ZO_TRACING_HEADER_VALUE: Basic cm9vdEBleGFtcGxlLmNvbTpJUDNPZGFGU0hJbDhYZjRI
         config:
-          ZO_S3_SERVER_URL: "http://rook-ceph-rgw-ceph-objectstore.rook-ceph.svc"
+          ZO_S3_SERVER_URL: "https://api.rook-ceph.homelab.emerconnelly.com"
           ZO_S3_BUCKET_NAME: "openobserve-21106f10-7d58-4834-9878-379bbd96903e"
           ZO_S3_PROVIDER: "s3"
           ZO_S3_FEATURE_FORCE_PATH_STYLE: "false"
