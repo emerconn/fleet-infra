@@ -22,6 +22,8 @@ spec:
         modules:
         - name: rook
           enabled: true
+        - name: k8sevents
+          enabled: true
       # removeOSDsIfOutAndSafeToRemove: true
       # cephBlockPools: [ "" ]
       # cephObjectStores: [ "" ]
