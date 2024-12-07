@@ -12,14 +12,6 @@ patches:
       namespace: flux-system
     spec:
       values:
-        replicaCount:
-          ingester: 2
-          querier: 2
-          router: 2
-          alertmanager: 2
-          compactor: 2
-          zplane: 1
-          reportserver: 1
         agent:
           tolerations:
           - operator: "Exists" # schedule on all nodes

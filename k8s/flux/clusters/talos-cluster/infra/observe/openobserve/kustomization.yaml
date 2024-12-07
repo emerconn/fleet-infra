@@ -37,3 +37,11 @@ patches:
           spec:
             storage:
               size: 50Gi
+        replicaCount:
+          ingester: 2
+          querier: 2
+          router: 2
+          alertmanager: 2
+          compactor: 2
+          zplane: 1
+          reportserver: 1
