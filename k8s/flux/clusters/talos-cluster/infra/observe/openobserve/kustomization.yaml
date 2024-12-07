@@ -34,6 +34,7 @@ patches:
           ZO_S3_PROVIDER: "s3"
           ZO_S3_FEATURE_FORCE_PATH_STYLE: "false"
           ZO_S3_ALLOW_INVALID_CERTIFICATES: "true"
+          ZO_COMPACT_DATA_RETENTION_DAYS: "7"
         postgres:
           spec:
             storage:
