@@ -26,6 +26,7 @@ patches:
           ZO_REPORT_USER_PASSWORD: Complexpass#123
           ZO_S3_ACCESS_KEY: CR1AQZ0SKY4HP8J3GQO0
           ZO_S3_SECRET_KEY: irhgnLNChjbN9XIGyJg5mFxBzW7XCHB48FJtehJP
+          ZO_S3_ALLOW_INVALID_CERTIFICATES: true
           ZO_TRACING_HEADER_KEY: Authorization
           ZO_TRACING_HEADER_VALUE: Basic cm9vdEBleGFtcGxlLmNvbTpJUDNPZGFGU0hJbDhYZjRI
         config:
