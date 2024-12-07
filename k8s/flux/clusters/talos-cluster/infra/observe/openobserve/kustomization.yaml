@@ -21,7 +21,7 @@ patches:
         config:
           ZO_S3_SERVER_URL: "https://api.rook-ceph.homelab.emerconnelly.com"
           ZO_S3_BUCKET_NAME: "openobserve"
-          ZO_S3_PROVIDER: "ceph"
+          ZO_S3_PROVIDER: "s3"
           ZO_COMPACT_DATA_RETENTION_DAYS: "7"
         postgres:
           spec:
