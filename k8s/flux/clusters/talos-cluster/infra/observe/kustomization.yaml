@@ -9,6 +9,6 @@ resources:
 - metrics-server
 - mikrotik-exporter
 # - openobserve
-- openobserve-collector
+# - openobserve-collector
 - opentelemetry-operator
 - uptime-kuma
