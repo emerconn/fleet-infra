@@ -19,8 +19,8 @@ patches:
           otlphttp/openobserve:
             endpoint: https://openobserve.homelab.emerconnelly.com/api/default/
             headers:
-              Authorization: Basic cm9vdEBleGFtcGxlLmNvbTp0VkNSeE9xdTcxckprNUo1
+              Authorization: Basic cm9vdEBleGFtcGxlLmNvbTpJUDNPZGFGU0hJbDhYZjRI
           otlphttp/openobserve_k8s_events:
             endpoint: https://openobserve.homelab.emerconnelly.com/api/default/
             headers:
-              Authorization: Basic cm9vdEBleGFtcGxlLmNvbTp0VkNSeE9xdTcxckprNUo1
+              Authorization: Basic cm9vdEBleGFtcGxlLmNvbTpJUDNPZGFGU0hJbDhYZjRI
