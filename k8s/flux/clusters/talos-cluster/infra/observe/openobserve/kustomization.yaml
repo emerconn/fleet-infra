@@ -19,8 +19,15 @@ patches:
         #   enabled: true
         #   name: "openobserve-auth"
         auth:
-          ZO_S3_ACCESS_KEY: "CR1AQZ0SKY4HP8J3GQO0"
-          ZO_S3_SECRET_KEY: "irhgnLNChjbN9XIGyJg5mFxBzW7XCHB48FJtehJP"
+          ZO_META_POSTGRES_DSN: postgres://openobserve:Batman123@openobserve-postgres-rw.openobserve.svc.cluster.local:5432/app?sslmode=disable
+          ZO_ROOT_USER_EMAIL: root@example.com
+          ZO_ROOT_USER_PASSWORD: Complexpass#123
+          ZO_REPORT_USER_EMAIL: root@example.com
+          ZO_REPORT_USER_PASSWORD: Complexpass#123
+          ZO_S3_ACCESS_KEY: CR1AQZ0SKY4HP8J3GQO0
+          ZO_S3_SECRET_KEY: irhgnLNChjbN9XIGyJg5mFxBzW7XCHB48FJtehJP
+          ZO_TRACING_HEADER_KEY: Authorization
+          ZO_TRACING_HEADER_VALUE: Basic cm9vdEBleGFtcGxlLmNvbTpJUDNPZGFGU0hJbDhYZjRI
         config:
           ZO_S3_SERVER_URL: "http://rook-ceph-rgw-ceph-objectstore.rook-ceph.svc"
           ZO_S3_BUCKET_NAME: "openobserve-21106f10-7d58-4834-9878-379bbd96903e"
