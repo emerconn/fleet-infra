@@ -26,13 +26,13 @@ patches:
           ZO_REPORT_USER_PASSWORD: Complexpass#123
           ZO_S3_ACCESS_KEY: CR1AQZ0SKY4HP8J3GQO0
           ZO_S3_SECRET_KEY: irhgnLNChjbN9XIGyJg5mFxBzW7XCHB48FJtehJP
-          ZO_S3_ALLOW_INVALID_CERTIFICATES: true
           ZO_TRACING_HEADER_KEY: Authorization
           ZO_TRACING_HEADER_VALUE: Basic cm9vdEBleGFtcGxlLmNvbTpJUDNPZGFGU0hJbDhYZjRI
         config:
           ZO_S3_SERVER_URL: "http://rook-ceph-rgw-ceph-objectstore.rook-ceph.svc"
           ZO_S3_BUCKET_NAME: "openobserve-21106f10-7d58-4834-9878-379bbd96903e"
           ZO_S3_PROVIDER: "s3"
+          ZO_S3_ALLOW_INVALID_CERTIFICATES: "true"
         postgres:
           spec:
             storage:
