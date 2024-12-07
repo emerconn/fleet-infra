@@ -17,10 +17,10 @@ patches:
           - operator: "Exists" # schedule on all nodes
         exporters:
           otlphttp/openobserve:
-            endpoint: https://openobserve.homelab.emerconnelly.com/api/default/
+            endpoint: http://openobserve-router.openobserve.svc.cluster.local/api/default/
             headers:
               Authorization: Basic cm9vdEBleGFtcGxlLmNvbTp0VkNSeE9xdTcxckprNUo1
           otlphttp/openobserve_k8s_events:
-            endpoint: https://openobserve.homelab.emerconnelly.com/api/default/
+            endpoint: http://openobserve-router.openobserve.svc.cluster.local/api/default/
             headers:
               Authorization: Basic cm9vdEBleGFtcGxlLmNvbTp0VkNSeE9xdTcxckprNUo1
