@@ -42,6 +42,6 @@ patches:
           querier: 2
           router: 2
           alertmanager: 1
-          compactor: 2
+          compactor: 1
           zplane: 1
           reportserver: 1
