@@ -22,7 +22,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
-    # Tailscale
+    # tailscale
     - name: Set up Tailscale
       uses: tailscale/github-action@v2
       with:
@@ -35,13 +35,17 @@ jobs:
     # kubectl
     - name: Set up kubectl
       uses: azure/setup-kubectl@v4
+      with:
+        version: latest
     - name: Configure kubeconfig
       run: tailscale configure kubeconfig talos-cluster
     - run: kubectl version
 
-    # Flux
+    # flux
     - name: Set up Flux
       uses: fluxcd/flux2/action@main
+      with:
+        version: latest
     - run: flux version
     - name: Run flux reconcile
       id: flux-reconcile
