@@ -24,7 +24,7 @@
 - Synology DS720+
   - disks: 4x 1TB SATA SSD
   - cache: 2x 256GB NVMe M.2 SD
-  - network: 2x 1G ethernet in ([LAG](https://support.hostifi.com/en/articles/6454249-unifi-how-to-enable-link-aggregation-on-switches-lag))
+  - network: 2x 1G ethernet in [LAG](https://support.hostifi.com/en/articles/6454249-unifi-how-to-enable-link-aggregation-on-switches-lag)
 
 ### servers 
 
