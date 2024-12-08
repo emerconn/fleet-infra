@@ -5,7 +5,7 @@
 
   # fleet-infra
   
-  My homelab-as-code, with horrible commit messages.
+  homelab
 
 </div>
 
