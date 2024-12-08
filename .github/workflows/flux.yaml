@@ -30,25 +30,29 @@ jobs:
         oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
         oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
         tags: tag:github-actions
-    - run: tailscale version
+    - name: Get Tailscale version
+      run: tailscale version
 
     # kubectl
     - name: Set up kubectl
       uses: azure/setup-kubectl@v4
       with:
         version: latest
-    - name: Create kubeconfig
+    - name: Create kubeconfig file
       run: tailscale configure kubeconfig talos-cluster
-    - run: kubectl version
+    - name: Get kubectl versions
+      run: kubectl version
 
     # flux
     - name: Set up Flux
       uses: fluxcd/flux2/action@main
       with:
         version: latest
-    - run: flux version
-    - name: Run flux reconcile
+    - name: Get Flux versions
+      run: flux version
+    - name: Reconcile Flux
       id: flux-reconcile
       run: flux reconcile source git flux-system --timeout "15s" && flux reconcile kustomization flux-system --timeout "30s"
-    - if: failure() && steps.flux-reconcile.outcome == 'failure'
+    - name: Get Flux kustomizations
+      if: failure() && steps.flux-reconcile.outcome == 'failure'
       run: flux get kustomization
