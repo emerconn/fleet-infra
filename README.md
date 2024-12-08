@@ -14,19 +14,17 @@
 ### network [![MikroTik Router](https://img.shields.io/badge/RouterOS-555?logo=mikrotik&logoColor=293239&labelColor=fff)](https://mikrotik.homelab.emerconnelly.com/) [![AdGuard Home](https://img.shields.io/badge/AdGuard_Home-555?logo=adguard&logoColor=68bc71&labelColor=000)](https://adguard.homelab.emerconnelly.com/) [![Unifi Network Server](https://img.shields.io/badge/Unifi_Network_Server-555?logo=ubiquiti&logoColor=fff&labelColor=0559c9)](https://unifi.homelab.emerconnelly.com/) 
 
 - MikroTik hAP ax³
-  - DNS via containerized AdGuard Home (yes, MikroTik routers are based af, they can [run containers](https://help.mikrotik.com/docs/display/ROS/Container))
-  - WireGuard for secure external access
-  - IKEv2 IPSec tunnels to my Azure subscription
+  - Containizerd AdGuard Home for DNS
+  - WireGuard for secure private access
+  - IPSec tunnels to cloud providers
 - Unifi Switch Lite 8 PoE
-- Unifi AP U6 Pro PoE
 
 ### storage [![Synology DSM](https://img.shields.io/badge/Synology_DSM-555)](https://synology.homelab.emerconnelly.com/)
 
 - Synology DS720+
-  - Storage: 4x 1TB SATA SSD
-  - Cache: 2x 256GB NVMe M.2 SD
-  - RAM: 16GB
-  - Network: 2x 1GbE ports using LAG ([link aggregation](https://support.hostifi.com/en/articles/6454249-unifi-how-to-enable-link-aggregation-on-switches-lag))
+  - disks: 4x 1TB SATA SSD
+  - cache: 2x 256GB NVMe M.2 SD
+  - network: 2x 1G ethernet in LAG ([link aggregation](https://support.hostifi.com/en/articles/6454249-unifi-how-to-enable-link-aggregation-on-switches-lag))
 
 ### servers 
 
