@@ -4,8 +4,6 @@
   [![flux](https://github.com/emerconnelly/fleet-infra/actions/workflows/flux.yaml/badge.svg?branch=main)](https://github.com/emerconnelly/fleet-infra/actions/workflows/flux.yaml)
 
   # fleet-infra
-  
-  homelab
 
 </div>
 
