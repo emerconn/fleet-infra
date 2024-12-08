@@ -28,7 +28,7 @@
 
 ### servers 
 
-[Talos Linux](https://www.talos.dev/v1.7/introduction/what-is-talos) bare-metal [Kubernetes](https://kubernetes.io/docs/concepts/overview) cluster running on mini-desktop PCs. Cheap and simple, unlike my ex.
+Used mini-desktop PCs running a bare-metal [Talos Linux](https://www.talos.dev/v1.7/introduction/what-is-talos) [Kubernetes](https://kubernetes.io/docs/concepts/overview) cluster
 
 - 3 control plane nodes
   - Dell 9020 Optiplex Micro
