@@ -5,7 +5,7 @@
 
   # fleet-infra
 
-  ![homelab](.github/homelab.png)
+  ![homelab](.github/homelab.webp)
 
 </div>
 
