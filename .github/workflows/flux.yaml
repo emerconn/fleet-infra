@@ -37,7 +37,7 @@ jobs:
       uses: azure/setup-kubectl@v4
       with:
         version: latest
-    - name: Configure kubeconfig
+    - name: Create kubeconfig
       run: tailscale configure kubeconfig talos-cluster
     - run: kubectl version
 
