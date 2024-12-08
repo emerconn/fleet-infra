@@ -5,6 +5,8 @@
 
   # fleet-infra
 
+  ![homelab](.github/homelab.png)
+
 </div>
 
 # hardware 
