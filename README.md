@@ -1,6 +1,6 @@
 <div align="center">
 
-  ctrl+f5
+  <sub><sup>ctrl+f5</sub></sup>
 
   [![github-pages](https://github.com/emerconnelly/fleet-infra/actions/workflows/github-pages.yaml/badge.svg)](https://github.com/emerconnelly/fleet-infra/actions/workflows/github-pages.yaml)
   [![flux](https://github.com/emerconnelly/fleet-infra/actions/workflows/flux.yaml/badge.svg?branch=main)](https://github.com/emerconnelly/fleet-infra/actions/workflows/flux.yaml)
