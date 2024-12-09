@@ -4,7 +4,7 @@ metadata:
   name: descheduler
   namespace: flux-system
 spec:
-  releaseName: descheduler
+  releaseName: kube-descheduler
   targetNamespace: kube-system
   chart:
     spec:
