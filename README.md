@@ -127,4 +127,4 @@ Refurbed mini-desktop PCs running bare-metal Talos Linux for hosting a Kubernete
 
 # GitHub Pages
 
-- deployed with [this](https://github.com/emerconnelly/fleet-infra/actions/workflows/github-pages.yml) GitHub Action using [Rust mdBook](https://github.com/rust-lang/mdBook)
+- [this](https://github.com/emerconnelly/fleet-infra/actions/workflows/github-pages.yml) workflow using [Rust mdBook](https://github.com/rust-lang/mdBook)
