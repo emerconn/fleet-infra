@@ -43,7 +43,7 @@ Refurbed mini-desktop PCs running bare-metal Talos Linux for hosting a Kubernete
   - ram: [64GB DDR4 2666 CL19](https://semiconductor.samsung.com/us/dram/module/sodimm/m471a4g43mb1-ctd)
   - storage: 256GB M.2 NVMe SSD
 
-# repository management
+# repo management
 
 ### Renovate [![Renovate Dashboard](https://img.shields.io/badge/Dashboard-555?logo=renovate&logoColor=497b9c&labelColor=000)](https://developer.mend.io/github/emerconn/fleet-infra)
 
