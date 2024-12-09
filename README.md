@@ -16,7 +16,7 @@
 - MikroTik hAP ax³
   - Containizerd AdGuard Home for DNS
   - WireGuard for secure private access
-  - IPSec tunnels to cloud providers
+  - IPSec tunnels for cloud providers
 - Unifi Switch Lite 8 PoE
 
 ### storage [![Synology DSM](https://img.shields.io/badge/Synology_DSM-555)](https://synology.homelab.emerconnelly.com/)
