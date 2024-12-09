@@ -28,7 +28,7 @@
 
 ### servers 
 
-Used mini-desktop PCs running bare-metal Talos Linuxfor a Kubernetes cluster
+Refurbed mini-desktop PCs running bare-metal Talos Linux for hosting a Kubernetes cluster
 
 - 3 control plane nodes
   - Dell 9020 Optiplex Micro
