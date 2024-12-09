@@ -22,13 +22,13 @@
 ### storage [![Synology DSM](https://img.shields.io/badge/Synology_DSM-555)](https://synology.homelab.emerconnelly.com/)
 
 - Synology DS720+
-  - disks: 4x 1TB SATA SSD
-  - cache: 2x 256GB NVMe M.2 SD
-  - network: 2x 1G ethernet in [LAG](https://support.hostifi.com/en/articles/6454249-unifi-how-to-enable-link-aggregation-on-switches-lag)
+  - disks: (4) 1TB SATA SSD
+  - cache: (2) 256GB NVMe M.2 SD
+  - network: (2) 1G ethernet in LAG
 
 ### servers 
 
-Used mini-desktop PCs running a bare-metal [Talos Linux](https://www.talos.dev/v1.7/introduction/what-is-talos) [Kubernetes](https://kubernetes.io/docs/concepts/overview) cluster
+Used mini-desktop PCs running bare-metal Talos Linuxfor a Kubernetes cluster
 
 - 3 control plane nodes
   - Dell 9020 Optiplex Micro
