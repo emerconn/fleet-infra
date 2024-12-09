@@ -31,17 +31,17 @@
 Refurbed mini-desktop PCs running bare-metal Talos Linux for hosting a Kubernetes cluster
 
 - control plane
-  - Dell 9020 Optiplex Micro
-  - cpu: [i7-4785T 4-core 3.2GHz 8M](https://www.intel.com/content/www/us/en/products/sku/80814/intel-core-i74785t-processor-8m-cache-up-to-3-20-ghz/specifications.html)
-  - ram: [8GB DDR3 1600 CL11](https://eu.crucial.com/memory/ddr3/ct102464bf160b)
-  - storage:
-    - 256GB M.2 SSD
-    - [MX500 2TB SATA SSD](https://www.crucial.com/ssd/mx500/ct2000mx500ssd1)
+  - (3) Dell 9020 Optiplex Micro
+    - cpu: [i7-4785T 4-core 3.2GHz 8M](https://www.intel.com/content/www/us/en/products/sku/80814/intel-core-i74785t-processor-8m-cache-up-to-3-20-ghz/specifications.html)
+    - ram: [8GB DDR3 1600 CL11](https://eu.crucial.com/memory/ddr3/ct102464bf160b)
+    - storage:
+      - 256GB M.2 SSD
+      - [MX500 2TB SATA SSD](https://www.crucial.com/ssd/mx500/ct2000mx500ssd1)
 - workers
-  - [Intel NUC10I5FNKN1](https://mitxpc.com/products/bxnuc10i5fnkn1)
-  - cpu: [i5-10210U 4-core 4.2GHz 6M](https://www.intel.com/content/www/us/en/products/sku/195436/intel-core-i510210u-processor-6m-cache-up-to-4-20-ghz/specifications.html)
-  - ram: [64GB DDR4 2666 CL19](https://semiconductor.samsung.com/us/dram/module/sodimm/m471a4g43mb1-ctd)
-  - storage: 256GB M.2 NVMe SSD
+  - (1) [Intel NUC10I5FNKN1](https://mitxpc.com/products/bxnuc10i5fnkn1)
+    - cpu: [i5-10210U 4-core 4.2GHz 6M](https://www.intel.com/content/www/us/en/products/sku/195436/intel-core-i510210u-processor-6m-cache-up-to-4-20-ghz/specifications.html)
+    - ram: [64GB DDR4 2666 CL19](https://semiconductor.samsung.com/us/dram/module/sodimm/m471a4g43mb1-ctd)
+    - storage: 256GB M.2 NVMe SSD
 
 # repo management
 
