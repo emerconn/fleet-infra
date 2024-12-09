@@ -36,7 +36,7 @@ Refurbed mini-desktop PCs running bare-metal Talos Linux for hosting a Kubernete
     - ram: [8GB DDR3 1600 CL11](https://eu.crucial.com/memory/ddr3/ct102464bf160b)
     - storage:
       - 256GB M.2 SSD
-      - [MX500 2TB SATA SSD](https://www.crucial.com/ssd/mx500/ct2000mx500ssd1)
+      - [MX500 2TB SATA SSD](https://www.crucial.com/ssd/mx500/ct2000mx500ssd1) <sub>for Ceph></sub>
 - workers
   - (1) [Intel NUC10I5FNKN1](https://mitxpc.com/products/bxnuc10i5fnkn1)
     - cpu: [i5-10210U 4-core 4.2GHz 6M](https://www.intel.com/content/www/us/en/products/sku/195436/intel-core-i510210u-processor-6m-cache-up-to-4-20-ghz/specifications.html)
