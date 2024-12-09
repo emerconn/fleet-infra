@@ -22,7 +22,7 @@
 ### storage [![Synology DSM](https://img.shields.io/badge/Synology_DSM-555)](https://synology.homelab.emerconnelly.com/)
 
 - Synology DS720+
-  - disks: (4) 1TB SATA SSD
+  - storage: (4) 1TB SATA SSD
   - cache: (2) 256GB NVMe M.2 SD
   - network: (2) 1G ethernet in LAG
 
@@ -32,16 +32,16 @@ Refurbed mini-desktop PCs running bare-metal Talos Linux for hosting a Kubernete
 
 - 3 control plane nodes
   - Dell 9020 Optiplex Micro
-  - CPU: [Intel i7-4785T 4-core 3.2GHz 8M Cache](https://www.intel.com/content/www/us/en/products/sku/80814/intel-core-i74785t-processor-8m-cache-up-to-3-20-ghz/specifications.html)
-  - RAM: [Crucial 8GB DDR3 1600 CL11](https://eu.crucial.com/memory/ddr3/ct102464bf160b)
-  - Storage
+  - cpu: [Intel i7-4785T 4-core 3.2GHz 8M Cache](https://www.intel.com/content/www/us/en/products/sku/80814/intel-core-i74785t-processor-8m-cache-up-to-3-20-ghz/specifications.html)
+  - ram: [Crucial 8GB DDR3 1600 CL11](https://eu.crucial.com/memory/ddr3/ct102464bf160b)
+  - storage:
     - 256GB M.2 SSD
     - [Crucial MX500 2TB SATA SSD](https://www.crucial.com/ssd/mx500/ct2000mx500ssd1)
 - 1 worker node
   - [Intel NUC10I5FNKN1](https://mitxpc.com/products/bxnuc10i5fnkn1)
-  - CPU: [Intel i5-10210U 4-core 4.2GHz 6M Cache](https://www.intel.com/content/www/us/en/products/sku/195436/intel-core-i510210u-processor-6m-cache-up-to-4-20-ghz/specifications.html)
-  - RAM: [Samsung 64GB DDR4 2666 CL19](https://semiconductor.samsung.com/us/dram/module/sodimm/m471a4g43mb1-ctd)
-  - Storage: 256GB M.2 NVMe SSD
+  - cpu: [Intel i5-10210U 4-core 4.2GHz 6M Cache](https://www.intel.com/content/www/us/en/products/sku/195436/intel-core-i510210u-processor-6m-cache-up-to-4-20-ghz/specifications.html)
+  - ram: [Samsung 64GB DDR4 2666 CL19](https://semiconductor.samsung.com/us/dram/module/sodimm/m471a4g43mb1-ctd)
+  - storage: 256GB M.2 NVMe SSD
 
 # repository management
 
