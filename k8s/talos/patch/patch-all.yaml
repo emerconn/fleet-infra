@@ -23,6 +23,8 @@ machine:
     wipe: true
     extraKernelArgs:
     - talos.platform=metal
+    - cpufreq.default_governor=performance
+    - intel_idle.max_cstate=0
   kubelet:
     image: ghcr.io/siderolabs/kubelet:v1.31.3
     extraArgs:
