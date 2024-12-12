@@ -29,7 +29,7 @@ machine:
     disk: /dev/sdb
     extraKernelArgs:
     - talos.platform=metal
-    image: factory.talos.dev/installer/c4f93bf64691eedef63d31b4513f4339249f5d5d1c368ebc70693bbbfa31aeda:v1.8.2
+    image: factory.talos.dev/installer/0b4f48281e59712995bea152e8e62f3082be4ab66d2bdd0ca83cb3ce8c4509a9:v1.9.0-beta.1
     wipe: true
   time:
     servers:
