@@ -17,7 +17,7 @@ machine:
   network: {}
   install:
     disk: /dev/nvme0n1
-    extraKernelArgs:
+    extraKernelArgs: # https://www.talos.dev/v1.8/talos-guides/configuration/performance-tuning/
     - talos.platform=metal
     - cpufreq.default_governor=performance
     - intel_idle.max_cstate=0

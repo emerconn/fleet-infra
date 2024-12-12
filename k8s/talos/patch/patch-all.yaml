@@ -21,7 +21,7 @@ machine:
     # intel-ucode, i915-ucode, iscsi-tools & btrfs
     disk: /dev/sda
     wipe: true
-    extraKernelArgs:
+    extraKernelArgs: # https://www.talos.dev/v1.8/talos-guides/configuration/performance-tuning/
     - talos.platform=metal
     - cpufreq.default_governor=performance
     - intel_idle.max_cstate=0
