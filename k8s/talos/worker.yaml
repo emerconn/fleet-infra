@@ -17,7 +17,8 @@ machine:
   network: {}
   install:
     disk: /dev/nvme0n1
-    extraKernelArgs: # https://www.talos.dev/v1.8/talos-guides/configuration/performance-tuning/
+    extraKernelArgs:
+    # https://www.talos.dev/v1.8/talos-guides/configuration/performance-tuning/
     - talos.platform=metal
     - cpufreq.default_governor=performance
     - intel_idle.max_cstate=0
@@ -36,6 +37,8 @@ machine:
       port: 7445
     hostDNS:
       enabled: true
+    imageCache:
+      localEnabled: true # TODO: use this feature
 cluster:
   id: uRqa5St6bu4DrnneHOYOyq32XY3dooiydG_9RvRiDhE=
   secret: rA4D4hDeypv/aLw+G50yY2iittyBK7btmgFLXY7Dk68=

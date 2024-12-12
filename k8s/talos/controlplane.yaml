@@ -47,6 +47,8 @@ machine:
       port: 7445
     hostDNS:
       enabled: true
+    imageCache:
+      localEnabled: true # TODO: use this feature
 cluster:
   id: uRqa5St6bu4DrnneHOYOyq32XY3dooiydG_9RvRiDhE=
   secret: rA4D4hDeypv/aLw+G50yY2iittyBK7btmgFLXY7Dk68=
