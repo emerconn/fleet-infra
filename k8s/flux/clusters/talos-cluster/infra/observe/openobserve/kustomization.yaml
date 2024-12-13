@@ -41,22 +41,22 @@ patches:
           compactor: 1
           zplane: 1
           reportserver: 1
-        ingester:
-          persistence:
-            size: 10Gi
-            storageClassName: synology-csi-ext4-delete
-        querier:
-          persistence:
-            size: 10Gi
-            storageClassName: synology-csi-ext4-delete
-        nats:
-          enabled: true
-          config:
-            jetstream:
-              fileStore:
-                pvc:
-                  size: 20Gi
-                  storageClassName: synology-csi-ext4-retain
+        # ingester:
+        #   persistence:
+        #     size: 10Gi
+        #     storageClassName: synology-csi-ext4-delete
+        # querier:
+        #   persistence:
+        #     size: 10Gi
+        #     storageClassName: synology-csi-ext4-delete
+        # nats:
+        #   enabled: true
+        #   config:
+        #     jetstream:
+        #       fileStore:
+        #         pvc:
+        #           size: 20Gi
+        #           storageClassName: synology-csi-ext4-retain
         postgres:
           spec:
             storage:
