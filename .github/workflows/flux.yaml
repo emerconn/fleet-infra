@@ -10,9 +10,9 @@ on:
     - '.github/workflows/flux.yaml'
     - 'k8s/flux/**'
 
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+# concurrency:
+#   group: ${{ github.workflow }}-${{ github.ref }}
+#   cancel-in-progress: true
 
 jobs:
   flux:
