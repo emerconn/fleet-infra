@@ -10,4 +10,4 @@ resources:
 - rook-ceph-test-buckets
 - snapshot-controller
 - synology-csi-talos
-- velero
+# - velero
