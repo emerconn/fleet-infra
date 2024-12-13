@@ -18,12 +18,13 @@ spec:
   install:
     remediation:
       retries: -1
-  values: # https://github.com/vmware-tanzu/helm-charts/blob/main/charts/velero/values.yaml
+  values:
+    # https://github.com/vmware-tanzu/helm-charts/blob/main/charts/velero/values.yaml
     upgradeCRDs: true
     cleanUpCRDs: true
+    deployNodeAgent: true # daemonset
     backupsEnabled: true # Pod Volume Backup
     snapshotsEnabled: false # Volume Snapshots
-    deployNodeAgent: true # daemonset
     configuration:
       backupStorageLocation:
       - name: default
