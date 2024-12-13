@@ -25,7 +25,7 @@ patches:
             volumesPerServer: 1
             size: 50Gi
             annotations:
-              backup.velero.io/backup-volumes: data0-main-pool-0-0
+              backup.velero.io/backup-volumes: data0
             storageClassName: synology-csi-ext4-retain
             resources:
               limits:
