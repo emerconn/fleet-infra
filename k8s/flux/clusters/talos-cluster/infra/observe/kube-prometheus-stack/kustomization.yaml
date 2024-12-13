@@ -21,6 +21,8 @@ patches:
     spec:
       values:
         prometheus:
+          annotations:
+            backup.velero.io/backup-volumes: prometheus-kube-prometheus-stack-prometheus-db
           prometheusSpec:
             enableFeatures: ["exemplar-storage"]
             serviceMonitorSelectorNilUsesHelmValues: false
