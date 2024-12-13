@@ -33,3 +33,4 @@ resources:
 - tailscale.yaml
 - traefik.yaml
 - uptime-kuma.yaml
+- vmware-tanzu.yaml
