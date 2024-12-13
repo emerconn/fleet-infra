@@ -28,7 +28,7 @@ spec:
     configuration:
       backupStorageLocation:
       - name: default
-        provider: azure
+        provider: velero.io/azure
         bucket: velero
         credential:
           name: velero-bucket
