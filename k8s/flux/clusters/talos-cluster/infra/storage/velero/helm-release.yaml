@@ -26,7 +26,8 @@ spec:
     backupsEnabled: true # Pod Volume Backup
     snapshotsEnabled: false # Volume Snapshots
     configuration:
-      backupStorageLocation: # https://github.com/vmware-tanzu/velero-plugin-for-microsoft-azure/blob/main/backupstoragelocation.md
+      backupStorageLocation:
+      # https://github.com/vmware-tanzu/velero-plugin-for-microsoft-azure/blob/main/backupstoragelocation.md
       - name: default
         provider: velero.io/azure
         bucket: velero
@@ -38,10 +39,10 @@ spec:
           storageAccount: p1sveleropoc
           storageAccountKeyEnvVar: AZURE_STORAGE_ACCOUNT_ACCESS_KEY
           subscriptionId: 76546707-01b4-4754-b18f-c5cfd2a86be2
-      initContainers:
-      - name: velero-plugin-for-microsoft-azure
-        image: velero/velero-plugin-for-microsoft-azure:v1.11.0
-        imagePullPolicy: IfNotPresent
-        volumeMounts:
-        - mountPath: /target
-          name: plugins
+    initContainers:
+    - name: velero-plugin-for-microsoft-azure
+      image: velero/velero-plugin-for-microsoft-azure:v1.11.0
+      imagePullPolicy: IfNotPresent
+      volumeMounts:
+      - mountPath: /target
+        name: plugins
