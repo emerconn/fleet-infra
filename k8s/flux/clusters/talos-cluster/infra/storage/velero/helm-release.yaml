@@ -1,0 +1,44 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: velero
+  namespace: flux-system
+spec:
+  releaseName: velero
+  targetNamespace: velero
+  chart:
+    spec:
+      chart: velero
+      sourceRef:
+        kind: HelmRepository
+        name: vmware-tanzu
+        namespace: flux-system
+      version: "8.1.0"
+  interval: 1h
+  install:
+    remediation:
+      retries: -1
+  values: # https://github.com/vmware-tanzu/helm-charts/blob/main/charts/velero/values.yaml
+    upgradeCRDs: true
+    backupsEnabled: true # Pod Volume Backup
+    snapshotsEnabled: false # Volume Snapshots
+    deployNodeAgent: true # daemonset
+    configuration:
+      backupStorageLocation:
+      - name: default
+        provider: azure
+        bucket: velero
+        credential:
+          name: velero-bucket
+          key: cloud
+        config:
+          resourceGroup: velero-poc
+          storageAccount: p1sveleropoc
+          storageAccountKeyEnvVar: AZURE_STORAGE_ACCOUNT_ACCESS_KEY
+          subscriptionId: 76546707-01b4-4754-b18f-c5cfd2a86be2
+      initContainers:
+      - name: velero-plugin-for-microsoft-azure
+        image: velero/velero-plugin-for-microsoft-azure:v1.11.0
+        volumeMounts:
+        - mountPath: /target
+          name: plugins
