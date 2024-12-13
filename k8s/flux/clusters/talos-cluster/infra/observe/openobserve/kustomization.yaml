@@ -33,10 +33,6 @@ patches:
           ZO_S3_BUCKET_NAME: "openobserve"
           ZO_S3_PROVIDER: "minio"
           ZO_COMPACT_DATA_RETENTION_DAYS: "7"
-        postgres:
-          spec:
-            storage:
-              size: 50Gi
         replicaCount:
           ingester: 2
           querier: 2
@@ -45,3 +41,28 @@ patches:
           compactor: 1
           zplane: 1
           reportserver: 1
+        ingester:
+          persistence:
+            enabled: true
+            size: 10Gi
+            storageClassName: synology-csi-ext4-delete
+        querier:
+          persistence:
+            enabled: true
+            size: 10oGi
+            storageClassName: synology-csi-ext4-delete
+        nats:
+          enabled: true
+          config:
+            jetstream:
+              enabled: true
+              fileStore:
+                enabled: true
+                pvc:
+                  enabled: true
+                  size: 20Gi
+                  storageClassName: synology-csi-ext4-retain
+        postgres:
+          spec:
+            storage:
+              size: 50Gi
