@@ -29,7 +29,7 @@ spec:
       backupStorageLocation:
       # https://github.com/vmware-tanzu/velero-plugin-for-microsoft-azure/blob/main/backupstoragelocation.md
       - name: default
-        provider: velero.io/azure
+        provider: azure
         bucket: velero
         credential:
           name: velero-bucket
