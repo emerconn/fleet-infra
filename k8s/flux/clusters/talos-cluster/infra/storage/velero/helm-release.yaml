@@ -26,7 +26,7 @@ spec:
     backupsEnabled: true # Pod Volume Backup
     snapshotsEnabled: false # Volume Snapshots
     configuration:
-      backupStorageLocation:
+      backupStorageLocation: # https://github.com/vmware-tanzu/velero-plugin-for-microsoft-azure/blob/main/backupstoragelocation.md
       - name: default
         provider: velero.io/azure
         bucket: velero
