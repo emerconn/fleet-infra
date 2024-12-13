@@ -43,23 +43,18 @@ patches:
           reportserver: 1
         ingester:
           persistence:
-            enabled: true
             size: 10Gi
             storageClassName: synology-csi-ext4-delete
         querier:
           persistence:
-            enabled: true
-            size: 10oGi
+            size: 10Gi
             storageClassName: synology-csi-ext4-delete
         nats:
           enabled: true
           config:
             jetstream:
-              enabled: true
               fileStore:
-                enabled: true
                 pvc:
-                  enabled: true
                   size: 20Gi
                   storageClassName: synology-csi-ext4-retain
         postgres:
