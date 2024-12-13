@@ -18,7 +18,8 @@ spec:
   install:
     remediation:
       retries: -1
-  values: # https://github.com/vmware-tanzu/helm-charts/blob/main/charts/velero/values.yaml
+  values:
+    # https://github.com/vmware-tanzu/helm-charts/blob/main/charts/velero/values.yaml
     upgradeCRDs: true
     backupsEnabled: true # Pod Volume Backup
     snapshotsEnabled: false # Volume Snapshots
@@ -26,7 +27,7 @@ spec:
     configuration:
       backupStorageLocation:
       - name: default
-        provider: microsoft-azure
+        provider: azure
         bucket: velero
         credential:
           name: velero-bucket
@@ -39,6 +40,7 @@ spec:
       initContainers:
       - name: velero-plugin-for-microsoft-azure
         image: velero/velero-plugin-for-microsoft-azure:v1.11.0
+        imagePullPolicy: IfNotPresent
         volumeMounts:
         - mountPath: /target
           name: plugins
