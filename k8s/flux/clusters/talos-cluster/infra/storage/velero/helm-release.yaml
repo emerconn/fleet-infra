@@ -21,7 +21,7 @@ spec:
   values:
     # https://github.com/vmware-tanzu/helm-charts/blob/main/charts/velero/values.yaml
     upgradeCRDs: true
-    cleanUpCRDs: false # this is borked
+    cleanUpCRDs: false # doesn't work if Helm chart isn't creatomg the namespace
     deployNodeAgent: true # DaemonSet for Pod Volume Backups
     backupsEnabled: true # Pod Volume Backups
     snapshotsEnabled: false # Volume Snapshots
