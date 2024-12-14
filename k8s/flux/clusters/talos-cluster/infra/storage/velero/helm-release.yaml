@@ -35,11 +35,10 @@ spec:
           name: backup-storage-locations
           key: azure-mytestbucket
         config:
-          storageAccountURI: https://p1sveleropoc.blob.core.windows.net
           useAAD: true
           resourceGroup: velero-poc
           storageAccount: p1sveleropoc
-          # storageAccountKeyEnvVar: AZURE_STORAGE_ACCOUNT_ACCESS_KEY
+          storageAccountURI: https://p1sveleropoc.blob.core.windows.net
           subscriptionId: 76546707-01b4-4754-b18f-c5cfd2a86be2
     initContainers:
     - name: velero-plugin-for-microsoft-azure
