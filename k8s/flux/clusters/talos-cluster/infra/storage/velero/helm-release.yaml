@@ -21,19 +21,19 @@ spec:
   values:
     # https://github.com/vmware-tanzu/helm-charts/blob/main/charts/velero/values.yaml
     upgradeCRDs: true
-    cleanUpCRDs: true
-    deployNodeAgent: true # daemonset
-    backupsEnabled: true # Pod Volume Backup
+    cleanUpCRDs: true # disable in prod
+    deployNodeAgent: true # DaemonSet for Pod Volume Backups
+    backupsEnabled: true # Pod Volume Backups
     snapshotsEnabled: false # Volume Snapshots
     configuration:
       backupStorageLocation:
       # https://github.com/vmware-tanzu/velero-plugin-for-microsoft-azure/blob/main/backupstoragelocation.md
-      - name: default
+      - name: azure-mytestbucket
         provider: azure
-        bucket: velero
+        bucket: mytestbucket
         credential:
-          name: velero-bucket
-          key: cloud
+          name: backup-storage-locations
+          key: azure-mytestbucket
         config:
           resourceGroup: velero-poc
           storageAccount: p1sveleropoc

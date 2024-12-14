@@ -4,4 +4,4 @@ kind: Kustomization
 resources:
 - helm-release.yaml
 - namespace.yaml
-- secret-sops-velero-bucket.yaml
+- secret-sops-backup-storage-locations.yaml
