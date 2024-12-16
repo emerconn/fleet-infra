@@ -1,5 +1,13 @@
 {
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+  "customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-kubernetes-tools.vscode-kubernetes-tools",
+        "ms-azuretools.vscode-docker"
+			]
+		}
+	},
   "features": {
     "ghcr.io/devcontainers/features/docker-in-docker:2": {},
     "ghcr.io/devcontainers/features/common-utils:2": {
