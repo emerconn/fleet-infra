@@ -1,6 +1,6 @@
 [book]
 title = "fleet-infra"
-description = "My homelab-as-code, with horrible commit messages."
+description = "homelab"
 authors = ["Emerson Connelly"]
 language = "en"
 multilingual = false
@@ -10,17 +10,17 @@ src = "src"
 git-repository-url = "https://github.com/emerconnelly/fleet-infra"
 git-repository-icon = "fa-github"
 git-branch = "main"
-default-theme = "navy"
-preferred-dark-theme = "navy"
+default-theme = "ayu"
+preferred-dark-theme = "ayu"
 no-section-label = true
 
 [output.html.fold]
-enable = true
+enable = false
 level = 1
+
+[output.html.search]
+limit-results = 15
 
 [output.html.playground]
 editable = true
 line-numbers = true
-
-[output.html.search]
-limit-results = 15
