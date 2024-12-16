@@ -7,7 +7,7 @@ resources:
 - nfs-subdir-external-provisioner
 - rook-ceph-cluster
 - rook-ceph-operator
-- rook-ceph-test-buckets
+# - rook-ceph-test-buckets
 - snapshot-controller
 - synology-csi-talos
 - velero
