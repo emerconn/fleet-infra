@@ -20,9 +20,6 @@
       "version": "latest"
     },
     "ghcr.io/jsburckhardt/devcontainer-features/flux:1": {},
-    "ghcr.io/devcontainers-extra/features/tailscale:1": {},
-    "ghcr.io/devcontainers-extra/features/bash-command:1": {
-      "command": "minikube start"
-    }
+    "ghcr.io/devcontainers-extra/features/tailscale:1": {}
   }
 }
