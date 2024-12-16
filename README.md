@@ -1,6 +1,6 @@
 <div align="center">
 
-  # homelab
+  # fleet-infra
 
   [![flux](https://github.com/emerconnelly/fleet-infra/actions/workflows/flux.yaml/badge.svg?branch=main)](https://github.com/emerconnelly/fleet-infra/actions/workflows/flux.yaml)
   [![github-pages](https://github.com/emerconnelly/fleet-infra/actions/workflows/github-pages.yaml/badge.svg)](https://github.com/emerconnelly/fleet-infra/actions/workflows/github-pages.yaml)
