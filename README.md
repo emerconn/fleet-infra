@@ -5,7 +5,7 @@
 
   # fleet-infra
 
-  ![homelab](.github/homelab.webp)
+  [![homelab](.github/homelab.webp)](https://raw.githubusercontent.com/emerconn/fleet-infra/refs/heads/main/.github/homelab.webp)
 
 </div>
 
