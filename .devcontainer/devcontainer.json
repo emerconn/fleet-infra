@@ -5,12 +5,12 @@
       "configureZshAsDefaultShell": true
     },
     "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {
-      "verison": "latest",
+      "version": "latest",
       "helm": "latest",
       "minikube": "latest"
     },
     "ghcr.io/devcontainers/features/terraform:1": {
-      "verison": "latest",
+      "version": "latest",
       "terragrunt": "latest",
       "tflint": "latest"
     }
