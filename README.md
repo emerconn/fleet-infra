@@ -5,6 +5,8 @@
   [![flux](https://github.com/emerconnelly/fleet-infra/actions/workflows/flux.yaml/badge.svg?branch=main)](https://github.com/emerconnelly/fleet-infra/actions/workflows/flux.yaml)
   [![github-pages](https://github.com/emerconnelly/fleet-infra/actions/workflows/github-pages.yaml/badge.svg)](https://github.com/emerconnelly/fleet-infra/actions/workflows/github-pages.yaml)
 
+  [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/emerconn/fleet-infra)
+
 </div>
 
 # hardware 
