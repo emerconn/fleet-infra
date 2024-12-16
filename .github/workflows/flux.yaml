@@ -27,7 +27,7 @@ jobs:
     - name: Set up Tailscale
       uses: tailscale/github-action@v2
       with:
-        version: 1.78.3
+        version: 1.78.1
         oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
         oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
         tags: tag:github-actions
