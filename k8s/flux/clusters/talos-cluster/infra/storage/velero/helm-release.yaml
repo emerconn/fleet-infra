@@ -42,7 +42,7 @@ spec:
           subscriptionId: 76546707-01b4-4754-b18f-c5cfd2a86be2
     initContainers:
     - name: velero-plugin-for-microsoft-azure
-      image: velero/velero-plugin-for-microsoft-azure:v1.11.0
+      image: velero/velero-plugin-for-microsoft-azure:v1.11.1
       imagePullPolicy: IfNotPresent
       volumeMounts:
       - mountPath: /target
