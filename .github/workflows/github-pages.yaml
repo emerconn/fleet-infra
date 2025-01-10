@@ -34,7 +34,7 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Build docs
-        uses: docker://ghcr.io/bjw-s/mdbook:0.4.43@sha256:d5ada054e3cf186c83bd6c45e864028b9ce0e5f2ce6284df9e3d6bf83570cbec
+        uses: docker://ghcr.io/bjw-s/mdbook:0.4.43@sha256:fdc61a86bc78f865d967a87912c37fecd8e26e289a97c040e0ab221ff5b0de18
         with:
           args: mdbook build docs
 
