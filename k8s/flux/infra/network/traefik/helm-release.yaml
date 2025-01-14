@@ -14,7 +14,7 @@ spec:
         kind: HelmRepository
         name: traefik
         namespace: flux-system
-      version: "33.2.1"
+      version: "34.0.0"
   interval: 1h
   install:
     remediation:
