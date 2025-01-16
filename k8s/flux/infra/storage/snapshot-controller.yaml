@@ -13,7 +13,7 @@ spec:
         kind: HelmRepository
         name: piraeus
         namespace: flux-system
-      version: "4.0.0"
+      version: "4.0.1"
   interval: 1h
   install:
     remediation:
