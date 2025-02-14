@@ -2,7 +2,6 @@ machine:
   network:
     hostname: talos-cp-02.homelab.emerconn.com
     interfaces:
-    - deviceSelector:
-        name: eno1
+    - interface: eno1
       addresses:
       - 172.21.0.3/24
