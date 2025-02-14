@@ -3,6 +3,7 @@ machine:
     hostname: talos-cp-02
     interfaces:
     - deviceSelector:
-        busPath: "0*"
+        physical: true
+      # busPath: "eno1" or "0*" for single interface
       addresses:
       - 172.21.0.31/24
