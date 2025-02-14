@@ -27,6 +27,16 @@ machine:
     image: ghcr.io/siderolabs/kubelet:v1.32.1
     extraArgs:
       rotate-server-certificates: true
+  network:
+    interfaces:
+    - deviceSelector:
+        physical: true
+      # busPath: "eno1" or "0*" for single interface
+      routes:
+      - network: 0.0.0.0/0
+        gateway: 172.21.0.1
+    nameservers:
+    - 172.17.0.1
   time:
     servers:
     - time.cloudflare.com
