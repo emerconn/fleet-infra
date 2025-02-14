@@ -6,7 +6,7 @@ helm repo update
 helm upgrade \
     cilium \
     cilium/cilium \
-    --version 1.16.6 \
+    --version 1.17.1 \
     --install \
     --namespace kube-system \
     --set ipam.mode=kubernetes \
@@ -42,4 +42,4 @@ helm upgrade \
 
 # or
 
-helm upgrade cilium cilium/cilium --namespace kube-system --version 1.16.6 --reuse-values
+helm upgrade cilium cilium/cilium --namespace kube-system --version 1.17.1 --reuse-values
