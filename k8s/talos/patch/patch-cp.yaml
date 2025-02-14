@@ -1,7 +1,0 @@
-machine:
-  network:
-    interfaces:
-    - deviceSelector:
-      physical: true
-      vip:
-        ip: 172.21.0.2
