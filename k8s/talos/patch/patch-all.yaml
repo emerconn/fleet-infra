@@ -1,5 +1,3 @@
-# TODO: change node names, eg. cp-01.talos-cluster.homelab.emerconnelly.com
-
 cluster:
   network:
     cni:
