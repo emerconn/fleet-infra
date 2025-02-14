@@ -4,7 +4,6 @@ cluster:
       name: none # use Cillium
   proxy:
     disabled: true # use Cillium
-    image: registry.k8s.io/kube-proxy:v1.32.2
   apiServer:
     image: registry.k8s.io/kube-apiserver:v1.32.2
   controllerManager:
