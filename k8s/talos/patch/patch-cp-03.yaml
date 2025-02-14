@@ -6,4 +6,4 @@ machine:
         physical: true
       # busPath: "eno1" or "0*" for single interface
       addresses:
-      - 172.21.0.32/24
+      - 172.21.0.4/24
