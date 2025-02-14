@@ -1,6 +1,6 @@
 machine:
   network:
-    hostname: talos-cp-01
+    hostname: talos-cp-01.homelab.emerconn.com
     interfaces:
     - deviceSelector:
       physical: true
