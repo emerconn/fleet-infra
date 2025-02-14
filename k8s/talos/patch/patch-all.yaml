@@ -4,7 +4,7 @@ cluster:
       name: none # manually install Cillium
   proxy:
     disabled: true # manually install Cillium
-    image: registry.k8s.io/kube-proxy:v1.32.1
+    image: registry.k8s.io/kube-proxy:v1.32.2
   apiServer:
     image: registry.k8s.io/kube-apiserver:v1.32.1
   controllerManager:
