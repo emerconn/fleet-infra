@@ -2,7 +2,7 @@ machine:
   network:
     interfaces:
     - vip:
-        ip: 172.21.0.2
+      ip: 172.21.0.2
     extraHostEntries:
     - ip: 172.21.0.2
       aliases:
