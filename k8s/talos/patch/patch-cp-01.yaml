@@ -4,6 +4,6 @@ machine:
     interfaces:
     - deviceSelector:
       physical: true
-      # busPath: "eno1" or "0*" for single interface
+    # busPath: "eno1" or "0*" for single interface
       addresses:
       - 172.21.0.2/24
