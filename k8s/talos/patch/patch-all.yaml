@@ -29,9 +29,9 @@ machine:
       rotate-server-certificates: true
   network:
     interfaces:
-    - deviceSelector:
-      physical: true
-    # busPath: "eno1" or "0*" for single interface
+    - interface: eno1
+  # - deviceSelector:
+    # physical: true
       routes:
       - network: 0.0.0.0/0
         gateway: 172.21.0.1
