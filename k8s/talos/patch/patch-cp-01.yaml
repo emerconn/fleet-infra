@@ -2,8 +2,6 @@ machine:
   network:
     hostname: talos-cp-01.homelab.emerconn.com
     interfaces:
-    - deviceSelector:
-      physical: true
-    # busPath: "eno1" or "0*" for single interface
+    - interface: eno1
       addresses:
       - 172.21.0.2/24
