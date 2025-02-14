@@ -5,4 +5,4 @@ machine:
     - deviceSelector:
         busPath: "0*"
       addresses:
-      - 172.21.0.33/24
+      - 172.21.0.8/24
