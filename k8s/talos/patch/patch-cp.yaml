@@ -1,17 +1,8 @@
 machine:
   network:
     interfaces:
-    - deviceSelector:
-        physical: true
-      # busPath: "eno1" or "0*" for single interface
-      routes:
-      - network: 0.0.0.0/0
-        gateway: 172.21.0.1
-      vip:
+    - vip:
         ip: 172.21.0.2
-    nameservers:
-    - 172.17.0.1
-
     extraHostEntries:
     - ip: 172.21.0.2
       aliases:
