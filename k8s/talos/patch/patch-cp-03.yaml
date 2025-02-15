@@ -5,3 +5,5 @@ machine:
     - interface: eno1
       addresses:
       - 172.21.0.4/24
+      vip:
+        ip: 172.21.0.2
