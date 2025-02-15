@@ -1,6 +1,6 @@
 machine:
   network:
-    hostname: talos-cp-01.homelab.emerconn.com
+    hostname: talos-cp-01
     interfaces:
     - interface: eno1
       addresses:
