@@ -1,9 +1,9 @@
 machine:
+  install:
+    disk: /dev/sdb
   network:
-    hostname: talos-cp-02.homelab.emerconn.com
+    hostname: cp-02.tal-clu-1.hl.emerconn.com
     interfaces:
     - interface: eno1
       addresses:
       - 172.21.0.3/24
-      vip:
-        ip: 172.21.0.2

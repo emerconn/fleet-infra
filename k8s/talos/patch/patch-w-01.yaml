@@ -1,6 +1,8 @@
 machine:
+  install:
+    disk: REPLACE_ME
   network:
-    hostname: talos-w-01.homelab.emerconn.com
+    hostname: w-01.tal-clu-1.hl.emerconn.com
     interfaces:
     - interface: eno1
       addresses:
