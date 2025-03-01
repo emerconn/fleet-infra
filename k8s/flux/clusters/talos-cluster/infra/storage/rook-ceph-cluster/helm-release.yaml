@@ -13,7 +13,7 @@ spec:
       rulesNamespaceOverride: kube-prometheus-stack
     toolbox:
       enabled: true
-      image: docker.io/rook/ceph:v1.16.3 # same image as the operator, includes s5cmd
+      image: docker.io/rook/ceph:v1.16.4 # same image as the operator, includes s5cmd
     cephClusterSpec:
       dashboard:
         enabled: true
