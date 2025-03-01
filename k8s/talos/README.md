@@ -1,6 +1,8 @@
 # how to init & bootstrap
 
-- do this stuff
+- verify install disk, edit patches to match: `talosctl get disks -n <DHCP_IP> -e <DHCP_IP> --insecure`
+
+- create & apply Talos configs, bootstrap ETCD, get kubeconfig, approve CSR
 
 ```bash
 talosctl gen config tal-clu-1 https://cp-01.tal-clu-1.hl.emerconn.com:6443 --config-patch @patch/patch-all.yaml
