@@ -1,6 +1,6 @@
 machine:
   install:
-    disk: REPLACE_ME
+    disk: /dev/nvme0n1
   network:
     hostname: w-01.tal-clu-1.hl.emerconn.com
     interfaces:
