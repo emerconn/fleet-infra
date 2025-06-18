@@ -452,7 +452,7 @@ cluster:
         key: ""
     # API server specific configuration options.
     apiServer:
-        image: registry.k8s.io/kube-apiserver:v1.32.2 # The container image used in the API server manifest.
+        image: registry.k8s.io/kube-apiserver:v1.33.2 # The container image used in the API server manifest.
         
         # # Configure the API server admission plugins.
         # admissionControl:
