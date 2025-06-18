@@ -508,7 +508,7 @@ cluster:
         #         timeout: 3s
     # Controller manager server specific configuration options.
     controllerManager:
-        image: registry.k8s.io/kube-controller-manager:v1.32.2 # The container image used in the controller manager manifest.
+        image: registry.k8s.io/kube-controller-manager:v1.33.2 # The container image used in the controller manager manifest.
     # Kube-proxy server-specific configuration options
     proxy:
         disabled: true # Disable kube-proxy deployment on cluster bootstrap.
