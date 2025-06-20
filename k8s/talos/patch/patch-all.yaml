@@ -21,7 +21,7 @@ machine:
     - cpufreq.default_governor=performance
     - intel_idle.max_cstate=0
   kubelet:
-    image: ghcr.io/siderolabs/kubelet:v1.32.2
+    image: ghcr.io/siderolabs/kubelet:v1.33.2
     extraArgs:
       rotate-server-certificates: true
   network:
