@@ -11,19 +11,23 @@ cluster:
     cni:
       name: none # use Cillium
   allowSchedulingOnControlPlanes: true
+  extraManifests:
+  - https://raw.githubusercontent.com/alex1989hu/kubelet-serving-cert-approver/main/deploy/standalone-install.yaml # for metrics server
+  - https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml # for metrics server
 
 machine:
   install:
     image: factory.talos.dev/installer/0b4f48281e59712995bea152e8e62f3082be4ab66d2bdd0ca83cb3ce8c4509a9:v1.11.0 # intel-ucode, i915-ucode, iscsi-tools, btrfs
     wipe: true
-    extraKernelArgs: # https://www.talos.dev/v1.8/talos-guides/configuration/performance-tuning/
+    extraKernelArgs:
+    # https://www.talos.dev/v1.8/talos-guides/configuration/performance-tuning/
     - talos.platform=metal
     - cpufreq.default_governor=performance
     - intel_idle.max_cstate=0
   kubelet:
     image: ghcr.io/siderolabs/kubelet:v1.32.2
     extraArgs:
-      rotate-server-certificates: true
+      rotate-server-certificates: true # for metrics server
   network:
     interfaces:
     - interface: eno1
