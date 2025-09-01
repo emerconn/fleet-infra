@@ -2,7 +2,7 @@
 
 ## Cluster Setup
 
-- verify install disk, edit patches to match: `talosctl get disks -n <DHCP_IP> -e <DHCP_IP> --insecure`
+- verify install disk, edit patches to match: `talosctl get disks -n <ip> -e <ip> --insecure`
 
 - create & apply Talos configs, bootstrap ETCD, get kubeconfig, approve CSR
 
