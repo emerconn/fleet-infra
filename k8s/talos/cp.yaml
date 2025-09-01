@@ -12,8 +12,6 @@ machine:
   kubelet:
     defaultRuntimeSeccompProfileEnabled: true
     disableManifestsDirectory: true
-  install:
-    disk: /dev/sda
   registries: {}
   features:
     rbac: true
