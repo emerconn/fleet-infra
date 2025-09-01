@@ -45,16 +45,13 @@
 ### Talos
 
 - upgrade nodes sequentially, starting with control plane
+  - `btrfs`, `i915`, `intel-ucode`, `iscsi-tools`
 
   ```bash
   talosctl upgrade \
     -i "factory.talos.dev/metal-installer/0b4f48281e59712995bea152e8e62f3082be4ab66d2bdd0ca83cb3ce8c4509a9:v<version>" \
     -n "<node_name>"
   ```
-  - btrfs
-  - i915
-  - intel-ucode
-  - iscsi-tools
 
 ### Kubernetes
 
