@@ -9,6 +9,7 @@
 ```bash
 # generate base config (contains secrets)
 talosctl gen config tal-clu-1 https://cp-01.tal-clu-1.hl.emerconn.com:6443
+mv controlplane.yaml cp.yaml && mv worker.yaml w.yaml
 
 # apply generic and machine-specific patches
 talosctl machineconfig patch cp.yaml \ # repeat for cp-02,-03
