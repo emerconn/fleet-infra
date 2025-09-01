@@ -37,7 +37,7 @@ kubectl certificate approve <CSR-NAME>
 
 ```bash
 talosctl upgrade \
-  -i "factory.talos.dev/metal-installer/0b4f48281e59712995bea152e8e62f3082be4ab66d2bdd0ca83cb3ce8c4509a9:v1.10.5" \
+  -i "factory.talos.dev/metal-installer/0b4f48281e59712995bea152e8e62f3082be4ab66d2bdd0ca83cb3ce8c4509a9:v1.11.0" \
   -n "cp-01"
 ```
   - btrfs
