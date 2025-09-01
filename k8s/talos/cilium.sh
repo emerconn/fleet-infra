@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 
 cilium_version=1.18.1
 prometheus_service_monitor_enabled=false
