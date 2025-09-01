@@ -63,3 +63,7 @@
   ```bash
   talosctl upgrade-k8s -n cp-01 --to <k8s-version>
   ```
+
+## To Do
+
+- TODO: figure out how/where to store secrets/keys in cp.yaml
