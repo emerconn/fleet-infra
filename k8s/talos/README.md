@@ -1,4 +1,6 @@
-# how to init & bootstrap
+# Talos
+
+## Cluster Setup
 
 - verify install disk, edit patches to match: `talosctl get disks -n <DHCP_IP> -e <DHCP_IP> --insecure`
 
@@ -29,4 +31,24 @@ kubectl certificate approve <CSR-NAME>
 
 - install `kube-prometheus-stack` via Flux
 
-- upgrade Cilium via Helm w/ Prometheus service monitors
+## Patching
+
+### Talos
+
+```bash
+talosctl upgrade \
+  -i "factory.talos.dev/metal-installer/0b4f48281e59712995bea152e8e62f3082be4ab66d2bdd0ca83cb3ce8c4509a9:v1.10.5" \
+  -n "cp-01"
+```
+  - btrfs
+  - i915
+  - intel-ucode
+  - iscsi-tools
+- upgrade nodes one-by-one, starting with control plane followed by workers
+
+### Kubernetes
+
+```bash
+talosctl upgrade-k8s --to 1.33.2 --dry-run -n cp-01
+```
+- remove `--dry-run` when ready
