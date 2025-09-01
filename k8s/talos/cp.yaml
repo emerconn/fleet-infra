@@ -10,48 +10,10 @@ machine:
     key: LS0tLS1CRUdJTiBFRDI1NTE5IFBSSVZBVEUgS0VZLS0tLS0KTUM0Q0FRQXdCUVlESzJWd0JDSUVJR2NtZnV4YmtUOWZKUE9SM05xM1J6enFkcUdxcUpxS0ZhZVVnMXQ5VVFoagotLS0tLUVORCBFRDI1NTE5IFBSSVZBVEUgS0VZLS0tLS0K
   certSANs: []
   kubelet:
-    image: ghcr.io/siderolabs/kubelet:v1.32.2
-    extraArgs:
-      rotate-server-certificates: "true"
     defaultRuntimeSeccompProfileEnabled: true
     disableManifestsDirectory: true
-  network:
-    interfaces:
-    - interface: eno1
-      routes:
-      - network: 0.0.0.0/0
-        gateway: 172.21.0.1
-      vip:
-        ip: 172.21.0.7
-    nameservers:
-    - 172.17.0.1
-    extraHostEntries:
-    - ip: 172.21.0.2
-      aliases:
-      - cp-01.tal-clu-1.hl.emerconn.com
-    - ip: 172.21.0.3
-      aliases:
-      - cp-02.tal-clu-1.hl.emerconn.com
-    - ip: 172.21.0.4
-      aliases:
-      - cp-03.tal-clu-1.hl.emerconn.com
-    - ip: 172.21.0.8
-      aliases:
-      - w-01.tal-clu-1.hl.emerconn.com
-    - ip: 172.21.0.7
-      aliases:
-      - vip.tal-clu-1.hl.emerconn.com
   install:
     disk: /dev/sda
-    extraKernelArgs:
-    - talos.platform=metal
-    - cpufreq.default_governor=performance
-    - intel_idle.max_cstate=0
-    image: factory.talos.dev/installer/0b4f48281e59712995bea152e8e62f3082be4ab66d2bdd0ca83cb3ce8c4509a9:v1.11.0
-    wipe: true
-  time:
-    servers:
-    - time.cloudflare.com
   registries: {}
   features:
     rbac: true
@@ -74,8 +36,6 @@ cluster:
     endpoint: https://cp-01.tal-clu-1.hl.emerconn.com:6443
   clusterName: tal-clu-1
   network:
-    cni:
-      name: none # use cilium
     dnsDomain: cluster.local
     podSubnets:
     - 10.244.0.0/16
@@ -92,7 +52,6 @@ cluster:
   serviceAccount:
     key: LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlKS1FJQkFBS0NBZ0VBMWIxWHV2RkFmOWpxMlFSVkJWRE5BZ2g4OHRWTVZHalRycGw3NUhGSXN4dytOdS9OCm9mbHFmb0xKYkpYbXZwcEdjZ3g5NHVaMEliWkYzc0QzaktWWGFGWHBBSmNCOGV5VTVvb3p0bnFSSGxxZmxsMWUKQlVSQkVheCt3dS9GY3pvaGYwMkwxM2VOaVlYWjF6TmpWV3dydmVqWndITHdubk1TVnNmd1ZjZG9LL0cvUk9tegovSDJ0c1VGd1JpYS9vWUwzREpqazFkYmZRWTM2dDJoYmdKYWZDRklhRCtQQTlYR1pZS01icDM5VnRmZHQ3KzhtCkhBenlQenZjbjJSbUlaQStmNW85ZWkxVmtzdUluQU5yTjMzb0JsZk1rRzgxTDdIS1o4Z1J6V0kvVTNpNWxuUy8KZG9VbkdEVFhPT3BrYjQ3VzlWN0swbmY1ZVN2SUpTZ2RmOVF4RmNZWDh0NlF1c3VIbTFtYjdYbkJIb2lJMzVJVwoxdTdsQ2Zyamhwa3lLY3VhVmE2eGhjeHFURkl6Zlk0Y3NOemxudjZiM2RIcm90Vk5RcXpyTmtIUlJwaUtRV0czCmFhaEdBNDdmSzR0RUVyVC9ZOGJPVDZLdzg3MGhPN0x3K1JNMDhoZnFXQVoxS1dsY0gzOTRWWjVyb29wSWJlbm8KL3dpTHRGT1FUV010Qm1SM3BZS3RiaFN0SUtGWDRSMXo5NndzaFZkV1lDL21YQmRuTExHUEttYzhxREF2b3NIUApnaitJS29Lam96K2hRMHMvQnN1U01ZbGI5UlhMUHdPSzlvclk0cC94RTR3Zm8wemFDdnVXZi9zTk5wTlRVNTc4Cmp6ejBMRW9ycnpXOXBvQmVzNExEM0VaZVhWSmZkR0kxVS9tODZSSm5HVUhscHd3TFE3UE4yQ1dFWWZjQ0F3RUEKQVFLQ0FnQmtjS2FpWGE1dXBiT3VxWjkrY1ByMW9xRjh4NGtuL1Y3RUpMSVlwcmVBRzV5TTJtR3FaUGVMWGRCagpxNG1VTmhFMmxQSXZSeFo1cFJydVU0WEEzUTNYSk0vcWpBdkk4T0VEK1J2Vis0RG9YN093eUUxZmNqU1ZwcGFtCjZsL0NCeVlvbVh0R2xKSzVkbUhwQStnQkEyVUd5RDVUZG0vbU5iTC9mdE5NcS9raTlXWnBidDA2b0tDWHRHV2IKUWFnNXNMNkJkL1BKSFVFcW9CcWFSM3NBVVVlSWRIUjAxUlVmQWZRT2VuZUxYWVljalpwbTd0M2N2cVN6M0dDUApzbkZnQWxXc1J3SHV3UkQrZTVERnA4R2hnUlFncnUrZFMvVVZaWm4wN1FxWWxqdWw4UXhkVEoyUWgzL1ltelFzCk5kRmVyeVFLaURJTmQzMlBXR2lrTlZhdmREcGY0Ym44Vi9WTTgrM3JrRFFBVHZpUmlaRmN2SDJpYjlYYWJzOXEKenRxUllKNFhKQisrcS9MSEF3RzdxNVFBbFpFUGQxNjNDbFJLL2QrTTgrTW44dVU3Y1k1M0RDSjcyZlVpMk9ETQo5QXNEZ0kwdjZSOEJORzJGTWQ3SWVHaFNJVFdyeHh0SXIyb3Z5SERmcHZLSTQ0SGZkYmdSZ05VdlBDamh0aXZNClQ0MDN2bFRyRFlwS2VBQlZ6RXo0dWZTNk9RSTVCUnFFMTBvK3Z4Tjg3Zks4dENoTVVsYWN5aFNmc0xyOGU5ZlIKNFg1K0dOVlFYazU2clhqcjE4cTcvMEZvVTdJK0d0WHhMMkxZQWplaWpQUThHbzVpa2xodmNvWmU5Y0FlVi9hTQpKa1ZGOG1pQlRQbFliZTNvRnNPRWlVUEpPdHJrcWh6clZrWFRsUTZvY0JnVEV2UjlnUUtDQVFFQStYK01HNWxjCnRndDArOWJRTmo3QXdSakJqT1FRWFp3am1XeUpXT0FXYzVuODVGWnNBbVBDZi9EWmc1ZmRETmFHZ1o1TVY0WHcKZFd2V254YU4yVzE3MW9GNFR1MnVYUkZQSHp2VndnZTJWK1lPRzlrbHZaK0hYdmg2ZTIxSDkvZG1uRlZMN09mSQppRElONDQ1emdwVDJvUGcxbzJNTlBEVXhMV01PSVppdTJnSWI0aHhKK1hTMEVRemU5TnRaNFRkdndxbTVCTHlLCm9Ld3ZSVTV6UGpHTno5R3pjYXFyUFh5eXIxUWphNTZ4NnI0aHZLT0VFaDdxTGRCVmNVTEIyV1NrSGVjYmlyc28KMnJDa3R6LzY2UXFFSlQwZFFWcVFJcUhWZ0NSbjUycnNmZTVMVkVQQnYxNlIrbW1NUDdpdHBNako4Ulh4TGNYbQp6YlVQYjloTW90OGxOd0tDQVFFQTIwOCtGc2krVXZrN2RENEdEakdqc2NCaFZnMEptcG5GSGUxUUFodFQyT0g3CnVORkR2SkJhQW5kejZMMVZtNDlvTjloN21XaU51UzFkMCtSRkk3WGdDQWpkRVhxQlhEMEFtRmJGSkQvbHV6YzAKdHVsb05jSi8wTmpQaFdWZEJXV1dGVUUrRFZlZXI2SU05SjFlT09qTEJTZms0SVBNb1ZIZDN3ei91SWtFazlybApvbXIwRHNMNFc2S2ZOeXdwWjBVcXFyYjJBWVJiam9DUjFLQ1dIbmhJb1ZSa0dRL1dDbkZ2aWc3ci9OOEV5eFU2Cng2dXBrVTlOY3pudVltcFM1RUZkY2tsUFVUTlhBRDNzeXFETzRQWjF2aUxWSEIrZWh2Y2dEUHByRFJ1cnpsMm8KQ01YZDkvQTFUa1YvRjJ1WXdKRHczTnZXcWhha1E3emtoSFc3Q0ZzSlFRS0NBUUJ2YUZUWHZoTjM5b1cyTHFXcQprenJlL243dXVxZlVKUFNBZmNhV3VQbE5oV1UzVUovS01XR1lYNlBBN3Y3MXpKVWpLOXhLK0xQMnVzQ0xLVGNOCjc2VnNrME4xZXd4dzRsbkNTS1dham5jTnFOeUQ4dUszV1pUSkE0c3RzZzZBMnlnbWhxL3dpVTh5QWFmU0JMbnYKaFRUYmkvbm5pME5OcnpMV1lYVGQ2NStvR1dqNS9rZko3Q0s3dWxPVVlwNHZ3dUZVdXhTeTJMM09JUlM2amQxSAoyRGpLbzRqTktMaHVMRkJkbWVSM0dkVzRURTRrUForcnQ4STUwdDFVUmNycGw5Ynd3MUc1RVBtZExXTmZzR0lKCnpYaFVhSVczdVFqRGJpQTNxQW45ZS9FK0NqbjQxb2lkTzAxVDArMmNSb3JER2lXU1VZbndObjVwUElBNElRMlgKYkt6aEFvSUJBUURRdTFNMURFdFpYYTJncllmRjZxa0tmVGduVnJGVlhCV29yajRBUTFKQ2twT3JERUdVTHkvOApPUVV3OTBPTGs2cDF2SzJuRFVRV2czOVNOV2s0MjlvbXk0amRJZVFOam1JS25FdDJmUHFDZmNER2R0Q2dta1pjCjJINXJVRmFBMUhkTU01U0R6bWxTY01Jejc3UEdKb3RVbE92YVpKZFcwenlCRnpZc3hQeCtYVkZDak5sTlUzUmUKZ3lGV3VjbU9hTjU3TFRobnFUb2JIM090RkVyTkpWNjdiajczTzROVTNUSjBERSsvbGVSU0JocTBBRWFiN3dhZwpMUHNlNEdPVXJFSHNqS25aZHl2UEp5RkFtbDFNOEVhUWVVYXNSY3YwV1RGQUtQZkt1aE9EanRCbnlTdkMxL1ZrClVmRHNzWlBwZEFwTHExRmRBYi9HV1BxR3VDY1RoTklCQW9JQkFRQ05zOFBrVm5OUHJ2dUkxR2FBT1ljL1dNV2wKL2x2K2p4anNvMXNkMUFpVEIwY1IzTVYwdGprc0J4M1VGVWV2K2xWU0pyTkMvNVkrbjNKTW5GM2d3N1htb0NpZwpUTWUwODRBb2hqZ0lqUVJNcEs3di9IcG80KzdQUU9BMVlwMmxicDhnUVAwRzMwOWZNZlQyTmZUbFJWV0lRbUZ6CjY2M0pzYmVmeFh2elRwVWVTVjh4ellWSGw5cUhEeTBYaDRXejk4d3czSjY1dHd3SUtZL3BTRHFSQVQxazAxdTkKUnJuWmw5OWp3YXltQlZMWmZKWENjcS9vb0tRZjU2cllTQlFFRjhZSXMxcVo1SVZxVXRBOGRHdzI0MjdqcjRQMQp1clJrRkt5MWZFSEkyV2R4aEpGazFvSFFicENIb0dlV2s3S05DQmplTDN6NnNoelFYc25maHQ4U1QrUzMKLS0tLS1FTkQgUlNBIFBSSVZBVEUgS0VZLS0tLS0K
   apiServer:
-    image: registry.k8s.io/kube-apiserver:v1.32.2
     certSANs:
     - cp-01.tal-clu-1.hl.emerconn.com
     disablePodSecurityPolicy: true
@@ -118,13 +77,6 @@ cluster:
       kind: Policy
       rules:
       - level: Metadata
-  controllerManager:
-    image: registry.k8s.io/kube-controller-manager:v1.32.2
-  proxy:
-    disabled: true
-    image: registry.k8s.io/kube-proxy:v1.32.2
-  scheduler:
-    image: registry.k8s.io/kube-scheduler:v1.32.2
   discovery:
     enabled: true
     registries:
@@ -137,4 +89,3 @@ cluster:
       key: LS0tLS1CRUdJTiBFQyBQUklWQVRFIEtFWS0tLS0tCk1IY0NBUUVFSUVNaXVuaGQzU1U4UWltRXNTTVdYTGovT0FvcWE2c1A2c2M3T1ZPUFdtZi9vQW9HQ0NxR1NNNDkKQXdFSG9VUURRZ0FFUlBPSHlKSnlIU2JNVnB3a0FjeWJZYS9wMWVYT0pwSXdkMnJDdHBIemNDcC84U0JEa0NwZgpxSGJHOWwzbUhQU2ZnT3djVnZOOG9RY1BxNFFNam93eXFRPT0KLS0tLS1FTkQgRUMgUFJJVkFURSBLRVktLS0tLQo=
   extraManifests: []
   inlineManifests: []
-  allowSchedulingOnControlPlanes: true
