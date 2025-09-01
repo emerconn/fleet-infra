@@ -16,7 +16,7 @@ talosctl machineconfig patch cp.yaml \ # repeat for cp-02,-03
   --patch @patch/all.yaml \
   --patch @patch/cp-01.yaml \
   -o cp-01.yaml
-talosctl machineconfig patch w-01.yaml \
+talosctl machineconfig patch w.yaml \
   --patch @patch/all.yaml \
   --patch @patch/w-01.yaml \
   -o w-01.yaml
@@ -31,6 +31,7 @@ talosctl bootstrap -n cp-01.tal-clu-1.hl.emerconn.com -e cp-01.tal-clu-1.hl.emer
 # generate kubeconfig
 talosctl kubeconfig --force -n cp-01.tal-clu-1.hl.emerconn.com -e cp-01.tal-clu-1.hl.emerconn.com --talosconfig=./talosconfig
 
+# approve CSRs
 kubectl get csr
 kubectl certificate approve <csr-name>
 ```
