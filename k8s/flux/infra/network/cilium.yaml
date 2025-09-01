@@ -1,4 +1,4 @@
-# cant get this fuckin thing to import with flux
+# TODO: cant get this fuckin thing to import with flux
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:

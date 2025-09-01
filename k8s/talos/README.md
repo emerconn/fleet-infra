@@ -36,9 +36,9 @@ kubectl get csr
 kubectl certificate approve <csr-name>
 ```
 
-- install Cilium via Helm
+- install Cilium via [cilium.sh](./cilium.sh)
 
-- install `kube-prometheus-stack` via Flux
+- proceed with Flux
 
 ## Upgrades
 
