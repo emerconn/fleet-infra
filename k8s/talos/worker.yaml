@@ -1,6 +1,7 @@
 version: v1alpha1
 debug: false
 persist: true
+
 machine:
   type: worker
   token: sjr5g0.0tcp1kd6951t9w5t
@@ -61,6 +62,7 @@ machine:
     hostDNS:
       enabled: true
       forwardKubeDNSToHost: true
+
 cluster:
   id: 7pk8eToiunjOQ6_jTi-P4-0JQSDGMHkcYp6T-QQCJU0=
   secret: cE4Lx2JYK0RH5V73AMmkTKnvhghP6irYDng95379vkg=
