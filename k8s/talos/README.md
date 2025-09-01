@@ -57,7 +57,7 @@ talosctl upgrade \
 
 ### Kubernetes
 
-- run checks and pull images
+- run checks and pre-pull images
 ```bash
 talosctl upgrade-k8s -n cp-01 --to <k8s-version> --dry-run
 ```
