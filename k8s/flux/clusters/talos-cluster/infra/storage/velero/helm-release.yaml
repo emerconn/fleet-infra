@@ -13,7 +13,7 @@ spec:
         kind: HelmRepository
         name: vmware-tanzu
         namespace: flux-system
-      version: "8.4.0"
+      version: "10.1.3"
   interval: 1h
   install:
     remediation:
