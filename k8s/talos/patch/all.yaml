@@ -1,10 +1,10 @@
 cluster:
   apiServer:
-    image: registry.k8s.io/kube-apiserver:v1.33.4
+    image: registry.k8s.io/kube-apiserver:v1.34.1
   scheduler:
-    image: registry.k8s.io/kube-scheduler:v1.33.4
+    image: registry.k8s.io/kube-scheduler:v1.34.1
   controllerManager:
-    image: registry.k8s.io/kube-controller-manager:v1.33.4
+    image: registry.k8s.io/kube-controller-manager:v1.34.1
   proxy:
     disabled: true # use Cillium
   network:
@@ -25,7 +25,7 @@ machine:
     - cpufreq.default_governor=performance
     - intel_idle.max_cstate=0
   kubelet:
-    image: ghcr.io/siderolabs/kubelet:v1.33.4
+    image: ghcr.io/siderolabs/kubelet:v1.34.1
     extraArgs:
       rotate-server-certificates: true # for metrics server
   network:
