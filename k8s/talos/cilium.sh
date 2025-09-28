@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-cilium_version=1.18.1
+cilium_version=1.18.2
 prometheus_service_monitor_enabled=false
 
 helm repo add cilium https://helm.cilium.io/
