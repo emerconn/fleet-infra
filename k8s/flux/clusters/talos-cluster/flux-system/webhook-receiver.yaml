@@ -37,7 +37,7 @@ spec:
   entryPoints:
   - web
   routes:
-  - match: Host(`e7290e1d83bf.sn.mynetname.net`) # MikroTik RouterOS DDNS
+  - match: Host(`e7290e1d83bf.sn.mynetname.net`) # MikroTik RouterOS Dynamic DNS
     kind: Rule
     services:
     - name: webhook-receiver-custom
