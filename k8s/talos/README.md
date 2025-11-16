@@ -42,7 +42,7 @@
 
 ## Upgrades
 
-### Talos (OS upgrades)
+### Talos (OS)
 
 - upgrade nodes sequentially, starting with control plane
   - `btrfs`, `i915`, `intel-ucode`, `iscsi-tools`
