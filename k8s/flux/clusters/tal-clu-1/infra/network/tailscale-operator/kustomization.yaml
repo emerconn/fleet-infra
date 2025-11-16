@@ -15,6 +15,6 @@ patches:
     spec:
       values:
         operatorConfig:
-          hostname: talos-cluster
+          hostname: tal-clu-1
         apiServerProxyConfig:
           mode: "true"

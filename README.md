@@ -59,7 +59,7 @@ Refurbed mini-desktop PCs running bare-metal Talos Linux for hosting a Kubernete
 
 - encrypts K8s secrets on the client with `age.key`, using the [age](https://github.com/FiloSottile/age) protocol, before commiting them to Git
 - Flux decrypts the secrets within the cluster before applying, using a Secret containing `age.key`
-- configured via [.sops.yaml](https://github.com/emerconnelly/homelab/blob/main/.sops.yaml) & [gotk-sync.yaml](k8s/flux/clusters/talos-cluster/flux-system/gotk-sync.yaml)
+- configured via [.sops.yaml](https://github.com/emerconnelly/homelab/blob/main/.sops.yaml) & [gotk-sync.yaml](k8s/flux/clusters/tal-clu-1/flux-system/gotk-sync.yaml)
 
 # kubernetes
 

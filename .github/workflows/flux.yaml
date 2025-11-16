@@ -40,7 +40,7 @@ jobs:
       with:
         version: v1.32.0
     - name: Create kubeconfig file
-      run: tailscale configure kubeconfig talos-cluster
+      run: tailscale configure kubeconfig tal-clu-1
     - name: Get kubectl versions
       run: kubectl version
 

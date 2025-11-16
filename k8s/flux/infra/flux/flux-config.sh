@@ -8,5 +8,5 @@ flux bootstrap github \
   --owner=$GITHUB_USER \
   --repository=homelab \
   --branch=main \
-  --path=./k8s/flux/clusters/talos-cluster \
+  --path=./k8s/flux/clusters/tal-clu-1 \
   --personal
