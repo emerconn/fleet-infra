@@ -1,6 +1,11 @@
 cluster:
   apiServer:
     image: registry.k8s.io/kube-apiserver:v1.34.1
+    certSANs:
+    - vip.tal-clu-1.hl.emerconn.com
+    - cp-01.tal-clu-1.hl.emerconn.com
+    - cp-02.tal-clu-1.hl.emerconn.com
+    - cp-03.tal-clu-1.hl.emerconn.com
   scheduler:
     image: registry.k8s.io/kube-scheduler:v1.34.1
   controllerManager:
