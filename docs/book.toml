@@ -7,7 +7,7 @@ multilingual = false
 src = "src"
 
 [output.html]
-git-repository-url = "https://github.com/emerconnelly/fleet-infra"
+git-repository-url = "https://github.com/emerconnelly/homelab"
 git-repository-icon = "fa-github"
 git-branch = "main"
 default-theme = "ayu"

@@ -1,11 +1,11 @@
 <div align="center">
 
-  # fleet-infra
+  # homelab
 
-  [![flux](https://github.com/emerconnelly/fleet-infra/actions/workflows/flux.yaml/badge.svg?branch=main)](https://github.com/emerconnelly/fleet-infra/actions/workflows/flux.yaml)
-  [![github-pages](https://github.com/emerconnelly/fleet-infra/actions/workflows/github-pages.yaml/badge.svg)](https://github.com/emerconnelly/fleet-infra/actions/workflows/github-pages.yaml)
+  [![flux](https://github.com/emerconnelly/homelab/actions/workflows/flux.yaml/badge.svg?branch=main)](https://github.com/emerconnelly/homelab/actions/workflows/flux.yaml)
+  [![github-pages](https://github.com/emerconnelly/homelab/actions/workflows/github-pages.yaml/badge.svg)](https://github.com/emerconnelly/homelab/actions/workflows/github-pages.yaml)
 
-  [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/emerconn/fleet-infra)
+  [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/emerconn/homelab)
 
 </div>
 
@@ -45,7 +45,7 @@ Refurbed mini-desktop PCs running bare-metal Talos Linux for hosting a Kubernete
 
 # repo management
 
-### Renovate [![Renovate Dashboard](https://img.shields.io/badge/Dashboard-555?logo=renovate&logoColor=497b9c&labelColor=000)](https://developer.mend.io/github/emerconn/fleet-infra)
+### Renovate [![Renovate Dashboard](https://img.shields.io/badge/Dashboard-555?logo=renovate&logoColor=497b9c&labelColor=000)](https://developer.mend.io/github/emerconn/homelab)
 
 - Automated detailed PRs for version upgrades of Flux `HelmRelease`s, container image tags, & K8s `.yaml` resources
 - Configured as a [GitHub app](https://github.com/apps/renovate) (migrate to GitHub Action cause it looks cooler?)
@@ -53,13 +53,13 @@ Refurbed mini-desktop PCs running bare-metal Talos Linux for hosting a Kubernete
 ### FluxCD
 
 - automatically manage Kubernetes resources as code
-- whenever `main` is updated, [this](https://github.com/emerconnelly/fleet-infra/actions/workflows/flux-reconcile.yml) GitHub Action remotely reconciles my cluster by connecting to the K8s API via Tailscale
+- whenever `main` is updated, [this](https://github.com/emerconnelly/homelab/actions/workflows/flux-reconcile.yml) GitHub Action remotely reconciles my cluster by connecting to the K8s API via Tailscale
 
 ### SOPS
 
 - encrypts K8s secrets on the client with `age.key`, using the [age](https://github.com/FiloSottile/age) protocol, before commiting them to Git
 - Flux decrypts the secrets within the cluster before applying, using a Secret containing `age.key`
-- configured via [.sops.yaml](https://github.com/emerconnelly/fleet-infra/blob/main/.sops.yaml) & [gotk-sync.yaml](k8s/flux/clusters/talos-cluster/flux-system/gotk-sync.yaml)
+- configured via [.sops.yaml](https://github.com/emerconnelly/homelab/blob/main/.sops.yaml) & [gotk-sync.yaml](k8s/flux/clusters/talos-cluster/flux-system/gotk-sync.yaml)
 
 # kubernetes
 
@@ -127,4 +127,4 @@ Refurbed mini-desktop PCs running bare-metal Talos Linux for hosting a Kubernete
 
 # GitHub Pages
 
-- [this](https://github.com/emerconnelly/fleet-infra/actions/workflows/github-pages.yml) workflow using [Rust mdBook](https://github.com/rust-lang/mdBook)
+- [this](https://github.com/emerconnelly/homelab/actions/workflows/github-pages.yml) workflow using [Rust mdBook](https://github.com/rust-lang/mdBook)
