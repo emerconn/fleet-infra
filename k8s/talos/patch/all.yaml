@@ -15,7 +15,7 @@ cluster:
   network:
     cni:
       name: none # use Cillium
-  allowSchedulingOnControlPlanes: true
+  allowSchedulingOnControlPlanes: false
   extraManifests:
   - https://raw.githubusercontent.com/alex1989hu/kubelet-serving-cert-approver/main/deploy/standalone-install.yaml # for metrics server
   - https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml # for metrics server
