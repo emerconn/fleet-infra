@@ -11,6 +11,9 @@ metadata:
 spec:
   releaseName: reflector
   targetNamespace: reflector
+  dependsOn:
+  - name: emberstack
+    namespace: flux-system
   chart:
     spec:
       chart: reflector
