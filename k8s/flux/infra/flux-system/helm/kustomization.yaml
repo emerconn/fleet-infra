@@ -9,7 +9,6 @@ resources:
 - deliveryhero.yaml
 - descheduler.yaml
 - emberstack.yaml
-- eraser.yaml
 - external-secrets.yaml
 - fluent.yaml
 - hashicorp.yaml

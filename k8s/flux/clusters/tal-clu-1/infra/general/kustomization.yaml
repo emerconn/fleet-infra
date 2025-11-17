@@ -4,5 +4,4 @@ kind: Kustomization
 resources:
 # - cert-manager
 # - cronjob-janitor
-- eraser
 - reflector
