@@ -5,6 +5,6 @@ resources:
 - secret-sops-webhook-receiver-token.yaml
 - gotk-components.yaml
 - gotk-sync.yaml
-- webhook-receiver.yaml
+# - webhook-receiver.yaml
 - ../../../infra/flux/git
 - ../../../infra/flux/helm
