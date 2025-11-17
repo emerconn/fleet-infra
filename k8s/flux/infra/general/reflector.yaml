@@ -18,7 +18,6 @@ spec:
         kind: HelmRepository
         name: emberstack
         namespace: flux-system
-      version: "7.1.288"
   interval: 1h
   install:
     remediation:
