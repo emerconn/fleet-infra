@@ -19,6 +19,8 @@ hubble:
     - key: node-role.kubernetes.io/control-plane
       effect: NoSchedule
       operator: Exists
+    nodeSelector:
+      node-role.kubernetes.io/control-plane: ""
     prometheus:
       enabled: true
       serviceMonitor:
