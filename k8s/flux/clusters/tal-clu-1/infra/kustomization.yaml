@@ -4,9 +4,9 @@ kind: Kustomization
 resources:
 # - database
 - general
-- kube-system
-- network
-- observe
-- secrets
+# - kube-system
+# - network
+# - observe
+# - secrets
 # - security
-- storage
+# - storage
