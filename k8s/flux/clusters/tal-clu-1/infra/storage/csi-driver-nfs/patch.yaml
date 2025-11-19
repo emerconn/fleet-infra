@@ -21,7 +21,7 @@ spec:
       allowVolumeExpansion: true
       volumeBindingMode: Immediate
       parameters:
-        server: 172.21.0.20
+        server: nas-01.hl.emerconn.com
         share: /volume1/nfs-hot-tal-clu-1
         archiveOnDelete: "true"
       mountOptions:
@@ -32,7 +32,7 @@ spec:
       allowVolumeExpansion: true
       volumeBindingMode: Immediate
       parameters:
-        server: 172.21.0.20
+        server: nas-01.hl.emerconn.com
         share: /volume1/nfs-hot-tal-clu-1
         archiveOnDelete: "true"
       mountOptions:
