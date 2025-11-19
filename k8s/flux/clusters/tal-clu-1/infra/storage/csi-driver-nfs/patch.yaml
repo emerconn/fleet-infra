@@ -16,25 +16,25 @@ spec:
         effect: "NoSchedule"
         operator: "Exists"
     storageClasses:
-    - name: nfs-hot-retain
-      parameters:
-        server: 172.21.0.20
-        share: /volume1/nfs-hot-tal-clu-1
-        archiveOnDelete: "true"
-      reclaimPolicy: Retain
-      volumeBindingMode: Immediate
-      mountOptions:
-      - hard
-      - nfsvers=4.1
-      allowVolumeExpansion: true
     - name: nfs-hot-delete
+      reclaimPolicy: Delete
+      allowVolumeExpansion: true
+      volumeBindingMode: Immediate
       parameters:
         server: 172.21.0.20
         share: /volume1/nfs-hot-tal-clu-1
         archiveOnDelete: "true"
-      reclaimPolicy: Delete
-      volumeBindingMode: Immediate
       mountOptions:
       - hard
       - nfsvers=4.1
+    - name: nfs-hot-retain
+      reclaimPolicy: Retain
       allowVolumeExpansion: true
+      volumeBindingMode: Immediate
+      parameters:
+        server: 172.21.0.20
+        share: /volume1/nfs-hot-tal-clu-1
+        archiveOnDelete: "true"
+      mountOptions:
+      - hard
+      - nfsvers=4.1
