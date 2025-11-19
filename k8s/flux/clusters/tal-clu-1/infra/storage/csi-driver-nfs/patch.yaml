@@ -16,6 +16,26 @@ spec:
         effect: "NoSchedule"
         operator: "Exists"
     storageClasses:
+    - name: nfs-cold-delete
+      reclaimPolicy: Delete
+      allowVolumeExpansion: true
+      volumeBindingMode: Immediate
+      parameters:
+        server: nas-01.hl.emerconn.com
+        share: /volume1/nfs-cold-tal-clu-1
+      mountOptions:
+      - hard
+      - nfsvers=4.1
+    - name: nfs-cold-retain
+      reclaimPolicy: Retain
+      allowVolumeExpansion: true
+      volumeBindingMode: Immediate
+      parameters:
+        server: nas-01.hl.emerconn.com
+        share: /volume1/nfs-cold-tal-clu-1
+      mountOptions:
+      - hard
+      - nfsvers=4.1
     - name: nfs-hot-delete
       reclaimPolicy: Delete
       allowVolumeExpansion: true
