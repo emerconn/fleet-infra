@@ -24,4 +24,3 @@ spec:
     remediation:
       retries: -1
   values: # https://github.com/cert-manager/cert-manager/blob/master/deploy/charts/cert-manager/values.yaml
-
