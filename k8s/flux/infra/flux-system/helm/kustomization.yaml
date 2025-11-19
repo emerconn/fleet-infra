@@ -6,6 +6,7 @@ resources:
 - cilium.yaml
 - cloudflare.yaml
 - cloudnative-pg.yaml
+- csi-driver-nfs.yaml
 - deliveryhero.yaml
 - descheduler.yaml
 - emberstack.yaml
@@ -21,7 +22,6 @@ resources:
 - minio-operator.yaml
 - minio.yaml
 - mongodb.yaml
-- nfs-subdir-external-provisioner.yaml
 - node-feature-discovery.yaml
 - openobserve.yaml
 - opentelemetry.yaml
