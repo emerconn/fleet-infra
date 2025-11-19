@@ -16,3 +16,5 @@ just about everything on the clusters is deployed via flux, except for
   - manually created
   - needed for automated secrets
   - primarily using this to GitOps the init secrets for external-secrets, vault-secrets-operator, etc.
+
+- Force a reconcile of all flux resources with `flux reconcile kustomization flux-system --with-source`
