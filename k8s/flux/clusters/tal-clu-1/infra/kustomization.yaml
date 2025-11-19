@@ -8,5 +8,5 @@ resources:
 # - observe
 # - secrets
 # - security
-# - storage
+- storage
 - util
