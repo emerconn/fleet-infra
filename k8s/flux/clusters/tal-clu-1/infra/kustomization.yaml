@@ -6,7 +6,7 @@ resources:
 # - kube-system
 # - network
 # - observe
-# - secrets
+- secrets
 # - security
 - storage
 - util
