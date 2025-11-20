@@ -14,6 +14,7 @@ resources:
 - fluent.yaml
 - hashicorp.yaml
 - headlamp.yaml
+- infisical.yaml
 - ingress-nginx.yaml
 - jetstack.yaml
 - kubeclarity.yaml
