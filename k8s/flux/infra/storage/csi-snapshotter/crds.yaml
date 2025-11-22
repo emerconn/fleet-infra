@@ -22,3 +22,19 @@ spec:
   prune: true
   timeout: 2m
   interval: 1h
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: wrapper-helm-csi-snapshotter-controller
+  namespace: flux-system
+spec:
+  interval: 10m
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: "./controller.yaml"
+  prune: true
+  wait: true
+  dependsOn:
+  - name: csi-snapshotter-crds
