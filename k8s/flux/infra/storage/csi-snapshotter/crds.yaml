@@ -13,12 +13,12 @@ metadata:
   name: csi-snapshotter-crds
   namespace: flux-system
 spec:
-  interval: 1h
-  prune: true
   sourceRef:
     kind: GitRepository
     name: external-snapshotter
     namespace: flux-system
   path: ./client/config/crd
   wait: true
+  prune: true
   timeout: 2m
+  interval: 1h
