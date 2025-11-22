@@ -6,7 +6,7 @@ resources:
 # - headlamp
 - kube-prometheus-stack
 # - kubernetes-dashboard
-- metrics-server
+# - metrics-server
 # - mikrotik-exporter
 # - openobserve
 # - openobserve-collector
