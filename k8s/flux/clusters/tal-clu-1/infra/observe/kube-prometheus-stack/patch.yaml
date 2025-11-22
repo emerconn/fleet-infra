@@ -49,7 +49,7 @@ spec:
     grafana:
       defaultDashboardsTimezone: browser
       persistence:
-        enabled: false
+        enabled: false # TODO: fix permissions issue
         type: sts
         storageClassName: nfs-hot-delete
         accessModes: [ "ReadWriteOnce" ]
