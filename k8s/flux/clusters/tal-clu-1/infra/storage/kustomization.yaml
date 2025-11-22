@@ -4,10 +4,5 @@ kind: Kustomization
 resources:
 - csi-driver-nfs
 - csi-snapshotter
-
-# - rook-ceph-cluster
-# - rook-ceph-operator
-# - rook-ceph-test-buckets
-# - snapshot-controller
 # - synology-csi-talos
 # - velero
