@@ -47,6 +47,12 @@ spec:
       enabled: true
 
     grafana:
+      nodeSelector:
+        node-role.kubernetes.io/control-plane: ""
+      tolerations:
+      - key: "node-role.kubernetes.io/control-plane"
+        effect: "NoSchedule"
+        operator: "Exists"
       defaultDashboardsTimezone: browser
       persistence:
         enabled: false # TODO: fix permissions issue
