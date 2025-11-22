@@ -10,6 +10,8 @@ spec:
   values:
     # Prometheus Operator: manages Prometheus/Alertmanager CRDs and lifecycle
     prometheusOperator:
+      enabled: true
+      fullnameOverride: prometheus-operator
       nodeSelector:
         node-role.kubernetes.io/control-plane: ""
       tolerations:
