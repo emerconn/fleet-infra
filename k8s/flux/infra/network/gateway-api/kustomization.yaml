@@ -1,6 +1,7 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-- git-repository.yaml
-- experimental.yaml
-- standard.yaml
+- crds-experimental.yaml
+- crds-standard.yaml
+- git-repo.yaml
+- namespace.yaml
