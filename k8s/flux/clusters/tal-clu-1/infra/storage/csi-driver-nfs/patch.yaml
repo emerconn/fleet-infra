@@ -7,6 +7,9 @@ spec:
   chart:
     spec:
       version: "4.12.1"
+  dependsOn:
+  - name: csi-snapshotter
+    namespace: flux-system
   values:
     controller:
       nodeSelector:
