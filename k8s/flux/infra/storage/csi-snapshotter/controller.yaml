@@ -13,11 +13,11 @@ spec:
         kind: HelmRepository
         name: piraeus
         namespace: flux-system
-      version: "4.0.1"
   interval: 1h
   install:
     remediation:
       retries: -1
-  values: # https://github.com/piraeusdatastore/helm-charts/blob/main/charts/snapshot-controller/values.yaml
-# TODO: add CRDs from Git source, helm chart doesn't manage these
-# https://github.com/kubernetes-csi/external-snapshotter/tree/master/client/config/crd
+  values:
+    # https://github.com/piraeusdatastore/helm-charts/blob/main/charts/snapshot-controller/values.yaml
+    # TODO: add CRDs from Git source, helm chart doesn't manage these
+    # https://github.com/kubernetes-csi/external-snapshotter/tree/master/client/config/crd
