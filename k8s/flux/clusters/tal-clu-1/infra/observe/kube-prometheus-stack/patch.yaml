@@ -48,3 +48,6 @@ spec:
         monitor:
           enabled: true
           interval: 10s
+
+    nodeExporter:
+      enabled: false # deployed separately
