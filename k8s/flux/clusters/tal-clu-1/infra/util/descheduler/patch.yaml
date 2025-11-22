@@ -10,7 +10,15 @@ spec:
   values:
     kind: CronJob
     schedule: "*/10 * * * *"
+
+    nodeSelector:
+      node-role.kubernetes.io/control-plane: ""
+    tolerations:
+    - key: "node-role.kubernetes.io/control-plane"
+      effect: "NoSchedule"
+      operator: "Exists"
+
     serviceMonitor:
       # TODO: create Grafana dashboard
-      enabled: false
+      enabled: true
       namespace: kube-system
