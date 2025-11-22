@@ -37,6 +37,15 @@ spec:
                 requests:
                   storage: 1Gi
 
+    prometheus-node-exporter:
+      prometheus:
+        monitor:
+          enabled: true
+          interval: 10s
+
+    nodeExporter:
+      enabled: true
+
     grafana:
       defaultDashboardsTimezone: browser
       persistence:
@@ -48,12 +57,3 @@ spec:
 
     alertmanager:
       enabled: false
-
-    prometheus-node-exporter:
-      prometheus:
-        monitor:
-          enabled: true
-          interval: 10s
-
-    nodeExporter:
-      enabled: false # deployed separately
