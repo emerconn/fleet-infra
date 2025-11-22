@@ -8,7 +8,7 @@ envoy:
   prometheus:
     enabled: true
     serviceMonitor:
-      enabled: false
+      enabled: true
 gatewayAPI:
   enabled: true
 hubble:
@@ -24,7 +24,7 @@ hubble:
     prometheus:
       enabled: true
       serviceMonitor:
-        enabled: false
+        enabled: true
   ui:
     enabled: true
     tolerations:
@@ -46,7 +46,7 @@ hubble:
     prometheus:
       enabled: true
       serviceMonitor:
-        enabled: false
+        enabled: true
 ingressController:
   enabled: true
 ipam:
@@ -63,11 +63,11 @@ operator:
   prometheus:
     enabled: true
     serviceMonitor:
-      enabled: false
+      enabled: true
 prometheus:
   enabled: true
   serviceMonitor:
-    enabled: false
+    enabled: true
 securityContext:
   capabilities:
     ciliumAgent:
