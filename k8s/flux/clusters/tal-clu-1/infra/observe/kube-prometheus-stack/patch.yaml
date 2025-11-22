@@ -8,8 +8,6 @@ spec:
     spec:
       version: "79.7.1"
   values:
-    fullnameOverride: "kps"
-
     # Prometheus Operator: manages Prometheus/Alertmanager CRDs and lifecycle
     prometheusOperator:
       enabled: true
