@@ -19,6 +19,6 @@ spec:
     kind: GitRepository
     name: external-snapshotter
     namespace: flux-system
-  path: ./client/config/crd
+  path: ./client/config/aasdfasdf
   wait: true
   timeout: 2m
