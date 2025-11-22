@@ -3,6 +3,6 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - grafana-dashboard.yaml
-- ../../../../../infra/kube-system/node-problem-detector.yaml
+- ../../../../../infra/util/node-problem-detector.yaml
 patches:
-- path: helm-release.yaml
+- path: patch.yaml

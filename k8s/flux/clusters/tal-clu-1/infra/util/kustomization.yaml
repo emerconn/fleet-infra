@@ -4,4 +4,5 @@ kind: Kustomization
 resources:
 # - cert-manager
 # - cronjob-janitor
+- node-problem-detector
 - reflector

@@ -4,8 +4,11 @@ metadata:
   name: node-problem-detector
   namespace: flux-system
 spec:
+  chart:
+    spec:
+      version: "2.3.14"
   values:
     metrics:
       enabled: true
       serviceMonitor:
-        enabled: true
+        enabled: false
