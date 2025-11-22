@@ -7,7 +7,18 @@ spec:
   chart:
     spec:
       version: "0.18.3"
-  # values:
-  #   worker:
-  #     tolerations:
-  #     - operator: \"Exists\" # schedule daemonSet pods on tainted nodes
+  values:
+    gc:
+      nodeSelector:
+        node-role.kubernetes.io/control-plane: ""
+      tolerations:
+      - key: "node-role.kubernetes.io/control-plane"
+        effect: "NoSchedule"
+        operator: "Exists"
+    worker:
+      nodeSelector:
+        node-role.kubernetes.io/control-plane: ""
+      tolerations:
+      - key: "node-role.kubernetes.io/control-plane"
+        effect: "NoSchedule"
+        operator: "Exists"
