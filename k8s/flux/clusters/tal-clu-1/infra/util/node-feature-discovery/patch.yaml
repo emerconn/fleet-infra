@@ -16,8 +16,6 @@ spec:
         effect: "NoSchedule"
         operator: "Exists"
     worker:
-      nodeSelector:
-        node-role.kubernetes.io/control-plane: ""
       tolerations:
       - key: "node-role.kubernetes.io/control-plane"
         effect: "NoSchedule"
