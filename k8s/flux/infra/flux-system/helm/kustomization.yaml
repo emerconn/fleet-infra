@@ -11,7 +11,6 @@ resources:
 - descheduler.yaml
 - emberstack.yaml
 - fluent.yaml
-- hashicorp.yaml
 - headlamp.yaml
 - infisical.yaml
 - ingress-nginx.yaml
