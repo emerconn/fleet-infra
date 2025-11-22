@@ -17,7 +17,7 @@ spec:
     kind: GitRepository
     name: kubernetes-csi-external-snapshotter
     namespace: flux-system
-  path: 'client/config/crds'
+  path: 'client/config/crd'
   wait: true
   prune: true
   timeout: 2m
