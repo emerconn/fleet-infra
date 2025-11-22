@@ -1,7 +1,7 @@
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: GitRepository
 metadata:
-  name: github_kubernetes-csi_external-snapshotter
+  name: kubernetes-csi-external-snapshotter
   namespace: flux-system
 spec:
   interval: 24h
@@ -15,9 +15,9 @@ metadata:
 spec:
   sourceRef:
     kind: GitRepository
-    name: external-snapshotter
+    name: kubernetes-csi-external-snapshotter
     namespace: flux-system
-  path: ./client/config/asdf
+  path: ./client/config/crds
   wait: true
   prune: true
   timeout: 2m
