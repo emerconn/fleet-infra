@@ -18,6 +18,12 @@ spec:
       version: "4.2.0"
   values:
     controller:
+      nodeSelector:
+        node-role.kubernetes.io/control-plane: ""
+      tolerations:
+      - key: "node-role.kubernetes.io/control-plane"
+        effect: "NoSchedule"
+        operator: "Exists"
       serviceMonitor:
         # TODO: create Grafana dashboard
         create: false
