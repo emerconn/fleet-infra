@@ -8,6 +8,7 @@ spec:
     spec:
       version: "79.7.1"
   values:
+    # Prometheus Operator: manages Prometheus/Alertmanager CRDs and lifecycle
     prometheusOperator:
       nodeSelector:
         node-role.kubernetes.io/control-plane: ""
@@ -15,10 +16,26 @@ spec:
       - key: "node-role.kubernetes.io/control-plane"
         effect: "NoSchedule"
         operator: "Exists"
+      admissionWebhooks:
+        deployment:
+          nodeSelector:
+            node-role.kubernetes.io/control-plane: ""
+          tolerations:
+          - key: "node-role.kubernetes.io/control-plane"
+            effect: "NoSchedule"
+            operator: "Exists"
+        patch:
+          nodeSelector:
+            node-role.kubernetes.io/control-plane: ""
+          tolerations:
+          - key: "node-role.kubernetes.io/control-plane"
+            effect: "NoSchedule"
+            operator: "Exists"
 
+    # Prometheus server: scraping, rule evaluation, TSDB and retention settings
     prometheus:
       # annotations:
-      # backup.velero.io/backup-volumes: prometheus-kube-prometheus-stack-prometheus-db
+      #   backup.velero.io/backup-volumes: prometheus-kube-prometheus-stack-prometheus-db
       prometheusSpec:
         nodeSelector:
           node-role.kubernetes.io/control-plane: ""
@@ -37,15 +54,18 @@ spec:
                 requests:
                   storage: 1Gi
 
+    # Node exporter DaemonSet: exposes host/node-level metrics on each node
+    nodeExporter:
+      enabled: true
+
+    # Prometheus scrape config: how Prometheus discovers and scrapes node-exporter
     prometheus-node-exporter:
       prometheus:
         monitor:
           enabled: true
           interval: 10s
 
-    nodeExporter:
-      enabled: true
-
+    # Grafana: dashboards, data sources, auth and persistent storage for the UI
     grafana:
       nodeSelector:
         node-role.kubernetes.io/control-plane: ""
@@ -61,6 +81,7 @@ spec:
         accessModes: [ "ReadWriteOnce" ]
         size: 1Gi
 
+    # kube-state-metrics: generates metrics from Kubernetes object state (Deployments, Pods, etc.)
     kube-state-metrics:
       nodeSelector:
         node-role.kubernetes.io/control-plane: ""
@@ -69,5 +90,6 @@ spec:
         effect: "NoSchedule"
         operator: "Exists"
 
+    # Alertmanager: routing, silencing and notification configuration (disabled here)
     alertmanager:
       enabled: false
