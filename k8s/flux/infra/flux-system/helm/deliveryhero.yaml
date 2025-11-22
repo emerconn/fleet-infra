@@ -7,4 +7,4 @@ metadata:
 spec:
   type: oci
   interval: 24h
-  url: oci://ghcr.io/stefanprodan/manifests/podinfo
+  url: oci://ghcr.io/deliveryhero/helm-charts/node-problem-detector
