@@ -6,5 +6,4 @@ resources:
 - gotk-components.yaml
 - gotk-sync.yaml
 # - webhook-receiver.yaml
-- ../../../infra/flux/git
 - ../../../infra/flux/helm
