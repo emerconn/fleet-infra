@@ -60,6 +60,13 @@ l2announcements:
   leaseRenewDeadline: "1s"
   leaseRetryPeriod: "500ms"
 operator:
+  replicas: 1
+  nodeSelector:
+    node-role.kubernetes.io/control-plane: ""
+  tolerations:
+  - key: node-role.kubernetes.io/control-plane
+    effect: NoSchedule
+    operator: Exists
   prometheus:
     enabled: true
     serviceMonitor:
