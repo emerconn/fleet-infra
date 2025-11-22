@@ -5,6 +5,5 @@ resources:
 # - cilium.yaml
 # - grafana-dashboard.yaml
 # - ingress.yaml
-# - gateway-class.yaml
 - l2-announcement.yaml
 - lb-pool.yaml
