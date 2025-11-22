@@ -6,7 +6,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.17.1"
+      version: "0.18.3"
   # values:
   #   worker:
   #     tolerations:
