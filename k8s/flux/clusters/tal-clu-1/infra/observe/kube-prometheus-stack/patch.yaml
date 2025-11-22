@@ -55,5 +55,13 @@ spec:
         accessModes: [ "ReadWriteOnce" ]
         size: 1Gi
 
+    kube-state-metrics:
+      nodeSelector:
+        node-role.kubernetes.io/control-plane: ""
+      tolerations:
+      - key: "node-role.kubernetes.io/control-plane"
+        effect: "NoSchedule"
+        operator: "Exists"
+
     alertmanager:
       enabled: false
