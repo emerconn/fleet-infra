@@ -1,7 +1,7 @@
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: GitRepository
 metadata:
-  name: csi-snapshotter
+  name: external-snapshotter
   namespace: flux-system
 spec:
   interval: 24h
@@ -17,7 +17,7 @@ spec:
   prune: true
   sourceRef:
     kind: GitRepository
-    name: csi-snapshotter
+    name: external-snapshotter
     namespace: flux-system
   path: ./client/config/crd
   wait: true
