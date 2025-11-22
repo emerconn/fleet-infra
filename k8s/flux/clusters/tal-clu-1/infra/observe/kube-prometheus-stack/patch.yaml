@@ -8,6 +8,14 @@ spec:
     spec:
       version: "79.7.1"
   values:
+    prometheusOperator:
+      nodeSelector:
+        node-role.kubernetes.io/control-plane: ""
+      tolerations:
+      - key: "node-role.kubernetes.io/control-plane"
+        effect: "NoSchedule"
+        operator: "Exists"
+
     prometheus:
       # annotations:
       # backup.velero.io/backup-volumes: prometheus-kube-prometheus-stack-prometheus-db
