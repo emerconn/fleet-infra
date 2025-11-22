@@ -7,6 +7,6 @@ helm repo update
 
 helm upgrade cilium cilium/cilium \
     --install \
-    --values cilium.yaml \
+    --values values.yaml \
     --namespace kube-system \
     --version $cilium_version \
