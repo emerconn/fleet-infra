@@ -4,6 +4,5 @@ kind: Kustomization
 resources:
 - cilium # TODO: figure out how to add the helmrelease here
 - descheduler
-- kubelet-serving-cert-approver
 - node-feature-discovery
 - node-problem-detector
