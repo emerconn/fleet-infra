@@ -5,4 +5,6 @@ resources:
 - secret-sops-webhook-receiver-token.yaml
 - flux-instance.yaml
 # - webhook-receiver.yaml
-- ../../../infra/flux/helm
+- ../../../infra/flux/
+patches:
+- path: patch-flux-operator.yaml
