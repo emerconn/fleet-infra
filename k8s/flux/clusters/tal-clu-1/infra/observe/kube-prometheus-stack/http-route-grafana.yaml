@@ -1,0 +1,39 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: grafana-https
+  namespace: kube-prometheus-stack
+spec:
+  parentRefs:
+  - name: cilium-wildcard-hl-emerconn-com
+    namespace: gateway-system
+    sectionName: https
+  hostnames:
+  - grafana.hl.emerconn.com
+  rules:
+  - matches:
+    - path:
+        type: PathPrefix
+        value: /
+    backendRefs:
+    - name: kube-prometheus-stack-grafana
+      port: 80
+---
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: grafana-redirect
+  namespace: kube-prometheus-stack
+spec:
+  parentRefs:
+  - name: cilium-wildcard-hl-emerconn-com
+    namespace: gateway-system
+    sectionName: http
+  hostnames:
+  - grafana.hl.emerconn.com
+  rules:
+  - filters:
+    - type: RequestRedirect
+      requestRedirect:
+        scheme: https
+        statusCode: 301
