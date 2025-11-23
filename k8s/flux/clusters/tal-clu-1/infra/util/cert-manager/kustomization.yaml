@@ -4,6 +4,6 @@ kind: Kustomization
 resources:
 # - cluster-issuer.yaml
 # - hcp-vault-secrets-app.yaml
-- ../../../../../infra/general/cert-manager.yaml
+- ../../../../../infra/util/cert-manager.yaml
 patches:
 - path: patch.yaml
