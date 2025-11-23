@@ -5,7 +5,7 @@
 
 export GITHUB_TOKEN='<replace_me>'
 
-helm install flux-operator \
+helm upgrade --install flux-operator \
   oci://ghcr.io/controlplaneio-fluxcd/charts/flux-operator \
   --namespace flux-system \
   --create-namespace
