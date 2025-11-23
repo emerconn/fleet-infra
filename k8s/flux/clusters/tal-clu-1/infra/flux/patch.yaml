@@ -8,3 +8,9 @@ spec:
     spec:
       version: "0.33.0"
   values:
+    nodeSelector:
+      node-role.kubernetes.io/control-plane: ""
+    tolerations:
+    - key: "node-role.kubernetes.io/control-plane"
+      effect: "NoSchedule"
+      operator: "Exists"
