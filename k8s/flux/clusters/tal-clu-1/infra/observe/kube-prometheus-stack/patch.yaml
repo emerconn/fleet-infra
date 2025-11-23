@@ -50,7 +50,7 @@ spec:
         storageSpec:
           volumeClaimTemplate:
             spec:
-              storageClassName: nfs-hot-delete
+              storageClassName: synology-ext4-retain
               accessModes: [ "ReadWriteOnce" ]
               resources:
                 requests:
@@ -77,9 +77,9 @@ spec:
         operator: "Exists"
       defaultDashboardsTimezone: browser
       persistence:
-        enabled: false # TODO: fix permissions issue
+        enabled: true # TODO: fix permissions issue
         type: sts
-        storageClassName: nfs-hot-delete
+        storageClassName: synology-ext4-retain
         accessModes: [ "ReadWriteOnce" ]
         size: 1Gi
 
