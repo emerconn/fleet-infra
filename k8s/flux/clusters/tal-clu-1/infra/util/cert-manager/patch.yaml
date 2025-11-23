@@ -10,6 +10,9 @@ spec:
   values:
     crds:
       enabled: true
+    global:
+      nodeSelector:
+        node-role.kubernetes.io/control-plane: ""
     podDnsPolicy: "None"
     podDnsConfig:
       nameservers:
