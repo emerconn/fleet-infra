@@ -11,6 +11,11 @@ spec:
     serviceMonitor:
       enabled: true
 
+    sources:
+    - service
+    - ingress
+    - gateway-httproute
+
     nodeSelector:
       node-role.kubernetes.io/control-plane: ""
     tolerations:
