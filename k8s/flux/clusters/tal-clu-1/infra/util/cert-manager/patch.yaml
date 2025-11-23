@@ -10,9 +10,22 @@ spec:
   values:
     crds:
       enabled: true
-    global:
+
+    nodeSelector:
+      node-role.kubernetes.io/control-plane: ""
+    tolerations:
+    - key: "node-role.kubernetes.io/control-plane"
+      operator: "Exists"
+      effect: "NoSchedule"
+
+    cainjector:
       nodeSelector:
         node-role.kubernetes.io/control-plane: ""
+      tolerations:
+      - key: "node-role.kubernetes.io/control-plane"
+        operator: "Exists"
+        effect: "NoSchedule"
+
     podDnsPolicy: "None"
     podDnsConfig:
       nameservers:
@@ -21,13 +34,24 @@ spec:
       - "1.1.1.1"
       - "8.8.8.8"
       - "10.96.0.10" # `kubectl get svc -n kube-system | grep dns`
+
     prometheus:
       servicemonitor:
         enabled: true
         namespace: cert-manager
-    nodeSelector:
-      node-role.kubernetes.io/control-plane: ""
-    tolerations:
-    - key: "node-role.kubernetes.io/control-plane"
-      operator: "Exists"
-      effect: "NoSchedule"
+
+    startupapicheck:
+      nodeSelector:
+        node-role.kubernetes.io/control-plane: ""
+      tolerations:
+      - key: "node-role.kubernetes.io/control-plane"
+        operator: "Exists"
+        effect: "NoSchedule"
+
+    webhook:
+      nodeSelector:
+        node-role.kubernetes.io/control-plane: ""
+      tolerations:
+      - key: "node-role.kubernetes.io/control-plane"
+        operator: "Exists"
+        effect: "NoSchedule"
