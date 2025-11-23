@@ -4,16 +4,26 @@ metadata:
   name: flux-operator
   namespace: flux-system
 spec:
-  interval: 1h
+  releaseName: flux-operator
+  targetNamespace: flux-system
   chart:
     spec:
       chart: flux-operator
-      version: "*"
       sourceRef:
         kind: HelmRepository
         name: controlplaneio-fluxcd
         namespace: flux-system
+  interval: 1h
+  timeout: 10m
   install:
     crds: CreateReplace
+    remediation:
+      retries: 3
   upgrade:
     crds: CreateReplace
+    cleanupOnFail: true
+    remediation:
+      retries: 3
+  uninstall:
+    keepHistory: false
+  values: # https://github.com/kubernetes-sigs/external-dns/blob/master/charts/external-dns/values.yaml
