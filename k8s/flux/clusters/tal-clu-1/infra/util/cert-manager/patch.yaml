@@ -14,7 +14,7 @@ spec:
     config:
       apiVersion: controller.config.cert-manager.io/v1alpha1
       kind: ControllerConfiguration
-      enableAPIGateway: true
+      enableGatewayAPI: true
 
     nodeSelector:
       node-role.kubernetes.io/control-plane: ""
