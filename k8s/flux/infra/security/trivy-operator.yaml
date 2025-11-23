@@ -20,7 +20,14 @@ spec:
       chart: trivy-operator
       version: "0.25.0"
   interval: 1h
+  timeout: 10m
   install:
     remediation:
-      retries: -1
+      retries: 3
+  upgrade:
+    cleanupOnFail: true
+    remediation:
+      retries: 3
+  uninstall:
+    keepHistory: false
   values: # https://github.com/aquasecurity/trivy-operator/blob/main/deploy/helm/values.yaml

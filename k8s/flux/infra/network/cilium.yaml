@@ -16,11 +16,17 @@ spec:
         namespace: flux-system
       version: "1.17.1"
   interval: 1h
+  timeout: 10m
   install:
     remediation:
-      retries: -1
+      retries: 3
   upgrade:
     force: true
+    cleanupOnFail: true
+    remediation:
+      retries: 3
+  uninstall:
+    keepHistory: false
   values:
     ipam:
       mode: kubernetes

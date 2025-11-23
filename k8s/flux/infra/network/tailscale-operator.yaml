@@ -20,9 +20,16 @@ spec:
         namespace: flux-system
       version: "1.78.3"
   interval: 1h
+  timeout: 10m
   install:
     remediation:
-      retries: -1
+      retries: 3
+  upgrade:
+    cleanupOnFail: true
+    remediation:
+      retries: 3
+  uninstall:
+    keepHistory: false
   values: # https://github.com/tailscale/tailscale/blob/main/cmd/k8s-operator/deploy/chart/values.yaml
 # create a secret for OAuth credentials
 # apiVersion: v1

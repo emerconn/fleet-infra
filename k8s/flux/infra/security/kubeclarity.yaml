@@ -20,7 +20,14 @@ spec:
       chart: kubeclarity
       version: "2.23.3"
   interval: 1h
+  timeout: 10m
   install:
     remediation:
-      retries: -1
+      retries: 3
+  upgrade:
+    cleanupOnFail: true
+    remediation:
+      retries: 3
+  uninstall:
+    keepHistory: false
   values: # https://github.com/openclarity/kubeclarity/blob/main/charts/kubeclarity/values.yaml

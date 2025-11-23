@@ -15,7 +15,14 @@ spec:
         namespace: flux-system
       version: "0.9.4" # synology-csi v1.1.3
   interval: 1h
+  timeout: 10m
   install:
     remediation:
-      retries: -1
+      retries: 3
+  upgrade:
+    cleanupOnFail: true
+    remediation:
+      retries: 3
+  uninstall:
+    keepHistory: false
   values: # https://github.com/zebernst/synology-csi-talos/blob/main/charts/synology-csi/values.yaml

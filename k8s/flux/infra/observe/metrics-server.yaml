@@ -15,7 +15,14 @@ spec:
         namespace: flux-system
       version: "3.12.2"
   interval: 1h
+  timeout: 10m
   install:
     remediation:
-      retries: -1
+      retries: 3
+  upgrade:
+    cleanupOnFail: true
+    remediation:
+      retries: 3
+  uninstall:
+    keepHistory: false
   values: # https://github.com/kubernetes-sigs/metrics-server/blob/master/charts/metrics-server/values.yaml

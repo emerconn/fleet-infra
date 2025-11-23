@@ -22,7 +22,14 @@ spec:
         namespace: flux-system
       version: "0.14.16"
   interval: 1h
+  timeout: 10m
   install:
     remediation:
-      retries: -1
+      retries: 3
+  upgrade:
+    cleanupOnFail: true
+    remediation:
+      retries: 3
+  uninstall:
+    keepHistory: false
   values: # https://github.com/openobserve/openobserve-helm-chart/blob/main/charts/openobserve/values.yaml

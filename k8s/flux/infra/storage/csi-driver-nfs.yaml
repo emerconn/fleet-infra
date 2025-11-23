@@ -23,7 +23,14 @@ spec:
         name: csi-driver-nfs
         namespace: flux-system
   interval: 1h
+  timeout: 10m
   install:
     remediation:
-      retries: -1
+      retries: 3
+  upgrade:
+    cleanupOnFail: true
+    remediation:
+      retries: 3
+  uninstall:
+    keepHistory: false
   values: # https://github.com/kubernetes-csi/csi-driver-nfs/tree/master/charts

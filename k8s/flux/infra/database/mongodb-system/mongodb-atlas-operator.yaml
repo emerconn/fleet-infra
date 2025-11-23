@@ -15,7 +15,14 @@ spec:
         namespace: flux-system
       version: "2.6.1"
   interval: 1h
+  timeout: 10m
   install:
     remediation:
-      retries: -1
+      retries: 3
+  upgrade:
+    cleanupOnFail: true
+    remediation:
+      retries: 3
+  uninstall:
+    keepHistory: false
   values: # https://github.com/mongodb/helm-charts/blob/main/charts/atlas-operator-crds/values.yaml
