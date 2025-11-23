@@ -15,8 +15,12 @@ spec:
       - key: "node-role.kubernetes.io/control-plane"
         effect: "NoSchedule"
         operator: "Exists"
+
     worker:
       tolerations:
       - key: "node-role.kubernetes.io/control-plane"
         effect: "NoSchedule"
         operator: "Exists"
+
+    prometheus:
+      enabled: true
