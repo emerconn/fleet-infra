@@ -9,6 +9,16 @@ spec:
       version: "1.45.0"
   values:
     k8sAppLabelOverride: kube-dns
+    service:
+      name: kube-dns
+      clusterIP: 10.96.0.10 # Match Talos CoreDNS ClusterIP
+
+    nodeSelector:
+      node-role.kubernetes.io/control-plane: ""
+    tolerations:
+    - key: "node-role.kubernetes.io/control-plane"
+      effect: "NoSchedule"
+      operator: "Exists"
 
     prometheus:
       service:
@@ -16,10 +26,7 @@ spec:
       monitor:
         enabled: true
 
-    service:
-      name: kube-dns
-      clusterIP: 10.96.0.10 # Match Talos CoreDNS ClusterIP
-
+    # CoreDNS ConfigMap
     servers:
     - zones:
       - zone: .
