@@ -14,8 +14,8 @@ spec:
         cloudflare:
           email: emerconn7@gmail.com
           apiTokenSecretRef:
-            name: hcp-secrets
-            key: cloudflare_api_token_secret
+            name: cloudflare-api-token
+            key: api-token
 ---
 apiVersion: cert-manager.io/v1
 kind: ClusterIssuer
@@ -33,5 +33,5 @@ spec:
         cloudflare:
           email: emerconn7@gmail.com
           apiTokenSecretRef:
-            name: hcp-secrets
-            key: cloudflare_api_token_secret
+            name: cloudflare-api-token
+            key: api-token
