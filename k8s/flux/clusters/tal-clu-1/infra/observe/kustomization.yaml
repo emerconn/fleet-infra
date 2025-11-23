@@ -5,7 +5,7 @@ resources:
 # - fluent-operator
 - headlamp
 - kube-prometheus-stack
-# - metrics-server
+- metrics-server
 # - mikrotik-exporter
 # - openobserve
 # - openobserve-collector

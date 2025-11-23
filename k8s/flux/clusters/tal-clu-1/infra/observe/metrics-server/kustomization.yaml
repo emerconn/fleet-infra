@@ -4,16 +4,4 @@ kind: Kustomization
 resources:
 - ../../../../../infra/observe/metrics-server.yaml
 patches:
-- patch: |-
-    apiVersion: helm.toolkit.fluxcd.io/v2
-    kind: HelmRelease
-    metadata:
-      name: metrics-server
-      namespace: flux-system
-    spec:
-      values:
-        replicas: 2
-        metrics:
-          enabled: true
-        serviceMonitor:
-          enabled: true
+- path: patch.yaml
