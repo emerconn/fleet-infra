@@ -1,0 +1,25 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: cert-manager
+  namespace: flux-system
+spec:
+  chart:
+    spec:
+      version: "v1.19.1"
+  values:
+    crds:
+      enabled: true
+    podDnsPolicy: "None"
+    podDnsConfig:
+      nameservers:
+      # avoid internal DNS caching issues with TXT records
+      - "1.1.1.1"
+      - "1.0.0.1"
+      - "8.8.8.8"
+      - "8.8.4.4"
+      - "10.96.0.10" # `kubectl get svc -n kube-system | grep dns`
+    prometheus:
+      servicemonitor:
+        enabled: true
+        namespace: cert-manager
