@@ -33,12 +33,13 @@ spec:
         - op: replace
           path: /spec/template/spec/nodeSelector
           value:
-            kubernetes.io/os: linux
+            node-role.kubernetes.io/control-plane: ""
         - op: add
           path: /spec/template/spec/tolerations
           value:
-            - key: "CriticalAddonsOnly"
-              operator: "Exists"
+          - key: "node-role.kubernetes.io/control-plane"
+            effect: "NoSchedule"
+            operator: "Exists"
   sync:
     kind: GitRepository
     url: "https://github.com/emerconn/homelab.git"
