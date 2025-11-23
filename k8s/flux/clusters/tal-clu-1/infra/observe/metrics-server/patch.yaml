@@ -1,7 +1,7 @@
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
-  name: flux-operator
+  name: metrics-server
   namespace: flux-system
 spec:
   chart:
