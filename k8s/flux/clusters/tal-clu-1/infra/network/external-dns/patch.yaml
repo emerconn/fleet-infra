@@ -15,6 +15,9 @@ spec:
     - service
     - ingress
     - gateway-httproute
+    - gateway-tlsroute
+    - gateway-tcproute
+    - gateway-udproute
 
     nodeSelector:
       node-role.kubernetes.io/control-plane: ""
