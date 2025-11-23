@@ -74,10 +74,6 @@ spec:
         effect: "NoSchedule"
         operator: "Exists"
       defaultDashboardsTimezone: browser
-      sidecar:
-        image:
-          repository: kiwigrid/k8s-sidecar
-          tag: 1.30.9
       persistence:
         enabled: true
         type: sts
