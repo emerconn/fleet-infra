@@ -4,5 +4,5 @@ kind: Kustomization
 resources:
 - csi-driver-nfs
 - csi-snapshotter
-# - synology-csi-talos
+- synology-csi-talos
 # - velero

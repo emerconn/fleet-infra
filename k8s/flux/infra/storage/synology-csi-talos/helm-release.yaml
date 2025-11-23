@@ -13,7 +13,6 @@ spec:
         kind: HelmRepository
         name: synology-csi-talos
         namespace: flux-system
-      version: "0.9.4" # synology-csi v1.1.3
   interval: 1h
   timeout: 10m
   install:
