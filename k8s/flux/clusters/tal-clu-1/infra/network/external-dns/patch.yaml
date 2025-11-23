@@ -17,3 +17,44 @@ spec:
     - key: "node-role.kubernetes.io/control-plane"
       effect: "NoSchedule"
       operator: "Exists"
+
+    provider:
+      name: webhook
+      webhook:
+        image:
+          repository: ghcr.io/muhlba91/external-dns-provider-adguard
+          tag: v11.0.0
+        service:
+          port: 8888
+        env:
+        - name: ADGUARD_URL
+          valueFrom:
+            secretKeyRef:
+              name: adguard-config
+              key: url
+        - name: ADGUARD_USER
+          valueFrom:
+            secretKeyRef:
+              name: adguard-config
+              key: user
+        - name: ADGUARD_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: adguard-config
+              key: password
+        - name: LOG_LEVEL
+          value: info
+        - name: DRY_RUN
+          value: "false"
+        livenessProbe:
+          httpGet:
+            path: /healthz
+            port: 8080
+          initialDelaySeconds: 10
+          timeoutSeconds: 5
+        readinessProbe:
+          httpGet:
+            path: /healthz
+            port: 8080
+          initialDelaySeconds: 10
+          timeoutSeconds: 5
