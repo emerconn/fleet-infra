@@ -17,7 +17,7 @@ cluster:
       name: none # use Cillium
   allowSchedulingOnControlPlanes: false
   extraManifests:
-  - https://raw.githubusercontent.com/alex1989hu/kubelet-serving-cert-approver/main/deploy/standalone-install.yaml # for metrics server
+  # - https://raw.githubusercontent.com/alex1989hu/kubelet-serving-cert-approver/main/deploy/standalone-install.yaml # commented because deployed via Flux
   # - https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml # commented because deployed via Flux
 
 machine:
