@@ -8,12 +8,20 @@ spec:
     spec:
       version: "0.38.0"
   values:
-    clusterRoleBinding:
-      create: true
     config:
       oidc:
         secret:
           create: false
+
+    clusterRoleBinding:
+      create: true
     serviceAccount:
       create: true
       name: headlamp
+
+    nodeSelector:
+      node-role.kubernetes.io/control-plane: ""
+    tolerations:
+    - key: "node-role.kubernetes.io/control-plane"
+      effect: "NoSchedule"
+      operator: "Exists"
