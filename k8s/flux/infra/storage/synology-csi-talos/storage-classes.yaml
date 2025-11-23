@@ -1,7 +1,7 @@
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
-  name: synology-csi-ext4-retain
+  name: synology-ext4-retain
   annotations:
     storageclass.kubernetes.io/is-default-class: "false"
 provisioner: csi.san.synology.com
@@ -14,7 +14,7 @@ allowVolumeExpansion: true
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
-  name: synology-csi-ext4-delete
+  name: synology-ext4-delete
   annotations:
     storageclass.kubernetes.io/is-default-class: "false"
 provisioner: csi.san.synology.com
@@ -27,7 +27,7 @@ allowVolumeExpansion: true
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
-  name: synology-csi-btrfs-retain
+  name: synology-btrfs-retain
   annotations:
     storageclass.kubernetes.io/is-default-class: "false"
 provisioner: csi.san.synology.com
@@ -40,7 +40,7 @@ allowVolumeExpansion: true
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
-  name: synology-csi-btrfs-delete
+  name: synology-btrfs-delete
   annotations:
     storageclass.kubernetes.io/is-default-class: "false"
 provisioner: csi.san.synology.com
