@@ -4,5 +4,5 @@ metadata:
   name: kubernetes-sigs-gateway-api
   namespace: flux-system
 spec:
-  url: https://github.com/kubernetes-sigs/gateway-api
+  url: https://github.com/kubernetes-sigs/gateway-api.git
   interval: 24h
