@@ -26,4 +26,4 @@ spec:
         operator: "Exists"
       serviceMonitor:
         # TODO: create Grafana dashboard
-        create: false
+        create: true

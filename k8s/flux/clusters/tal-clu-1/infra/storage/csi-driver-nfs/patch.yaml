@@ -18,6 +18,7 @@ spec:
       - key: "node-role.kubernetes.io/control-plane"
         effect: "NoSchedule"
         operator: "Exists"
+
     storageClasses:
     - name: nfs-cold-delete
       reclaimPolicy: Delete
