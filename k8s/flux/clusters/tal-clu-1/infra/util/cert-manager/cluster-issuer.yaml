@@ -8,7 +8,7 @@ spec:
     server: https://acme-v02.api.letsencrypt.org/directory
     email: emerconn7@gmail.com
     privateKeySecretRef:
-      name: letsencrypt-account-key
+      name: letsencrypt-dns01-emerconn-com-account-key
     solvers:
     - dns01:
         cloudflare:
@@ -20,14 +20,14 @@ spec:
 apiVersion: cert-manager.io/v1
 kind: ClusterIssuer
 metadata:
-  name: letsencrypt-dns01-staging-emerconn-com
+  name: letsencrypt-staging-dns01-emerconn-com
   namespace: cert-manager
 spec:
   acme:
     server: https://acme-staging-v02.api.letsencrypt.org/directory # substantially higher rate limits https://letsencrypt.org/docs/staging-environment/
     email: emerconn7@gmail.com
     privateKeySecretRef:
-      name: letsencrypt-staging-account-key
+      name: letsencrypt-staging-dns01-emerconn-com-account-key
     solvers:
     - dns01:
         cloudflare:
