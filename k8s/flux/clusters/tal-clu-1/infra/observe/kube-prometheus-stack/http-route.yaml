@@ -5,10 +5,10 @@ metadata:
   namespace: kube-prometheus-stack
 spec:
   parentRefs:
-  - name: http
+  - name: cilium-wildcard-hl-emerconn-com
     namespace: gateway-system
   hostnames:
-  - prometheus.hl.emerconnelly.com
+  - prometheus.hl.emerconn.com
   rules:
   - matches:
     - path:
