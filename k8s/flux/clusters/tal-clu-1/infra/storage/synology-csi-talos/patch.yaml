@@ -8,6 +8,9 @@ spec:
     spec:
       version: "0.9.5-pre.4" # synology-csi:v1.2.0
   values:
+    clientInfoSecret:
+      name: clients
+
     controller:
       nodeSelector:
         node-role.kubernetes.io/control-plane: ""
