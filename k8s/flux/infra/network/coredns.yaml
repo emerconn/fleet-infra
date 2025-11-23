@@ -1,0 +1,27 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: coredns
+  namespace: flux-system
+spec:
+  releaseName: coredns
+  targetNamespace: kube-system
+  chart:
+    spec:
+      chart: coredns
+      sourceRef:
+        kind: HelmRepository
+        name: coredns
+        namespace: flux-system
+  interval: 1h
+  timeout: 10m
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    cleanupOnFail: true
+    remediation:
+      retries: 3
+  uninstall:
+    keepHistory: false
+  values: # https://github.com/coredns/helm/blob/master/charts/coredns/values.yaml
