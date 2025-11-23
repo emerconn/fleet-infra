@@ -9,7 +9,7 @@ metadata:
     fluxcd.controlplane.io/reconcileArtifactEvery: "10m"
 spec:
   distribution:
-    version: "2.7.2"
+    version: "2.7.3"
     registry: "ghcr.io/fluxcd"
     artifact: "oci://ghcr.io/controlplaneio-fluxcd/flux-operator-manifests"
   components:
