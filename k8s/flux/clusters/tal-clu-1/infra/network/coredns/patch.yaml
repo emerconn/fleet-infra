@@ -13,6 +13,8 @@ spec:
     prometheus:
       service:
         enabled: false # Disabled, as this is managed via kube-prometheus-stack
+      monitor:
+        enabled: true
 
     service:
       name: kube-dns
