@@ -6,6 +6,7 @@ resources:
 - cilium.yaml
 - cloudflare.yaml
 - cloudnative-pg.yaml
+- controlplaneio-fluxcd.yaml
 - csi-driver-nfs.yaml
 - deliveryhero.yaml
 - descheduler.yaml
