@@ -36,9 +36,9 @@
   kubectl certificate approve <csr-name>
   ```
 
-- install [Cilium](./cilium.sh)
+- Install [Cilium](./cilium/deploy.sh)
 
-- proceed with Flux
+- Install [Flux](./flux/deploy.sh) (Operator and FluxInstance)
 
 ## Upgrades
 
