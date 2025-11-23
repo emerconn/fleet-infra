@@ -5,4 +5,3 @@ resources:
 - csi-driver-nfs
 - csi-snapshotter
 - synology-csi-talos
-# - velero
