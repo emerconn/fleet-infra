@@ -5,4 +5,4 @@ resources:
 - secret-sops-webhook-receiver-token.yaml
 - flux-instance.yaml
 # - webhook-receiver.yaml
-- ../../../infra/flux/helm-charts
+- ../../../infra/flux/helm
