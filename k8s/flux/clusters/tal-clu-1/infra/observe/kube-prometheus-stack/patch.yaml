@@ -75,7 +75,7 @@ spec:
         operator: "Exists"
       defaultDashboardsTimezone: browser
       persistence:
-        enabled: true # TODO: fix permissions issue
+        enabled: true
         type: sts
         storageClassName: synology-ext4-retain
         accessModes: [ "ReadWriteOnce" ]
