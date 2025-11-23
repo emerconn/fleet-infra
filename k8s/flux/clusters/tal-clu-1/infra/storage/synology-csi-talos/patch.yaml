@@ -9,8 +9,10 @@ spec:
       version: "0.9.5-pre.4" # synology-csi:v1.2.0
   values:
     node:
-      # tolerations:
-      # - operator: "Exists" # schedule daemonSet pods on tainted nodes
+      tolerations:
+      - key: "node-role.kubernetes.io/control-plane"
+        effect: "NoSchedule"
+        operator: "Exists"
     storageClasses:
       synology-iscsi-storage:
         disabled: true
