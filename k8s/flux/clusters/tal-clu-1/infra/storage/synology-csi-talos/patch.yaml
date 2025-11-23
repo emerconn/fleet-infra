@@ -8,11 +8,28 @@ spec:
     spec:
       version: "0.9.5-pre.4" # synology-csi:v1.2.0
   values:
+    controller:
+      nodeSelector:
+        node-role.kubernetes.io/control-plane: ""
+      tolerations:
+      - key: "node-role.kubernetes.io/control-plane"
+        effect: "NoSchedule"
+        operator: "Exists"
+
     node:
       tolerations:
       - key: "node-role.kubernetes.io/control-plane"
         effect: "NoSchedule"
         operator: "Exists"
+
+    snapshotter:
+      nodeSelector:
+        node-role.kubernetes.io/control-plane: ""
+      tolerations:
+      - key: "node-role.kubernetes.io/control-plane"
+        effect: "NoSchedule"
+        operator: "Exists"
+
     storageClasses:
       synology-iscsi-storage:
         disabled: true
