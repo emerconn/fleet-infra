@@ -36,9 +36,9 @@
   kubectl certificate approve <csr-name>
   ```
 
-- Deploy [CoreDNS](./coredns/deploy.sh)
+- Deploy [CoreDNS](./coredns/deploy.sh), later managed via Flux
 
-- Deploy [Cilium](./cilium/deploy.sh)
+- Deploy [Cilium](./cilium/deploy.sh), later managed via Flux
 
 - Deploy [Flux](./flux/deploy.sh) (Operator and FluxInstance)
 
