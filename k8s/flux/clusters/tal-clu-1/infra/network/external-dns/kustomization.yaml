@@ -2,9 +2,6 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-# - adguard-home
-- cilium
-- external-dns
-- gateway-api
-# - tailscale-operator
-# - unifi-network-application
+- ../../../../../infra/network/external-dns
+patches:
+- path: patch.yaml
