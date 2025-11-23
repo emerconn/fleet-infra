@@ -11,6 +11,11 @@ spec:
     crds:
       enabled: true
 
+    config:
+      apiVersion: controller.config.cert-manager.io/v1alpha1
+      kind: ControllerConfiguration
+      enableAPIGateway: true
+
     nodeSelector:
       node-role.kubernetes.io/control-plane: ""
     tolerations:
