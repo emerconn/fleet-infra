@@ -36,8 +36,6 @@ spec:
     # Prometheus server: scraping, rule evaluation, TSDB and retention settings
     prometheus:
       enabled: true
-      # annotations:
-      #   backup.velero.io/backup-volumes: prometheus-kube-prometheus-stack-prometheus-db
       prometheusSpec:
         nodeSelector:
           node-role.kubernetes.io/control-plane: ""
