@@ -13,7 +13,7 @@ spec:
     podDnsPolicy: "None"
     podDnsConfig:
       nameservers:
-      # avoid internal DNS caching issues with TXT records
+      # internal DNS returns cached TXT records, no bueno for ACME challenges
       - "1.1.1.1"
       - "1.0.0.1"
       - "8.8.8.8"
@@ -23,3 +23,9 @@ spec:
       servicemonitor:
         enabled: true
         namespace: cert-manager
+    nodeSelector:
+      node-role.kubernetes.io/control-plane: ""
+    tolerations:
+    - key: "node-role.kubernetes.io/control-plane"
+      operator: "Exists"
+      effect: "NoSchedule"
