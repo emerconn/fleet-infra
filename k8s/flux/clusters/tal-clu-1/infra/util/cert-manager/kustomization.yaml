@@ -5,5 +5,6 @@ resources:
 # - cluster-issuer.yaml
 # - hcp-vault-secrets-app.yaml
 - ../../../../../infra/util/cert-manager.yaml
+- secret-sops-cloudflare-api-token.yaml
 patches:
 - path: patch.yaml
