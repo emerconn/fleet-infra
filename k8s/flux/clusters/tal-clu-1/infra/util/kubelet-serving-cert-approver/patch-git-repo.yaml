@@ -4,5 +4,5 @@ metadata:
   name: kubelet-serving-cert-approver
   namespace: flux-system
 spec:
-  interval: 24h
-  url: https://github.com/alex1989hu/kubelet-serving-cert-approver.git
+  ref:
+    tag: v0.10.0
