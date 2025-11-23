@@ -6,5 +6,4 @@ resources:
 - cilium
 - gateway-api
 # - tailscale-operator
-# - traefik
 # - unifi-network-application
