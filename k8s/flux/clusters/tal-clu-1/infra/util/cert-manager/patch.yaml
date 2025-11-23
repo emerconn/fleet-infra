@@ -13,11 +13,10 @@ spec:
     podDnsPolicy: "None"
     podDnsConfig:
       nameservers:
-      # internal DNS returns cached TXT records, no bueno for ACME challenges
+      # Internal DNS returns cached TXT records, no bueno for ACME challenges.
+      # Only 3 nameservers allowed.
       - "1.1.1.1"
-      - "1.0.0.1"
       - "8.8.8.8"
-      - "8.8.4.4"
       - "10.96.0.10" # `kubectl get svc -n kube-system | grep dns`
     prometheus:
       servicemonitor:
