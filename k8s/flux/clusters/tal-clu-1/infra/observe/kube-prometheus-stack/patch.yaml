@@ -67,6 +67,10 @@ spec:
 
     # Grafana: dashboards, data sources, auth and persistent storage for the UI
     grafana:
+      sidecar:
+        dashboards:
+          enabled: true
+          searchNamespace: ALL
       nodeSelector:
         node-role.kubernetes.io/control-plane: ""
       tolerations:
