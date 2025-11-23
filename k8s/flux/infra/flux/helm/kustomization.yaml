@@ -7,6 +7,7 @@ resources:
 - cloudflare.yaml
 - cloudnative-pg.yaml
 - controlplaneio-fluxcd.yaml
+- coredns.yaml
 - csi-driver-nfs.yaml
 - deliveryhero.yaml
 - descheduler.yaml
