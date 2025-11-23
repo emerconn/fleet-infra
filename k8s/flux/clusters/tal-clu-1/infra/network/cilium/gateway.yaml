@@ -5,6 +5,7 @@ metadata:
   namespace: gateway-system
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-dns01-emerconn-com
+    cert-manager.io/common-name: "*.hl.emerconn.com"
 spec:
   gatewayClassName: cilium
   infrastructure:
