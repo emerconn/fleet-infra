@@ -33,7 +33,7 @@ Refurbed mini-desktop PCs running bare-metal Talos Linux for hosting a Kubernete
 - control plane
   - (3) Dell 9020 Optiplex Micro
     - cpu: [i7-4785T 4-core 3.2GHz 8M](https://www.intel.com/content/www/us/en/products/sku/80814/intel-core-i74785t-processor-8m-cache-up-to-3-20-ghz/specifications.html)
-    - ram: [8GB DDR3 1600 CL11](https://eu.crucial.com/memory/ddr3/ct102464bf160b)
+    - ram: [(2x) 8GB DDR3 1600 CL11](https://eu.crucial.com/memory/ddr3/ct102464bf160b)
     - storage:
       - 256GB M.2 SSD <sub>boot</sub>
       - [MX500 2TB SATA SSD](https://www.crucial.com/ssd/mx500/ct2000mx500ssd1) <sub>Rook Ceph</sub>
