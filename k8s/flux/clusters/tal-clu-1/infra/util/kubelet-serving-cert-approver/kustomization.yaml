@@ -5,3 +5,4 @@ resources:
 - ../../../../../infra/util/kubelet-serving-cert-approver
 patches:
 - path: patch-git-repo.yaml
+- path: patch-flux-kustomization.yaml

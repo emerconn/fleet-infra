@@ -1,0 +1,24 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: kubelet-serving-cert-approver
+  namespace: flux-system
+spec:
+  patches:
+  - target:
+      kind: Deployment
+      name: kubelet-serving-cert-approver
+    patch: |
+      apiVersion: apps/v1
+      kind: Deployment
+      metadata:
+        name: kubelet-serving-cert-approver
+      spec:
+        template:
+          spec:
+            nodeSelector:
+              node-role.kubernetes.io/control-plane: ""
+            tolerations:
+            - effect: NoSchedule
+              key: node-role.kubernetes.io/control-plane
+              operator: Exists
