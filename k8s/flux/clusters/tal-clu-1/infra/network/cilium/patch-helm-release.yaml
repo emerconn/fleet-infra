@@ -1,0 +1,105 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: cilium
+  namespace: flux-system
+spec:
+  chart:
+    spec:
+      version: "1.17.1"
+  values:
+    cgroup:
+      autoMount:
+        enabled: false
+      hostRoot: /sys/fs/cgroup
+    envoy:
+      enabled: true
+      initialFetchTimeoutSeconds: 30
+      prometheus:
+        enabled: true
+        serviceMonitor:
+          enabled: true
+    gatewayAPI:
+      enabled: true
+    hubble:
+      enabled: true
+      relay:
+        enabled: true
+        nodeSelector:
+          node-role.kubernetes.io/control-plane: ""
+        tolerations:
+        - key: node-role.kubernetes.io/control-plane
+          effect: NoSchedule
+          operator: Exists
+        prometheus:
+          enabled: true
+          serviceMonitor:
+            enabled: true
+      ui:
+        enabled: true
+        nodeSelector:
+          node-role.kubernetes.io/control-plane: ""
+        tolerations:
+        - key: node-role.kubernetes.io/control-plane
+          effect: NoSchedule
+          operator: Exists
+      metrics:
+        enabled:
+        - dns
+        - drop
+        - tcp
+        - flow
+        - port-distribution
+        - icmp
+        - "httpV2:exemplars=true;labelsContext=source_ip,source_namespace,source_workload,destination_ip,destination_namespace,destination_workload,traffic_direction"
+        enableOpenMetrics: true
+        prometheus:
+          enabled: true
+          serviceMonitor:
+            enabled: true
+    ingressController:
+      enabled: true
+    ipam:
+      mode: kubernetes
+    k8sServiceHost: localhost
+    k8sServicePort: 7445
+    kubeProxyReplacement: true
+    l2announcements:
+      enabled: true
+      leaseDuration: "3s"
+      leaseRenewDeadline: "1s"
+      leaseRetryPeriod: "500ms"
+    operator:
+      replicas: 1
+      nodeSelector:
+        node-role.kubernetes.io/control-plane: ""
+      tolerations:
+      - key: node-role.kubernetes.io/control-plane
+        effect: NoSchedule
+        operator: Exists
+      prometheus:
+        enabled: true
+        serviceMonitor:
+          enabled: true
+    prometheus:
+      enabled: true
+      serviceMonitor:
+        enabled: true
+    securityContext:
+      capabilities:
+        ciliumAgent:
+        - CHOWN
+        - KILL
+        - NET_ADMIN
+        - NET_RAW
+        - IPC_LOCK
+        - SYS_ADMIN
+        - SYS_RESOURCE
+        - DAC_OVERRIDE
+        - FOWNER
+        - SETGID
+        - SETUID
+        cleanCiliumState:
+        - NET_ADMIN
+        - SYS_ADMIN
+        - SYS_RESOURCE
