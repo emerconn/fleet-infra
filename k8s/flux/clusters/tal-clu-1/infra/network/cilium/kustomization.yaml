@@ -9,4 +9,5 @@ resources:
 - gateway.yaml
 - l2-announcement.yaml
 - lb-pool.yaml
-- patch-helm-release.yaml
+patches:
+- path: patch-helm-release.yaml
