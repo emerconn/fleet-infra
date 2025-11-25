@@ -12,6 +12,9 @@ spec:
         name: coredns
         namespace: flux-system
       version: "1.45.0"
+  valuesFrom:
+  - kind: ConfigMap
+    name: coredns-helm-values
   values:
     prometheus:
       monitor:
