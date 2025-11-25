@@ -6,6 +6,11 @@ metadata:
 spec:
   chart:
     spec:
+      chart: cilium
+      sourceRef:
+        kind: HelmRepository
+        name: cilium
+        namespace: flux-system
       version: "1.17.1"
   valuesFrom:
   - kind: ConfigMap
