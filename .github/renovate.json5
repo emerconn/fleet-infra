@@ -43,6 +43,10 @@
     {
       "matchManagers": ["github-actions"],
       "addLabels": ["renovate/source/github-action"]
+    },
+    {
+      "matchPackagePatterns": ["^factory\\.talos\\.dev/installer/"],
+      "enabled": false
     }
   ]
 }
