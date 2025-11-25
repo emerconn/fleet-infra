@@ -4,4 +4,5 @@ kind: Kustomization
 resources:
 - ../../../../../infra/storage/csi-snapshotter
 patches:
-- path: patch.yaml
+- path: helm-values-patch.yaml
+- path: git-repo-patch.yaml
