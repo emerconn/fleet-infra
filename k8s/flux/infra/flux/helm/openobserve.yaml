@@ -5,5 +5,5 @@ metadata:
   name: openobserve
   namespace: flux-system
 spec:
-  interval: 24h
+  interval: 1h
   url: https://charts.openobserve.ai

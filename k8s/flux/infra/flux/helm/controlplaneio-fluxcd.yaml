@@ -5,5 +5,5 @@ metadata:
   namespace: flux-system
 spec:
   type: oci
-  interval: 24h
+  interval: 1h
   url: oci://ghcr.io/controlplaneio-fluxcd/charts

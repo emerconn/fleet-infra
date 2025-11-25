@@ -5,5 +5,5 @@ metadata:
   name: mongodb
   namespace: flux-system
 spec:
-  interval: 24h
+  interval: 1h
   url: https://mongodb.github.io/helm-charts

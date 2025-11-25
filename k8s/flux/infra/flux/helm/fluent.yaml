@@ -5,5 +5,5 @@ metadata:
   name: fluent
   namespace: flux-system
 spec:
-  interval: 24h
+  interval: 1h
   url: https://fluent.github.io/helm-charts
