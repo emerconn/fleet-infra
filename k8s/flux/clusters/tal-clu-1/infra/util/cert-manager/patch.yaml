@@ -6,6 +6,11 @@ metadata:
 spec:
   chart:
     spec:
+      chart: cert-manager
+      sourceRef:
+        kind: HelmRepository
+        name: jetstack
+        namespace: flux-system
       version: "v1.19.1"
   values:
     crds:

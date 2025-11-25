@@ -6,6 +6,11 @@ metadata:
 spec:
   chart:
     spec:
+      chart: node-problem-detector
+      sourceRef:
+        kind: HelmRepository
+        name: deliveryhero
+        namespace: flux-system
       version: "2.3.22"
   values:
     metrics:

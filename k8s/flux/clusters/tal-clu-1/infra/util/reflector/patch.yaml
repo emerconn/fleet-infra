@@ -6,6 +6,11 @@ metadata:
 spec:
   chart:
     spec:
+      chart: reflector
+      sourceRef:
+        kind: HelmRepository
+        name: emberstack
+        namespace: flux-system
       version: "9.1.39"
   values:
     nodeSelector:

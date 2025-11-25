@@ -6,6 +6,11 @@ metadata:
 spec:
   chart:
     spec:
+      chart: node-feature-discovery
+      sourceRef:
+        kind: HelmRepository
+        name: node-feature-discovery
+        namespace: flux-system
       version: "0.18.3"
   values:
     gc:
