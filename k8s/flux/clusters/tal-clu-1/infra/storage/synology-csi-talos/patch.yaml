@@ -6,6 +6,11 @@ metadata:
 spec:
   chart:
     spec:
+      chart: synology-csi
+      sourceRef:
+        kind: HelmRepository
+        name: synology-csi-talos
+        namespace: flux-system
       version: "0.9.5-pre.4" # synology-csi:v1.2.0
   values:
     clientInfoSecret:
