@@ -1,7 +1,7 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: gateway-api-standard
+  name: gateway-api-crds-standard
   namespace: flux-system
 spec:
   sourceRef:
