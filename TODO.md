@@ -27,3 +27,5 @@
   - Layer 2 (Config): Gateways, ClusterIssuers (Things that use Layer 1 CRDs).
   - Layer 3 (Apps): HTTPRoutes, Deployments (Things that use Layer 2).
   - You usually only need to define dependencies between these big layers (e.g., "Make sure System is ready before applying Apps"), not between individual files.
+
+- configure GitHub webhook for Flux to auto sync on push
