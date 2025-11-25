@@ -6,6 +6,11 @@ metadata:
 spec:
   chart:
     spec:
+      chart: metrics-server
+      sourceRef:
+        kind: HelmRepository
+        name: metrics-server
+        namespace: flux-system
       version: "3.12.2"
   values:
     replicas: 1

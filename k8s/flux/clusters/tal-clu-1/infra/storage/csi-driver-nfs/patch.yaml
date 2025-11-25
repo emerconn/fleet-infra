@@ -6,6 +6,11 @@ metadata:
 spec:
   chart:
     spec:
+      chart: csi-driver-nfs
+      sourceRef:
+        kind: HelmRepository
+        name: csi-driver-nfs
+        namespace: flux-system
       version: "4.12.1"
   dependsOn:
   - name: csi-snapshotter-controller

@@ -6,6 +6,11 @@ metadata:
 spec:
   chart:
     spec:
+      chart: coredns
+      sourceRef:
+        kind: HelmRepository
+        name: coredns
+        namespace: flux-system
       version: "1.45.0"
   values:
     k8sAppLabelOverride: kube-dns

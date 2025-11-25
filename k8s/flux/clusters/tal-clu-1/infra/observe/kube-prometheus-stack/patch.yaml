@@ -6,6 +6,11 @@ metadata:
 spec:
   chart:
     spec:
+      chart: kube-prometheus-stack
+      sourceRef:
+        kind: HelmRepository
+        name: prometheus-community
+        namespace: flux-system
       version: "79.7.1"
   values:
     # Prometheus Operator: manages Prometheus/Alertmanager CRDs and lifecycle

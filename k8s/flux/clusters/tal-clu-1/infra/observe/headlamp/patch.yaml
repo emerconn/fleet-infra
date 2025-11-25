@@ -6,6 +6,11 @@ metadata:
 spec:
   chart:
     spec:
+      chart: headlamp
+      sourceRef:
+        kind: HelmRepository
+        name: headlamp
+        namespace: flux-system
       version: "0.38.0"
   values:
     config:
