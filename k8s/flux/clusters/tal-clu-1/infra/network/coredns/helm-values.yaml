@@ -1,16 +1,22 @@
-# Override default label (coredns) to match Talos CoreDNS label
-# This is a legacy/backwards-compatible label
-# Used by most 3rd-party services (ie. kube-prometheus-stack)
 k8sAppLabelOverride: kube-dns
-
-prometheus:
-  service:
-    enabled: false # Disabled, as this is managed via kube-prometheus-stack
-
 service:
   name: kube-dns
   clusterIP: 10.96.0.10 # Match Talos CoreDNS ClusterIP
 
+nodeSelector:
+  node-role.kubernetes.io/control-plane: ""
+tolerations:
+- key: "node-role.kubernetes.io/control-plane"
+  effect: "NoSchedule"
+  operator: "Exists"
+
+prometheus:
+  service:
+    enabled: false # Disabled, as this is managed via kube-prometheus-stack
+  monitor:
+    enabled: false
+
+# CoreDNS ConfigMap
 servers:
 - zones:
   - zone: .

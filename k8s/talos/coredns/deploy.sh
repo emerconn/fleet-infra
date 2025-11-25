@@ -9,5 +9,5 @@ kubectl delete -n kube-system service kube-dns
 # Deploy CoreDNS via Helm
 helm upgrade --install coredns \
   oci://ghcr.io/coredns/charts/coredns \
-  --values values.yaml \
+  --values ../../flux/clusters/tal-clu-1/infra/network/coredns/helm-values.yaml \
   --namespace kube-system
