@@ -9,7 +9,7 @@ spec:
       version: "1.17.1"
   valuesFrom:
   - kind: ConfigMap
-    name: cilium-values
+    name: helm-values
   values:
     envoy:
       prometheus:

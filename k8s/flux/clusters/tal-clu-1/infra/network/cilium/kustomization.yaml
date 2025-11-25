@@ -10,9 +10,9 @@ resources:
 - lb-pool.yaml
 
 patches:
-- path: helm-release-patch.yaml
+- path: helm-patch.yaml
 
 configMapGenerator:
-- name: cilium-values
+- name: helm-values
   files:
-  - helm-release-values.yaml
+  - helm-values.yaml
