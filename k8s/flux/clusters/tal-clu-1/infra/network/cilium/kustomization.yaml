@@ -14,6 +14,6 @@ patches:
 - path: helm-patch.yaml
 
 configMapGenerator:
-- name: helm-values
+- name: cilium-helm-values
   files:
   - helm-values.yaml
