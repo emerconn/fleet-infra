@@ -6,7 +6,6 @@ resources:
 - ../../../../../infra/network/cilium.yaml
 # - grafana-dashboard.yaml
 # - ingress.yaml
-- gateway.yaml
 - l2-announcement.yaml
 - lb-pool.yaml
 
