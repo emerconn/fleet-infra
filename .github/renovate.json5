@@ -1,52 +1,97 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended"],
-  "assignees": ["emerconnelly"],
-  "flux": {
-    "fileMatch": ["(^|/)k8s/.+\\.ya?ml(?:\\.j2)?$"]
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  extends: [
+    'config:recommended',
+  ],
+  assignees: [
+    'emerconnelly',
+  ],
+  flux: {
+    managerFilePatterns: [
+      '/(^|/)k8s/.+\\.ya?ml(?:\\.j2)?$/',
+    ],
   },
-  "helm-values": {
-    "fileMatch": ["(^|/)k8s/.+\\.ya?ml(?:\\.j2)?$"]
+  'helm-values': {
+    managerFilePatterns: [
+      '/(^|/)k8s/.+\\.ya?ml(?:\\.j2)?$/',
+    ],
   },
-  "kubernetes": {
-    "fileMatch": ["(^|/)k8s/.+\\.ya?ml(?:\\.j2)?$"]
+  kubernetes: {
+    managerFilePatterns: [
+      '/(^|/)k8s/.+\\.ya?ml(?:\\.j2)?$/',
+    ],
   },
-  "packageRules": [
+  packageRules: [
     {
-      "matchUpdateTypes": ["major"],
-      "addLabels": ["renovate/type/major"]
+      matchUpdateTypes: [
+        'major',
+      ],
+      addLabels: [
+        'renovate/type/major',
+      ],
     },
     {
-      "matchUpdateTypes": ["minor"],
-      "addLabels": ["renovate/type/minor"]
+      matchUpdateTypes: [
+        'minor',
+      ],
+      addLabels: [
+        'renovate/type/minor',
+      ],
     },
     {
-      "matchUpdateTypes": ["patch"],
-      "addLabels": ["renovate/type/patch"]
+      matchUpdateTypes: [
+        'patch',
+      ],
+      addLabels: [
+        'renovate/type/patch',
+      ],
     },
     {
-      "matchUpdateTypes": ["digest"],
-      "addLabels": ["renovate/type/digest"]
+      matchUpdateTypes: [
+        'digest',
+      ],
+      addLabels: [
+        'renovate/type/digest',
+      ],
     },
     {
-      "matchDatasources": ["docker"],
-      "addLabels": ["renovate/source/container"]
+      matchDatasources: [
+        'docker',
+      ],
+      addLabels: [
+        'renovate/source/container',
+      ],
     },
     {
-      "matchDatasources": ["helm"],
-      "addLabels": ["renovate/source/helm"]
+      matchDatasources: [
+        'helm',
+      ],
+      addLabels: [
+        'renovate/source/helm',
+      ],
     },
     {
-      "matchDatasources": ["github-releases", "github-tags"],
-      "addLabels": ["renovate/source/github-release"]
+      matchDatasources: [
+        'github-releases',
+        'github-tags',
+      ],
+      addLabels: [
+        'renovate/source/github-release',
+      ],
     },
     {
-      "matchManagers": ["github-actions"],
-      "addLabels": ["renovate/source/github-action"]
+      matchManagers: [
+        'github-actions',
+      ],
+      addLabels: [
+        'renovate/source/github-action',
+      ],
     },
     {
-      "matchPackagePatterns": ["^factory\\.talos\\.dev/installer/"],
-      "enabled": false
-    }
-  ]
+      enabled: false,
+      matchPackageNames: [
+        '/^factory\\.talos\\.dev/installer//',
+      ],
+    },
+  ],
 }
