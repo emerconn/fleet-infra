@@ -29,3 +29,4 @@ resources:
 - tailscale.yaml
 - uptime-kuma.yaml
 - vmware-tanzu.yaml
+- wazuh.yaml
