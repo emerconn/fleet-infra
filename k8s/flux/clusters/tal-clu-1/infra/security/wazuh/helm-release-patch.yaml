@@ -15,14 +15,10 @@ spec:
   values:
     agent:
       enabled: true
-      daemonset:
-        tolerations:
-        - effect: NoSchedule
-          operator: Exists
-        - key: CriticalAddonsOnly
-          operator: Exists
-        - effect: NoExecute
-          operator: Exists
+      tolerations:
+      - key: "node-role.kubernetes.io/control-plane"
+        effect: "NoSchedule"
+        operator: "Exists"
 
     dashboard:
       replicas: 1
