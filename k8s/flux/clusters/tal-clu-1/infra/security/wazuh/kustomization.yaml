@@ -2,7 +2,8 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-# - kubeclarity
-# - tetragon
-# - trivy-operator
-- wazuh
+- ../../../../../infra/secrets/infisical-operator.yaml
+- secret-sops-universal-auth.yaml
+- test-secret.yaml
+patches:
+- path: patch.yaml

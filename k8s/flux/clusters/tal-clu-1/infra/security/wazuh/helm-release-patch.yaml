@@ -1,0 +1,27 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: wazuh
+  namespace: flux-system
+spec:
+  chart:
+    spec:
+      sourceRef:
+        kind: HelmRepository
+        name: wazuh
+        namespace: flux-system
+      chart: wazuh
+      version: "1.0.4"
+  values:
+    indexer:
+      storageSize: 1Gi
+      storageClass: synology-ext4-retain
+
+    wazuh:
+      master:
+        storageSize: 1Gi
+        storageClass: synology-ext4-retain
+
+      worker:
+        storageSize: 1Gi
+        storageClass: synology-ext4-retain

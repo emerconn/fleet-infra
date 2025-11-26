@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: wazuh
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: wazuh
+  namespace: flux-system
+spec:
+  releaseName: wazuh
+  targetNamespace: wazuh
+  chart:
+    spec:
+      sourceRef:
+        kind: HelmRepository
+        name: wazuh
+        namespace: flux-system
+      chart: wazuh
+  interval: 1h
+  timeout: 10m
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    cleanupOnFail: true
+    remediation:
+      retries: 3
+  uninstall:
+    keepHistory: false
+  values: # https://github.com/morgoved/wazuh-helm/blob/main/charts/wazuh/values.yaml
