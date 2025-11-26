@@ -15,6 +15,9 @@ spec:
   values:
     agent:
       enabled: true
+      joinManager:
+        managerHost: "wazuh.wazuh.svc.cluster.local"
+        workerHost: "wazuh-manager-worker.wazuh.svc.cluster.local"
       tolerations:
       - key: "node-role.kubernetes.io/control-plane"
         effect: "NoSchedule"
