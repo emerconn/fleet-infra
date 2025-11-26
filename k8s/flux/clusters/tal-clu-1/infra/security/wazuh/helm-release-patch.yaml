@@ -13,6 +13,14 @@ spec:
       chart: wazuh
       version: "1.0.4"
   values:
+    dashboard:
+      nodeSelector:
+        node-role.kubernetes.io/control-plane: ""
+      tolerations:
+      - key: "node-role.kubernetes.io/control-plane"
+        effect: "NoSchedule"
+        operator: "Exists"
+
     indexer:
       storageSize: 1Gi
       storageClass: synology-ext4-retain
