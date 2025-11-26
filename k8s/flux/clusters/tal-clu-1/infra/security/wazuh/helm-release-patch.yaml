@@ -24,22 +24,17 @@ spec:
         operator: "Exists"
 
     wazuh:
+      nodeSelector:
+        node-role.kubernetes.io/control-plane: ""
+      tolerations:
+      - key: "node-role.kubernetes.io/control-plane"
+        effect: "NoSchedule"
+        operator: "Exists"
+
       master:
         storageSize: 1Gi
         storageClass: synology-ext4-retain
-        nodeSelector:
-          node-role.kubernetes.io/control-plane: ""
-        tolerations:
-        - key: "node-role.kubernetes.io/control-plane"
-          effect: "NoSchedule"
-          operator: "Exists"
 
       worker:
         storageSize: 1Gi
         storageClass: synology-ext4-retain
-        nodeSelector:
-          node-role.kubernetes.io/control-plane: ""
-        tolerations:
-        - key: "node-role.kubernetes.io/control-plane"
-          effect: "NoSchedule"
-          operator: "Exists"
