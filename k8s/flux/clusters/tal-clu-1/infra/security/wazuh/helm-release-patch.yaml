@@ -14,6 +14,7 @@ spec:
       version: "1.0.4"
   values:
     dashboard:
+      replicas: 1
       nodeSelector:
         node-role.kubernetes.io/control-plane: ""
       tolerations:
@@ -22,6 +23,7 @@ spec:
         operator: "Exists"
 
     indexer:
+      replicas: 1
       storageSize: 1Gi
       storageClass: synology-ext4-retain
       nodeSelector:
@@ -44,5 +46,6 @@ spec:
         storageClass: synology-ext4-retain
 
       worker:
+        replicas: 1
         storageSize: 1Gi
         storageClass: synology-ext4-retain
