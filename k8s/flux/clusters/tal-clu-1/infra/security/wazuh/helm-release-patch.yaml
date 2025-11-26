@@ -13,6 +13,17 @@ spec:
       chart: wazuh
       version: "1.0.4"
   values:
+    agent:
+      enabled: true
+      daemonset:
+        tolerations:
+        - effect: NoSchedule
+          operator: Exists
+        - key: CriticalAddonsOnly
+          operator: Exists
+        - effect: NoExecute
+          operator: Exists
+
     dashboard:
       replicas: 1
       nodeSelector:
