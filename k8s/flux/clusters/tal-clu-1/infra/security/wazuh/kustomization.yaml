@@ -5,4 +5,4 @@ resources:
 - ../../../../../infra/security/wazuh.yaml
 
 patches:
-- path: patch.yaml
+- path: helm-release-patch.yaml
